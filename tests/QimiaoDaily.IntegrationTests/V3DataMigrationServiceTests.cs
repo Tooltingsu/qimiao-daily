@@ -90,6 +90,42 @@ public sealed class V3DataMigrationServiceTests
         Assert.Equal(0, result.LegacyBusinessTimelineItems);
     }
 
+    [Fact]
+    public async Task ApplyAsync_NormalizesExistingManualActivitiesAndExactRulesToFourOClock()
+    {
+        var options = new DbContextOptionsBuilder<QimiaoDailyDbContext>().UseSqlite("Data Source=:memory:").Options;
+        await using var database = new QimiaoDailyDbContext(options);
+        await database.Database.OpenConnectionAsync();
+        await database.Database.EnsureCreatedAsync();
+
+        database.ManualEvents.Add(new ManualEventEntity
+        {
+            Game = "GENSHIN",
+            Name = "旧活动",
+            StartAt = new DateTimeOffset(2026, 8, 20, 10, 0, 0, TimeSpan.FromHours(8)),
+            EndAt = new DateTimeOffset(2026, 8, 27, 3, 59, 0, TimeSpan.FromHours(8))
+        });
+        database.EndgameRules.Add(new EndgameRuleEntity
+        {
+            RuleKey = "CUSTOM_EXACT",
+            Game = "GENSHIN",
+            Name = "测试深渊",
+            RuleKind = "INTERVAL",
+            TimePrecision = "EXACT",
+            StartTime = new TimeOnly(10, 0),
+            ConfigurationJson = "{}"
+        });
+        await database.SaveChangesAsync();
+
+        await new V3DataMigrationService(database).ApplyAsync();
+
+        var activity = await database.ManualEvents.SingleAsync();
+        var rule = await database.EndgameRules.SingleAsync(x => x.RuleKey == "CUSTOM_EXACT");
+        Assert.Equal(new TimeOnly(4, 0), TimeOnly.FromDateTime(activity.StartAt.DateTime));
+        Assert.Equal(new TimeOnly(4, 0), TimeOnly.FromDateTime(activity.EndAt.DateTime));
+        Assert.Equal(new TimeOnly(4, 0), rule.StartTime);
+    }
+
     private static TimelineItem Item(string type, string title)
     {
         var item = new TimelineItem("GENSHIN", type, title, VerificationStatus.VerifiedOfficial,

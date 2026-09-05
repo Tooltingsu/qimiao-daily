@@ -1218,7 +1218,7 @@ public sealed partial class ShellViewModel : ObservableObject
             var service = new ManualDataService(database);
             var input = new ManualEventInput(
                 ManualGame, ManualEventName, ParseRequiredActivityTime(ManualEventStart, "活动开始时间", "Asia/Shanghai", new TimeOnly(4, 0)),
-                ParseRequiredActivityTime(ManualEventEnd, "活动结束旴间", "Asia/Shanghai", new TimeOnly(3, 59)), ManualEventNotes);
+                ParseRequiredActivityTime(ManualEventEnd, "活动结束时间", "Asia/Shanghai", new TimeOnly(4, 0)), ManualEventNotes);
             if (EditingManualEventId is Guid eventId) await service.UpdateEventAsync(eventId, input);
             else await service.CreateEventAsync(input);
             ImportMessage = wasEditing ? "活动已更新，剩余时间已重新计算。" : "活动已保存为人工确认的正式数据。";

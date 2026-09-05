@@ -54,7 +54,7 @@ public sealed class EndgameScheduleEngineTests
 
         Assert.Equal([new DateOnly(2026, 8, 27), new DateOnly(2026, 10, 8), new DateOnly(2026, 11, 19)], result.Select(x => x.StartsOn));
         Assert.Equal([new DateOnly(2026, 9, 6), new DateOnly(2026, 10, 18), new DateOnly(2026, 11, 29)], result.Select(x => x.EndsOn));
-        Assert.All(result, x => Assert.Equal(new TimeOnly(10, 0), x.StartTime));
+        Assert.All(result, x => Assert.Equal(new TimeOnly(4, 0), x.StartTime));
         Assert.All(result, x => Assert.Equal(new TimeOnly(4, 0), x.EndTime));
     }
 

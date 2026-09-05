@@ -18,6 +18,8 @@ public sealed class ManualDataServiceTests
 
         Assert.Equal(DataOrigin.Manual, saved.Origin);
         Assert.True(saved.UserConfirmed);
+        Assert.Equal(new TimeOnly(4, 0), TimeOnly.FromDateTime(saved.StartAt.DateTime));
+        Assert.Equal(new TimeOnly(4, 0), TimeOnly.FromDateTime(saved.EndAt.DateTime));
         Assert.Empty(database.Evidence);
     }
 

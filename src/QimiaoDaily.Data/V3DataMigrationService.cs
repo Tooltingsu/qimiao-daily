@@ -39,6 +39,8 @@ public sealed class V3DataMigrationService(QimiaoDailyDbContext database)
         }
 
         var endgameRulesSeeded = await SeedEndgameRulesAsync(cancellationToken);
+        NormalizeManualActivityAndEndgameTimes(await database.ManualEvents.ToListAsync(cancellationToken),
+            await database.EndgameRules.ToListAsync(cancellationToken));
         await database.SaveChangesAsync(cancellationToken);
         return new V3DataMigrationResult(legacyBusinessItems, birthdaysInitialized, endgameRulesSeeded);
     }
@@ -49,8 +51,8 @@ public sealed class V3DataMigrationService(QimiaoDailyDbContext database)
         {
             ("GENSHIN_SPIRAL_ABYSS", "GENSHIN", "深境螺旋", "MONTHLY", "EXACT", "04:00"),
             ("GENSHIN_IMAGINARIUM_THEATER", "GENSHIN", "幻想真境剧诗", "MONTHLY", "EXACT", "04:00"),
-            ("GENSHIN_STYGIAN_ONSLAUGHT", "GENSHIN", "幽境危战", "VERSION_STYGIAN", "EXACT", "10:00"),
-            ("GENSHIN_FRENZIED_ONSLAUGHT", "GENSHIN", "幽境危战·纷乱爆发", "VERSION_FRENZIED", "EXACT", "10:00"),
+            ("GENSHIN_STYGIAN_ONSLAUGHT", "GENSHIN", "幽境危战", "VERSION_STYGIAN", "EXACT", "04:00"),
+            ("GENSHIN_FRENZIED_ONSLAUGHT", "GENSHIN", "幽境危战·纷乱爆发", "VERSION_FRENZIED", "EXACT", "04:00"),
             ("STARRAIL_MEMORY_OF_CHAOS", "STARRAIL", "混沌回忆", "INTERVAL", "EXACT", "04:00"),
             ("STARRAIL_APOCALYPTIC_SHADOW", "STARRAIL", "末日幻影", "INTERVAL", "EXACT", "04:00"),
             ("STARRAIL_PURE_FICTION", "STARRAIL", "虚构叙事", "INTERVAL", "EXACT", "04:00"),
@@ -73,6 +75,23 @@ public sealed class V3DataMigrationService(QimiaoDailyDbContext database)
         }
         return added;
     }
+
+    private static void NormalizeManualActivityAndEndgameTimes(
+        IEnumerable<ManualEventEntity> activities,
+        IEnumerable<EndgameRuleEntity> endgameRules)
+    {
+        foreach (var activity in activities)
+        {
+            activity.StartAt = AtFour(activity.StartAt);
+            activity.EndAt = AtFour(activity.EndAt);
+        }
+
+        foreach (var rule in endgameRules.Where(x => !x.TimePrecision.Equals("DATE_ONLY", StringComparison.OrdinalIgnoreCase)))
+            rule.StartTime = new TimeOnly(4, 0);
+    }
+
+    private static DateTimeOffset AtFour(DateTimeOffset value)
+        => new(value.Year, value.Month, value.Day, 4, 0, 0, value.Offset);
 
     private static string BuildOriginTrace(BirthdayEntity birthday)
         => $"V3_INITIAL_IMPORT | Source={birthday.Source} | SourceUrl={birthday.SourceUrl} | Evidence={birthday.Evidence}";

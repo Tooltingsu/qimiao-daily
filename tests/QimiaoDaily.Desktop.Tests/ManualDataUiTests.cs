@@ -111,8 +111,8 @@ public sealed class ManualDataUiTests
 
         Assert.Contains("独立小窗口中填写", main, StringComparison.Ordinal);
         Assert.Contains("验证通过并保存后窗口自动关闭", main, StringComparison.Ordinal);
-        Assert.Contains("开始时间仅填日期时默认 04:00", activity, StringComparison.Ordinal);
-        Assert.Contains("结束时间仅填日期时默认 03:59", activity, StringComparison.Ordinal);
+        Assert.Contains("仅填写日期时默认 04:00", activity, StringComparison.Ordinal);
+        Assert.Contains("游戏活动的开始、结束时分统一为 04:00", activity, StringComparison.Ordinal);
     }
 
     [Fact]

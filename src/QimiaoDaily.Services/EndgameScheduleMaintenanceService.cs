@@ -160,9 +160,9 @@ public sealed class EndgameScheduleMaintenanceService(QimiaoDailyDbContext datab
         var configuration = JsonSerializer.Deserialize<EndgameSchedulePersistenceConfiguration>(entity.ConfigurationJson, JsonOptions);
         var precision = string.Equals(entity.TimePrecision, "DATE_ONLY", StringComparison.OrdinalIgnoreCase)
             ? EndgameTimePrecision.DateOnly : EndgameTimePrecision.Exact;
-        var time = precision == EndgameTimePrecision.DateOnly
+        TimeOnly? time = precision == EndgameTimePrecision.DateOnly
             ? null
-            : entity.StartTime ?? ParseTime(configuration?.StartTime) ?? defaultRule?.StartTime;
+            : new TimeOnly(4, 0);
         var anchor = (await database.EndgameAnchors.Where(x => x.RuleId == ruleId).ToListAsync(cancellationToken))
             .OrderByDescending(x => x.AnchorDate ?? DateOnly.MinValue).FirstOrDefault()?.AnchorDate
             ?? defaultRule?.AnchorDate
@@ -170,7 +170,9 @@ public sealed class EndgameScheduleMaintenanceService(QimiaoDailyDbContext datab
             ?? throw new InvalidOperationException("The endgame rule requires an anchor before maintenance.");
         var interval = configuration?.IntervalDays > 0 ? configuration.IntervalDays : defaultRule?.IntervalDays ?? 0;
         var overrides = (configuration?.Overrides ?? [])
-            .ToDictionary(x => x.ScheduledStart, x => new EndgameOccurrenceOverride(x.ScheduledStart, x.StartsOn, x.StartTime, x.Suppressed, x.Notes, x.EndsOn, x.EndTime, x.VersionNumber));
+            .ToDictionary(x => x.ScheduledStart, x => new EndgameOccurrenceOverride(x.ScheduledStart, x.StartsOn,
+                precision == EndgameTimePrecision.Exact ? new TimeOnly(4, 0) : null, x.Suppressed, x.Notes, x.EndsOn,
+                precision == EndgameTimePrecision.Exact ? new TimeOnly(4, 0) : null, x.VersionNumber));
         return new EndgameScheduleRule(entity.RuleKey, entity.Game, entity.Name, anchor, interval, precision, time, overrides, entity.RuleKind);
     }
 

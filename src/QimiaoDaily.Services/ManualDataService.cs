@@ -10,6 +10,7 @@ public sealed class ManualDataService(QimiaoDailyDbContext database)
 {
     public async Task<ManualEventEntity> CreateEventAsync(ManualEventInput input, CancellationToken ct = default)
     {
+        input = NormalizeEventTimes(input);
         Validate(input.Game, input.Name, input.StartAt, input.EndAt);
         var entity = new ManualEventEntity { Game = input.Game.Trim(), Name = input.Name.Trim(), StartAt = input.StartAt, EndAt = input.EndAt, Notes = input.Notes?.Trim() ?? string.Empty, Origin = DataOrigin.Manual, UserConfirmed = true };
         database.ManualEvents.Add(entity);
@@ -20,6 +21,7 @@ public sealed class ManualDataService(QimiaoDailyDbContext database)
 
     public async Task<ManualEventEntity> UpdateEventAsync(Guid id, ManualEventInput input, CancellationToken ct = default)
     {
+        input = NormalizeEventTimes(input);
         Validate(input.Game, input.Name, input.StartAt, input.EndAt);
         var entity = await database.ManualEvents.SingleAsync(x => x.Id == id, ct);
         entity.Game = input.Game.Trim(); entity.Name = input.Name.Trim(); entity.StartAt = input.StartAt; entity.EndAt = input.EndAt; entity.Notes = input.Notes?.Trim() ?? string.Empty; entity.UpdatedAt = DateTimeOffset.UtcNow;
@@ -141,6 +143,19 @@ public sealed class ManualDataService(QimiaoDailyDbContext database)
     }
 
     private void Audit(string entityType, Guid entityId, string action) => database.ManualDataAudits.Add(new ManualDataAuditEntity { EntityType = entityType, EntityId = entityId, Action = action });
+
+    private static ManualEventInput NormalizeEventTimes(ManualEventInput input)
+    {
+        // The manual activity convention is date-based: both boundaries are
+        // displayed and persisted at Shanghai 04:00 rather than mixing
+        // arbitrary imported clock values into the activity board.
+        var start = AtFour(input.StartAt);
+        var end = AtFour(input.EndAt);
+        return input with { StartAt = start, EndAt = end };
+    }
+
+    private static DateTimeOffset AtFour(DateTimeOffset value)
+        => new(value.Year, value.Month, value.Day, 4, 0, 0, value.Offset);
 
     private static void Validate(string game, string name, DateTimeOffset startAt, DateTimeOffset endAt)
     {

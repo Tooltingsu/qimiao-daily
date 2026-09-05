@@ -20,10 +20,10 @@
         <TextBlock Text="开始日期时间（Asia/Shanghai，yyyy-MM-dd HH:mm）" Foreground="#C5CBE8"/>
         <TextBox Text="{Binding ManualEventStart,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" ToolTip="仅填写日期时默认 04:00"/>
         <TextBlock Text="结束日期时间（Asia/Shanghai，yyyy-MM-dd HH:mm）" Foreground="#C5CBE8"/>
-        <TextBox Text="{Binding ManualEventEnd,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" ToolTip="仅填写日期时默认 03:59"/>
+        <TextBox Text="{Binding ManualEventEnd,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" ToolTip="仅填写日期时默认 04:00"/>
         <TextBlock Text="备注（可选）" Foreground="#C5CBE8"/>
         <TextBox Text="{Binding ManualEventNotes,UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" Height="70" TextWrapping="Wrap" Margin="0,4,0,14"/>
-        <TextBlock Text="开始时间仅填日期时默认 04:00，结束时间仅填日期时默认 03:59。" Foreground="#9AA4D7" TextWrapping="Wrap" Margin="0,0,0,14"/>
+        <TextBlock Text="游戏活动的开始、结束时分统一为 04:00；仅填写日期时会自动补全。" Foreground="#9AA4D7" TextWrapping="Wrap" Margin="0,0,0,14"/>
         <WrapPanel HorizontalAlignment="Right">
           <Button Content="取消" Click="Cancel_Click" Padding="12,5" Background="#323A67" Foreground="White"/>
           <Button Content="确定并保存" Click="Save_Click" Padding="12,5" Margin="8,0,0,0" Background="#365E68" Foreground="White"/>

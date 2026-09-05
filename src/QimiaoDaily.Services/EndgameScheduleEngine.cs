@@ -79,6 +79,8 @@ public sealed class EndgameScheduleEngine
     public EndgameScheduleRule WithOverride(EndgameScheduleRule rule, EndgameOccurrenceOverride occurrenceOverride)
     {
         Validate(rule);
+        if (rule.Precision == EndgameTimePrecision.Exact)
+            occurrenceOverride = occurrenceOverride with { StartTime = new TimeOnly(4, 0), EndTime = new TimeOnly(4, 0) };
         if (occurrenceOverride.ScheduledStart < rule.AnchorDate)
             throw new ArgumentException("An occurrence override must target an occurrence on or after the rule anchor.", nameof(occurrenceOverride));
         var overrides = rule.Overrides is null
@@ -156,8 +158,8 @@ public sealed class EndgameScheduleEngine
             DateOnly start, end; TimeOnly startTime, endTime;
             switch (rule.RuleKind)
             {
-                case "VERSION_STYGIAN": start = version.StartDate.AddDays(7); startTime = new TimeOnly(10, 0); end = version.EndDate; endTime = new TimeOnly(4, 0); break;
-                case "VERSION_FRENZIED": start = version.StartDate.AddDays(7); startTime = new TimeOnly(10, 0); end = start.AddDays(10); endTime = new TimeOnly(4, 0); break;
+                case "VERSION_STYGIAN": start = version.StartDate.AddDays(7); startTime = new TimeOnly(4, 0); end = version.EndDate; endTime = new TimeOnly(4, 0); break;
+                case "VERSION_FRENZIED": start = version.StartDate.AddDays(7); startTime = new TimeOnly(4, 0); end = start.AddDays(10); endTime = new TimeOnly(4, 0); break;
                 case "VERSION_BOUNDED": start = version.StartDate; startTime = new TimeOnly(4, 0); end = version.EndDate; endTime = new TimeOnly(4, 0); break;
                 default: throw new ArgumentException($"Unsupported version rule kind: {rule.RuleKind}", nameof(rule));
             }
