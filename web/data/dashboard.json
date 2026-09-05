@@ -21,7 +21,7 @@
   },
   "artworkPending": 128,
   "conflictCount": 0,
-  "repositoryUrl": "https://github.com/OWNER/qimiao-daily",
+  "repositoryUrl": "https://github.com/Tooltingsu/qimiao-daily",
   "providers": [
     {
       "provider": "GitHub:babalae/better-genshin-impact",
