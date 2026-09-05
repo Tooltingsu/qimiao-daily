@@ -30,6 +30,20 @@ def persist(kind, message, cwd=None, branch='main'):
     git('config', 'user.email', 'qimiao-automation[bot]@users.noreply.github.com', cwd=cwd)
     git('add', '--', *sorted(set(changed)), cwd=cwd)
     git('commit', '-m', message, cwd=cwd)
+
+    # A tool can create a final allowed projection while its first write set is
+    # being staged (notably the generated Pages dashboard).  Fold only an
+    # explicitly allow-listed residual set into the same immutable writeback
+    # commit before rebasing; never stash, discard, or stage arbitrary files.
+    residual = git('diff', '--name-only', 'HEAD', cwd=cwd).stdout.splitlines()
+    residual += git('ls-files', '--others', '--exclude-standard', cwd=cwd).stdout.splitlines()
+    illegal_residual = [p for p in residual if not p.startswith(roots)]
+    if illegal_residual:
+        raise RuntimeError('Write-path violation after staging: ' + ', '.join(illegal_residual))
+    if residual:
+        git('add', '--', *sorted(set(residual)), cwd=cwd)
+        git('commit', '--amend', '--no-edit', cwd=cwd)
+
     for attempt in range(3):
         git('fetch', 'origin', branch, cwd=cwd)
         rebased = git('rebase', 'origin/' + branch, cwd=cwd, check=False)
