@@ -12,6 +12,10 @@ PATTERNS = [
     rb"PHPSESSID=[0-9]{3,}_[A-Za-z0-9]{10,}",
     rb"(?i)(?:QQ_BOT_SECRET|PIXIV_SESSION|GITHUB_TOKEN|APP_SECRET)\s*[=:]\s*[\"']?[A-Za-z0-9_+/=-]{20,}",
 ]
+# A workstation or runner path is not a credential, but it is personal/runtime
+# metadata and must never be deployed to the public dashboard or reports.
+LOCAL_ABSOLUTE_PATH = re.compile(rb"(?:[A-Za-z]:\\\\|/(?:home|Users|var|tmp)/)", re.IGNORECASE)
+PUBLIC_DATA_ROOTS = {"data", "collected", "generated", "reports", "publish-log", "web"}
 DENIED = {"bin", "obj", "node_modules", ".vs", ".idea", "publish", "publish-v3", "cache", "logs", "browser-profile"}
 
 def scan(root, files):
@@ -28,6 +32,8 @@ def scan(root, files):
         data = p.read_bytes()
         if any(re.search(pattern, data) for pattern in PATTERNS):
             findings.append({'path': name, 'reason': 'credential-like content (redacted)'})
+        if Path(name).parts and Path(name).parts[0] in PUBLIC_DATA_ROOTS and LOCAL_ABSOLUTE_PATH.search(data):
+            findings.append({'path': name, 'reason': 'local absolute path in public data (redacted)'})
     return {'status': 'FAIL' if findings else 'PASS', 'files': count, 'bytes': size, 'findings': findings}
 
 if __name__ == '__main__':

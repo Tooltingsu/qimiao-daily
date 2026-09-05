@@ -51,7 +51,7 @@ public sealed class V3JsonExporter(V4Repository repository)
 
         var artworks = (await database.Artworks.AsNoTracking().ToListAsync(cancellationToken)).Select(x => new ArtworkRecord(
             x.Platform, x.ArtworkId, x.CharacterName, x.FranchiseName, x.Title, x.Author, x.SourceUrl,
-            Uri.TryCreate(x.ThumbnailUrl, UriKind.Absolute, out _) ? x.ThumbnailUrl : string.Empty,
+            Uri.TryCreate(x.ThumbnailUrl, UriKind.Absolute, out var thumbnail) && thumbnail.Scheme == Uri.UriSchemeHttps ? x.ThumbnailUrl : string.Empty,
             x.ReviewStatus.ToString().ToUpperInvariant(), x.SelectedForReport, x.PublishedAt, x.FetchedAt)).ToList();
         var videos = (await database.TimelineItems.AsNoTracking().Include(x => x.Evidence)
             .Where(x => x.ItemType == "VIDEO" || x.ItemType == "PREVIEW_NOTICE" || x.ItemType == "PREVIEW_LIVE").ToListAsync(cancellationToken))

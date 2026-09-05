@@ -5,10 +5,13 @@ import time
 ALLOWED = {
     'collect': ('collected/',),
     'calculate': ('generated/',),
-    'generate': ('reports/', 'generated/'),
+    # The generator also refreshes the static Pages dashboard.  It is a
+    # generated view, rather than user-maintained web source, so it is an
+    # explicitly allow-listed write target.
+    'generate': ('reports/', 'generated/', 'web/data/'),
     'lock': ('reports/',),
     'publish': ('reports/', 'publish-log/'),
-    'republish': ('reports/', 'publish-log/', 'generated/'),
+    'republish': ('reports/', 'publish-log/', 'generated/', 'web/data/'),
 }
 
 def git(*args, cwd=None, check=True):

@@ -17,7 +17,9 @@ public sealed class V4ReportGenerator(V4Repository repository)
         var hash = "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(content))).ToLowerInvariant();
         var health = providerStatuses.Any(x => !x.Status.Equals("HEALTHY", StringComparison.OrdinalIgnoreCase)) ? "DEGRADED" : "HEALTHY";
         var artwork = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
-            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase)).ToList();
+            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase))
+            .Select(PublicArtworkMetadata)
+            .ToList();
         var report = new ReportRevision
         {
             Date = date,
@@ -109,6 +111,15 @@ public sealed class V4ReportGenerator(V4Repository repository)
         => "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(
             System.Text.Json.JsonSerializer.Serialize(new { content, artwork }, V4Repository.JsonOptions)))).ToLowerInvariant();
     private static string Short(string value) => value[..Math.Min(7, value.Length)];
+    private static ArtworkRecord PublicArtworkMetadata(ArtworkRecord artwork)
+    {
+        // Reports are public Git artifacts.  A legacy desktop database can
+        // contain a local cache filename, so only an https thumbnail is safe
+        // to snapshot into a report revision.
+        var thumbnail = Uri.TryCreate(artwork.ThumbnailUrl, UriKind.Absolute, out var uri) && uri.Scheme == Uri.UriSchemeHttps
+            ? artwork.ThumbnailUrl : string.Empty;
+        return artwork with { ThumbnailUrl = thumbnail };
+    }
     private static string DisplayGame(string value) => value.Trim().ToUpperInvariant() switch
     {
         "GENSHIN" => "原神", "STARRAIL" => "崩坏：星穹铁道", "NTE" => "异环", "HI3" => "崩坏3", "ZZZ" => "绝区零", "WUWA" => "鸣潮", _ => value
