@@ -84,7 +84,17 @@ try
                     break;
                 }
             }
-            Print(new V4PublishService(repository).PublishDryRun(date, Option("--workflow-run") ?? "LOCAL_POC", now));
+            try
+            {
+                Print(new V4PublishService(repository).PublishDryRun(date, Option("--workflow-run") ?? "LOCAL_POC", now));
+            }
+            catch (InvalidOperationException error) when (error.Message.StartsWith("Idempotency guard:", StringComparison.Ordinal))
+            {
+                // A racing watchdog invocation must be a successful no-op, not
+                // a failed workflow.  PublishDryRun retains the same guard as
+                // the final defense in case a log appeared after the precheck.
+                Print(new { status = "SKIPPED_ALREADY_PUBLISHED", date, reason = error.Message });
+            }
             break;
         case "republish":
             EnsureDryRun();
