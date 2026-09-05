@@ -1,6 +1,12 @@
 const stateLabels = {
   NOT_GENERATED: "尚未生成", READY: "已生成 · 待自动发布", LOCKED_MANUAL: "已人工锁定",
-  LOCKED_AUTO: "已自动锁定", PUBLISHED: "已真实发布", DRY_RUN_SUCCEEDED: "Dry Run 已完成", FAILED: "失败"
+  LOCKED_AUTO: "已自动锁定", PUBLISHED: "已真实发布", DRY_RUN_SUCCEEDED: "演练完成",
+  REPUBLICATION_READY: "准备重新发布", SUPERSEDED: "已被后续版本替代", FAILED: "失败"
+};
+
+const providerStatusLabels = {
+  HEALTHY: "正常", DEGRADED: "部分来源异常", LOGIN_REQUIRED: "需要登录凭据",
+  RATE_LIMITED: "请求受限", BLOCKED: "来源访问受阻", FAILED: "失败", UNKNOWN: "未知"
 };
 
 async function loadDashboard() {
@@ -16,7 +22,7 @@ async function loadDashboard() {
   document.querySelector("#publish-time").textContent = data.publishTime;
   document.querySelector("#revision").textContent = data.revision;
   document.querySelector("#generated-at").textContent = formatTime(data.generatedAt);
-  document.querySelector("#health").textContent = data.health;
+  document.querySelector("#health").textContent = providerStatusLabels[data.health] ?? data.health;
   document.querySelector("#artwork-pending").textContent = data.artworkPending;
   document.querySelector("#conflicts").textContent = data.conflictCount;
   document.querySelector("#report-preview").textContent = report;
@@ -41,7 +47,7 @@ function renderProviders(providers) {
   if (!providers?.length) return;
   document.querySelector("#providers").innerHTML = providers.map(item => `
     <div class="provider-row"><div><strong>${escapeHtml(item.provider)}</strong><p>${escapeHtml(item.message)}</p></div>
-    <span class="provider-status ${item.status === "HEALTHY" ? "" : "bad"}">${escapeHtml(item.status)}</span></div>`).join("");
+    <span class="provider-status ${item.status === "HEALTHY" ? "" : "bad"}">${escapeHtml(providerStatusLabels[item.status] ?? item.status)}</span></div>`).join("");
 }
 
 function formatTime(value) {
