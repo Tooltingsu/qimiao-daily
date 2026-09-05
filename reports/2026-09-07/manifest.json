@@ -1,12 +1,12 @@
 {
   "date": "2026-09-07",
   "latestRevision": 1,
-  "lockedRevision": null,
-  "state": "READY",
+  "lockedRevision": 1,
+  "state": "DRY_RUN_SUCCEEDED",
   "sourceCommit": "6a85555daa262a5459990669a746a178d97ea039",
   "reportHash": "sha256:777b068eac5c062ebf4d0e4c937f215e4b990809b273c0befe4443964db28297",
   "generatedAt": "2026-09-05T14:51:30.1455313+00:00",
-  "lockedAt": null,
-  "lockReason": null,
+  "lockedAt": "2026-09-07T18:31:00+08:00",
+  "lockReason": "AUTO_DEADLINE",
   "publishedAt": null
 }
