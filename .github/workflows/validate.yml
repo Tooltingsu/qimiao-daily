@@ -19,6 +19,6 @@ jobs:
       - run: dotnet restore src/QimiaoDaily.V4/QimiaoDaily.V4.csproj
       - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --no-restore
       - run: dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- validate --root .
-      - run: dotnet test tests/QimiaoDaily.Core.Tests/QimiaoDaily.Core.Tests.csproj -c Release --no-restore
-      - run: dotnet test tests/QimiaoDaily.Collectors.Tests/QimiaoDaily.Collectors.Tests.csproj -c Release --no-restore
-      - run: dotnet test tests/QimiaoDaily.V4.Tests/QimiaoDaily.V4.Tests.csproj -c Release --no-restore
+      - run: dotnet test tests/QimiaoDaily.Core.Tests/QimiaoDaily.Core.Tests.csproj -c Release
+      - run: dotnet test tests/QimiaoDaily.Collectors.Tests/QimiaoDaily.Collectors.Tests.csproj -c Release
+      - run: dotnet test tests/QimiaoDaily.V4.Tests/QimiaoDaily.V4.Tests.csproj -c Release
