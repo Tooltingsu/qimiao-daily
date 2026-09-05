@@ -14,6 +14,20 @@
       "error": null,
       "dryRun": true,
       "reason": null
+    },
+    {
+      "revision": 2,
+      "reportHash": "sha256:777b068eac5c062ebf4d0e4c937f215e4b990809b273c0befe4443964db28297",
+      "sourceCommit": "e349be97dc3fca9cbb58a4a485f06655b55a2b27",
+      "qqPostId": null,
+      "qqMessageId": null,
+      "attemptedAt": "2026-09-05T14:57:00.800645+00:00",
+      "publishedAt": null,
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/33973293292",
+      "status": "DRY_RUN_SUCCEEDED",
+      "error": null,
+      "dryRun": true,
+      "reason": "V4-B idempotency correction test"
     }
   ]
 }
