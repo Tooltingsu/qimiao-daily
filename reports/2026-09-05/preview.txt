@@ -21,9 +21,12 @@
 -崩坏：星穹铁道 4.5上半【知更鸟·晴歌、风堇】（08-26 11:00～09-12 12:00）
 
 BGI 更新
--fix: 点「AI推理设备设置 - 更多」打不开窗口 (#3604) (05efd0c)
--采集cd管理 補充部份模版匹配圖片 (#3614) (4f52b12)
--update repo.json [skip ci] (abc8e33)
+-移除自动地脉花手动寻路并细分通知 (#3605) (a0f0983)
+-修复日志分析无法识别 fakeLog 的问题 (639ccfb)
+-Update version to 0.64.2-alpha.1 (cca51e1)
+-update repo.json [skip ci] (50d8b99)
+-同步 AutoCommissionNova 1.0.3 (#3616) (09e18e2)
+-至冬新增特产 金蕨采集路线 (#3618) (45a178c)
 
 美图分享
 胡桃 原神 来源：pixiv

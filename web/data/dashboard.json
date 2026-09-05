@@ -1,10 +1,10 @@
 {
   "date": "2026-09-05",
-  "state": "PUBLISHED",
+  "state": "DRYRUNSUCCEEDED",
   "publishTime": "18:30",
   "revision": 2,
   "generatedAt": "2026-09-05T03:33:12.7168407+00:00",
-  "publishedAt": "2026-09-05T03:33:12.7168407+00:00",
+  "publishedAt": null,
   "health": "HEALTHY",
   "manualCounts": {
     "\u6D3B\u52A8": 23,
@@ -15,8 +15,8 @@
   "automaticCounts": {
     "\u5468\u671F\u73A9\u6CD5": 20,
     "\u5B98\u65B9\u89C6\u9891": 34,
-    "BGI \u672C\u4F53": 1,
-    "BGI Scripts": 2,
+    "BGI \u672C\u4F53": 3,
+    "BGI Scripts": 3,
     "\u7F8E\u56FE\u5019\u9009": 130
   },
   "artworkPending": 128,
@@ -26,16 +26,44 @@
     {
       "provider": "GitHub:babalae/better-genshin-impact",
       "status": "HEALTHY",
-      "message": "Collected 1 commit(s).",
-      "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+      "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
       "usedCachedData": false
     },
     {
       "provider": "GitHub:babalae/bettergi-scripts-list",
       "status": "HEALTHY",
-      "message": "Collected 2 commit(s).",
-      "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+      "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
       "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili returned 412; official account feed needs retry or user-authorized session.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "LOGIN_REQUIRED",
+      "message": "PIXIV_SESSION is not configured; retained metadata cache.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": true
     }
   ]
 }
