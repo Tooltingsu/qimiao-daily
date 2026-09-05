@@ -34,8 +34,13 @@ def persist(kind, message, cwd=None, branch='main'):
         git('fetch', 'origin', branch, cwd=cwd)
         rebased = git('rebase', 'origin/' + branch, cwd=cwd, check=False)
         if rebased.returncode:
-            git('rebase', '--abort', cwd=cwd)
-            raise RuntimeError('Git conflict: rebase aborted, remote not overwritten.')
+            # `rebase --abort` is only valid after Git has entered a rebase
+            # state.  Preserve the original failure details even when setup
+            # itself failed before that point (for example a repository state
+            # problem), while still never resolving/overwriting remotely.
+            git('rebase', '--abort', cwd=cwd, check=False)
+            detail = (rebased.stderr or rebased.stdout).strip().replace('\n', ' ')
+            raise RuntimeError('Git rebase failed; remote not overwritten. ' + detail)
         pushed = git('push', 'origin', 'HEAD:' + branch, cwd=cwd, check=False)
         if not pushed.returncode:
             return {'status': 'COMMITTED', 'files': len(set(changed)), 'commit': git('rev-parse', 'HEAD', cwd=cwd).stdout.strip(), 'attempt': attempt + 1}
