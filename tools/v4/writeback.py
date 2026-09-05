@@ -46,16 +46,22 @@ def persist(kind, message, cwd=None, branch='main'):
 
     for attempt in range(3):
         git('fetch', 'origin', branch, cwd=cwd)
-        rebased = git('rebase', 'origin/' + branch, cwd=cwd, check=False)
-        if rebased.returncode:
-            # `rebase --abort` is only valid after Git has entered a rebase
-            # state.  Preserve the original failure details even when setup
-            # itself failed before that point (for example a repository state
-            # problem), while still never resolving/overwriting remotely.
-            git('rebase', '--abort', cwd=cwd, check=False)
-            detail = (rebased.stderr or rebased.stdout).strip().replace('\n', ' ')
-            dirty = git('status', '--porcelain', cwd=cwd, check=False).stdout.replace('\n', '; ')
-            raise RuntimeError('Git rebase failed; remote not overwritten. ' + detail + ' residual=' + (dirty or '<none>'))
+        # Skip rebase when the freshly fetched remote is already the parent of
+        # this writeback commit.  Besides being cheaper, this avoids a needless
+        # checkout touching generated text files on CI.  A genuinely advanced
+        # remote is still rebased safely and never force-pushed.
+        needs_rebase = git('merge-base', '--is-ancestor', 'origin/' + branch, 'HEAD', cwd=cwd, check=False).returncode != 0
+        if needs_rebase:
+            rebased = git('rebase', 'origin/' + branch, cwd=cwd, check=False)
+            if rebased.returncode:
+                # `rebase --abort` is only valid after Git has entered a rebase
+                # state.  Preserve the original failure details even when setup
+                # itself failed before that point (for example a repository state
+                # problem), while still never resolving/overwriting remotely.
+                git('rebase', '--abort', cwd=cwd, check=False)
+                detail = (rebased.stderr or rebased.stdout).strip().replace('\n', ' ')
+                dirty = git('status', '--porcelain', cwd=cwd, check=False).stdout.replace('\n', '; ')
+                raise RuntimeError('Git rebase failed; remote not overwritten. ' + detail + ' residual=' + (dirty or '<none>'))
         pushed = git('push', 'origin', 'HEAD:' + branch, cwd=cwd, check=False)
         if not pushed.returncode:
             return {'status': 'COMMITTED', 'files': len(set(changed)), 'commit': git('rev-parse', 'HEAD', cwd=cwd).stdout.strip(), 'attempt': attempt + 1}
