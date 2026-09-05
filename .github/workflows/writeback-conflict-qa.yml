@@ -1,0 +1,79 @@
+name: Verify V4 safe Git write-back conflict handling
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-conflict-handling:
+    # This is deliberately a disposable remote branch, never main.  It proves
+    # the same fetch/rebase/no-force behavior used by writeback.py.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Test non-conflicting rebase and conflicting rebase abort
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch="qa/v4-writeback-${GITHUB_RUN_ID}"
+          auth_url="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          cleanup() { git -C seed push origin --delete "$branch" >/dev/null 2>&1 || true; rm -rf seed writer-a writer-b writer-c writer-d; }
+          trap cleanup EXIT
+
+          git clone --quiet "$auth_url" seed
+          git -C seed checkout --quiet -b "$branch" origin/main
+          git -C seed config user.name "qimiao-automation[bot]"
+          git -C seed config user.email "qimiao-automation[bot]@users.noreply.github.com"
+          mkdir -p seed/generated
+          printf '{"value":"base"}\n' > seed/generated/.v4-writeback-conflict-qa.json
+          git -C seed add generated/.v4-writeback-conflict-qa.json
+          git -C seed commit --quiet -m "test: establish V4 writeback conflict fixture"
+          git -C seed push --quiet origin "$branch"
+
+          git clone --quiet --branch "$branch" "$auth_url" writer-a
+          git clone --quiet --branch "$branch" "$auth_url" writer-b
+          for repo in writer-a writer-b; do
+            git -C "$repo" config user.name "qimiao-automation[bot]"
+            git -C "$repo" config user.email "qimiao-automation[bot]@users.noreply.github.com"
+          done
+          printf '{"writer":"a"}\n' > writer-a/generated/.v4-writeback-a.json
+          git -C writer-a add generated/.v4-writeback-a.json && git -C writer-a commit --quiet -m "test: writer a"
+          printf '{"writer":"b"}\n' > writer-b/generated/.v4-writeback-b.json
+          git -C writer-b add generated/.v4-writeback-b.json && git -C writer-b commit --quiet -m "test: writer b"
+          git -C writer-a push --quiet origin "$branch"
+          ! git -C writer-b push origin "$branch" >/dev/null 2>&1
+          git -C writer-b fetch --quiet origin "$branch"
+          git -C writer-b rebase --quiet "origin/$branch"
+          git -C writer-b push --quiet origin "$branch"
+
+          git clone --quiet --branch "$branch" "$auth_url" writer-c
+          git clone --quiet --branch "$branch" "$auth_url" writer-d
+          for repo in writer-c writer-d; do
+            git -C "$repo" config user.name "qimiao-automation[bot]"
+            git -C "$repo" config user.email "qimiao-automation[bot]@users.noreply.github.com"
+          done
+          printf '{"value":"remote"}\n' > writer-c/generated/.v4-writeback-conflict-qa.json
+          git -C writer-c add generated/.v4-writeback-conflict-qa.json && git -C writer-c commit --quiet -m "test: remote side"
+          printf '{"value":"local"}\n' > writer-d/generated/.v4-writeback-conflict-qa.json
+          git -C writer-d add generated/.v4-writeback-conflict-qa.json && git -C writer-d commit --quiet -m "test: local side"
+          git -C writer-c push --quiet origin "$branch"
+          ! git -C writer-d push origin "$branch" >/dev/null 2>&1
+          git -C writer-d fetch --quiet origin "$branch"
+          if git -C writer-d rebase "origin/$branch"; then
+            echo "Expected rebase conflict did not occur." >&2
+            exit 1
+          fi
+          git -C writer-d rebase --abort
+          test "$(git -C writer-d status --porcelain)" = ""
+          test "$(git -C writer-c show "origin/$branch:generated/.v4-writeback-conflict-qa.json")" = '{"value":"remote"}'
+          echo "### V4 write-back conflict QA" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Different paths: rejected push → fetch/rebase → normal push: PASS" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Same path: rejected push → rebase conflict → abort/no force: PASS" >> "$GITHUB_STEP_SUMMARY"
