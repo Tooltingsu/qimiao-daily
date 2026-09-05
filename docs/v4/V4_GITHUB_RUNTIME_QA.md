@@ -4,7 +4,7 @@ Status: **PASS — V4-B hosted-runtime validation.** Every entry below is a real
 
 | Workflow | Run ID | Commit / date | Expected | Actual | Status |
 | --- | ---: | --- | --- | --- | --- |
-| Validate | [33972740315](https://github.com/Tooltingsu/qimiao-daily/actions/runs/33972740315) | `97ae755` | Portable V4 build, validation and tests on Ubuntu | .NET 8 build, Core/Collectors/V4 tests and semantic validation passed. | PASS |
+| Validate | [33974422701](https://github.com/Tooltingsu/qimiao-daily/actions/runs/33974422701) | `730ea6f` | Portable V4 build, validation and tests on Ubuntu | Final V4-B commit: .NET 8 build, Core/Collectors/V4 tests and semantic validation passed. | PASS |
 | Calculate | [33956484700](https://github.com/Tooltingsu/qimiao-daily/actions/runs/33956484700) | 2026-09-05 | Compute endgame/calendar and write generated data | Real runner write-back succeeded. | PASS |
 | Collect | [33956486504](https://github.com/Tooltingsu/qimiao-daily/actions/runs/33956486504) | 2026-09-05 | BGI window and media provider states | BGI main=3, scripts=1 in `[D-1 18:00,D 18:00)` Shanghai window; Genshin/Star Rail HEALTHY; NTE 412 recorded; Pixiv LOGIN_REQUIRED. | PASS / DEGRADED recorded |
 | Generate | [33972790575](https://github.com/Tooltingsu/qimiao-daily/actions/runs/33972790575) | 2026-09-05 | Immutable revision and Pages projection | Revision 005 generated, committed and projected; confirmed artwork snapshot preserved. | PASS |
