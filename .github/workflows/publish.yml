@@ -1,0 +1,50 @@
+name: Publish V4 report watchdog (DRY RUN)
+
+on:
+  schedule:
+    - cron: "25,30,35,40,45,50 10 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Report date (yyyy-MM-dd); blank uses Shanghai today
+        required: false
+        type: string
+      bypass_watchdog:
+        description: Allow a manual dry run outside the publish window
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-repository-writer
+  cancel-in-progress: false
+
+jobs:
+  dry-run-publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: qq-publish-dry-run
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Lock and exercise idempotency without QQ credentials
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          BYPASS_WATCHDOG: ${{ inputs.bypass_watchdog }}
+        run: |
+          REPORT_DATE="${INPUT_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          WATCHDOG=true
+          if [ "$BYPASS_WATCHDOG" = "true" ]; then WATCHDOG=false; fi
+          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- publish --root . --date "$REPORT_DATE" --watchdog "$WATCHDOG" --dry-run true --workflow-run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - name: Persist lock and dry-run log
+        run: |
+          git config user.name "qimiao-automation[bot]"
+          git config user.email "qimiao-automation[bot]@users.noreply.github.com"
+          git add reports/ publish-log/
+          git diff --cached --quiet || git commit -m "chore(v4): record publish dry run"
+          git push

@@ -1,0 +1,34 @@
+<Window x:Class="QimiaoDaily.Desktop.ManualEventEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:QimiaoDaily.Desktop.Localization"
+        Title="活动编辑" Width="500" SizeToContent="Height" MaxHeight="720"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Background="#101427">
+  <Window.Resources>
+    <local:DisplayNameConverter x:Key="DisplayNameConverter"/>
+    <DataTemplate x:Key="GameOptionTemplate"><TextBlock Text="{Binding Converter={StaticResource DisplayNameConverter},ConverterParameter=game}"/></DataTemplate>
+    <Style TargetType="TextBox"><Setter Property="Background" Value="#151A2F"/><Setter Property="Foreground" Value="White"/><Setter Property="BorderBrush" Value="#5A6FA8"/><Setter Property="Padding" Value="7,4"/></Style>
+  </Window.Resources>
+  <Border Background="#1A203A" BorderBrush="#3B4771" BorderThickness="1" CornerRadius="10" Padding="20" Margin="8">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <StackPanel>
+        <TextBlock Text="{Binding ManualEventEditorModeText}" FontSize="19" FontWeight="SemiBold" Foreground="White" Margin="0,0,0,16"/>
+        <TextBlock Text="所属游戏" Foreground="#C5CBE8"/>
+        <ComboBox ItemsSource="{Binding ManualGameOptions}" ItemTemplate="{StaticResource GameOptionTemplate}" SelectedItem="{Binding ManualGame,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+        <TextBlock Text="活动名称（日报显示名称）" Foreground="#C5CBE8"/>
+        <TextBox Text="{Binding ManualEventName,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+        <TextBlock Text="开始日期时间（Asia/Shanghai，yyyy-MM-dd HH:mm）" Foreground="#C5CBE8"/>
+        <TextBox Text="{Binding ManualEventStart,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" ToolTip="仅填写日期时默认 04:00"/>
+        <TextBlock Text="结束日期时间（Asia/Shanghai，yyyy-MM-dd HH:mm）" Foreground="#C5CBE8"/>
+        <TextBox Text="{Binding ManualEventEnd,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" ToolTip="仅填写日期时默认 03:59"/>
+        <TextBlock Text="备注（可选）" Foreground="#C5CBE8"/>
+        <TextBox Text="{Binding ManualEventNotes,UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" Height="70" TextWrapping="Wrap" Margin="0,4,0,14"/>
+        <TextBlock Text="开始时间仅填日期时默认 04:00，结束时间仅填日期时默认 03:59。" Foreground="#9AA4D7" TextWrapping="Wrap" Margin="0,0,0,14"/>
+        <WrapPanel HorizontalAlignment="Right">
+          <Button Content="取消" Click="Cancel_Click" Padding="12,5" Background="#323A67" Foreground="White"/>
+          <Button Content="确定并保存" Click="Save_Click" Padding="12,5" Margin="8,0,0,0" Background="#365E68" Foreground="White"/>
+        </WrapPanel>
+      </StackPanel>
+    </ScrollViewer>
+  </Border>
+</Window>

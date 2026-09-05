@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily endgame overrides",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["ruleId", "scheduledStart", "suppressed", "notes"],
+    "properties": {
+      "ruleId": { "type": "string", "minLength": 1 },
+      "scheduledStart": { "type": "string", "format": "date" },
+      "startsOn": {},
+      "startTime": {},
+      "endsOn": {},
+      "endTime": {},
+      "suppressed": { "type": "boolean" },
+      "notes": { "type": "string" }
+    }
+  }
+}

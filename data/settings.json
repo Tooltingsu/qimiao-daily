@@ -1,0 +1,14 @@
+{
+  "$schema": "../schemas/settings.schema.json",
+  "timeZone": "Asia/Shanghai",
+  "publishTime": "18:30",
+  "defaultBranch": "main",
+  "repositoryUrl": "https://github.com/Tooltingsu/qimiao-daily",
+  "artworkTargetCount": 30,
+  "bgiRepositories": [
+    "babalae/better-genshin-impact",
+    "babalae/bettergi-scripts-list"
+  ],
+  "qqChannelId": "BLOCKED_BY_USER",
+  "qqForumId": "BLOCKED_BY_USER"
+}

@@ -1,0 +1,11 @@
+{
+  "bgiRepositories": [
+    "babalae/better-genshin-impact",
+    "babalae/bettergi-scripts-list"
+  ],
+  "artwork": {
+    "dailyRankingLimit": 30,
+    "targetCount": 30,
+    "directArtworkIds": []
+  }
+}

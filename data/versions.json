@@ -1,0 +1,32 @@
+[
+  {
+    "id": "63dce13c-a7ac-4c2c-b09e-336c9560a0e5",
+    "game": "GENSHIN",
+    "versionNumber": "7.0",
+    "versionName": "",
+    "startAt": "2026-08-12T11:00:00+08:00",
+    "endAt": "2026-09-22T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  },
+  {
+    "id": "a40df4a9-bba1-4aae-8e5f-cf14d37a2123",
+    "game": "STARRAIL",
+    "versionNumber": "4.5",
+    "versionName": "",
+    "startAt": "2026-08-26T11:00:00+08:00",
+    "endAt": "2026-09-29T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  },
+  {
+    "id": "6b410270-4f8a-4d92-9aa0-ca90c44ae55b",
+    "game": "NTE",
+    "versionNumber": "1.3",
+    "versionName": "",
+    "startAt": "2026-08-13T11:00:00+08:00",
+    "endAt": "2026-09-24T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  }
+]

@@ -1,0 +1,31 @@
+name: 修改 V4 人工数据
+description: 提交活动、卡池、版本、生日、纪念日或周期玩法调整
+title: "[V4 数据] "
+labels: ["v4-data"]
+body:
+  - type: dropdown
+    id: data_type
+    attributes:
+      label: 数据类型
+      options: [活动, 卡池, 游戏版本, 生日, 纪念日, 周期玩法特殊调整]
+    validations:
+      required: true
+  - type: textarea
+    id: payload
+    attributes:
+      label: 需要新增或修改的内容
+      description: 请给出名称、所属游戏、起止时间及必要说明。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 来源或说明
+      description: 人工确认依据、官方图片或链接。
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 确认
+      options:
+        - label: 我已检查时间与所属游戏。
+          required: true

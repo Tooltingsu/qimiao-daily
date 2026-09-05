@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+</Project>

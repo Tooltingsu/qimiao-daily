@@ -1,0 +1,22 @@
+name: Validate V4 data and code
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet restore QimiaoDaily.sln
+      - run: dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- validate --root .
+      - run: dotnet test tests/QimiaoDaily.V4.Tests/QimiaoDaily.V4.Tests.csproj -c Release --no-restore
+

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily manual banners",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "game", "name", "type", "startAt", "endAt", "characters", "notes", "enabled"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "game": { "type": "string", "minLength": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "type": { "type": "string", "minLength": 1 },
+      "startAt": { "type": "string", "format": "date-time" },
+      "endAt": { "type": "string", "format": "date-time" },
+      "characters": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+      "notes": { "type": "string" },
+      "enabled": { "type": "boolean" }
+    }
+  }
+}

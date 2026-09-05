@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>绮喵日报 · V4 控制中心</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">QIMIAO DAILY · V4 POC</p>
+        <h1>绮喵日报</h1>
+        <p id="report-date" class="date">正在读取日报状态…</p>
+      </div>
+      <div class="status-card">
+        <span id="state-dot" class="status-dot"></span>
+        <div><small>当前状态</small><strong id="state">读取中</strong></div>
+      </div>
+    </header>
+
+    <section class="summary-grid" aria-label="日报摘要">
+      <article class="summary-card"><span>发布时间</span><strong id="publish-time">--:--</strong></article>
+      <article class="summary-card"><span>Revision</span><strong id="revision">0</strong></article>
+      <article class="summary-card"><span>最后生成</span><strong id="generated-at">尚未生成</strong></article>
+      <article class="summary-card"><span>来源健康</span><strong id="health">UNKNOWN</strong></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel report-panel">
+        <div class="panel-heading"><div><p class="eyebrow">TODAY</p><h2>完整日报</h2></div><button id="copy-report" class="button secondary" type="button">复制日报</button></div>
+        <pre id="report-preview" tabindex="0">今日日报尚未生成。</pre>
+      </article>
+
+      <aside class="side-stack">
+        <article class="panel">
+          <div class="panel-heading"><h2>数据概览</h2></div>
+          <h3>人工数据</h3><div id="manual-counts" class="metric-list"></div>
+          <h3>自动数据</h3><div id="automatic-counts" class="metric-list"></div>
+        </article>
+        <article class="panel attention">
+          <div class="panel-heading"><h2>需要处理</h2></div>
+          <div class="attention-row"><span>美图待审核</span><strong id="artwork-pending">0</strong></div>
+          <div class="attention-row"><span>数据冲突</span><strong id="conflicts">0</strong></div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">SOURCE HEALTH</p><h2>采集状态</h2></div></div>
+      <div id="providers" class="provider-list"><p class="muted">暂无采集记录。</p></div>
+    </section>
+
+    <nav class="actions" aria-label="GitHub 操作入口">
+      <a id="edit-data" class="button primary" href="#">前往编辑数据</a>
+      <a id="run-generate" class="button secondary" href="#">运行重新生成</a>
+      <a id="view-actions" class="button ghost" href="#">查看 Actions</a>
+    </nav>
+    <footer>静态控制中心 · 不保存 QQ Secret、GitHub PAT 或 Pixiv Session</footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

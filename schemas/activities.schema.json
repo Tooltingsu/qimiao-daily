@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily manual activities",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "game", "name", "startAt", "endAt", "notes", "enabled"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "game": { "type": "string", "minLength": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "startAt": { "type": "string", "format": "date-time" },
+      "endAt": { "type": "string", "format": "date-time" },
+      "notes": { "type": "string" },
+      "enabled": { "type": "boolean" }
+    }
+  }
+}

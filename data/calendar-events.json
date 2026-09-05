@@ -1,0 +1,332 @@
+[
+  {
+    "id": "195bed3e-b2aa-4dea-a925-de20f8be02d9",
+    "eventDate": "2026-08-10",
+    "kind": "GAME",
+    "title": "\u7B2C\u4E94\u671F\u300C\u783A\u884C\u4FEE\u8FDC\u300D\u65B0\u589E\u53EF\u90095\u661F\u89D2\u8272\u547D\u661F",
+    "detail": "\u539F\u795E | 2026-08-10 - 2026-11-02 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "5b823816-e97c-4521-ac00-e44a73908667",
+    "eventDate": "2026-08-12",
+    "kind": "GAME",
+    "title": "\u300C\u65E0\u795E\u601C\u7231\u7684\u51BB\u571F\u300D\u533A\u57DF\u63A2\u7D22",
+    "detail": "\u539F\u795E | 2026-08-12 - 2026-11-03 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "146b1945-50c8-43bf-b344-9ceefc06e19d",
+    "eventDate": "2026-08-12",
+    "kind": "GAME",
+    "title": "\u6D3B\u52A8\u300C\u65B0\u82BD\u76F8\u52A9\u00B7\u521D\u63A2\u96EA\u539F\u300D",
+    "detail": "\u539F\u795E | 2026-08-12 - 2026-08-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "cf645898-4bf2-40af-9c6b-640e5a83c089",
+    "eventDate": "2026-08-12",
+    "kind": "GAME",
+    "title": "\u9B54\u795E\u4EFB\u52A1\u300C\u65E0\u795E\u601C\u7231\u7684\u96EA\u56FD\u300D\u9650\u5B9A\u5956\u52B1",
+    "detail": "\u539F\u795E | 2026-08-12 - 2026-09-22 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "5609a067-9f00-4cd2-bd60-176c5814920a",
+    "eventDate": "2026-08-12",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u963F\u857E\u5947\u8BFA",
+    "detail": "\u539F\u795E | 2026-08-12 - 2026-09-01 | User-provided calendar screenshot; phase 1 wish",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "528b0f8f-41a4-4c05-9981-74bf2dc9e28d",
+    "eventDate": "2026-08-12",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u5965\u9EDB\u5854",
+    "detail": "\u539F\u795E | 2026-08-12 - 2026-09-01 | User-provided calendar screenshot; phase 1 wish",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "20b89ef2-e58e-4f02-b804-d9e6d2667106",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u5355\u9A91\u7834\u6D6A",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "28546af4-2231-4cbf-8cdb-dbc98d95728c",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u73AF\u671F\u8D60\u793C\u3008\u4E03\u65E5\u7B7E\u5230\u3009",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "9043f4dc-0ca6-43e8-a895-6870d7ef1d36",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u6D3B\u52A8\u300C\u6392\u7403\u4E4B\u661F\u300D",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "39f3b9d5-c3bd-498c-89c9-84c0a683f0d7",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u6B8B\u8679",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-03 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "d1553958-2f2c-4e86-b869-95dda8f8d994",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u5A1C\u5A1C\u8389",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-03 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "3232852b-2a22-41f6-baa3-91ab46c7582f",
+    "eventDate": "2026-08-13",
+    "kind": "GAME",
+    "title": "\u4E89\u950B\u5BA3\u8A00",
+    "detail": "\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "3152738a-f3b6-49d1-ae40-7c05f7e3b081",
+    "eventDate": "2026-08-17",
+    "kind": "GAME",
+    "title": "\u6D3B\u529B\u71C3\u80FD",
+    "detail": "\u5F02\u73AF | 2026-08-17 - 2026-08-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "d14fa41e-6cba-4d2e-947e-ed1f022af31b",
+    "eventDate": "2026-08-19",
+    "kind": "GAME",
+    "title": "\u5E7D\u5883\u5371\u6218",
+    "detail": "\u539F\u795E | 2026-08-19 - 2026-08-29 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "03e2b6ea-86a8-45d1-9724-6c78fe4fab2f",
+    "eventDate": "2026-08-21",
+    "kind": "GAME",
+    "title": "\u9057\u95FB\u5BFB\u73CD",
+    "detail": "\u5F02\u73AF | 2026-08-21 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "0f64479d-ae99-4035-beb8-24a919806ec2",
+    "eventDate": "2026-08-21",
+    "kind": "GAME",
+    "title": "\u70DB\u5929\u73AF\u7EBF\u300A\u8F68\u5916\u4E4B\u5883\u300B",
+    "detail": "\u5F02\u73AF | 2026-08-21 - 2026-09-04 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "e107f9fe-b0d9-4658-aa06-4b9b24a33fd1",
+    "eventDate": "2026-08-24",
+    "kind": "GAME",
+    "title": "\u593A\u91D1\u5927\u4F5C\u6218",
+    "detail": "\u5F02\u73AF | 2026-08-24 - 2026-09-07 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "80f95eb6-d861-440d-9dba-064c0eb403e1",
+    "eventDate": "2026-08-26",
+    "kind": "GAME",
+    "title": "\u8D85\u9650\uFF1A\u72C2\u98D9\u5927\u5956\u8D5B",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-08-26 - 2026-09-28 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "d87743ad-1e6e-45f0-bf6d-e228740c8bba",
+    "eventDate": "2026-08-26",
+    "kind": "GAME",
+    "title": "\u5DE1\u661F\u4E4B\u793C",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-08-26 - 2026-09-28 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "ac7c684a-b8e3-43a3-af8c-4ec68487d9a7",
+    "eventDate": "2026-08-28",
+    "kind": "GAME",
+    "title": "\u6D3B\u52A8\u300C\u9669\u5883\u5F81\u8005\u7ADE\u950B\u5927\u8D5B\u300D",
+    "detail": "\u539F\u795E | 2026-08-28 - 2026-09-14 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/genshin-7.0-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "d0c24d52-dbbb-4e38-a3cd-405bfb97b761",
+    "eventDate": "2026-08-31",
+    "kind": "GAME",
+    "title": "\u672B\u65E5\u5E7B\u5F71",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-08-31 - 2026-10-05 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "13ecf1d7-3338-45f9-9fa2-d2620ead526c",
+    "eventDate": "2026-09-03",
+    "kind": "GAME",
+    "title": "\u8F68\u5916\u56DE\u54CD",
+    "detail": "\u5F02\u73AF | 2026-09-03 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "db08e1f6-5b78-4358-bb50-d5ab3f576aba",
+    "eventDate": "2026-09-03",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u7075\u53EF",
+    "detail": "\u5F02\u73AF | 2026-09-03 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "4daf492c-010f-44f3-9563-899e62d0d7e8",
+    "eventDate": "2026-09-03",
+    "kind": "GAME",
+    "title": "\u7948\u613F\u00B7\u6D54",
+    "detail": "\u5F02\u73AF | 2026-09-03 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "0117731d-e5bb-46df-9af1-ad7de4945133",
+    "eventDate": "2026-09-04",
+    "kind": "GAME",
+    "title": "\u5E7D\u8BED\u73AF\u7EBF\u300A\u8F68\u5916\u4E4B\u5883\u300B",
+    "detail": "\u5F02\u73AF | 2026-09-04 - 2026-09-18 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "c8ce8837-a825-4649-9af4-f56cfcdd9585",
+    "eventDate": "2026-09-07",
+    "kind": "GAME",
+    "title": "\u5076\u7D20\u6EA2\u51FA",
+    "detail": "\u5F02\u73AF | 2026-09-07 - 2026-09-14 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "6ac7f300-31b0-49ea-8a82-2ecf2f0c5468",
+    "eventDate": "2026-09-07",
+    "kind": "GAME",
+    "title": "\u4F4D\u9762\u5206\u88C2",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-07 - 2026-09-21 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "d78f2a79-3882-4557-b5c1-80722026d0be",
+    "eventDate": "2026-09-11",
+    "kind": "GAME",
+    "title": "\u6E05\u98CE\u9A91\u65C5",
+    "detail": "\u5F02\u73AF | 2026-09-11 - 2026-09-24 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "e6c06dc2-1705-4768-920d-072669d52bae",
+    "eventDate": "2026-09-12",
+    "kind": "GAME",
+    "title": "\u65B9\u5BF8\u5927\u5192\u9669",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-12 - 2026-09-28 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "41bbf1b2-743f-43bf-b570-c28b6ac4cd5c",
+    "eventDate": "2026-09-14",
+    "kind": "GAME",
+    "title": "\u6DD8\u65B9\u65AF\u8BB0",
+    "detail": "\u5F02\u73AF | 2026-09-14 - 2026-09-21 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "04d6f1e6-512a-4267-9720-884b0230b2ce",
+    "eventDate": "2026-09-14",
+    "kind": "GAME",
+    "title": "\u865A\u6784\u53D9\u4E8B",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-14 - 2026-10-19 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "8e741780-1656-407c-9e83-c8aa0bba848c",
+    "eventDate": "2026-09-18",
+    "kind": "GAME",
+    "title": "\u661F\u701A\u73AF\u7EBF\u300A\u8F68\u5916\u4E4B\u5883\u300B",
+    "detail": "\u5F02\u73AF | 2026-09-18 - 2026-10-02 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/nte-0903-calendar.jpg",
+    "enabled": false
+  },
+  {
+    "id": "a1df5a5f-4022-4c04-b922-f32d6a8da034",
+    "eventDate": "2026-09-19",
+    "kind": "GAME",
+    "title": "\u5F02\u5668\u76C8\u754C",
+    "detail": "\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-19 - 2026-09-28 | User-provided calendar screenshot",
+    "source": "qimiao-import.json",
+    "sourceUrl": "file:///C:/Users/30344/AppData/Local/QimiaoDaily/images/calendar-imports/2026-08-29/starrail-4.5-calendar.jpg",
+    "enabled": false
+  }
+]

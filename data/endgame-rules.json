@@ -1,0 +1,101 @@
+[
+  {
+    "ruleId": "GENSHIN_FRENZIED_ONSLAUGHT",
+    "game": "GENSHIN",
+    "name": "\u5E7D\u5883\u5371\u6218\u00B7\u7EB7\u4E71\u7206\u53D1",
+    "ruleKind": "VERSION_FRENZIED",
+    "anchorDate": "2026-01-01",
+    "intervalDays": 1,
+    "timePrecision": "EXACT",
+    "startTime": "10:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "GENSHIN_IMAGINARIUM_THEATER",
+    "game": "GENSHIN",
+    "name": "\u5E7B\u60F3\u771F\u5883\u5267\u8BD7",
+    "ruleKind": "MONTHLY",
+    "anchorDate": "2026-01-01",
+    "intervalDays": 31,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "GENSHIN_SPIRAL_ABYSS",
+    "game": "GENSHIN",
+    "name": "\u6DF1\u5883\u87BA\u65CB",
+    "ruleKind": "MONTHLY",
+    "anchorDate": "2026-01-16",
+    "intervalDays": 31,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "GENSHIN_STYGIAN_ONSLAUGHT",
+    "game": "GENSHIN",
+    "name": "\u5E7D\u5883\u5371\u6218",
+    "ruleKind": "VERSION_STYGIAN",
+    "anchorDate": "2026-01-01",
+    "intervalDays": 1,
+    "timePrecision": "EXACT",
+    "startTime": "10:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "NTE_OUTER_REALM",
+    "game": "NTE",
+    "name": "\u8F68\u5916\u4E4B\u5883",
+    "ruleKind": "INTERVAL",
+    "anchorDate": "2026-08-21",
+    "intervalDays": 14,
+    "timePrecision": "DATE_ONLY",
+    "startTime": null,
+    "enabled": true
+  },
+  {
+    "ruleId": "STARRAIL_APOCALYPTIC_SHADOW",
+    "game": "STARRAIL",
+    "name": "\u672B\u65E5\u5E7B\u5F71",
+    "ruleKind": "INTERVAL",
+    "anchorDate": "2026-08-31",
+    "intervalDays": 42,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "STARRAIL_MEMORY_OF_CHAOS",
+    "game": "STARRAIL",
+    "name": "\u6DF7\u6C8C\u56DE\u5FC6",
+    "ruleKind": "INTERVAL",
+    "anchorDate": "2026-08-17",
+    "intervalDays": 42,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "STARRAIL_PURE_FICTION",
+    "game": "STARRAIL",
+    "name": "\u865A\u6784\u53D9\u4E8B",
+    "ruleKind": "INTERVAL",
+    "anchorDate": "2026-09-14",
+    "intervalDays": 42,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  },
+  {
+    "ruleId": "STARRAIL_SECTOR_ARBITRATION",
+    "game": "STARRAIL",
+    "name": "\u5F02\u76F8\u4EF2\u88C1",
+    "ruleKind": "VERSION_BOUNDED",
+    "anchorDate": "2026-01-01",
+    "intervalDays": 1,
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "enabled": true
+  }
+]

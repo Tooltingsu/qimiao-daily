@@ -1,0 +1,34 @@
+<Window x:Class="QimiaoDaily.Desktop.BirthdayEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:QimiaoDaily.Desktop.Localization"
+        Title="生日编辑" Width="430" SizeToContent="Height" MinHeight="330"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="#101427">
+  <Window.Resources>
+    <local:DisplayNameConverter x:Key="DisplayNameConverter"/>
+    <DataTemplate x:Key="GameOptionTemplate"><TextBlock Text="{Binding Converter={StaticResource DisplayNameConverter},ConverterParameter=game}"/></DataTemplate>
+    <Style TargetType="TextBox"><Setter Property="Background" Value="#151A2F"/><Setter Property="Foreground" Value="White"/><Setter Property="BorderBrush" Value="#5A6FA8"/><Setter Property="Padding" Value="7,4"/></Style>
+  </Window.Resources>
+  <Border Background="#1A203A" BorderBrush="#3B4771" BorderThickness="1" CornerRadius="10" Padding="20" Margin="8">
+    <StackPanel>
+      <TextBlock Text="{Binding BirthdayEditorModeText}" FontSize="19" FontWeight="SemiBold" Foreground="White" Margin="0,0,0,16"/>
+      <TextBlock Text="角色名称" Foreground="#C5CBE8"/>
+      <TextBox Text="{Binding BirthdayCharacter,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+      <TextBlock Text="所属游戏" Foreground="#C5CBE8"/>
+      <ComboBox ItemsSource="{Binding BirthdayFranchiseOptions}" ItemTemplate="{StaticResource GameOptionTemplate}" SelectedItem="{Binding BirthdayFranchise,UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+      <TextBlock Text="生日（月 / 日）" Foreground="#C5CBE8"/>
+      <StackPanel Orientation="Horizontal" Margin="0,4,0,16">
+        <TextBox Text="{Binding BirthdayMonthText,UpdateSourceTrigger=PropertyChanged}" Width="130" ToolTip="月份"/>
+        <TextBlock Text="月" Foreground="#C5CBE8" VerticalAlignment="Center" Margin="7,0"/>
+        <TextBox Text="{Binding BirthdayDayText,UpdateSourceTrigger=PropertyChanged}" Width="130" ToolTip="日期"/>
+        <TextBlock Text="日" Foreground="#C5CBE8" VerticalAlignment="Center" Margin="7,0"/>
+      </StackPanel>
+      <TextBlock Text="保存后可在日历页启用或停用该生日。" Foreground="#9AA4D7" TextWrapping="Wrap" Margin="0,0,0,14"/>
+      <WrapPanel HorizontalAlignment="Right">
+        <Button Content="取消" Click="Cancel_Click" Padding="12,5" Background="#323A67" Foreground="White"/>
+        <Button Content="保存" Click="Save_Click" Padding="12,5" Margin="8,0,0,0" Background="#365E68" Foreground="White"/>
+      </WrapPanel>
+    </StackPanel>
+  </Border>
+</Window>

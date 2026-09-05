@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily V4 settings",
+  "type": "object",
+  "required": ["timeZone", "publishTime", "defaultBranch", "repositoryUrl", "artworkTargetCount", "bgiRepositories", "qqChannelId", "qqForumId"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "timeZone": { "type": "string", "minLength": 1 },
+    "publishTime": { "type": "string", "minLength": 4 },
+    "defaultBranch": { "type": "string", "minLength": 1 },
+    "repositoryUrl": { "type": "string", "format": "uri" },
+    "artworkTargetCount": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "bgiRepositories": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 3 } },
+    "qqChannelId": { "type": "string", "minLength": 1 },
+    "qqForumId": { "type": "string", "minLength": 1 }
+  }
+}

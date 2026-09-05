@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/QimiaoDaily.Core/QimiaoDaily.Core.csproj" />
+    <ProjectReference Include="../../src/QimiaoDaily.Data/QimiaoDaily.Data.csproj" />
+    <ProjectReference Include="../../src/QimiaoDaily.Collectors/QimiaoDaily.Collectors.csproj" />
+    <ProjectReference Include="../../src/QimiaoDaily.Services/QimiaoDaily.Services.csproj" />
+  </ItemGroup>
+</Project>

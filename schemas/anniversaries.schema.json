@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily anniversaries",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "title", "startedOn", "enabled", "notes"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "title": { "type": "string", "minLength": 1 },
+      "startedOn": { "type": "string", "format": "date" },
+      "enabled": { "type": "boolean" },
+      "notes": { "type": "string" }
+    }
+  }
+}

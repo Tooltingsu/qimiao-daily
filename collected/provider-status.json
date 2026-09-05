@@ -1,0 +1,16 @@
+[
+  {
+    "provider": "GitHub:babalae/better-genshin-impact",
+    "status": "HEALTHY",
+    "message": "Collected 1 commit(s).",
+    "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+    "usedCachedData": false
+  },
+  {
+    "provider": "GitHub:babalae/bettergi-scripts-list",
+    "status": "HEALTHY",
+    "message": "Collected 2 commit(s).",
+    "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+    "usedCachedData": false
+  }
+]

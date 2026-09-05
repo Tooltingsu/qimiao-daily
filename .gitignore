@@ -1,0 +1,41 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# IDE and local runtime data
+.vs/
+*.user
+logs/
+cache/
+images/
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Distribution and local-only artifacts
+publish/
+publish-v3/
+publish-*/
+!publish-log/
+!publish-log/**
+node_modules/
+**/node_modules/
+.idea/
+*.log
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.pfx
+*.p12
+*.tmp
+TestResults/
+**/TestResults/
+qa-output/
+.runtime-evidence/
+playwright-report/

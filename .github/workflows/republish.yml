@@ -1,0 +1,52 @@
+name: Republish V4 corrected revision (DRY RUN)
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Report date (yyyy-MM-dd)
+        required: true
+        type: string
+      reason:
+        description: Why a corrected full report is being republished
+        required: true
+        type: string
+      force:
+        description: Explicitly bypass normal same-day idempotency
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-repository-writer
+  cancel-in-progress: false
+
+jobs:
+  republish-dry-run:
+    if: github.ref == 'refs/heads/main' && inputs.force == true
+    runs-on: ubuntu-latest
+    environment: qq-publish-dry-run
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Generate, lock and republish corrected revision
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          INPUT_REASON: ${{ inputs.reason }}
+        run: |
+          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- republish --root . --date "$INPUT_DATE" --reason "$INPUT_REASON" --source-commit "$GITHUB_SHA" --dry-run true --workflow-run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- build-pages --root . --date "$INPUT_DATE"
+      - name: Persist corrected revision
+        run: |
+          git config user.name "qimiao-automation[bot]"
+          git config user.email "qimiao-automation[bot]@users.noreply.github.com"
+          git add reports/ publish-log/ web/data/
+          git diff --cached --quiet || git commit -m "chore(v4): record corrected report dry run"
+          git push

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily birthdays",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "character", "franchise", "month", "day", "enabled", "source", "sourceUrl", "evidence"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "character": { "type": "string", "minLength": 1 },
+      "franchise": { "type": "string" },
+      "month": { "type": "integer", "minimum": 0, "maximum": 12 },
+      "day": { "type": "integer", "minimum": 0, "maximum": 31 },
+      "enabled": { "type": "boolean" },
+      "source": { "type": "string" },
+      "sourceUrl": { "type": "string" },
+      "evidence": { "type": "string" }
+    }
+  }
+}

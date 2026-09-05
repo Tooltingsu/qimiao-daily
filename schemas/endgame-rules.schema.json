@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily endgame rules",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["ruleId", "game", "name", "ruleKind", "anchorDate", "intervalDays", "timePrecision", "startTime", "enabled"],
+    "properties": {
+      "ruleId": { "type": "string", "minLength": 1 },
+      "game": { "type": "string", "minLength": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "ruleKind": { "type": "string", "enum": ["INTERVAL", "MONTHLY", "VERSION_STYGIAN", "VERSION_FRENZIED", "VERSION_BOUNDED"] },
+      "anchorDate": { "type": "string", "format": "date" },
+      "intervalDays": { "type": "integer", "minimum": 1 },
+      "timePrecision": { "type": "string", "enum": ["EXACT", "DATE_ONLY"] },
+      "startTime": {},
+      "enabled": { "type": "boolean" }
+    }
+  }
+}

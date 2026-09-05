@@ -1,0 +1,209 @@
+[
+  {
+    "id": "1a0e5d82-f1ca-411c-8b24-fec2ebfd04f5",
+    "game": "NTE",
+    "name": "\u5355\u9A91\u7834\u6D6A",
+    "startAt": "2026-08-13T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 20b89ef2e58e4f02b804d9e6d2667106\uFF1B\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "27fc75db-d355-406d-b5e7-80747dd54602",
+    "game": "NTE",
+    "name": "\u5076\u7D20\u6EA2\u51FA",
+    "startAt": "2026-09-07T00:00:00+08:00",
+    "endAt": "2026-09-15T00:00:00+08:00",
+    "notes": "Migrated from calendar event c8ce8837a82546499af4f56cfcdd9585\uFF1B\u5F02\u73AF | 2026-09-07 - 2026-09-14 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "289647e6-fce6-4f69-a259-d3568bfcbffd",
+    "game": "STARRAIL",
+    "name": "\u4F4D\u9762\u5206\u88C2",
+    "startAt": "2026-09-07T00:00:00+08:00",
+    "endAt": "2026-09-22T00:00:00+08:00",
+    "notes": "Migrated from calendar event 6ac7f30031b049ea8a822ecf2f0c5468\uFF1B\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-07 - 2026-09-21 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "347ca6eb-1cbc-4ea7-aa47-add9717218a9",
+    "game": "GENSHIN",
+    "name": "\u7B2C\u4E94\u671F\u300C\u783A\u884C\u4FEE\u8FDC\u300D\u65B0\u589E\u53EF\u90095\u661F\u89D2\u8272\u547D\u661F",
+    "startAt": "2026-08-10T00:00:00+08:00",
+    "endAt": "2026-11-03T00:00:00+08:00",
+    "notes": "Migrated from calendar event 195bed3eb2aa4deaa925de20f8be02d9\uFF1B\u539F\u795E | 2026-08-10 - 2026-11-02 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "3753a39e-f99e-4d12-af5d-62e9a3f338a1",
+    "game": "STARRAIL",
+    "name": "\u8D85\u9650\uFF1A\u72C2\u98D9\u5927\u5956\u8D5B",
+    "startAt": "2026-08-26T00:00:00+08:00",
+    "endAt": "2026-09-29T00:00:00+08:00",
+    "notes": "Migrated from calendar event 80f95eb6d861440d9dba064c0eb403e1\uFF1B\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-08-26 - 2026-09-28 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "3bb03f22-0278-4566-9f07-9d837fe25d94",
+    "game": "STARRAIL",
+    "name": "\u65B9\u5BF8\u5927\u5192\u9669",
+    "startAt": "2026-09-12T00:00:00+08:00",
+    "endAt": "2026-09-29T00:00:00+08:00",
+    "notes": "Migrated from calendar event e6c06dc217054768920d072669d52bae\uFF1B\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-12 - 2026-09-28 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "47237a4c-ce71-4ce7-af54-8d40d807314f",
+    "game": "NTE",
+    "name": "\u6DD8\u65B9\u65AF\u8BB0",
+    "startAt": "2026-09-14T00:00:00+08:00",
+    "endAt": "2026-09-22T00:00:00+08:00",
+    "notes": "Migrated from calendar event 41bbf1b2743f43bfb570c28b6ac4cd5c\uFF1B\u5F02\u73AF | 2026-09-14 - 2026-09-21 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "4826d988-735f-46b7-a22c-efc03deadcd9",
+    "game": "GENSHIN",
+    "name": "\u6D3B\u52A8\u300C\u9669\u5883\u5F81\u8005\u7ADE\u950B\u5927\u8D5B\u300D",
+    "startAt": "2026-08-28T00:00:00+08:00",
+    "endAt": "2026-09-15T00:00:00+08:00",
+    "notes": "Migrated from calendar event ac7c684ab8e343a3af8c4ec68487d9a7\uFF1B\u539F\u795E | 2026-08-28 - 2026-09-14 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "4c3a6ac6-fde9-403d-bd37-a4cbbdaae674",
+    "game": "NTE",
+    "name": "\u6E05\u98CE\u9A91\u65C5",
+    "startAt": "2026-09-11T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event d78f2a7938824557b5c180722026d0be\uFF1B\u5F02\u73AF | 2026-09-11 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "56d4cf0e-d902-4380-8d87-3edf903fa759",
+    "game": "NTE",
+    "name": "\u6D3B\u529B\u71C3\u80FD",
+    "startAt": "2026-08-17T00:00:00+08:00",
+    "endAt": "2026-08-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 3152738af3b649d1ae407c05f7e3b081\uFF1B\u5F02\u73AF | 2026-08-17 - 2026-08-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "5daf3acb-320e-4c0c-9794-16ceb9eaface",
+    "game": "NTE",
+    "name": "\u4E89\u950B\u5BA3\u8A00",
+    "startAt": "2026-08-13T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 3232852b2a2241f6baa391ab46c7582f\uFF1B\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "74db6fee-a6ce-4a69-bbda-b4ef02c07e8f",
+    "game": "STARRAIL",
+    "name": "\u5F02\u5668\u76C8\u754C",
+    "startAt": "2026-09-19T00:00:00+08:00",
+    "endAt": "2026-09-29T00:00:00+08:00",
+    "notes": "Migrated from calendar event a1df5a5f40224c04b922f32d6a8da034\uFF1B\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-09-19 - 2026-09-28 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "75501e9e-bcba-4492-aaa7-1f177f3fc3b7",
+    "game": "NTE",
+    "name": "\u9057\u95FB\u5BFB\u73CD",
+    "startAt": "2026-08-21T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 03e2b6ea86a845d197246c78fe4fab2f\uFF1B\u5F02\u73AF | 2026-08-21 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "949fcdb7-42ea-404e-b295-12edae212415",
+    "game": "NTE",
+    "name": "\u8F68\u5916\u56DE\u54CD",
+    "startAt": "2026-09-03T06:00:00+08:00",
+    "endAt": "2026-09-25T06:00:00+08:00",
+    "notes": "Migrated from calendar event 13ecf1d7333845f99fa2d2620ead526c\uFF1B\u5F02\u73AF | 2026-09-03 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "ab410c3e-cbc8-4d0d-bdb2-6452bdc18f86",
+    "game": "NTE",
+    "name": "\u6D3B\u52A8\u300C\u6392\u7403\u4E4B\u661F\u300D",
+    "startAt": "2026-08-13T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 9043f4dc0ca643e8a8956870d7ef1d36\uFF1B\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "d8bc2236-e9d5-4d6b-8cfb-f7f9a9917b95",
+    "game": "GENSHIN",
+    "name": "\u9B54\u795E\u4EFB\u52A1\u300C\u65E0\u795E\u601C\u7231\u7684\u96EA\u56FD\u300D\u9650\u5B9A\u5956\u52B1",
+    "startAt": "2026-08-12T00:00:00+08:00",
+    "endAt": "2026-09-23T00:00:00+08:00",
+    "notes": "Migrated from calendar event cf6458984bf240af9c6b640e5a83c089\uFF1B\u539F\u795E | 2026-08-12 - 2026-09-22 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "e1ef2c25-2ddf-4e1f-99be-7254cb5cac36",
+    "game": "NTE",
+    "name": "\u73AF\u671F\u8D60\u793C\u3008\u4E03\u65E5\u7B7E\u5230\u3009",
+    "startAt": "2026-08-13T00:00:00+08:00",
+    "endAt": "2026-09-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 28546af422314cbf8cdbdbc98d95728c\uFF1B\u5F02\u73AF | 2026-08-13 - 2026-09-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "e9e918c3-f172-454b-b63e-bb3570bc37e6",
+    "game": "STARRAIL",
+    "name": "\u5DE1\u661F\u4E4B\u793C",
+    "startAt": "2026-08-26T00:00:00+08:00",
+    "endAt": "2026-09-29T00:00:00+08:00",
+    "notes": "Migrated from calendar event d87743ad1e6e45f0bf6de228740c8bba\uFF1B\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 | 2026-08-26 - 2026-09-28 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "f4d42397-943e-4c9a-b753-a23d4ac2eb7b",
+    "game": "GENSHIN",
+    "name": "\u300C\u65E0\u795E\u601C\u7231\u7684\u51BB\u571F\u300D\u533A\u57DF\u63A2\u7D22",
+    "startAt": "2026-08-12T00:00:00+08:00",
+    "endAt": "2026-11-04T00:00:00+08:00",
+    "notes": "Migrated from calendar event 5b823816e97c4521ac00e44a73908667\uFF1B\u539F\u795E | 2026-08-12 - 2026-11-03 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "f829bd7e-0976-454f-9d5f-ed001a2264ee",
+    "game": "GENSHIN",
+    "name": "\u6D3B\u52A8\u300C\u65B0\u82BD\u76F8\u52A9\u00B7\u521D\u63A2\u96EA\u539F\u300D",
+    "startAt": "2026-08-12T00:00:00+08:00",
+    "endAt": "2026-08-25T00:00:00+08:00",
+    "notes": "Migrated from calendar event 146b194550c843bfb3449ceefc06e19d\uFF1B\u539F\u795E | 2026-08-12 - 2026-08-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "fdd8fc6b-5e9d-440c-8df0-d553ea1468d6",
+    "game": "NTE",
+    "name": "\u593A\u91D1\u5927\u4F5C\u6218",
+    "startAt": "2026-08-24T00:00:00+08:00",
+    "endAt": "2026-09-08T00:00:00+08:00",
+    "notes": "Migrated from calendar event e107f9feb0d94658aa064b9b24a33fd1\uFF1B\u5F02\u73AF | 2026-08-24 - 2026-09-07 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "5d65db4a-0aa8-490d-ba6c-49ee047d9799",
+    "game": "GENSHIN",
+    "name": "\u6D3B\u52A8\u300C\u7981\u754C\u62DF\u60F3\u9635\u5730\u6218\u300D",
+    "startAt": "2026-09-07T04:00:00+08:00",
+    "endAt": "2026-09-17T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  },
+  {
+    "id": "669cb960-42ab-428f-887c-0b4cc41280b9",
+    "game": "GENSHIN",
+    "name": "\u6D3B\u52A8\u300C\u76DB\u6750\u79FB\u6D8C\u300D",
+    "startAt": "2026-09-15T04:00:00+08:00",
+    "endAt": "2026-09-21T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  }
+]

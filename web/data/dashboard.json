@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-05",
+  "state": "PUBLISHED",
+  "publishTime": "18:30",
+  "revision": 2,
+  "generatedAt": "2026-09-05T03:33:12.7168407+00:00",
+  "publishedAt": "2026-09-05T03:33:12.7168407+00:00",
+  "health": "HEALTHY",
+  "manualCounts": {
+    "\u6D3B\u52A8": 23,
+    "\u5361\u6C60": 6,
+    "\u7248\u672C": 3,
+    "\u7EAA\u5FF5\u65E5": 0
+  },
+  "automaticCounts": {
+    "\u5468\u671F\u73A9\u6CD5": 20,
+    "\u5B98\u65B9\u89C6\u9891": 34,
+    "BGI \u672C\u4F53": 1,
+    "BGI Scripts": 2,
+    "\u7F8E\u56FE\u5019\u9009": 130
+  },
+  "artworkPending": 128,
+  "conflictCount": 0,
+  "repositoryUrl": "https://github.com/OWNER/qimiao-daily",
+  "providers": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "Collected 1 commit(s).",
+      "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "Collected 2 commit(s).",
+      "checkedAt": "2026-09-05T03:38:52.8382343+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
