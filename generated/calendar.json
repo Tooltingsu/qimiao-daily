@@ -2,14 +2,14 @@
   {
     "date": "2026-01-01",
     "kind": "BIRTHDAY",
-    "title": "\u6BD4\u5B89\u5361\u30FB\u5E7D\u5170\u9EDB\u5C14\u30FB\u963F\u5854\u5409\u5A1C",
-    "detail": "HI3"
+    "title": "\u5361\u5384\u65AF",
+    "detail": "NTE"
   },
   {
     "date": "2026-01-01",
     "kind": "BIRTHDAY",
-    "title": "\u5361\u5384\u65AF",
-    "detail": "NTE"
+    "title": "\u6BD4\u5B89\u5361\u30FB\u5E7D\u5170\u9EDB\u5C14\u30FB\u963F\u5854\u5409\u5A1C",
+    "detail": "HI3"
   },
   {
     "date": "2026-01-01",
@@ -128,14 +128,14 @@
   {
     "date": "2026-02-09",
     "kind": "BIRTHDAY",
-    "title": "\u963F\u7F57\u590F",
-    "detail": "GENSHIN"
+    "title": "\u7B26\u534E",
+    "detail": "HI3"
   },
   {
     "date": "2026-02-09",
     "kind": "BIRTHDAY",
-    "title": "\u7B26\u534E",
-    "detail": "HI3"
+    "title": "\u963F\u7F57\u590F",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-02-11",
@@ -188,14 +188,14 @@
   {
     "date": "2026-03-01",
     "kind": "BIRTHDAY",
-    "title": "\u83C8\u4E4C\u739B",
-    "detail": "GENSHIN"
+    "title": "\u4E3D\u5854\u30FB\u6D1B\u4E1D\u8587\u745F",
+    "detail": "HI3"
   },
   {
     "date": "2026-03-01",
     "kind": "BIRTHDAY",
-    "title": "\u4E3D\u5854\u30FB\u6D1B\u4E1D\u8587\u745F",
-    "detail": "HI3"
+    "title": "\u83C8\u4E4C\u739B",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-03-03",
@@ -392,14 +392,14 @@
   {
     "date": "2026-04-30",
     "kind": "BIRTHDAY",
-    "title": "\u8FEA\u5362\u514B",
-    "detail": "GENSHIN"
+    "title": "\u6885\u6BD4\u4E4C\u65AF",
+    "detail": "HI3"
   },
   {
     "date": "2026-04-30",
     "kind": "BIRTHDAY",
-    "title": "\u6885\u6BD4\u4E4C\u65AF",
-    "detail": "HI3"
+    "title": "\u8FEA\u5362\u514B",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-05-03",
@@ -464,14 +464,14 @@
   {
     "date": "2026-05-25",
     "kind": "BIRTHDAY",
-    "title": "\u963F\u6CE2\u5C3C\u4E9A",
-    "detail": "HI3"
+    "title": "\u5854\u5229\u96C5",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-05-25",
     "kind": "BIRTHDAY",
-    "title": "\u5854\u5229\u96C5",
-    "detail": "GENSHIN"
+    "title": "\u963F\u6CE2\u5C3C\u4E9A",
+    "detail": "HI3"
   },
   {
     "date": "2026-05-27",
@@ -494,14 +494,14 @@
   {
     "date": "2026-06-01",
     "kind": "BIRTHDAY",
-    "title": "\u8584\u8377",
-    "detail": "NTE"
+    "title": "\u8352\u6CF7\u4E00\u6597",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-06-01",
     "kind": "BIRTHDAY",
-    "title": "\u8352\u6CF7\u4E00\u6597",
-    "detail": "GENSHIN"
+    "title": "\u8584\u8377",
+    "detail": "NTE"
   },
   {
     "date": "2026-06-06",
@@ -566,14 +566,14 @@
   {
     "date": "2026-06-23",
     "kind": "BIRTHDAY",
-    "title": "\u8D5B\u8BFA",
-    "detail": "GENSHIN"
+    "title": "\u897F\u7433",
+    "detail": "HI3"
   },
   {
     "date": "2026-06-23",
     "kind": "BIRTHDAY",
-    "title": "\u897F\u7433",
-    "detail": "HI3"
+    "title": "\u8D5B\u8BFA",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-06-26",
@@ -752,14 +752,14 @@
   {
     "date": "2026-08-20",
     "kind": "BIRTHDAY",
-    "title": "\u73D0\u9732\u73CA",
-    "detail": "GENSHIN"
+    "title": "\u5A1C\u5A1C\u8389",
+    "detail": "NTE"
   },
   {
     "date": "2026-08-20",
     "kind": "BIRTHDAY",
-    "title": "\u5A1C\u5A1C\u8389",
-    "detail": "NTE"
+    "title": "\u73D0\u9732\u73CA",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-08-22",
@@ -974,6 +974,12 @@
   {
     "date": "2026-10-31",
     "kind": "BIRTHDAY",
+    "title": "\u4F0A\u7538",
+    "detail": "HI3"
+  },
+  {
+    "date": "2026-10-31",
+    "kind": "BIRTHDAY",
     "title": "\u6CD5\u8482\u5A05",
     "detail": "NTE"
   },
@@ -982,12 +988,6 @@
     "kind": "BIRTHDAY",
     "title": "\u83F2\u6797\u65AF",
     "detail": "GENSHIN"
-  },
-  {
-    "date": "2026-10-31",
-    "kind": "BIRTHDAY",
-    "title": "\u4F0A\u7538",
-    "detail": "HI3"
   },
   {
     "date": "2026-11-02",
@@ -1016,14 +1016,14 @@
   {
     "date": "2026-11-11",
     "kind": "BIRTHDAY",
-    "title": "\u7231\u8389\u5E0C\u96C5",
-    "detail": "HI3"
+    "title": "\u57FA\u5C3C\u5947",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-11-11",
     "kind": "BIRTHDAY",
-    "title": "\u57FA\u5C3C\u5947",
-    "detail": "GENSHIN"
+    "title": "\u7231\u8389\u5E0C\u96C5",
+    "detail": "HI3"
   },
   {
     "date": "2026-11-13",
@@ -1040,13 +1040,13 @@
   {
     "date": "2026-11-20",
     "kind": "BIRTHDAY",
-    "title": "\u5E03\u4F26\u59AE",
+    "title": "\u523B\u6674",
     "detail": "GENSHIN"
   },
   {
     "date": "2026-11-20",
     "kind": "BIRTHDAY",
-    "title": "\u523B\u6674",
+    "title": "\u5E03\u4F26\u59AE",
     "detail": "GENSHIN"
   },
   {
@@ -1136,14 +1136,14 @@
   {
     "date": "2026-12-21",
     "kind": "BIRTHDAY",
-    "title": "\u591A\u8389",
-    "detail": "GENSHIN"
+    "title": "\u4F0A\u6D1B\u4F0A",
+    "detail": "NTE"
   },
   {
     "date": "2026-12-21",
     "kind": "BIRTHDAY",
-    "title": "\u4F0A\u6D1B\u4F0A",
-    "detail": "NTE"
+    "title": "\u591A\u8389",
+    "detail": "GENSHIN"
   },
   {
     "date": "2026-12-22",
