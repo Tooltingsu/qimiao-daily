@@ -5,6 +5,22 @@
     "subject": "update repo.json [skip ci]",
     "url": "https://github.com/babalae/bettergi-scripts-list/commit/50d8b997a30ddad2a50e44475f9536c093bbc10a",
     "committedAt": "2026-09-04T14:07:16+00:00",
-    "fetchedAt": "2026-09-05T08:54:07.6660598+00:00"
+    "fetchedAt": "2026-09-05T12:45:59.8913112+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "09e18e23c18ad1a7d910eed9b70816d670a268f4",
+    "subject": "\u540C\u6B65 AutoCommissionNova 1.0.3 (#3616)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/09e18e23c18ad1a7d910eed9b70816d670a268f4",
+    "committedAt": "2026-09-05T09:36:46+00:00",
+    "fetchedAt": "2026-09-05T12:45:59.8913112+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "45a178cf3dc42193cbdf80e548f68977c59c6c7c",
+    "subject": "\u81F3\u51AC\u65B0\u589E\u7279\u4EA7 \u91D1\u8568\u91C7\u96C6\u8DEF\u7EBF (#3618)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/45a178cf3dc42193cbdf80e548f68977c59c6c7c",
+    "committedAt": "2026-09-05T09:37:00+00:00",
+    "fetchedAt": "2026-09-05T12:45:59.8913112+00:00"
   }
 ]

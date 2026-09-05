@@ -2,43 +2,43 @@
   {
     "provider": "GitHub:babalae/better-genshin-impact",
     "status": "HEALTHY",
-    "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); provisional before cutoff",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": false
   },
   {
     "provider": "GitHub:babalae/bettergi-scripts-list",
     "status": "HEALTHY",
-    "message": "1 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); provisional before cutoff",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:GENSHIN",
     "status": "HEALTHY",
     "message": "Fetched 15 official candidates.",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:STARRAIL",
     "status": "HEALTHY",
     "message": "Fetched 15 official candidates.",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:NTE",
     "status": "FAILED",
     "message": "Bilibili returned 412; official account feed needs retry or user-authorized session.",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Pixiv",
     "status": "LOGIN_REQUIRED",
     "message": "PIXIV_SESSION is not configured; retained metadata cache.",
-    "checkedAt": "2026-09-05T08:54:07.6660598+00:00",
+    "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
     "usedCachedData": true
   }
 ]
