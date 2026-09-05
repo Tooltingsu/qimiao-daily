@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-09",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "8a5bb433d7915d7a135a841b46cde8439c3fccc0",
+  "reportHash": "sha256:920711ca537184329cb25fbbb1bf78747454eb87aeef244492f6e38bbffecdc9",
+  "generatedAt": "2026-09-05T15:57:58.2442254+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u7EEE\u55B5\u65E5\u62A5 260909\n\n\u4ECA\u5929\u662F2026\u5E749\u67089\u65E5\uFF0C\u661F\u671F\u4E09\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u96F7\u6CFD\u3011\u7684\u751F\u65E5\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u5355\u9A91\u7834\u6D6A\uFF0808-13 00:00\uFF5E09-25 00:00\uFF09\n-\u5F02\u73AF \u5076\u7D20\u6EA2\u51FA\uFF0809-07 00:00\uFF5E09-15 00:00\uFF09\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u4F4D\u9762\u5206\u88C2\uFF0809-07 00:00\uFF5E09-22 00:00\uFF09\n-\u539F\u795E \u7B2C\u4E94\u671F\u300C\u783A\u884C\u4FEE\u8FDC\u300D\u65B0\u589E\u53EF\u90095\u661F\u89D2\u8272\u547D\u661F\uFF0808-10 00:00\uFF5E11-03 00:00\uFF09\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u8D85\u9650\uFF1A\u72C2\u98D9\u5927\u5956\u8D5B\uFF0808-26 00:00\uFF5E09-29 00:00\uFF09\n-\u539F\u795E \u6D3B\u52A8\u300C\u9669\u5883\u5F81\u8005\u7ADE\u950B\u5927\u8D5B\u300D\uFF0808-28 00:00\uFF5E09-15 00:00\uFF09\n-\u5F02\u73AF \u4E89\u950B\u5BA3\u8A00\uFF0808-13 00:00\uFF5E09-25 00:00\uFF09\n-\u5F02\u73AF \u9057\u95FB\u5BFB\u73CD\uFF0808-21 00:00\uFF5E09-25 00:00\uFF09\n-\u5F02\u73AF \u8F68\u5916\u56DE\u54CD\uFF0809-03 06:00\uFF5E09-25 06:00\uFF09\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6392\u7403\u4E4B\u661F\u300D\uFF0808-13 00:00\uFF5E09-25 00:00\uFF09\n-\u539F\u795E \u9B54\u795E\u4EFB\u52A1\u300C\u65E0\u795E\u601C\u7231\u7684\u96EA\u56FD\u300D\u9650\u5B9A\u5956\u52B1\uFF0808-12 00:00\uFF5E09-23 00:00\uFF09\n-\u5F02\u73AF \u73AF\u671F\u8D60\u793C\u3008\u4E03\u65E5\u7B7E\u5230\u3009\uFF0808-13 00:00\uFF5E09-25 00:00\uFF09\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u5DE1\u661F\u4E4B\u793C\uFF0808-26 00:00\uFF5E09-29 00:00\uFF09\n-\u539F\u795E \u300C\u65E0\u795E\u601C\u7231\u7684\u51BB\u571F\u300D\u533A\u57DF\u63A2\u7D22\uFF0808-12 00:00\uFF5E11-04 00:00\uFF09\n-\u539F\u795E \u6D3B\u52A8\u300C\u7981\u754C\u62DF\u60F3\u9635\u5730\u6218\u300D\uFF0809-07 04:00\uFF5E09-17 04:00\uFF09\n-\u539F\u795E 7.0\u4E0B\u534A\u3010\u83F2\u6797\u65AF\u3001\u4F0A\u6D85\u8299\u3011\uFF0809-01 18:00\uFF5E09-22 04:00\uFF09\n-\u5F02\u73AF 1.3\u4E0B\u534A\u3010\u7075\u53EF\u3001\u6D54\u3011\uFF0809-03 06:00\uFF5E09-25 05:00\uFF09\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 4.5\u4E0A\u534A\u3010\u77E5\u66F4\u9E1F\u00B7\u6674\u6B4C\u3001\u98CE\u5807\u3011\uFF0808-26 11:00\uFF5E09-12 12:00\uFF09\n\nBGI \u66F4\u65B0\n-\u79FB\u9664\u81EA\u52A8\u5730\u8109\u82B1\u624B\u52A8\u5BFB\u8DEF\u5E76\u7EC6\u5206\u901A\u77E5 (#3605) (a0f0983)\n-\u4FEE\u590D\u65E5\u5FD7\u5206\u6790\u65E0\u6CD5\u8BC6\u522B fakeLog \u7684\u95EE\u9898 (639ccfb)\n-Update version to 0.64.2-alpha.1 (cca51e1)\n-update repo.json [skip ci] (50d8b99)\n-\u540C\u6B65 AutoCommissionNova 1.0.3 (#3616) (09e18e2)\n-\u81F3\u51AC\u65B0\u589E\u7279\u4EA7 \u91D1\u8568\u91C7\u96C6\u8DEF\u7EBF (#3618) (45a178c)\n\n\u7F8E\u56FE\u5206\u4EAB\n\u80E1\u6843 \u539F\u795E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149119754",
+      "character": "\u80E1\u6843",
+      "franchise": "GENSHIN",
+      "title": "260831",
+      "author": "\u5B89\u54C8\u5A1C",
+      "sourceUrl": "https://www.pixiv.net/artworks/149119754",
+      "thumbnailUrl": "",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-08-31T21:16:39+09:00",
+      "fetchedAt": "2026-08-31T15:53:05.3059214+00:00"
+    }
+  ],
+  "payloadHash": "sha256:b87cd4989eea8c7ca3e4b052f3f0c968a95da81ae629649703e4a726be857802",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-04T18:00:00.0000000\u002B08:00, 2026-09-05T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili returned 412; official account feed needs retry or user-authorized session.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "LOGIN_REQUIRED",
+      "message": "PIXIV_SESSION is not configured; retained metadata cache.",
+      "checkedAt": "2026-09-05T12:45:59.8913112+00:00",
+      "usedCachedData": true
+    }
+  ]
+}
