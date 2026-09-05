@@ -29,6 +29,9 @@ public sealed class V4PocTests
         var manifest = fixture.Repository.Read<ReportManifest>("reports", fixture.Date.ToString("yyyy-MM-dd"), "manifest.json");
         Assert.Equal(first.ReportHash, manifest.ReportHash);
         Assert.Equal("commit-a", manifest.SourceCommit);
+        Assert.Equal(ReportState.DryRunSucceeded, manifest.State);
+        Assert.Null(manifest.PublishedAt);
+        Assert.Null(attempt.PublishedAt);
     }
 
     [Fact]
@@ -57,6 +60,14 @@ public sealed class V4PocTests
         Assert.False(guard.Evaluate(new DateTimeOffset(2026, 9, 5, 10, 29, 0, TimeSpan.Zero)).ShouldPublish);
         Assert.True(guard.Evaluate(new DateTimeOffset(2026, 9, 5, 10, 35, 0, TimeSpan.Zero)).ShouldPublish);
         Assert.False(guard.Evaluate(new DateTimeOffset(2026, 9, 5, 11, 1, 0, TimeSpan.Zero)).ShouldPublish);
+    }
+
+    [Fact]
+    public void BgiWindowUsesTheExactShanghaiHalfOpenDailyRange()
+    {
+        var (start, end) = ShanghaiClock.BgiWindow(new DateOnly(2026, 9, 5));
+        Assert.Equal(new DateTimeOffset(2026, 9, 4, 18, 0, 0, TimeSpan.FromHours(8)), start);
+        Assert.Equal(new DateTimeOffset(2026, 9, 5, 18, 0, 0, TimeSpan.FromHours(8)), end);
     }
 
     [Fact]

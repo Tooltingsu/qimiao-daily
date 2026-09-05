@@ -1,6 +1,6 @@
 const stateLabels = {
   NOT_GENERATED: "尚未生成", READY: "已生成 · 待自动发布", LOCKED_MANUAL: "已人工锁定",
-  LOCKED_AUTO: "已自动锁定", PUBLISHED: "已发布", FAILED: "失败"
+  LOCKED_AUTO: "已自动锁定", PUBLISHED: "已真实发布", DRY_RUN_SUCCEEDED: "Dry Run 已完成", FAILED: "失败"
 };
 
 async function loadDashboard() {
@@ -27,6 +27,8 @@ async function loadDashboard() {
   const repo = data.repositoryUrl.replace(/\/$/, "");
   document.querySelector("#edit-data").href = `${repo}/tree/main/data`;
   document.querySelector("#run-generate").href = `${repo}/actions/workflows/generate.yml`;
+  document.querySelector("#lock-report").href = `${repo}/actions/workflows/lock.yml`;
+  document.querySelector("#republish-report").href = `${repo}/actions/workflows/republish.yml`;
   document.querySelector("#view-actions").href = `${repo}/actions`;
 }
 

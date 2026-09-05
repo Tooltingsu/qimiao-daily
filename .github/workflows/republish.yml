@@ -32,21 +32,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-      - name: Generate, lock and republish corrected revision
+      - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+      - name: Generate, lock and record corrected dry-run revision
         env:
           INPUT_DATE: ${{ inputs.date }}
           INPUT_REASON: ${{ inputs.reason }}
-        run: |
-          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- republish --root . --date "$INPUT_DATE" --reason "$INPUT_REASON" --source-commit "$GITHUB_SHA" --dry-run true --workflow-run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- build-pages --root . --date "$INPUT_DATE"
-      - name: Persist corrected revision
-        run: |
-          git config user.name "qimiao-automation[bot]"
-          git config user.email "qimiao-automation[bot]@users.noreply.github.com"
-          git add reports/ publish-log/ web/data/
-          git diff --cached --quiet || git commit -m "chore(v4): record corrected report dry run"
-          git push
+          INPUT_FORCE: ${{ inputs.force }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 tools/v4/runtime.py republish

@@ -28,6 +28,7 @@ try
             Environment.ExitCode = validation.IsValid ? 0 : 2;
             break;
         case "calculate":
+            EnsureValid(repository);
             var calculator = new V4Calculator(repository);
             var endgame = calculator.CalculateEndgame(date);
             var calendar = calculator.CalculateCalendar(date.Year);
@@ -35,7 +36,16 @@ try
             break;
         case "collect-bgi":
             using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(30) })
-                Print(new { collected = await new V4BgiCollector(repository, client).CollectAsync(now) });
+                Print(new { collected = await new V4BgiCollector(repository, client).CollectAsync(date, now) });
+            break;
+        case "collect":
+            EnsureValid(repository);
+            using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(20) })
+            {
+                var count = await new V4BgiCollector(repository, client).CollectAsync(date, now);
+                await new V4MediaCollector(repository, client).CollectAsync(date, now);
+                Print(new { collected = count, providers = repository.Read<List<ProviderStatusRecord>>("collected", "provider-status.json") });
+            }
             break;
         case "generate":
             EnsureValid(repository);
@@ -48,6 +58,16 @@ try
         case "publish":
             EnsureDryRun();
             EnsureValid(repository);
+            if (Option("--simulate-deadline") == "true")
+            {
+                now = ShanghaiClock.At(date, TimeOnly.Parse(repository.Read<V4Settings>("data", "settings.json").PublishTime)).AddMinutes(1);
+            }
+            var priorLog = repository.ReadOr(new PublishLog { Date = date }, "publish-log", date + ".json");
+            if (priorLog.Attempts.Any(x => x.Status is "PUBLISHED" or "DRY_RUN_SUCCEEDED"))
+            {
+                Print(new { status = "SKIPPED_ALREADY_PUBLISHED", date });
+                break;
+            }
             if (bool.TryParse(Option("--watchdog") ?? "false", out var watchdog) && watchdog)
             {
                 var window = new PublishWindowGuard(repository.Read<V4Settings>("data", "settings.json")).Evaluate(now);
@@ -68,6 +88,8 @@ try
             break;
         case "republish":
             EnsureDryRun();
+            if (Option("--force") != "true" || string.IsNullOrWhiteSpace(Option("--reason")))
+                throw new ArgumentException("Republish requires --force true and --reason.");
             EnsureValid(repository);
             var service = new V4PublishService(repository);
             var revision = service.PrepareRepublication(date, Option("--source-commit") ?? "LOCAL_POC", now, Option("--reason") ?? "manual correction");
@@ -98,7 +120,7 @@ string? Option(string name)
 void EnsureDryRun()
 {
     if (!bool.TryParse(Option("--dry-run") ?? "true", out var dryRun) || !dryRun)
-        throw new InvalidOperationException("BLOCKED_BY_USER: production QQ publishing is disabled during V4-A.");
+        throw new InvalidOperationException("BLOCKED_BY_USER: production QQ publishing is disabled during V4-B.");
 }
 
 static void EnsureValid(V4Repository repo)

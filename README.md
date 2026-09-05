@@ -1,19 +1,22 @@
-# 绮喵日报
+# 绮喵日报 V4
 
-> V4-A 已启动：最终架构转向 GitHub Repository + Pages + Actions + QQ 官方机器人。当前 Windows V3 保留为经过验证的参考实现，真实 QQ 发布仍为 DRY_RUN。
+> 主架构为 GitHub Repository + GitHub Actions + GitHub Pages + QQ 官方机器人。当前 Windows Desktop V3 是保留的参考实现；真实 QQ 发布尚未接入，所有发布流程仅为 DRY_RUN。
 
-绮喵日报是一个 Windows 本地日报工作台：采集游戏信息、BGI 更新和美图候选，经人工审核后生成日报。运行时仅依赖 WPF/.NET 8、SQLite 和 HttpClient；不启动 Python、Node、浏览器或 localhost 服务。
+绮喵日报以 GitHub 作为数据和审计记录中心：人工数据在 `data/`，采集结果在 `collected/`，计算结果在 `generated/`，不可变日报修订在 `reports/`，发布历史在 `publish-log/`。Pages 只读展示，编辑和运行入口跳转到 GitHub 原生页面。
 
 ## 运行与构建
 
-直接运行 `publish/QimiaoDaily.exe`，或执行：
+本地诊断入口：
 
 ```powershell
-dotnet test QimiaoDaily.sln --configuration Release
-dotnet publish src/QimiaoDaily.Desktop/QimiaoDaily.Desktop.csproj --configuration Release --runtime win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true --output publish
+dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- validate --root .
+dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- calculate --root . --date 2026-09-05
+dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- collect --root . --date 2026-09-05
+dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- generate --root . --date 2026-09-05 --source-commit LOCAL
+dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- publish --root . --date 2026-09-05 --dry-run true
 ```
 
-## 用户数据
+## Legacy Desktop V3
 
 所有用户数据保存于 `%LOCALAPPDATA%\QimiaoDaily`：
 

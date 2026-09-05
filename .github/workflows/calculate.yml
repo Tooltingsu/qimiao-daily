@@ -11,8 +11,7 @@ on:
         type: string
   push:
     branches: [main]
-    paths:
-      - "data/**"
+    paths: ["data/**"]
 
 permissions:
   contents: write
@@ -27,21 +26,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-      - name: Validate and calculate
+      - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+      - name: Validate manual data and calculate derived data
         env:
           INPUT_DATE: ${{ inputs.date }}
-        run: |
-          REPORT_DATE="${INPUT_DATE:-$(TZ=Asia/Shanghai date +%F)}"
-          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- validate --root .
-          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- calculate --root . --date "$REPORT_DATE"
-      - name: Persist calculated data
-        run: |
-          git config user.name "qimiao-automation[bot]"
-          git config user.email "qimiao-automation[bot]@users.noreply.github.com"
-          git add generated/
-          git diff --cached --quiet || git commit -m "chore(v4): calculate calendar and endgame"
-          git push
-
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 tools/v4/runtime.py calculate

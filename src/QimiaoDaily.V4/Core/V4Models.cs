@@ -93,6 +93,7 @@ public enum ReportState
     LockedAuto,
     Publishing,
     Published,
+    DryRunSucceeded,
     Superseded,
     RepublicationReady,
     Failed
@@ -111,6 +112,9 @@ public sealed class ReportRevision
     public DateTimeOffset? PublishedAt { get; set; }
     public required string Content { get; init; }
     public string Health { get; init; } = "HEALTHY";
+    public string ValidationState { get; init; } = "VALID";
+    public IReadOnlyList<ArtworkRecord> SelectedArtwork { get; init; } = [];
+    public string? PayloadHash { get; init; }
     public IReadOnlyList<ProviderStatusRecord> ProviderStatuses { get; init; } = [];
 }
 

@@ -15,7 +15,7 @@ public sealed class V4Calculator(V4Repository repository)
         var records = new List<CalculatedEndgameRecord>();
         var versions = repository.Read<List<VersionRecord>>("data", "versions.json")
             .Where(x => x.Enabled)
-            .Select(x => new VersionWindow(x.Game, x.VersionNumber, DateOnly.FromDateTime(x.StartAt.DateTime), DateOnly.FromDateTime(x.EndAt.DateTime)))
+            .Select(x => new VersionWindow(x.Game, x.VersionNumber, ShanghaiClock.Date(x.StartAt), ShanghaiClock.Date(x.EndAt)))
             .ToArray();
         var overrides = repository.Read<List<EndgameOverrideRecord>>("data", "endgame-overrides.json")
             .GroupBy(x => x.RuleId, StringComparer.OrdinalIgnoreCase)

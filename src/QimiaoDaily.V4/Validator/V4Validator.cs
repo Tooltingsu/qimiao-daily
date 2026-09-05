@@ -29,7 +29,12 @@ public sealed class V4Validator(V4Repository repository)
             else issues.AddRange(JsonSchemaSubsetValidator.Validate(data, schema, "data/" + contract.Data));
         }
 
-        if (issues.Count == 0) ValidateSemantics(issues);
+        if (issues.Count == 0)
+        {
+            try { ValidateSemantics(issues); }
+            catch (Exception ex) when (ex is System.Text.Json.JsonException or ArgumentException)
+            { issues.Add(new("ERROR", "data/", "$", "Invalid typed date/time/value: " + ex.GetType().Name)); }
+        }
         return new(issues.All(x => x.Level != "ERROR"), issues);
     }
 
@@ -50,12 +55,43 @@ public sealed class V4Validator(V4Repository repository)
         var versions = repository.Read<List<VersionRecord>>("data", "versions.json");
         for (var i = 0; i < versions.Count; i++)
             if (versions[i].StartAt >= versions[i].EndAt) issues.Add(Error("versions.json", i, "startAt must be before endAt."));
+        foreach (var group in versions.Where(x => x.Enabled).GroupBy(x => x.Game))
+        {
+            var windows = group.OrderBy(x => x.StartAt).ToArray();
+            for (var i = 1; i < windows.Length; i++)
+                if (windows[i].StartAt < windows[i - 1].EndAt)
+                    issues.Add(new("ERROR", "data/versions.json", "$", "Overlapping versions for " + group.Key));
+        }
+        var birthdays = repository.Read<List<BirthdayRecord>>("data", "birthdays.json");
+        for (var i = 0; i < birthdays.Count; i++)
+        {
+            var b = birthdays[i];
+            if (!b.Enabled && b.Month == 0 && b.Day == 0) continue;
+            if (b.Month is < 1 or > 12 || b.Day < 1 || b.Day > DateTime.DaysInMonth(2000, b.Month))
+                issues.Add(Error("birthdays.json", i, "Invalid birthday month/day (Feb 29 allowed)."));
+        }
 
         var rules = repository.Read<List<EndgameRuleRecord>>("data", "endgame-rules.json");
         if (rules.GroupBy(x => x.RuleId, StringComparer.OrdinalIgnoreCase).Any(x => x.Count() > 1))
             issues.Add(new("ERROR", "data/endgame-rules.json", "$", "ruleId values must be unique."));
+        foreach (var rule in rules)
+        {
+            if ((rule.TimePrecision == "DATE_ONLY" && rule.StartTime is not null) || (rule.TimePrecision == "EXACT" && rule.StartTime is null))
+                issues.Add(new("ERROR", "data/endgame-rules.json", rule.RuleId, "Time precision and startTime disagree."));
+        }
+        var overrides = repository.Read<List<EndgameOverrideRecord>>("data", "endgame-overrides.json");
+        if (overrides.GroupBy(x => (x.RuleId, x.ScheduledStart)).Any(x => x.Count() > 1))
+            issues.Add(new("ERROR", "data/endgame-overrides.json", "$", "Duplicate occurrence override."));
+        foreach (var item in overrides)
+        {
+            var rule = rules.SingleOrDefault(x => x.RuleId == item.RuleId);
+            if (rule is null || item.EndsOn < (item.StartsOn ?? item.ScheduledStart) ||
+                (rule.TimePrecision == "DATE_ONLY" && (item.StartTime is not null || item.EndTime is not null)))
+                issues.Add(new("ERROR", "data/endgame-overrides.json", item.RuleId, "Invalid override rule/date/precision."));
+        }
 
         var settings = repository.Read<V4Settings>("data", "settings.json");
+        if (settings.TimeZone != "Asia/Shanghai") issues.Add(new("ERROR", "data/settings.json", "$.timeZone", "Business timezone must be Asia/Shanghai."));
         if (!TimeOnly.TryParse(settings.PublishTime, out _)) issues.Add(new("ERROR", "data/settings.json", "$.publishTime", "publishTime must be HH:mm."));
         try { _ = TimeZoneInfo.FindSystemTimeZoneById(settings.TimeZone); }
         catch { issues.Add(new("ERROR", "data/settings.json", "$.timeZone", "Unknown IANA/Windows time zone.")); }

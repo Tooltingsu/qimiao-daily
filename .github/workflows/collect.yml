@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 9 * * *"
   workflow_dispatch:
+    inputs:
+      date:
+        description: Report date (yyyy-MM-dd); blank uses Shanghai today
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -18,15 +23,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-      - run: dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- collect-bgi --root .
-      - name: Persist metadata only
-        run: |
-          git config user.name "qimiao-automation[bot]"
-          git config user.email "qimiao-automation[bot]@users.noreply.github.com"
-          git add collected/
-          git diff --cached --quiet || git commit -m "chore(v4): refresh collected metadata"
-          git push
-
+      - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+      - name: Collect BGI, official videos and Pixiv metadata
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PIXIV_SESSION: ${{ secrets.PIXIV_SESSION }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 tools/v4/runtime.py collect

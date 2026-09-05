@@ -3,8 +3,10 @@ name: Deploy V4 static control center
 on:
   push:
     branches: [main]
-    paths:
-      - "web/**"
+    paths: ["web/**"]
+  workflow_run:
+    workflows: ["Generate V4 report revision", "Republish V4 corrected revision (DRY RUN)"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -18,17 +20,20 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Scan actual Pages artifact before upload
+        run: python3 tools/v4/secret_scan.py --tree web --output $RUNNER_TEMP/pages-secret-scan.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
       - id: deployment
         uses: actions/deploy-pages@v4
-

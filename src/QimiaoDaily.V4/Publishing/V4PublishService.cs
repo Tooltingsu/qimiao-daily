@@ -1,4 +1,6 @@
 using QimiaoDaily.V4.Core;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace QimiaoDaily.V4.Publishing;
 
@@ -12,6 +14,7 @@ public sealed class V4PublishService(V4Repository repository)
             return repository.Read<ReportRevision>("reports", folder, "revisions", manifest.LockedRevision.Value.ToString("000") + ".json");
         var revision = repository.Read<ReportRevision>("reports", folder, "revisions", manifest.LatestRevision.ToString("000") + ".json");
         if (revision.State != ReportState.Ready) throw new InvalidOperationException("Only a READY revision can be locked.");
+        Verify(revision);
         revision.State = manual ? ReportState.LockedManual : ReportState.LockedAuto;
         revision.LockedAt = now;
         revision.LockReason = manual ? "MANUAL_CONFIRMATION" : "AUTO_DEADLINE";
@@ -44,16 +47,14 @@ public sealed class V4PublishService(V4Repository repository)
         if (!force && log.Attempts.Any(x => x.ReportHash == revision.ReportHash && x.Status is "PUBLISHED" or "DRY_RUN_SUCCEEDED"))
             throw new InvalidOperationException("Idempotency guard: this date + reportHash was already published.");
 
-        var attempt = new PublishAttempt(revision.Revision, revision.ReportHash, revision.SourceCommit, null, null, now, now,
+        Verify(revision);
+        var attempt = new PublishAttempt(revision.Revision, revision.ReportHash, revision.SourceCommit, null, null, now, null,
             workflowRun, "DRY_RUN_SUCCEEDED", null, true, reason);
         log.Attempts.Add(attempt);
         repository.Write(log, "publish-log", folder + ".json");
-        manifest.State = ReportState.Published;
-        manifest.PublishedAt = now;
-        revision.State = ReportState.Published;
-        revision.PublishedAt = now;
+        manifest.State = ReportState.DryRunSucceeded;
+        manifest.PublishedAt = null;
         repository.Write(manifest, "reports", folder, "manifest.json");
-        repository.Write(revision, "reports", folder, "revisions", revision.Revision.ToString("000") + ".json");
         return attempt;
     }
 
@@ -62,12 +63,6 @@ public sealed class V4PublishService(V4Repository repository)
         if (string.IsNullOrWhiteSpace(reason)) throw new ArgumentException("A republication reason is required.", nameof(reason));
         var folder = date.ToString("yyyy-MM-dd");
         var manifest = repository.Read<ReportManifest>("reports", folder, "manifest.json");
-        if (manifest.State == ReportState.Published)
-        {
-            var previous = repository.Read<ReportRevision>("reports", folder, "revisions", manifest.LockedRevision!.Value.ToString("000") + ".json");
-            previous.State = ReportState.Superseded;
-            repository.Write(previous, "reports", folder, "revisions", previous.Revision.ToString("000") + ".json");
-        }
         manifest.LockedRevision = null;
         manifest.LockedAt = null;
         manifest.LockReason = null;
@@ -75,5 +70,17 @@ public sealed class V4PublishService(V4Repository repository)
         manifest.State = ReportState.RepublicationReady;
         repository.Write(manifest, "reports", folder, "manifest.json");
         return new Generator.V4ReportGenerator(repository).Generate(date, sourceCommit, now);
+    }
+
+    private static void Verify(ReportRevision revision)
+    {
+        var hash = "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(revision.Content))).ToLowerInvariant();
+        if (hash != revision.ReportHash) throw new InvalidDataException("Locked report hash mismatch.");
+        if (revision.ValidationState != "VALID") throw new InvalidDataException("Revision is not VALID.");
+        if (revision.PayloadHash is not null && revision.PayloadHash != Generator.V4ReportGenerator.PayloadHash(revision.Content, revision.SelectedArtwork))
+            throw new InvalidDataException("Selected artwork payload hash mismatch.");
+        foreach (var image in revision.SelectedArtwork)
+            if (!image.SelectedForReport || !image.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException("Publish payload contains unselected/unconfirmed artwork.");
     }
 }

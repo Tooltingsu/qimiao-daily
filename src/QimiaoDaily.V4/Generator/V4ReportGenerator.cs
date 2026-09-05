@@ -16,6 +16,8 @@ public sealed class V4ReportGenerator(V4Repository repository)
         var content = Compose(date);
         var hash = "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(content))).ToLowerInvariant();
         var health = providerStatuses.Any(x => !x.Status.Equals("HEALTHY", StringComparison.OrdinalIgnoreCase)) ? "DEGRADED" : "HEALTHY";
+        var artwork = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
+            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase)).ToList();
         var report = new ReportRevision
         {
             Date = date,
@@ -26,6 +28,8 @@ public sealed class V4ReportGenerator(V4Repository repository)
             GeneratedAt = now,
             Content = content,
             Health = health,
+            SelectedArtwork = artwork,
+            PayloadHash = PayloadHash(content, artwork),
             ProviderStatuses = providerStatuses
         };
         repository.Write(report, "reports", date.ToString("yyyy-MM-dd"), "revisions", revision.ToString("000") + ".json");
@@ -97,10 +101,13 @@ public sealed class V4ReportGenerator(V4Repository repository)
             lines.AddRange([string.Empty, "美图分享"]);
             lines.AddRange(artworks.Select(x => $"{x.Character} {DisplayGame(x.Franchise)} 来源：{x.Platform.ToLowerInvariant()}"));
         }
-        return string.Join(Environment.NewLine, lines).TrimEnd();
+        return string.Join("\n", lines).TrimEnd();
     }
 
     private static DateTimeOffset Local(DateTimeOffset value) => TimeZoneInfo.ConvertTime(value, TimeZoneInfo.FindSystemTimeZoneById("Asia/Shanghai"));
+    public static string PayloadHash(string content, IReadOnlyList<ArtworkRecord> artwork)
+        => "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(
+            System.Text.Json.JsonSerializer.Serialize(new { content, artwork }, V4Repository.JsonOptions)))).ToLowerInvariant();
     private static string Short(string value) => value[..Math.Min(7, value.Length)];
     private static string DisplayGame(string value) => value.Trim().ToUpperInvariant() switch
     {

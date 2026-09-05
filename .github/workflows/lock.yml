@@ -1,17 +1,12 @@
-name: Generate V4 report revision
+name: Lock V4 report revision manually
 
 on:
-  schedule:
-    - cron: "37 9 * * *"
   workflow_dispatch:
     inputs:
       date:
-        description: Report date (yyyy-MM-dd); blank uses Shanghai today
-        required: false
+        description: Report date (yyyy-MM-dd)
+        required: true
         type: string
-  push:
-    branches: [main]
-    paths: ["data/**", "collected/**", "generated/**"]
 
 permissions:
   contents: write
@@ -21,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate:
+  lock:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
@@ -33,8 +28,8 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
-      - name: Generate immutable revision and Pages projection
+      - name: Validate and lock the latest ready revision
         env:
           INPUT_DATE: ${{ inputs.date }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: python3 tools/v4/runtime.py generate
+        run: python3 tools/v4/runtime.py lock
