@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-05",
-  "state": "DRYRUNSUCCEEDED",
+  "date": "2026-09-06",
+  "state": "READY",
   "publishTime": "18:30",
-  "revision": 2,
-  "generatedAt": "2026-09-05T03:33:12.7168407+00:00",
+  "revision": 1,
+  "generatedAt": "2026-09-05T14:48:00.3550732+00:00",
   "publishedAt": null,
-  "health": "HEALTHY",
+  "health": "DEGRADED",
   "manualCounts": {
     "\u6D3B\u52A8": 23,
     "\u5361\u6C60": 6,
