@@ -1,9 +1,9 @@
 {
-  "date": "2026-09-07",
-  "state": "DRYRUNSUCCEEDED",
+  "date": "2026-09-08",
+  "state": "READY",
   "publishTime": "18:30",
-  "revision": 2,
-  "generatedAt": "2026-09-05T14:57:00.800645+00:00",
+  "revision": 1,
+  "generatedAt": "2026-09-05T14:58:33.604433+00:00",
   "publishedAt": null,
   "health": "DEGRADED",
   "manualCounts": {
