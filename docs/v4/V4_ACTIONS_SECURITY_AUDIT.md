@@ -19,11 +19,11 @@ No workflow uses `write-all`, `pull_request_target`, an external third-party wri
 
 | Action | Pinned major | Source | Purpose |
 | --- | --- | --- | --- |
-| actions/checkout | v4 | GitHub | Checkout trusted main or PR source. |
-| actions/setup-dotnet | v4 | GitHub | Install .NET 8. |
-| actions/configure-pages | v5 | GitHub | Configure Pages metadata. |
-| actions/upload-pages-artifact | v3 | GitHub | Upload scanned static tree. |
-| actions/deploy-pages | v4 | GitHub | Deploy Pages artifact. |
+| actions/checkout | v6 | GitHub | Checkout trusted main or PR source. |
+| actions/setup-dotnet | v5 | GitHub | Install .NET 8. |
+| actions/configure-pages | v6 | GitHub | Configure Pages metadata. |
+| actions/upload-pages-artifact | v5 | GitHub | Upload scanned static tree. |
+| actions/deploy-pages | v5 | GitHub | Deploy Pages artifact. |
 
 Each is an official GitHub action and necessary. No additional marketplace action was introduced.
 
