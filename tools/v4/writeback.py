@@ -54,7 +54,8 @@ def persist(kind, message, cwd=None, branch='main'):
             # problem), while still never resolving/overwriting remotely.
             git('rebase', '--abort', cwd=cwd, check=False)
             detail = (rebased.stderr or rebased.stdout).strip().replace('\n', ' ')
-            raise RuntimeError('Git rebase failed; remote not overwritten. ' + detail)
+            dirty = git('status', '--porcelain', cwd=cwd, check=False).stdout.replace('\n', '; ')
+            raise RuntimeError('Git rebase failed; remote not overwritten. ' + detail + ' residual=' + (dirty or '<none>'))
         pushed = git('push', 'origin', 'HEAD:' + branch, cwd=cwd, check=False)
         if not pushed.returncode:
             return {'status': 'COMMITTED', 'files': len(set(changed)), 'commit': git('rev-parse', 'HEAD', cwd=cwd).stdout.strip(), 'attempt': attempt + 1}
