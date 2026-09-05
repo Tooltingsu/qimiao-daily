@@ -36,6 +36,7 @@ node_modules/
 *.tmp
 TestResults/
 **/TestResults/
+**/__pycache__/
 qa-output/
 .runtime-evidence/
 playwright-report/

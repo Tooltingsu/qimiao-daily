@@ -2,11 +2,11 @@
   "date": "2026-09-05",
   "latestRevision": 4,
   "lockedRevision": 2,
-  "state": "PUBLISHED",
+  "state": "DRY_RUN_SUCCEEDED",
   "sourceCommit": "LOCAL_V4_A_POC_REV2",
   "reportHash": "sha256:5d3f0f0dcdebeffdb795aa0a42dac24a131358133c9c6adc50a2fe4c79415bda",
   "generatedAt": "2026-09-05T03:33:12.7168407+00:00",
   "lockedAt": "2026-09-05T03:33:12.7168407+00:00",
   "lockReason": "MANUAL_CONFIRMATION",
-  "publishedAt": "2026-09-05T03:33:12.7168407+00:00"
+  "publishedAt": null
 }
