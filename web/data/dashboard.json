@@ -69,10 +69,10 @@
   "qqTest": {
     "environment": "qq-test",
     "status": "TEST_SUBMITTED",
-    "mode": "medium",
+    "mode": "image",
     "messageCount": 1,
-    "mediaCount": 0,
-    "completedAt": "2026-09-06T04:10:12.659+00:00",
+    "mediaCount": 1,
+    "completedAt": "2026-09-06T04:11:52.674+00:00",
     "error": null
   }
 }
