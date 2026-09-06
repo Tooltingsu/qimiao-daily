@@ -1,0 +1,47 @@
+name: QQ forum V4-C test post cleanup
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmDelete:
+        description: Type DELETE_TEST_POSTS to remove only marked V4-C test forum posts
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup-forum-tests:
+    runs-on: ubuntu-latest
+    environment: qq-test
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Install Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Delete only explicitly marked V4-C test forum posts
+        env:
+          INPUT_CONFIRM_DELETE: ${{ inputs.confirmDelete }}
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
+          QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
+          FORUM_CLEANUP_OUTPUT: ${{ runner.temp }}/qq-forum-cleanup.md
+        run: node tools/qq-test/cleanup-forum-run.mjs
+      - name: Publish safe cleanup summary
+        if: always()
+        run: |
+          if [ -f "${RUNNER_TEMP}/qq-forum-cleanup.md" ]; then
+            cat "${RUNNER_TEMP}/qq-forum-cleanup.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "# QQ 论坛测试帖清理失败" >> "$GITHUB_STEP_SUMMARY"
+            echo "未生成可安全展示的清理结果。" >> "$GITHUB_STEP_SUMMARY"
+          fi
