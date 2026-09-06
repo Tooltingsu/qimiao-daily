@@ -160,6 +160,15 @@ try {
       result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
       await sendWithRetry(() => sendText(bot, "text", chunk, 1), chunk);
       result.status = successfulSendStatus();
+    } else if (mode === "medium") {
+      const text = "【测试】绮喵日报 V4-C 中等长度文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(25);
+      const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
+      result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
+      for (const chunk of chunks) {
+        await sendWithRetry(() => sendText(bot, "medium", chunk, chunks.length), chunk);
+        await new Promise(resolve => setTimeout(resolve, 250));
+      }
+      result.status = successfulSendStatus();
     } else if (mode === "long") {
       const text = "【测试】绮喵日报 V4-C 长文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(55);
       const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));

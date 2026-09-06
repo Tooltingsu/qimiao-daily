@@ -7,6 +7,7 @@ test("forum text payload uses documented Markdown format", () => {
     title: "【测试】标题", content: "正文", format: 3
   });
   assert.equal(forumTitle("report", "2026-09-06", 2, 3), "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06（2/3）");
+  assert.equal(forumTitle("medium", "2026-09-06"), "【测试】绮喵日报 V4-C 中等长度测试 2026-09-06");
 });
 
 test("forum image payload uses documented RichText JSON image element", () => {

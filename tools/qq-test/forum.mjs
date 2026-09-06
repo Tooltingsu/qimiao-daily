@@ -19,7 +19,7 @@ export function forumImagePayload(title, caption, imageUrl) {
 }
 
 export function forumTitle(mode, date, sequence = 1, total = 1) {
-  const labels = { text: "连接测试", long: "长文本测试", image: "图片测试", report: "完整日报测试" };
+  const labels = { text: "连接测试", medium: "中等长度测试", long: "长文本测试", image: "图片测试", report: "完整日报测试" };
   const suffix = total > 1 ? `（${sequence}/${total}）` : "";
   return `【测试】绮喵日报 V4-C ${labels[mode] ?? mode} ${date}${suffix}`;
 }
