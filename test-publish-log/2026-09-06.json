@@ -119,6 +119,36 @@
       "attemptedAt": "2026-09-06T04:06:56.999Z",
       "completedAt": "2026-09-06T04:07:00.832Z",
       "error": null
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "medium",
+      "targetType": "FORUM",
+      "status": "TEST_SUBMITTED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34010804525",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:98bb09dd53169ea3fcf4ac85f913693bbc17d02de1d320bcc3a1c4361027b2e8",
+          "characters": 898
+        }
+      ],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "text",
+          "postTaskId": "1788667812298534470",
+          "createTime": "1788667812",
+          "hash": "sha256:98bb09dd53169ea3fcf4ac85f913693bbc17d02de1d320bcc3a1c4361027b2e8"
+        }
+      ],
+      "mediaCount": 0,
+      "attemptedAt": "2026-09-06T04:10:09.649Z",
+      "completedAt": "2026-09-06T04:10:12.659Z",
+      "error": null
     }
   ]
 }
