@@ -280,6 +280,44 @@
       "attemptedAt": "2026-09-06T06:59:26.611Z",
       "completedAt": "2026-09-06T06:59:28.107Z",
       "error": "PUBLISH_MEDIA_FAILED: artwork 149119754 has no HTTPS image URL."
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "report",
+      "targetType": "FORUM",
+      "status": "TEST_SUBMITTED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018791395",
+      "reportRevision": 1,
+      "reportHash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
+          "characters": 946
+        }
+      ],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "text",
+          "postTaskId": "1788679122749538052",
+          "createTime": "1788679122",
+          "hash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0"
+        },
+        {
+          "sequence": 2,
+          "kind": "artwork",
+          "postTaskId": "1788679123491729105",
+          "createTime": "1788679123",
+          "hash": "sha256:7ea11c230c19629ff38d1eaeb987a1c5f31fb916f5887fe76e29487e78559362"
+        }
+      ],
+      "mediaCount": 1,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06",
+      "attemptedAt": "2026-09-06T07:18:37.624Z",
+      "completedAt": "2026-09-06T07:18:43.612Z",
+      "error": null
     }
   ]
 }
