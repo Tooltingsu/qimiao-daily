@@ -16,7 +16,7 @@ on:
         required: true
         default: text
         type: choice
-        options: [text, medium, long, image, report]
+        options: [text, medium, long, richtext, image, report]
       textOnly:
         description: Reserved for the report stage; V4-C sends report text only until the forum image stage is verified
         required: true

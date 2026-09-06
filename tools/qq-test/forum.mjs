@@ -18,8 +18,15 @@ export function forumImagePayload(title, caption, imageUrl) {
   return forumThreadPayload(title, JSON.stringify(richText), 4);
 }
 
+export function forumRichTextPayload(title, text) {
+  const richText = {
+    paragraphs: [{ elems: [{ type: 1, text: { text: String(text) } }] }]
+  };
+  return forumThreadPayload(title, JSON.stringify(richText), 4);
+}
+
 export function forumTitle(mode, date, sequence = 1, total = 1) {
-  const labels = { text: "连接测试", medium: "中等长度测试", long: "长文本测试", image: "图片测试", report: "完整日报测试" };
+  const labels = { text: "连接测试", medium: "中等长度测试", long: "长文本测试", richtext: "富文本结构测试", image: "图片测试", report: "完整日报测试" };
   const suffix = total > 1 ? `（${sequence}/${total}）` : "";
   return `【测试】绮喵日报 V4-C ${labels[mode] ?? mode} ${date}${suffix}`;
 }

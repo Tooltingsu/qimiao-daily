@@ -3,7 +3,7 @@ import { dirname, resolve } from "node:path";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
 import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { chunkReport, sha256 } from "./chunking.mjs";
-import { forumImagePayload, forumThreadPayload, forumTitle } from "./forum.mjs";
+import { forumImagePayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "./forum.mjs";
 
 const root = resolve(process.env.GITHUB_WORKSPACE || process.cwd());
 const mode = process.env.INPUT_MODE || "auth";
@@ -176,6 +176,18 @@ try {
       for (const chunk of chunks) {
         await sendWithRetry(() => sendText(bot, "long", chunk, chunks.length), chunk);
         await new Promise(resolve => setTimeout(resolve, 250));
+      }
+      result.status = successfulSendStatus();
+    } else if (mode === "richtext") {
+      const text = "【测试】绮喵日报 V4-C 富文本结构测试：仅包含官方 RichText 的文本元素，用于定位图片测试失败原因。";
+      const chunk = { sequence: 1, text, hash: sha256(text) };
+      result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
+      if (targetType === "FORUM") {
+        await sendWithRetry(() => bot.api.put(
+          `/channels/${encodeURIComponent(channelId)}/threads`,
+          forumRichTextPayload(forumTitle("richtext", date), text)), chunk, "richtext");
+      } else {
+        await sendWithRetry(() => bot.sendChannelMessage(channelId, text), chunk, "richtext");
       }
       result.status = successfulSendStatus();
     } else if (mode === "report") {
