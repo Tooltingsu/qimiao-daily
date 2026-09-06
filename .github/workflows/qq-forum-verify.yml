@@ -2,6 +2,11 @@ name: QQ forum test post verification
 
 on:
   workflow_dispatch:
+    inputs:
+      titlePrefix:
+        description: Exact test-title prefix to verify; blank verifies all V4-C test posts
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -28,6 +33,7 @@ jobs:
           QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
           QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
           QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
+          QQ_TEST_TITLE_PREFIX: ${{ inputs.titlePrefix }}
           FORUM_VERIFY_OUTPUT: ${{ runner.temp }}/qq-forum-verify.md
         run: node tools/qq-test/verify-forum.mjs
       - name: Publish safe verification summary
