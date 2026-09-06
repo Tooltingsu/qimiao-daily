@@ -28,6 +28,8 @@
 
 测试图片已通过，但当前 locked revision 的已选 Pixiv 美图只有作品页 URL、没有可下载/可上传的直接图像 URL。因此它不能被悄悄替换成普通文本或测试图：正式 Publisher 将其视为 `PUBLISH_MEDIA_FAILED`，除非在临时下载、格式/大小校验及 QQ 图片发送后全部成功。仓库不会保存 Pixiv 原图。
 
+此策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED: artwork 149119754 has no HTTPS image URL.`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。
+
 ## 测试帖删除
 
 用户要求测试完成后立即删除。清理工作流只匹配 `【测试】绮喵日报 V4-C`，且要求手动输入 `DELETE_TEST_POSTS`。第一次真实删除调用曾被 QQ 拒绝：`HTTP 400 / 11264 / 频道未对机器人授权`，没有把该次失败写成删除成功。随后运行 [34017690886](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017690886) 成功读取当前可见列表，匹配为 **0**，因此未尝试删除任何帖子；这证明当前读取窗口内没有残留的标记测试帖。接口返回 `is_finish=否/未知`，所以它不是跨全部历史页面的绝对证明；若 QQ 客户端仍看到标记测试帖，请人工删除，或授予机器人论坛删帖权限后再运行清理工作流。
