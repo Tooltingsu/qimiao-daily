@@ -109,6 +109,34 @@ public sealed class V4PocTests
         Assert.False(File.Exists(fixture.Repository.PathFor("publish-log", fixture.Date.ToString("yyyy-MM-dd") + ".json")));
     }
 
+    [Fact]
+    public void QqOfficialPublisherOnlyPlansTheExactLockedRevision()
+    {
+        using var fixture = new RepositoryFixture();
+        var generated = new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit-a", fixture.Now);
+        var locked = new V4PublishService(fixture.Repository).Lock(fixture.Date, true, fixture.Now.AddMinutes(1));
+        var manifest = fixture.Repository.Read<ReportManifest>("reports", fixture.Date.ToString("yyyy-MM-dd"), "manifest.json");
+
+        var plan = new QQOfficialPublisher().CreatePlan(locked, manifest, new QqPublishTarget("FORUM", "test-target"), 200);
+
+        Assert.Equal(generated.ReportHash, plan.ReportHash);
+        Assert.Equal(locked.Revision, plan.Revision);
+        Assert.Equal(locked.Content, string.Join("\n\n", plan.TextChunks.Select(x => x.Text)));
+        Assert.All(plan.TextChunks, chunk => Assert.StartsWith("sha256:", chunk.Hash));
+    }
+
+    [Fact]
+    public void QqOfficialPublisherBlocksAHashThatDoesNotMatchTheManifest()
+    {
+        using var fixture = new RepositoryFixture();
+        new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit-a", fixture.Now);
+        var locked = new V4PublishService(fixture.Repository).Lock(fixture.Date, true, fixture.Now.AddMinutes(1));
+        var manifest = fixture.Repository.Read<ReportManifest>("reports", fixture.Date.ToString("yyyy-MM-dd"), "manifest.json");
+        manifest.ReportHash = "sha256:not-the-locked-content";
+
+        Assert.Throws<InvalidDataException>(() => new QQOfficialPublisher().CreatePlan(locked, manifest, new QqPublishTarget("FORUM", "test-target")));
+    }
+
     private sealed class RepositoryFixture : IDisposable
     {
         private readonly string _root = Path.Combine(Path.GetTempPath(), "qimiao-v4-" + Guid.NewGuid().ToString("N"));
