@@ -2,6 +2,7 @@ import { writeFile } from "node:fs/promises";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
 import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { cleanupPlan, renderCleanupMarkdown } from "./cleanup-forum.mjs";
+import { retryDelayMs } from "./retry.mjs";
 
 const appId = process.env.QQ_BOT_APP_ID || "";
 const appSecret = process.env.QQ_BOT_APP_SECRET || "";
@@ -30,7 +31,7 @@ async function deleteWithRetry(bot, threadId) {
     } catch (error) {
       const retryable = error instanceof ApiError && (error.httpStatus === 429 || error.httpStatus >= 500);
       if (!retryable || attempt === 3) throw error;
-      await new Promise(resolve => setTimeout(resolve, attempt * 1000));
+      await new Promise(resolve => setTimeout(resolve, retryDelayMs(error, attempt)));
     }
   }
 }

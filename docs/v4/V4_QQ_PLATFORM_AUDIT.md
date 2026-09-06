@@ -37,7 +37,7 @@
 
 ## 限流、错误与网络
 
-- SDK 定义结构化 `ApiError`，带 HTTP status 与 QQ 业务错误码；V4-C 只对网络错误、429 和 5xx 至多重试三次。400/401/403/参数错误不重试。
+- SDK 定义结构化 `ApiError`，带 HTTP status 与 QQ 业务错误码；V4-C 只对网络错误、429 和 5xx 至多重试三次。400/401/403/参数错误不重试。SDK 1.0.4 当前的 `ApiError` 未公开响应 headers；若以后 SDK/transport 暴露 `Retry-After` 或 `retryAfterMs`，重试器会优先遵守它，否则使用 1s、2s 的有限退避。
 - 频道连续分段之间固定等待 250ms；真正的 `Retry-After` / QQ 返回限流语义由真实测试记录后再补充。
 - 尚未找到可作为结论的当前官方“GitHub-hosted Runner 固定出口 IP / 白名单”依据。因此第一份真实 `qq-connectivity-test.yml` 输出是唯一有效 Gate：若 QQ 返回白名单/源 IP/ACL 拒绝，将记录 HTTP 状态、业务错误码和脱敏报错到 `V4_QQ_GITHUB_RUNNER_NETWORK_RESULT.md`，并停止生产 Publisher。
 

@@ -6,6 +6,7 @@ import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { chunkReport, sha256 } from "./chunking.mjs";
 import { forumImagePayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "./forum.mjs";
 import { withValidatedArtwork } from "./artwork-media.mjs";
+import { retryDelayMs } from "./retry.mjs";
 
 const root = resolve(process.env.GITHUB_WORKSPACE || process.cwd());
 const mode = process.env.INPUT_MODE || "auth";
@@ -112,7 +113,7 @@ async function sendWithRetry(send, chunk, kind = "text") {
     } catch (error) {
       const retryable = error instanceof ApiError && (error.httpStatus === 429 || error.httpStatus >= 500);
       if (!retryable || attempt === 3) throw error;
-      await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+      await new Promise(resolve => setTimeout(resolve, retryDelayMs(error, attempt)));
     }
   }
 }
