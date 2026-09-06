@@ -23,6 +23,7 @@
 - Node 单元测试以 fake transport 模拟第三段发送失败：状态为 `PARTIAL_FAILURE`，恢复只发送未完成的第三段，已成功的前两段不会重复。
 - C# V4 测试覆盖普通发布幂等与 `republish` 生成 revision 2；qq-test Pages 投影与生产 `publish-log/` 隔离。
 - `tools/v4/secret_scan.py` 覆盖 `QQ_BOT_APP_SECRET`、`Authorization`、`access_token`，运行结果必须为 PASS 才允许提交。
+- [34018101053](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018101053) 已在 GitHub-hosted Runner 通过 Core、Collectors、V4、QQ Node harness（12 项）及 Secret Scan；后续每次 `main` 推送都会执行该 QQ harness。
 
 ## 美图的当前 Gate
 
