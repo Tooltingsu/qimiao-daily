@@ -10,24 +10,27 @@ import { retryDelayMs } from "./retry.mjs";
 
 const root = resolve(process.env.GITHUB_WORKSPACE || process.cwd());
 const mode = process.env.INPUT_MODE || "auth";
+const runtimeEnvironment = process.env.INPUT_ENVIRONMENT || "qq-test";
+const isProductionRelease = runtimeEnvironment === "production";
 const date = process.env.INPUT_REPORT_DATE || new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit"
 }).format(new Date());
 const revisionInput = process.env.INPUT_REVISION || "";
-const targetType = (process.env.QQ_TEST_TARGET_TYPE || "").toUpperCase();
-const channelId = process.env.QQ_TEST_CHANNEL_ID || "";
-const guildId = process.env.QQ_TEST_GUILD_ID || "";
+const targetType = (process.env.QQ_TARGET_TYPE || process.env.QQ_TEST_TARGET_TYPE || "").toUpperCase();
+const channelId = process.env.QQ_TARGET_CHANNEL_ID || process.env.QQ_TEST_CHANNEL_ID || "";
+const guildId = process.env.QQ_TARGET_GUILD_ID || process.env.QQ_TEST_GUILD_ID || "";
 const appId = process.env.QQ_BOT_APP_ID || "";
 const appSecret = process.env.QQ_BOT_APP_SECRET || "";
 const workflowRun = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
   ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
   : "LOCAL_QQ_TEST";
 const testLogPath = process.env.QQ_TEST_LOG_PATH || resolve(root, "test-publish-log", `${date}.json`);
+const productionLogPath = process.env.QQ_PUBLISH_LOG_PATH || resolve(root, "publish-log", `${date}.json`);
 const includeArtwork = process.env.INPUT_INCLUDE_ARTWORK === "true";
 
 const result = {
   date,
-  environment: "qq-test",
+  environment: runtimeEnvironment,
   mode,
   targetType: targetType || null,
   status: "RUNNING",
@@ -89,6 +92,7 @@ async function loadLockedRevision() {
   }
   result.reportRevision = revision;
   result.reportHash = actualHash;
+  result.sourceCommit = record.sourceCommit;
   return record;
 }
 
@@ -130,6 +134,7 @@ function sendText(bot, modeName, chunk, total) {
 function successfulSendStatus() {
   // The forum API returns a task_id. It acknowledges queueing, not a visible
   // thread ID; only the audit event or read-back can prove final visibility.
+  if (isProductionRelease) return targetType === "FORUM" ? "SUBMITTED_VISIBILITY_PENDING" : "PUBLISHED";
   return targetType === "FORUM" ? "TEST_SUBMITTED" : "TEST_PUBLISHED";
 }
 
@@ -144,18 +149,62 @@ function titlePrefix(modeName) {
   return forumTitle(modeName, date).replace(/（1\/1）$/, "");
 }
 
+function releaseTitle() {
+  return `绮喵日报 ${date.replaceAll("-", "").slice(2)}`;
+}
+
+async function assertProductionIdempotency() {
+  let log;
+  try { log = JSON.parse(await readFile(productionLogPath, "utf8")); } catch { return; }
+  const attempts = Array.isArray(log?.attempts) ? log.attempts : [];
+  if (attempts.some(item => item?.reportHash === result.reportHash && ["PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(item?.status)))
+    throw new Error("Idempotency guard: this locked report is already submitted or published.");
+}
+
+async function persistProduction() {
+  // Configuration/auth failures happen before a locked revision is loaded.
+  // They must not create an invalid production PublishLog entry.
+  if (!Number.isInteger(result.reportRevision) || !result.reportHash) return;
+  let log = { date, attempts: [] };
+  try {
+    const parsed = JSON.parse(await readFile(productionLogPath, "utf8"));
+    if (Array.isArray(parsed?.attempts)) log = parsed;
+  } catch { /* first release for this date */ }
+  log.date = date;
+  log.attempts.push({
+    revision: result.reportRevision,
+    reportHash: result.reportHash,
+    sourceCommit: result.sourceCommit || "",
+    qqPostId: result.messages.map(item => item.postTaskId).filter(Boolean).join(",") || null,
+    qqMessageId: result.messages.map(item => item.messageId).filter(Boolean).join(",") || null,
+    attemptedAt: result.attemptedAt,
+    publishedAt: result.status === "PUBLISHED" ? result.completedAt : null,
+    workflowRun,
+    status: result.status,
+    error: result.error,
+    dryRun: false,
+    reason: "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
+  });
+  await mkdir(dirname(productionLogPath), { recursive: true });
+  await writeFile(productionLogPath, JSON.stringify(log, null, 2) + "\n", "utf8");
+}
+
 async function persist() {
   result.completedAt = new Date().toISOString();
+  if (isProductionRelease) {
+    await persistProduction();
+  } else {
   await mkdir(dirname(testLogPath), { recursive: true });
-  let existing = { date, environment: "qq-test", attempts: [] };
+  let existing = { date, environment: runtimeEnvironment, attempts: [] };
   try {
     const parsed = JSON.parse(await readFile(testLogPath, "utf8"));
     if (Array.isArray(parsed.attempts)) existing = parsed;
   } catch { /* first test for this date */ }
   existing.date = date;
-  existing.environment = "qq-test";
+  existing.environment = runtimeEnvironment;
   existing.attempts.push(result);
   await writeFile(testLogPath, JSON.stringify(existing, null, 2) + "\n", "utf8");
+  }
   if (process.env.GITHUB_STEP_SUMMARY) {
     const elapsedMs = Math.max(0, Date.now() - new Date(result.attemptedAt).getTime());
     const ids = result.messages.map(message => message.postTaskId ?? message.messageId ?? "<missing>").join(", ") || "无";
@@ -231,13 +280,23 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "report") {
+      if (isProductionRelease && process.env.INPUT_TEXT_ONLY !== "true")
+        throw new Error("Production release currently requires explicit INPUT_TEXT_ONLY=true.");
       result.testTitlePrefix = titlePrefix(mode);
       const revision = await loadLockedRevision();
+      if (isProductionRelease) await assertProductionIdempotency();
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
       const sendReport = async validatedArtwork => {
         for (const chunk of chunks) {
-          await sendWithRetry(() => sendText(bot, "report", chunk, chunks.length), chunk);
+          const modeName = isProductionRelease ? "release" : "report";
+          if (isProductionRelease && targetType === "FORUM") {
+            await sendWithRetry(() => bot.api.put(
+              `/channels/${encodeURIComponent(channelId)}/threads`,
+              forumThreadPayload(releaseTitle(), chunk.text, 3)), chunk);
+          } else {
+            await sendWithRetry(() => sendText(bot, modeName, chunk, chunks.length), chunk);
+          }
           await new Promise(resolve => setTimeout(resolve, 250));
         }
         for (const image of validatedArtwork) {
@@ -283,4 +342,4 @@ try {
 }
 
 await persist();
-if (!["AUTHENTICATED", "TEST_PUBLISHED", "TEST_SUBMITTED"].includes(result.status)) process.exitCode = 2;
+if (!["AUTHENTICATED", "TEST_PUBLISHED", "TEST_SUBMITTED", "PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(result.status)) process.exitCode = 2;

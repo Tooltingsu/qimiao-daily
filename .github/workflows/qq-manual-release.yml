@@ -1,0 +1,75 @@
+name: QQ manual production release (text only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      reportDate:
+        description: Locked report date (yyyy-MM-dd)
+        required: true
+        type: string
+      revision:
+        description: Exact locked revision
+        required: true
+        type: string
+      confirm:
+        description: Type RELEASE_LOCKED_TEXT_ONLY to authorize this one production post
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-production-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: inputs.confirm == 'RELEASE_LOCKED_TEXT_ONLY'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+      - name: Install current Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Submit the exact locked text-only report
+        env:
+          INPUT_ENVIRONMENT: production
+          INPUT_MODE: report
+          INPUT_TEXT_ONLY: "true"
+          INPUT_INCLUDE_ARTWORK: "false"
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+          INPUT_REVISION: ${{ inputs.revision }}
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TARGET_TYPE: ${{ vars.QQ_PROD_TARGET_TYPE }}
+          QQ_TARGET_GUILD_ID: ${{ vars.QQ_PROD_GUILD_ID }}
+          QQ_TARGET_CHANNEL_ID: ${{ vars.QQ_PROD_CHANNEL_ID }}
+          QQ_TEST_MAX_TEXT_CHARS: "1800"
+          QQ_PUBLISH_LOG_PATH: ${{ github.workspace }}/publish-log/${{ inputs.reportDate }}.json
+        run: node tools/qq-test/run.mjs
+      - name: Build Pages and persist the sanitized release log
+        if: always()
+        run: |
+          dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- build-pages --root . --date '${{ inputs.reportDate }}'
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publish-log web/data
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(release): submit ${{ inputs.reportDate }} r${{ inputs.revision }} text only"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
