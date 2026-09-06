@@ -1,0 +1,39 @@
+name: QQ test target discovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover-targets:
+    runs-on: ubuntu-latest
+    environment: qq-test
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Install Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Discover accessible Guilds and Channels (read-only)
+        env:
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          DISCOVERY_OUTPUT: ${{ runner.temp }}/qq-target-discovery.md
+        run: node tools/qq-test/discover.mjs
+      - name: Publish safe target discovery summary
+        if: always()
+        run: |
+          if [ -f "${RUNNER_TEMP}/qq-target-discovery.md" ]; then
+            cat "${RUNNER_TEMP}/qq-target-discovery.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "# QQ 测试目标发现失败" >> "$GITHUB_STEP_SUMMARY"
+            echo "未生成可安全展示的发现结果。" >> "$GITHUB_STEP_SUMMARY"
+          fi
