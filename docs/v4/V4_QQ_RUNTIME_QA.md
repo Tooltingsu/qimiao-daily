@@ -29,7 +29,7 @@
 
 测试图片已通过，但当前 locked revision 的已选 Pixiv 美图只有作品页 URL、没有可下载/可上传的直接图像 URL。因此它不能被悄悄替换成普通文本或测试图：正式 Publisher 将其视为 `PUBLISH_MEDIA_FAILED`，除非在临时下载、格式/大小校验及 QQ 图片发送后全部成功。仓库不会保存 Pixiv 原图。
 
-此策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED: artwork 149119754 has no HTTPS image URL.`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。
+此策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED：美图 149119754 没有可用的 HTTPS 直接图片链接。`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。
 
 ## 测试帖删除
 

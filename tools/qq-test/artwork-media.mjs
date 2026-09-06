@@ -9,7 +9,7 @@ function requireDirectImageUrl(artwork) {
     // A Pixiv artwork page is intentionally not treated as an image URL. This
     // prevents an apparently successful text-only replacement for a selected
     // image when the collector did not retain a usable preview URL.
-    throw new Error(`PUBLISH_MEDIA_FAILED: artwork ${artwork?.artworkId ?? "unknown"} has no HTTPS image URL.`);
+    throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork?.artworkId ?? "unknown"} 没有可用的 HTTPS 直接图片链接。`);
   }
   return url;
 }
@@ -24,15 +24,15 @@ export async function validateArtworkDownload(artwork, directory, fetchImpl = fe
       redirect: "follow"
     });
   } catch (error) {
-    throw new Error(`PUBLISH_MEDIA_FAILED: artwork ${artwork.artworkId} download failed: ${error instanceof Error ? error.message : String(error)}`);
+    throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork.artworkId} 下载失败：${error instanceof Error ? error.message : String(error)}`);
   }
   const type = response.headers.get("content-type") ?? "";
   if (!response.ok || !type.toLowerCase().startsWith("image/")) {
-    throw new Error(`PUBLISH_MEDIA_FAILED: artwork ${artwork.artworkId} is not a downloadable image (HTTP ${response.status}, ${type || "unknown content type"}).`);
+    throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork.artworkId} 不是可下载图片（HTTP ${response.status}，${type || "未知内容类型"}）。`);
   }
   const bytes = Buffer.from(await response.arrayBuffer());
   if (!bytes.length || bytes.length > MAX_IMAGE_BYTES) {
-    throw new Error(`PUBLISH_MEDIA_FAILED: artwork ${artwork.artworkId} has invalid size ${bytes.length} bytes.`);
+    throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork.artworkId} 文件大小异常（${bytes.length} bytes）。`);
   }
   const filePath = resolve(directory, `${basename(String(artwork.artworkId || "artwork"))}.image`);
   await writeFile(filePath, bytes);

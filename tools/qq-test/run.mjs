@@ -242,7 +242,7 @@ try {
         }
         for (const image of validatedArtwork) {
           const chunk = { sequence: result.messages.length + 1, hash: sha256(image.sourceUrl) };
-          if (targetType !== "FORUM") throw new Error("PUBLISH_MEDIA_FAILED: V4-C only verified forum artwork delivery.");
+          if (targetType !== "FORUM") throw new Error("PUBLISH_MEDIA_FAILED：V4-C 当前只验证了论坛子频道的美图发送。");
           await sendWithRetry(() => bot.api.put(
             `/channels/${encodeURIComponent(channelId)}/threads`,
             forumImagePayload(forumTitle("report-artwork", date), "【测试】绮喵日报 V4-C 已选美图", image.sourceUrl)), chunk, "artwork");
