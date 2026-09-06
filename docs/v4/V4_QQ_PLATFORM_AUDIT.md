@@ -67,4 +67,5 @@
 | qq-test 环境 | AppID/AppSecret 已配置；用户已选 type=10007 论坛目标，代码支持 `QQ_TEST_TARGET_TYPE=FORUM`，待写入目标变量 |
 | GitHub-hosted Runner Auth / 只读 OpenAPI | VERIFIED：运行 [34006072572](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34006072572) 成功列出 1 个 Guild、33 个子频道和 2 个 type=0 文字子频道，未发送消息 |
 | GitHub-hosted Runner 论坛发帖/图片 | 待写入目标变量后测试 |
+| 论坛可见性核验 | 使用只读 `GET /channels/{channel_id}/threads` 工作流核验；`task_id` 仅代表创建任务被接收，不能单独等同于前台可见 |
 | Production QQ 自动发布 | 仍关闭 |

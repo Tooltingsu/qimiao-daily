@@ -1,0 +1,41 @@
+name: QQ forum test post verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-forum-post:
+    runs-on: ubuntu-latest
+    environment: qq-test
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Install Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Verify forum test post through the read-only API
+        env:
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
+          QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
+          FORUM_VERIFY_OUTPUT: ${{ runner.temp }}/qq-forum-verify.md
+        run: node tools/qq-test/verify-forum.mjs
+      - name: Publish safe verification summary
+        if: always()
+        run: |
+          if [ -f "${RUNNER_TEMP}/qq-forum-verify.md" ]; then
+            cat "${RUNNER_TEMP}/qq-forum-verify.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "# QQ 论坛测试帖核验失败" >> "$GITHUB_STEP_SUMMARY"
+            echo "未生成可安全展示的核验结果。" >> "$GITHUB_STEP_SUMMARY"
+          fi
