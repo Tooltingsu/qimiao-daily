@@ -1,9 +1,9 @@
-import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
 import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { chunkReport, sha256 } from "./chunking.mjs";
+import { forumImagePayload, forumThreadPayload, forumTitle } from "./forum.mjs";
 
 const root = resolve(process.env.GITHUB_WORKSPACE || process.cwd());
 const mode = process.env.INPUT_MODE || "auth";
@@ -13,6 +13,7 @@ const date = process.env.INPUT_REPORT_DATE || new Intl.DateTimeFormat("en-CA", {
 const revisionInput = process.env.INPUT_REVISION || "";
 const targetType = (process.env.QQ_TEST_TARGET_TYPE || "").toUpperCase();
 const channelId = process.env.QQ_TEST_CHANNEL_ID || "";
+const guildId = process.env.QQ_TEST_GUILD_ID || "";
 const appId = process.env.QQ_BOT_APP_ID || "";
 const appSecret = process.env.QQ_BOT_APP_SECRET || "";
 const workflowRun = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
@@ -24,6 +25,7 @@ const result = {
   date,
   environment: "qq-test",
   mode,
+  targetType: targetType || null,
   status: "RUNNING",
   workflowRun,
   reportRevision: null,
@@ -51,10 +53,12 @@ function failure(error) {
   return mask(error instanceof Error ? error.message : error);
 }
 
-function configured() {
+function configured(needsTarget) {
   if (!appId || !appSecret) return "缺少 qq-test Environment Secret：QQ_BOT_APP_ID 或 QQ_BOT_APP_SECRET。";
-  if (targetType !== "CHANNEL") return "qq-test 目前仅允许 QQ_TEST_TARGET_TYPE=CHANNEL。";
+  if (!needsTarget) return null;
+  if (!["CHANNEL", "FORUM"].includes(targetType)) return "qq-test 仅允许 QQ_TEST_TARGET_TYPE=CHANNEL 或 FORUM。";
   if (!channelId) return "缺少 qq-test Environment Variable：QQ_TEST_CHANNEL_ID。";
+  if (targetType === "FORUM" && !guildId) return "论坛测试还需要 qq-test Environment Variable：QQ_TEST_GUILD_ID。";
   return null;
 }
 
@@ -83,11 +87,23 @@ async function loadLockedRevision() {
   return record;
 }
 
-async function sendWithRetry(send, chunk) {
+function recordTargetResponse(response, chunk, kind) {
+  if (targetType === "FORUM") {
+    const postTaskId = response?.task_id;
+    if (!postTaskId) throw new Error("QQ 论坛发帖接口未返回 task_id。帖子可能仍在审核，不能伪造已发布状态。");
+    result.messages.push({ sequence: chunk.sequence, kind, postTaskId, createTime: response?.create_time ?? null, hash: chunk.hash });
+    return;
+  }
+  const messageId = response?.id;
+  if (!messageId) throw new Error("QQ 频道消息接口未返回 message ID。");
+  result.messages.push({ sequence: chunk.sequence, kind, messageId, hash: chunk.hash });
+}
+
+async function sendWithRetry(send, chunk, kind = "text") {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const response = await send();
-      result.messages.push({ sequence: chunk.sequence, kind: "text", messageId: response.id, hash: chunk.hash });
+      recordTargetResponse(response, chunk, kind);
       return;
     } catch (error) {
       const retryable = error instanceof ApiError && (error.httpStatus === 429 || error.httpStatus >= 500);
@@ -95,6 +111,15 @@ async function sendWithRetry(send, chunk) {
       await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
     }
   }
+}
+
+function sendText(bot, modeName, chunk, total) {
+  if (targetType === "FORUM") {
+    return bot.api.put(
+      `/channels/${encodeURIComponent(channelId)}/threads`,
+      forumThreadPayload(forumTitle(modeName, date, chunk.sequence, total), chunk.text, 3));
+  }
+  return bot.sendChannelMessage(channelId, chunk.text);
 }
 
 async function persist() {
@@ -113,7 +138,7 @@ async function persist() {
 }
 
 try {
-  const configError = configured();
+  const configError = configured(mode !== "auth");
   if (configError) {
     result.status = "BLOCKED_BY_USER";
     result.error = configError;
@@ -124,16 +149,17 @@ try {
     if (mode === "auth") {
       result.status = "AUTHENTICATED";
     } else if (mode === "text") {
-      const chunk = { sequence: 1, text: "绮喵日报 V4-C QQ 官方机器人连接测试", hash: sha256("绮喵日报 V4-C QQ 官方机器人连接测试") };
+      const text = "【测试】绮喵日报 V4-C QQ 官方机器人连接测试";
+      const chunk = { sequence: 1, text, hash: sha256(text) };
       result.textChunks = [chunk];
-      await sendWithRetry(() => bot.sendChannelMessage(channelId, chunk.text), chunk);
+      await sendWithRetry(() => sendText(bot, "text", chunk, 1), chunk);
       result.status = "TEST_PUBLISHED";
     } else if (mode === "long") {
-      const text = "绮喵日报 V4-C 长文本测试\n" + "本消息用于验证 QQ 官方机器人在测试频道的文本承载与稳定分段能力。\n".repeat(55);
+      const text = "【测试】绮喵日报 V4-C 长文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(55);
       const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
       for (const chunk of chunks) {
-        await sendWithRetry(() => bot.sendChannelMessage(channelId, chunk.text), chunk);
+        await sendWithRetry(() => sendText(bot, "long", chunk, chunks.length), chunk);
         await new Promise(resolve => setTimeout(resolve, 250));
       }
       result.status = "TEST_PUBLISHED";
@@ -142,19 +168,23 @@ try {
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
       for (const chunk of chunks) {
-        await sendWithRetry(() => bot.sendChannelMessage(channelId, chunk.text), chunk);
+        await sendWithRetry(() => sendText(bot, "report", chunk, chunks.length), chunk);
         await new Promise(resolve => setTimeout(resolve, 250));
       }
       result.status = "TEST_PUBLISHED";
     } else if (mode === "image") {
-      // Channel-media upload is not wrapped by the current official SDK. Its documented raw
-      // API gateway is used only for this explicit test and only with an HTTPS test URL.
       const image = process.env.QQ_TEST_IMAGE_URL || "";
       if (!/^https:\/\//.test(image)) throw new Error("图片测试需要 HTTPS 的 QQ_TEST_IMAGE_URL。");
-      const response = await bot.api.post(`/channels/${channelId}/messages`, { content: "绮喵日报 V4-C 图片连接测试", image });
-      const messageId = response?.id;
-      if (!messageId) throw new Error("QQ 图片接口未返回 message ID。");
-      result.messages.push({ sequence: 1, kind: "image", messageId, hash: sha256(image) });
+      const chunk = { sequence: 1, hash: sha256(image) };
+      if (targetType === "FORUM") {
+        await sendWithRetry(() => bot.api.put(
+          `/channels/${encodeURIComponent(channelId)}/threads`,
+          forumImagePayload(forumTitle("image", date), "【测试】绮喵日报 V4-C 图片连接测试", image)), chunk, "image");
+      } else {
+        await sendWithRetry(() => bot.api.post(
+          `/channels/${encodeURIComponent(channelId)}/messages`,
+          { content: "【测试】绮喵日报 V4-C 图片连接测试", image }), chunk, "image");
+      }
       result.mediaCount = 1;
       result.status = "TEST_PUBLISHED";
     } else {

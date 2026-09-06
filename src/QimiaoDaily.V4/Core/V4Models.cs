@@ -164,6 +164,7 @@ public sealed class QqTestPublishLog
 public sealed class QqTestPublishAttempt
 {
     public string Mode { get; init; } = "auth";
+    public string? TargetType { get; init; }
     public string Status { get; init; } = "NOT_TESTED";
     public int? ReportRevision { get; init; }
     public string? ReportHash { get; init; }
@@ -179,6 +180,8 @@ public sealed class QqTestMessage
     public int Sequence { get; init; }
     public string Kind { get; init; } = "text";
     public string? MessageId { get; init; }
+    public string? PostTaskId { get; init; }
+    public string? CreateTime { get; init; }
     public string? Hash { get; init; }
 }
 

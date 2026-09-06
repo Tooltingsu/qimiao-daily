@@ -10,7 +10,7 @@ PATTERNS = [
     rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----",
     rb"(?:AKIA|ASIA)[A-Z0-9]{16}",
     rb"PHPSESSID=[0-9]{3,}_[A-Za-z0-9]{10,}",
-    rb"(?i)(?:QQ_BOT_SECRET|PIXIV_SESSION|GITHUB_TOKEN|APP_SECRET)\s*[=:]\s*[\"']?[A-Za-z0-9_+/=-]{20,}",
+    rb"(?i)\b(?:QQ_BOT_APP_SECRET|QQ_BOT_SECRET|PIXIV_SESSION|GITHUB_TOKEN|APP_SECRET|authorization|access_token)\b\s*[=:]\s*[\"']?(?!\*{3})[A-Za-z0-9._~+/=-]{20,}",
 ]
 # A workstation or runner path is not a credential, but it is personal/runtime
 # metadata and must never be deployed to the public dashboard or reports.
