@@ -48,7 +48,11 @@ jobs:
           FORUM_VERIFY_JSON: ${{ runner.temp }}/qq-forum-verify.json
         run: |
           # The V4-C test titles always end in yyyy-MM-dd. Do not accept a
-          # broad verifier result for write-back.
+          # broad verifier result for write-back; broad checks are read-only.
+          if ! [[ "${INPUT_TITLE_PREFIX}" =~ [0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Broad forum verification: no Pages write-back requested." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           export INPUT_REPORT_DATE="$(echo "${INPUT_TITLE_PREFIX}" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
           test -n "${INPUT_REPORT_DATE}"
           dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo

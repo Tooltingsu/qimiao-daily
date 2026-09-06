@@ -33,9 +33,11 @@
 
 `qq-artwork-preflight.yml` 是仅手动、无 QQ Secret、无 QQ API 调用的前置校验：它验证 locked revision hash 后才临时下载图片，并总在退出时清理临时文件。只有该 Gate 通过，才有资格请求一次需要人工删帖配合的实际图片发送测试。
 
+实际发送已于 [34018791395](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018791395) 执行：locked Revision 1 的文本与一张已选 Pixiv 美图均收到 QQ 论坛 `task_id`。随后 [34018840573](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018840573) 和 [34018924256](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018924256) 的只读列表确认了文本帖可见，但当前读取窗口没有对应图片帖。因此测试日志被明确标记为 `TEST_PARTIAL_VISIBILITY`，**不把图片 task_id 误写成图片发布成功**。
+
 ## 测试帖删除
 
-用户要求测试完成后立即删除。清理工作流只匹配 `【测试】绮喵日报 V4-C`，且要求手动输入 `DELETE_TEST_POSTS`。第一次真实删除调用曾被 QQ 拒绝：`HTTP 400 / 11264 / 频道未对机器人授权`，没有把该次失败写成删除成功。随后运行 [34017690886](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017690886) 成功读取当前可见列表，匹配为 **0**，因此未尝试删除任何帖子；这证明当前读取窗口内没有残留的标记测试帖。接口返回 `is_finish=否/未知`，所以它不是跨全部历史页面的绝对证明；若 QQ 客户端仍看到标记测试帖，请人工删除，或授予机器人论坛删帖权限后再运行清理工作流。
+用户要求测试完成后立即删除。清理工作流只匹配 `【测试】绮喵日报 V4-C`，且要求手动输入 `DELETE_TEST_POSTS`。第一次真实删除调用曾被 QQ 拒绝：`HTTP 400 / 11264 / 频道未对机器人授权`，没有把该次失败写成删除成功。随后运行 [34017690886](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017690886) 成功读取当前可见列表，匹配为 **0**，因此未尝试删除任何帖子；这证明当前读取窗口内没有残留的标记测试帖。实际选图测试后的 [34018882951](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018882951) 仍收到同一 `11264` 错误，说明删帖授权尚未在当前 Bot/Guild/论坛目标上生效。请人工删除当前可见测试文本帖，或在 QQ 开放平台确认“删除论坛帖子”的权限已授权给**本次 qq-test 凭据对应的机器人**后再试。
 
 ## 尚待补齐的证据
 

@@ -68,11 +68,11 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "TEST_SUBMITTED",
+    "status": "TEST_PARTIAL_VISIBILITY",
     "mode": "report",
     "messageCount": 2,
     "mediaCount": 1,
     "completedAt": "2026-09-06T07:18:43.612+00:00",
-    "error": null
+    "error": "\u53EA\u8BFB\u8BBA\u575B\u6838\u9A8C\u5DF2\u786E\u8BA4\u5B8C\u6574\u65E5\u62A5\u6587\u672C\u5E16\u53EF\u89C1\uFF1B\u540C\u6B21\u56FE\u7247 task_id \u5728\u5F53\u524D\u53EF\u8BFB\u53D6\u5217\u8868\u4E2D\u672A\u627E\u5230\u5BF9\u5E94\u5E16\u5B50\uFF0C\u4E0D\u80FD\u89C6\u4E3A\u56FE\u7247\u5DF2\u53D1\u5E03\u3002"
   }
 }

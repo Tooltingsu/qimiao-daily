@@ -286,7 +286,7 @@
       "environment": "qq-test",
       "mode": "report",
       "targetType": "FORUM",
-      "status": "TEST_SUBMITTED",
+      "status": "TEST_PARTIAL_VISIBILITY",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018791395",
       "reportRevision": 1,
       "reportHash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
@@ -317,7 +317,7 @@
       "testTitlePrefix": "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06",
       "attemptedAt": "2026-09-06T07:18:37.624Z",
       "completedAt": "2026-09-06T07:18:43.612Z",
-      "error": null
+      "error": "只读论坛核验已确认完整日报文本帖可见；同次图片 task_id 在当前可读取列表中未找到对应帖子，不能视为图片已发布。"
     }
   ]
 }

@@ -19,7 +19,8 @@ const providerLabels = {
 const qqTestStatusLabels = {
   NOT_TESTED: "尚未测试", BLOCKED_BY_USER: "等待测试环境配置", AUTHENTICATED: "鉴权成功",
   TEST_SUBMITTED: "论坛帖子已提交，待核验", TEST_VISIBLE: "测试帖子已核验可见", TEST_NOT_VISIBLE: "论坛帖子未显示",
-  TEST_PUBLISHED: "测试发布成功", TEST_FAILED: "测试发布失败", PARTIAL_FAILURE: "部分发送失败"
+    TEST_PUBLISHED: "测试发布成功", TEST_FAILED: "测试发布失败", PARTIAL_FAILURE: "部分发送失败",
+    TEST_PARTIAL_VISIBILITY: "部分帖子可见，图片待核验"
 };
 
 async function loadDashboard() {
