@@ -16,9 +16,17 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 8.0.x
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
       - run: dotnet restore src/QimiaoDaily.V4/QimiaoDaily.V4.csproj
       - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --no-restore
       - run: dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- validate --root .
       - run: dotnet test tests/QimiaoDaily.Core.Tests/QimiaoDaily.Core.Tests.csproj -c Release
       - run: dotnet test tests/QimiaoDaily.Collectors.Tests/QimiaoDaily.Collectors.Tests.csproj -c Release
       - run: dotnet test tests/QimiaoDaily.V4.Tests/QimiaoDaily.V4.Tests.csproj -c Release
+      - run: npm ci --ignore-scripts && npm test
+        working-directory: tools/qq-test
+      - run: python3 tools/v4/secret_scan.py
