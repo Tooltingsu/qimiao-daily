@@ -31,7 +31,9 @@ try {
   // Official read-only forum list endpoint. No gateway and no message/thread creation.
   const response = await bot.api.get(`/channels/${encodeURIComponent(channelId)}/threads`);
   const all = Array.isArray(response?.threads) ? response.threads : [];
-  markdown = renderForumVerificationMarkdown(matchingForumThreads(response, titlePrefix), all.length);
+  const matches = matchingForumThreads(response, titlePrefix);
+  markdown = renderForumVerificationMarkdown(matches, all.length);
+  if (!matches.length) process.exitCode = 3;
 } catch (error) {
   markdown = `# QQ 论坛测试帖核验失败\n\n${safeError(error)}\n\n未发送 QQ 消息；未输出 AppSecret 或 access token。`;
   process.exitCode = 2;

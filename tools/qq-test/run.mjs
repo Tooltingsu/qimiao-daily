@@ -122,6 +122,12 @@ function sendText(bot, modeName, chunk, total) {
   return bot.sendChannelMessage(channelId, chunk.text);
 }
 
+function successfulSendStatus() {
+  // The forum API returns a task_id. It acknowledges queueing, not a visible
+  // thread ID; only the audit event or read-back can prove final visibility.
+  return targetType === "FORUM" ? "TEST_SUBMITTED" : "TEST_PUBLISHED";
+}
+
 async function persist() {
   result.completedAt = new Date().toISOString();
   await mkdir(dirname(testLogPath), { recursive: true });
@@ -153,7 +159,7 @@ try {
       const chunk = { sequence: 1, text, hash: sha256(text) };
       result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
       await sendWithRetry(() => sendText(bot, "text", chunk, 1), chunk);
-      result.status = "TEST_PUBLISHED";
+      result.status = successfulSendStatus();
     } else if (mode === "long") {
       const text = "【测试】绮喵日报 V4-C 长文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(55);
       const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
@@ -162,7 +168,7 @@ try {
         await sendWithRetry(() => sendText(bot, "long", chunk, chunks.length), chunk);
         await new Promise(resolve => setTimeout(resolve, 250));
       }
-      result.status = "TEST_PUBLISHED";
+      result.status = successfulSendStatus();
     } else if (mode === "report") {
       const revision = await loadLockedRevision();
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
@@ -171,7 +177,7 @@ try {
         await sendWithRetry(() => sendText(bot, "report", chunk, chunks.length), chunk);
         await new Promise(resolve => setTimeout(resolve, 250));
       }
-      result.status = "TEST_PUBLISHED";
+      result.status = successfulSendStatus();
     } else if (mode === "image") {
       const image = process.env.QQ_TEST_IMAGE_URL || "";
       if (!/^https:\/\//.test(image)) throw new Error("图片测试需要 HTTPS 的 QQ_TEST_IMAGE_URL。");
@@ -186,7 +192,7 @@ try {
           { content: "【测试】绮喵日报 V4-C 图片连接测试", image }), chunk, "image");
       }
       result.mediaCount = 1;
-      result.status = "TEST_PUBLISHED";
+      result.status = successfulSendStatus();
     } else {
       throw new Error(`不支持的 qq-test mode：${mode}`);
     }
@@ -197,4 +203,4 @@ try {
 }
 
 await persist();
-if (!["AUTHENTICATED", "TEST_PUBLISHED"].includes(result.status)) process.exitCode = 2;
+if (!["AUTHENTICATED", "TEST_PUBLISHED", "TEST_SUBMITTED"].includes(result.status)) process.exitCode = 2;

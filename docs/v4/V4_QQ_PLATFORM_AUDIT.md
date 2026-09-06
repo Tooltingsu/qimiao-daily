@@ -66,6 +66,7 @@
 | 官方 SDK 方案与最小 workflow | READY |
 | qq-test 环境 | AppID/AppSecret 已配置；用户已选 type=10007 论坛目标，代码支持 `QQ_TEST_TARGET_TYPE=FORUM`，待写入目标变量 |
 | GitHub-hosted Runner Auth / 只读 OpenAPI | VERIFIED：运行 [34006072572](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34006072572) 成功列出 1 个 Guild、33 个子频道和 2 个 type=0 文字子频道，未发送消息 |
-| GitHub-hosted Runner 论坛发帖/图片 | 待写入目标变量后测试 |
-| 论坛可见性核验 | 使用只读 `GET /channels/{channel_id}/threads` 工作流核验；`task_id` 仅代表创建任务被接收，不能单独等同于前台可见 |
+| GitHub-hosted Runner 论坛发帖 | 仅得到创建 `task_id`；8 分钟后只读帖子列表仍无匹配测试帖，**不视为发布成功** |
+| 论坛可见性核验 | 已实现只读 `GET /channels/{channel_id}/threads` 工作流；无匹配帖子会失败，`task_id` 仅代表创建任务被接收，不能单独等同于前台可见 |
+| 当前阻塞 | 腾讯论坛发帖接口标注 `<PrivateDomain/>`，即仅私域机器人可用。选定的外部 Guild 论坛目标很可能因此在异步审核阶段未通过；在确认机器人为该 Guild 的私域机器人前，禁止继续发送长文本、图片或完整日报 |
 | Production QQ 自动发布 | 仍关闭 |

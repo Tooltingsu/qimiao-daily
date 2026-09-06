@@ -23,7 +23,7 @@
       "environment": "qq-test",
       "mode": "text",
       "targetType": "FORUM",
-      "status": "TEST_PUBLISHED",
+      "status": "TEST_NOT_VISIBLE",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34007089213",
       "reportRevision": null,
       "reportHash": null,
@@ -46,7 +46,7 @@
       "mediaCount": 0,
       "attemptedAt": "2026-09-06T02:40:43.938Z",
       "completedAt": "2026-09-06T02:40:47.622Z",
-      "error": null
+      "error": "论坛只读核验未找到匹配测试帖；task_id 仅表示创建任务被接收，不代表帖子前台可见。"
     }
   ]
 }
