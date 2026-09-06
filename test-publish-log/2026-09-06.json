@@ -30,7 +30,7 @@
       "textChunks": [
         {
           "sequence": 1,
-          "text": "【测试】绮喵日报 V4-C QQ 官方机器人连接测试",
+          "characters": 26,
           "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c"
         }
       ],

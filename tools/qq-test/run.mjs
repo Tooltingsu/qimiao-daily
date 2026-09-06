@@ -151,7 +151,7 @@ try {
     } else if (mode === "text") {
       const text = "【测试】绮喵日报 V4-C QQ 官方机器人连接测试";
       const chunk = { sequence: 1, text, hash: sha256(text) };
-      result.textChunks = [chunk];
+      result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
       await sendWithRetry(() => sendText(bot, "text", chunk, 1), chunk);
       result.status = "TEST_PUBLISHED";
     } else if (mode === "long") {
