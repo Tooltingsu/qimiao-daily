@@ -53,6 +53,13 @@ public sealed class V3JsonExporter(V4Repository repository)
             x.Platform, x.ArtworkId, x.CharacterName, x.FranchiseName, x.Title, x.Author, x.SourceUrl,
             Uri.TryCreate(x.ThumbnailUrl, UriKind.Absolute, out var thumbnail) && thumbnail.Scheme == Uri.UriSchemeHttps ? x.ThumbnailUrl : string.Empty,
             x.ReviewStatus.ToString().ToUpperInvariant(), x.SelectedForReport, x.PublishedAt, x.FetchedAt)).ToList();
+        // Legacy V3 only had a boolean selection flag. Preserve its existing
+        // selected confirmed rows as a deterministic initial FIFO queue;
+        // subsequent ordering is explicit user-owned V4 data.
+        var artworkQueue = artworks
+            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase))
+            .OrderBy(x => x.FetchedAt).ThenBy(x => x.ArtworkId, StringComparer.Ordinal)
+            .Select((x, index) => new ArtworkQueueEntry(x.Platform, x.ArtworkId, index + 1)).ToList();
         var videos = (await database.TimelineItems.AsNoTracking().Include(x => x.Evidence)
             .Where(x => x.ItemType == "VIDEO" || x.ItemType == "PREVIEW_NOTICE" || x.ItemType == "PREVIEW_LIVE").ToListAsync(cancellationToken))
             .Select(x => new VideoRecord(x.Id.ToString(), x.GameCode, x.ItemType, x.Title, x.Evidence.FirstOrDefault()?.SourceUrl ?? string.Empty,
@@ -68,6 +75,7 @@ public sealed class V3JsonExporter(V4Repository repository)
         repository.Write(birthdays.OrderBy(x => x.Franchise).ThenBy(x => x.Month).ThenBy(x => x.Day).ThenBy(x => x.Character).ToList(), "data", "birthdays.json");
         repository.Write(anniversaries.OrderBy(x => x.StartedOn).ToList(), "data", "anniversaries.json");
         repository.Write(calendarEvents.OrderBy(x => x.EventDate).ThenBy(x => x.Kind).ThenBy(x => x.Title).ToList(), "data", "calendar-events.json");
+        repository.Write(artworkQueue, "data", "artwork-queue.json");
         repository.Write(artworks, "collected", "artwork.json");
         repository.Write(videos, "collected", "videos.json");
         repository.Write(commits.Where(x => !x.Repository.Contains("scripts", StringComparison.OrdinalIgnoreCase)).ToList(), "collected", "bgi-main.json");
@@ -79,7 +87,7 @@ public sealed class V3JsonExporter(V4Repository repository)
             ["activities"] = activities.Count, ["banners"] = banners.Count, ["versions"] = versions.Count,
             ["endgameRules"] = rules.Count, ["endgameOverrides"] = overrides.Count, ["birthdays"] = birthdays.Count,
             ["anniversaries"] = anniversaries.Count, ["calendarEvents"] = calendarEvents.Count,
-            ["artworks"] = artworks.Count, ["videos"] = videos.Count, ["bgiCommits"] = commits.Count
+            ["artworks"] = artworks.Count, ["artworkQueue"] = artworkQueue.Count, ["videos"] = videos.Count, ["bgiCommits"] = commits.Count
         };
     }
 }

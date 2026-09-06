@@ -16,8 +16,12 @@ public sealed class V4ReportGenerator(V4Repository repository)
         var content = Compose(date);
         var hash = "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(content))).ToLowerInvariant();
         var health = providerStatuses.Any(x => !x.Status.Equals("HEALTHY", StringComparison.OrdinalIgnoreCase)) ? "DEGRADED" : "HEALTHY";
-        var artwork = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
-            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase))
+        // The confirmed area is a FIFO queue, not a collection of images to
+        // send all at once.  Snapshot only its head into an immutable daily
+        // revision.  The entry is consumed only after a real production
+        // publication succeeds; generating or locking must never advance it.
+        var artwork = ConfirmedArtworkQueue()
+            .Take(1)
             .Select(PublicArtworkMetadata)
             .ToList();
         var report = new ReportRevision
@@ -96,8 +100,7 @@ public sealed class V4ReportGenerator(V4Repository repository)
         foreach (var item in repository.ReadOr(new List<BgiCommitRecord>(), "collected", "bgi-main.json")) lines.Add($"-{item.Subject} ({Short(item.Sha)})");
         foreach (var item in repository.ReadOr(new List<BgiCommitRecord>(), "collected", "bgi-scripts.json")) lines.Add($"-{item.Subject} ({Short(item.Sha)})");
 
-        var artworks = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
-            .Where(x => x.SelectedForReport && x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase)).ToList();
+        var artworks = ConfirmedArtworkQueue().Take(1).ToList();
         if (artworks.Count > 0)
         {
             lines.AddRange([string.Empty, "美图分享"]);
@@ -111,6 +114,22 @@ public sealed class V4ReportGenerator(V4Repository repository)
         => "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(
             System.Text.Json.JsonSerializer.Serialize(new { content, artwork }, V4Repository.JsonOptions)))).ToLowerInvariant();
     private static string Short(string value) => value[..Math.Min(7, value.Length)];
+    private IEnumerable<ArtworkRecord> ConfirmedArtworkQueue()
+    {
+        var entries = repository.Read<List<ArtworkQueueEntry>>("data", "artwork-queue.json");
+        var duplicateOrder = entries.Where(x => x.QueueOrder > 0)
+            .GroupBy(x => x.QueueOrder)
+            .FirstOrDefault(x => x.Count() > 1);
+        if (duplicateOrder is not null)
+            throw new InvalidDataException($"Confirmed artwork queueOrder {duplicateOrder.Key} is duplicated.");
+        var candidates = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
+            .ToDictionary(x => ArtworkKey(x.Platform, x.ArtworkId), StringComparer.OrdinalIgnoreCase);
+        return entries.OrderBy(x => x.QueueOrder)
+            .Select(entry => candidates.TryGetValue(ArtworkKey(entry.Platform, entry.ArtworkId), out var candidate)
+                ? candidate with { ReviewStatus = "CONFIRMED", SelectedForReport = true }
+                : throw new InvalidDataException($"Confirmed artwork {entry.Platform}/{entry.ArtworkId} is missing from collected metadata."));
+    }
+    private static string ArtworkKey(string platform, string artworkId) => platform.Trim() + "\u001f" + artworkId.Trim();
     private static ArtworkRecord PublicArtworkMetadata(ArtworkRecord artwork)
     {
         // Reports are public Git artifacts.  A legacy desktop database can

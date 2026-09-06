@@ -52,6 +52,10 @@ public sealed record ArtworkRecord(
     DateTimeOffset PublishedAt,
     DateTimeOffset FetchedAt);
 
+// Manual confirmation state is deliberately separate from collector output.
+// `collected/artwork.json` can be refreshed without changing the user's queue.
+public sealed record ArtworkQueueEntry(string Platform, string ArtworkId, int QueueOrder);
+
 public sealed record VideoRecord(string Id, string Game, string Type, string Title, string SourceUrl, DateTimeOffset? PublishedAt, string ReviewStatus, DateTimeOffset FetchedAt);
 public sealed record BgiCommitRecord(string Repository, string Sha, string Subject, string Url, DateTimeOffset? CommittedAt, DateTimeOffset FetchedAt);
 public sealed record ProviderStatusRecord(string Provider, string Status, string Message, DateTimeOffset CheckedAt, bool UsedCachedData = false);

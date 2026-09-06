@@ -14,6 +14,7 @@ public sealed class V4Validator(V4Repository repository)
         ("birthdays.json", "birthdays.schema.json"),
         ("anniversaries.json", "anniversaries.schema.json"),
         ("calendar-events.json", "calendar-events.schema.json"),
+        ("artwork-queue.json", "artwork-queue.schema.json"),
         ("settings.json", "settings.schema.json")
     ];
 
@@ -95,6 +96,17 @@ public sealed class V4Validator(V4Repository repository)
         if (!TimeOnly.TryParse(settings.PublishTime, out _)) issues.Add(new("ERROR", "data/settings.json", "$.publishTime", "publishTime must be HH:mm."));
         try { _ = TimeZoneInfo.FindSystemTimeZoneById(settings.TimeZone); }
         catch { issues.Add(new("ERROR", "data/settings.json", "$.timeZone", "Unknown IANA/Windows time zone.")); }
+
+        var artworkQueue = repository.Read<List<ArtworkQueueEntry>>("data", "artwork-queue.json");
+        if (artworkQueue.Any(x => x.QueueOrder < 1))
+            issues.Add(new("ERROR", "data/artwork-queue.json", "$", "queueOrder must be a positive integer."));
+        if (artworkQueue.GroupBy(x => x.QueueOrder).Any(x => x.Count() > 1))
+            issues.Add(new("ERROR", "data/artwork-queue.json", "$", "queueOrder values must be unique."));
+        var candidates = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json")
+            .Select(x => (x.Platform, x.ArtworkId)).ToHashSet();
+        foreach (var entry in artworkQueue)
+            if (!candidates.Contains((entry.Platform, entry.ArtworkId)))
+                issues.Add(new("ERROR", "data/artwork-queue.json", entry.ArtworkId, "Artwork queue entry is not present in collected/artwork.json."));
     }
 
     private static ValidationIssue Error(string file, int index, string message) => new("ERROR", "data/" + file, $"$[{index}]", message);

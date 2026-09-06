@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QimiaoDaily confirmed artwork queue",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["platform", "artworkId", "queueOrder"],
+    "properties": {
+      "platform": { "type": "string", "minLength": 1 },
+      "artworkId": { "type": "string", "minLength": 1 },
+      "queueOrder": { "type": "integer", "minimum": 1 }
+    },
+    "additionalProperties": false
+  }
+}

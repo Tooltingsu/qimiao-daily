@@ -20,6 +20,7 @@
 - `birthdays.json`: character, franchise, month/day, enabled state, provenance.
 - `anniversaries.json`: title, original start date, enabled state, notes.
 - `calendar-events.json`: one-off manual memorial/custom date entries retained separately from recurring anniversaries.
+- `artwork-queue.json`: reviewed artwork IDs in their user-selected FIFO order.
 - `settings.json`: timezone, publish time, repository navigation, non-secret target identifiers.
 
 Every file above is checked by a JSON Schema in `schemas/` and by semantic validation. Schema-valid but logically invalid intervals are rejected.
@@ -53,4 +54,6 @@ A revision contains:
 
 ## Artwork policy
 
-Git stores artwork ID, character, franchise, author, Pixiv URL, thumbnail URL, review status, and selection state. It does not store bulk original images. A production publish job will download only `selectedForReport=true` images to runner temporary storage, upload them, and clean the workspace.
+`collected/artwork.json` stores artwork metadata only. `data/artwork-queue.json` is the manual confirmed area: it stores an artwork ID/platform and its `queueOrder`. This separation means an automatic collection refresh cannot change the user's confirmation or daily sequence. Git does not store bulk original images.
+
+The reviewed **confirmed area is a FIFO queue**. A generated/locked report snapshots **only the first image**. It does not consume it. A real production publisher downloads that image only to runner temporary storage, uploads it to QQ, and cleans the temporary file. Only after every required report part and image has a confirmed `PUBLISHED` result may it delete that exact entry from `data/artwork-queue.json`; dry runs and `qq-test` never advance or delete the queue.

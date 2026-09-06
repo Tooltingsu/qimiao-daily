@@ -137,6 +137,43 @@ public sealed class V4PocTests
         Assert.Throws<InvalidDataException>(() => new QQOfficialPublisher().CreatePlan(locked, manifest, new QqPublishTarget("FORUM", "test-target")));
     }
 
+    [Fact]
+    public void ConfirmedArtworkQueueUsesOneHeadAndConsumesOnlyAfterRealPublication()
+    {
+        using var fixture = new RepositoryFixture();
+        var first = new ArtworkRecord("PIXIV", "first", "胡桃", "GENSHIN", "", "", "https://www.pixiv.net/artworks/first", "https://example.test/first.jpg", "PENDING", false, fixture.Now, fixture.Now);
+        var second = new ArtworkRecord("PIXIV", "second", "芙宁娜", "GENSHIN", "", "", "https://www.pixiv.net/artworks/second", "https://example.test/second.jpg", "PENDING", false, fixture.Now, fixture.Now);
+        fixture.Repository.Write(new List<ArtworkRecord> { first, second }, "collected", "artwork.json");
+        fixture.Repository.Write(new List<ArtworkQueueEntry> { new("PIXIV", "first", 2), new("PIXIV", "second", 1) }, "data", "artwork-queue.json");
+
+        var generated = new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit-a", fixture.Now);
+        Assert.Single(generated.SelectedArtwork);
+        Assert.Equal("second", generated.SelectedArtwork[0].ArtworkId);
+        Assert.Equal(2, fixture.Repository.Read<List<ArtworkQueueEntry>>("data", "artwork-queue.json").Count);
+
+        var dryRun = new PublishAttempt(generated.Revision, generated.ReportHash, "commit-a", null, null, fixture.Now, null, "run", "DRY_RUN_SUCCEEDED", null, true, null);
+        var queue = new ArtworkQueueService(fixture.Repository);
+        Assert.Throws<InvalidOperationException>(() => queue.ConsumeAfterProductionPublication(generated, dryRun));
+
+        var published = dryRun with { Status = "PUBLISHED", DryRun = false, PublishedAt = fixture.Now.AddMinutes(1) };
+        Assert.Equal(1, queue.ConsumeAfterProductionPublication(generated, published));
+        var remaining = fixture.Repository.Read<List<ArtworkQueueEntry>>("data", "artwork-queue.json");
+        Assert.Single(remaining);
+        Assert.Equal("first", remaining[0].ArtworkId);
+    }
+
+    [Fact]
+    public void ConfirmedArtworkQueueRejectsAmbiguousPositiveOrder()
+    {
+        using var fixture = new RepositoryFixture();
+        var a = new ArtworkRecord("PIXIV", "a", "A", "GENSHIN", "", "", "https://www.pixiv.net/artworks/a", "https://example.test/a.jpg", "PENDING", false, fixture.Now, fixture.Now);
+        var b = new ArtworkRecord("PIXIV", "b", "B", "GENSHIN", "", "", "https://www.pixiv.net/artworks/b", "https://example.test/b.jpg", "PENDING", false, fixture.Now, fixture.Now);
+        fixture.Repository.Write(new List<ArtworkRecord> { a, b }, "collected", "artwork.json");
+        fixture.Repository.Write(new List<ArtworkQueueEntry> { new("PIXIV", "a", 1), new("PIXIV", "b", 1) }, "data", "artwork-queue.json");
+
+        Assert.Throws<InvalidDataException>(() => new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit-a", fixture.Now));
+    }
+
     private sealed class RepositoryFixture : IDisposable
     {
         private readonly string _root = Path.Combine(Path.GetTempPath(), "qimiao-v4-" + Guid.NewGuid().ToString("N"));
@@ -160,6 +197,7 @@ public sealed class V4PocTests
             Repository.Write(new List<BgiCommitRecord>(), "collected", "bgi-main.json");
             Repository.Write(new List<BgiCommitRecord>(), "collected", "bgi-scripts.json");
             Repository.Write(new List<ArtworkRecord>(), "collected", "artwork.json");
+            Repository.Write(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json");
             Repository.Write(new List<ProviderStatusRecord>(), "collected", "provider-status.json");
         }
 
