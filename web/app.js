@@ -9,6 +9,18 @@ const providerStatusLabels = {
   RATE_LIMITED: "请求受限", BLOCKED: "来源访问受阻", FAILED: "失败", UNKNOWN: "未知"
 };
 
+const providerLabels = {
+  "Video:GENSHIN": "原神官方视频",
+  "Video:STARRAIL": "星铁官方视频",
+  "Video:NTE": "异环官方视频",
+  "Pixiv": "Pixiv 美图"
+};
+
+const qqTestStatusLabels = {
+  NOT_TESTED: "尚未测试", BLOCKED_BY_USER: "等待测试环境配置", AUTHENTICATED: "鉴权成功",
+  TEST_PUBLISHED: "测试发布成功", TEST_FAILED: "测试发布失败", PARTIAL_FAILURE: "部分发送失败"
+};
+
 async function loadDashboard() {
   const [dashboardResponse, reportResponse] = await Promise.all([
     fetch("data/dashboard.json", { cache: "no-store" }),
@@ -25,6 +37,7 @@ async function loadDashboard() {
   document.querySelector("#health").textContent = providerStatusLabels[data.health] ?? data.health;
   document.querySelector("#artwork-pending").textContent = data.artworkPending;
   document.querySelector("#conflicts").textContent = data.conflictCount;
+  renderQqTest(data.qqTest);
   document.querySelector("#report-preview").textContent = report;
   document.querySelector("#state-dot").className = `status-dot ${data.state === "FAILED" ? "failed" : data.health === "HEALTHY" ? "healthy" : ""}`;
   renderMetrics("#manual-counts", data.manualCounts);
@@ -38,6 +51,16 @@ async function loadDashboard() {
   document.querySelector("#view-actions").href = `${repo}/actions`;
 }
 
+function renderQqTest(test) {
+  const value = test ?? { environment: "qq-test", status: "NOT_TESTED", messageCount: 0 };
+  document.querySelector("#qq-test-environment").textContent = value.environment === "qq-test" ? "qq-test（测试环境）" : "未知环境";
+  document.querySelector("#qq-test-status").textContent = qqTestStatusLabels[value.status] ?? value.status;
+  document.querySelector("#qq-test-messages").textContent = `${value.messageCount ?? 0}${value.mediaCount ? `（含 ${value.mediaCount} 张图片）` : ""}`;
+  document.querySelector("#qq-test-detail").textContent = value.error
+    ? value.error
+    : value.completedAt ? `最近测试：${formatTime(value.completedAt)}${value.mode ? ` · ${value.mode}` : ""}` : "测试发布不会影响正式发布记录。";
+}
+
 function renderMetrics(selector, metrics) {
   document.querySelector(selector).innerHTML = Object.entries(metrics)
     .map(([name, count]) => `<div><span>${escapeHtml(name)}</span><strong>${count}</strong></div>`).join("");
@@ -46,7 +69,7 @@ function renderMetrics(selector, metrics) {
 function renderProviders(providers) {
   if (!providers?.length) return;
   document.querySelector("#providers").innerHTML = providers.map(item => `
-    <div class="provider-row"><div><strong>${escapeHtml(item.provider)}</strong><p>${escapeHtml(item.message)}</p></div>
+    <div class="provider-row"><div><strong>${escapeHtml(providerLabels[item.provider] ?? item.provider)}</strong><p>${escapeHtml(item.message)}</p></div>
     <span class="provider-status ${item.status === "HEALTHY" ? "" : "bad"}">${escapeHtml(providerStatusLabels[item.status] ?? item.status)}</span></div>`).join("");
 }
 

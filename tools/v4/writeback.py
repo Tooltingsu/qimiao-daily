@@ -12,6 +12,9 @@ ALLOWED = {
     'lock': ('reports/',),
     'publish': ('reports/', 'publish-log/'),
     'republish': ('reports/', 'publish-log/', 'generated/', 'web/data/'),
+    # Test-environment QQ evidence is deliberately isolated from the production
+    # publish log. Pages receives only its generated, non-secret summary.
+    'qq-test': ('test-publish-log/', 'web/data/'),
 }
 
 def git(*args, cwd=None, check=True):

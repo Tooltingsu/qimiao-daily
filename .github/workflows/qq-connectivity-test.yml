@@ -1,0 +1,60 @@
+name: QQ official bot connectivity test
+
+on:
+  workflow_dispatch:
+    inputs:
+      reportDate:
+        description: Test-log date (yyyy-MM-dd); blank uses Shanghai today
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-repository-writer
+  cancel-in-progress: false
+
+jobs:
+  connectivity:
+    # This test-only environment is intentionally distinct from any future production environment.
+    runs-on: ubuntu-latest
+    environment: qq-test
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+      - name: Install current Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Authenticate only; do not send a QQ message
+        id: connectivity
+        env:
+          INPUT_MODE: auth
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
+          QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
+          QQ_TEST_LOG_PATH: test-publish-log/${{ inputs.reportDate || 'current' }}.json
+        run: |
+          if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
+          export QQ_TEST_LOG_PATH="test-publish-log/${INPUT_REPORT_DATE}.json"
+          node tools/qq-test/run.mjs
+      - name: Build Pages projection and persist the sanitized test result
+        if: always()
+        env:
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+        run: |
+          if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
+          dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+          python3 tools/v4/qq_test_writeback.py

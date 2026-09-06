@@ -152,5 +152,35 @@ public sealed class PublishLog
     public List<PublishAttempt> Attempts { get; init; } = [];
 }
 
+// qq-test results are intentionally not PublishLog entries. They must never
+// cause the production idempotency guard to regard a report as published.
+public sealed class QqTestPublishLog
+{
+    public required DateOnly Date { get; init; }
+    public string Environment { get; init; } = "qq-test";
+    public List<QqTestPublishAttempt> Attempts { get; init; } = [];
+}
+
+public sealed class QqTestPublishAttempt
+{
+    public string Mode { get; init; } = "auth";
+    public string Status { get; init; } = "NOT_TESTED";
+    public int? ReportRevision { get; init; }
+    public string? ReportHash { get; init; }
+    public List<QqTestMessage> Messages { get; init; } = [];
+    public int MediaCount { get; init; }
+    public DateTimeOffset AttemptedAt { get; init; }
+    public DateTimeOffset? CompletedAt { get; init; }
+    public string? Error { get; init; }
+}
+
+public sealed class QqTestMessage
+{
+    public int Sequence { get; init; }
+    public string Kind { get; init; } = "text";
+    public string? MessageId { get; init; }
+    public string? Hash { get; init; }
+}
+
 public sealed record ValidationIssue(string Level, string File, string Path, string Message);
 public sealed record ValidationResult(bool IsValid, IReadOnlyList<ValidationIssue> Issues);

@@ -15,7 +15,17 @@ public sealed record DashboardData(
     int ArtworkPending,
     int ConflictCount,
     string RepositoryUrl,
-    IReadOnlyList<ProviderStatusRecord> Providers);
+    IReadOnlyList<ProviderStatusRecord> Providers,
+    QqTestDashboardStatus QqTest);
+
+public sealed record QqTestDashboardStatus(
+    string Environment,
+    string Status,
+    string? Mode,
+    int MessageCount,
+    int MediaCount,
+    DateTimeOffset? CompletedAt,
+    string? Error);
 
 public sealed class V4PagesBuilder(V4Repository repository)
 {
@@ -30,6 +40,8 @@ public sealed class V4PagesBuilder(V4Repository repository)
             : draft;
         var artworks = repository.ReadOr(new List<ArtworkRecord>(), "collected", "artwork.json");
         var providers = repository.ReadOr(new List<ProviderStatusRecord>(), "collected", "provider-status.json");
+        var qqTestLog = repository.ReadOr<QqTestPublishLog?>(null, "test-publish-log", folder + ".json");
+        var qqTestAttempt = qqTestLog?.Attempts.LastOrDefault();
         var data = new DashboardData(
             date,
             manifest?.State.ToString().ToUpperInvariant() ?? "NOT_GENERATED",
@@ -57,7 +69,15 @@ public sealed class V4PagesBuilder(V4Repository repository)
             artworks.Count(x => x.ReviewStatus.Equals("PENDING", StringComparison.OrdinalIgnoreCase)),
             providers.Count(x => x.Status.Equals("CONFLICT", StringComparison.OrdinalIgnoreCase)),
             settings.RepositoryUrl,
-            providers);
+            providers,
+            new QqTestDashboardStatus(
+                qqTestLog?.Environment ?? "qq-test",
+                qqTestAttempt?.Status ?? "NOT_TESTED",
+                qqTestAttempt?.Mode,
+                qqTestAttempt?.Messages.Count ?? 0,
+                qqTestAttempt?.MediaCount ?? 0,
+                qqTestAttempt?.CompletedAt,
+                qqTestAttempt?.Error));
         repository.Write(data, "web", "data", "dashboard.json");
         repository.WriteText(displayedReport?.Content ?? "今日日报尚未生成。", "web", "data", "report.txt");
         return data;

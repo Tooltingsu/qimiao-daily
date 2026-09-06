@@ -1,6 +1,7 @@
 using QimiaoDaily.V4.Core;
 using QimiaoDaily.V4.Generator;
 using QimiaoDaily.V4.Publishing;
+using QimiaoDaily.V4.Web;
 
 namespace QimiaoDaily.V4.Tests;
 
@@ -84,6 +85,28 @@ public sealed class V4PocTests
         Assert.Contains(records, x => x.Kind == "SOLAR_TERM");
         Assert.Contains(records, x => x.Kind == "FESTIVAL");
         Assert.Contains(records, x => x.Kind == "MEMORIAL" && x.Title == "测试纪念日");
+    }
+
+    [Fact]
+    public void PagesExposeQqTestStateWithoutChangingProductionPublishLog()
+    {
+        using var fixture = new RepositoryFixture();
+        fixture.Repository.Write(new QqTestPublishLog
+        {
+            Date = fixture.Date,
+            Attempts = [new QqTestPublishAttempt
+            {
+                Mode = "text", Status = "TEST_PUBLISHED", MediaCount = 0,
+                AttemptedAt = fixture.Now, CompletedAt = fixture.Now,
+                Messages = [new QqTestMessage { Sequence = 1, Kind = "text", MessageId = "real-test-id" }]
+            }]
+        }, "test-publish-log", fixture.Date.ToString("yyyy-MM-dd") + ".json");
+
+        var dashboard = new V4PagesBuilder(fixture.Repository).Build(fixture.Date);
+
+        Assert.Equal("TEST_PUBLISHED", dashboard.QqTest.Status);
+        Assert.Equal(1, dashboard.QqTest.MessageCount);
+        Assert.False(File.Exists(fixture.Repository.PathFor("publish-log", fixture.Date.ToString("yyyy-MM-dd") + ".json")));
     }
 
     private sealed class RepositoryFixture : IDisposable

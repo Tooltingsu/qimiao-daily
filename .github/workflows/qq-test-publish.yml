@@ -1,0 +1,84 @@
+name: QQ official bot test publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      reportDate:
+        description: Locked report date (yyyy-MM-dd); blank uses Shanghai today
+        required: false
+        type: string
+      revision:
+        description: Locked revision; blank uses the manifest's locked revision
+        required: false
+        type: string
+      mode:
+        description: Run one progressive qq-test stage
+        required: true
+        default: text
+        type: choice
+        options: [text, long, image, report]
+      textOnly:
+        description: Reserved for the report stage; V4-C sends report text only until image test is verified
+        required: true
+        default: true
+        type: boolean
+      includeArtwork:
+        description: Disabled until the explicit channel image stage has passed
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-repository-writer
+  cancel-in-progress: false
+
+jobs:
+  test-publish:
+    runs-on: ubuntu-latest
+    environment: qq-test
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+      - name: Install current Tencent official SDK
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Send only to qq-test target
+        id: publish
+        env:
+          INPUT_MODE: ${{ inputs.mode }}
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+          INPUT_REVISION: ${{ inputs.revision }}
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
+          QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
+          QQ_TEST_IMAGE_URL: https://raw.githubusercontent.com/Tooltingsu/qimiao-daily/main/tools/qq-test/fixture.png
+          QQ_TEST_MAX_TEXT_CHARS: "1800"
+        run: |
+          if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
+          if [ "${{ inputs.includeArtwork }}" = "true" ]; then
+            echo "includeArtwork is blocked until the explicit channel image test succeeds." >&2
+            exit 2
+          fi
+          node tools/qq-test/run.mjs
+      - name: Build Pages projection and persist the sanitized test result
+        if: always()
+        env:
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+        run: |
+          if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
+          dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+          python3 tools/v4/qq_test_writeback.py
