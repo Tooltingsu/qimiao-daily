@@ -27,9 +27,9 @@
 
 ## 美图的当前 Gate
 
-测试图片已通过，但当前 locked revision 的已选 Pixiv 美图只有作品页 URL、没有可下载/可上传的直接图像 URL。因此它不能被悄悄替换成普通文本或测试图：正式 Publisher 将其视为 `PUBLISH_MEDIA_FAILED`，除非在临时下载、格式/大小校验及 QQ 图片发送后全部成功。仓库不会保存 Pixiv 原图。
+测试图片已通过。当前 locked revision 的已选 Pixiv 美图没有收集到 `thumbnailUrl`；运行时会基于其 immutable work ID 与记录的 JST 发布时间生成一个**候选** master-preview URL，但绝不写回仓库，也绝不将它直接视为成功。只有临时下载、MIME/大小校验和 QQ 图片发送全部成功，才算图片成功；否则为 `PUBLISH_MEDIA_FAILED`，并且不会悄悄替换成普通文本或测试图。仓库不会保存 Pixiv 原图。
 
-此策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED：美图 149119754 没有可用的 HTTPS 直接图片链接。`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。
+旧版直接 URL 策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。现已改为候选 master-preview URL 的下载校验策略；它尚未运行真实发送测试，避免在机器人尚无删帖权限时重新留下测试帖。
 
 ## 测试帖删除
 

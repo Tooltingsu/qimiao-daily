@@ -3,19 +3,29 @@ import { basename, resolve } from "node:path";
 
 const MAX_IMAGE_BYTES = 30 * 1024 * 1024;
 
-function requireDirectImageUrl(artwork) {
+export function resolveArtworkImageUrl(artwork) {
   const url = String(artwork?.thumbnailUrl ?? "");
-  if (!/^https:\/\//.test(url)) {
-    // A Pixiv artwork page is intentionally not treated as an image URL. This
-    // prevents an apparently successful text-only replacement for a selected
-    // image when the collector did not retain a usable preview URL.
-    throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork?.artworkId ?? "unknown"} 没有可用的 HTTPS 直接图片链接。`);
+  if (/^https:\/\//.test(url)) return url;
+
+  // Older V3 exports sometimes retained the Pixiv work page but omitted its
+  // thumbnail. Pixiv's master preview URL is derivable from the immutable work
+  // ID and its recorded JST publish timestamp. This is only a *candidate*: it
+  // is never persisted or trusted until the same-run download preflight has
+  // proved that it is an image.
+  const match = String(artwork?.publishedAt ?? "").match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/);
+  if (String(artwork?.platform ?? "").toUpperCase() === "PIXIV" && /^\d+$/.test(String(artwork?.artworkId ?? "")) && match) {
+    const [, year, month, day, hour, minute, second] = match;
+    return `https://i.pximg.net/img-master/img/${year}/${month}/${day}/${hour}/${minute}/${second}/${artwork.artworkId}_p0_master1200.jpg`;
   }
-  return url;
+
+  // A Pixiv artwork page is intentionally not treated as an image URL. This
+  // prevents an apparently successful text-only replacement for a selected
+  // image when neither metadata nor the safe fallback can provide an image.
+  throw new Error(`PUBLISH_MEDIA_FAILED：美图 ${artwork?.artworkId ?? "unknown"} 没有可用的 HTTPS 直接图片链接。`);
 }
 
 export async function validateArtworkDownload(artwork, directory, fetchImpl = fetch) {
-  const url = requireDirectImageUrl(artwork);
+  const url = resolveArtworkImageUrl(artwork);
   await mkdir(directory, { recursive: true });
   let response;
   try {

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, access } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { withValidatedArtwork } from "../artwork-media.mjs";
+import { resolveArtworkImageUrl, withValidatedArtwork } from "../artwork-media.mjs";
 
 test("selected artwork is validated temporarily and then removed", async () => {
   const folder = await mkdtemp(join(tmpdir(), "qimiao-qq-image-"));
@@ -15,6 +15,13 @@ test("selected artwork is validated temporarily and then removed", async () => {
   );
   assert.equal(result.bytes, 4);
   await assert.rejects(access(tempPath));
+});
+
+test("uses a verified-at-runtime Pixiv master-preview candidate for legacy metadata", () => {
+  assert.equal(
+    resolveArtworkImageUrl({ platform: "PIXIV", artworkId: "149119754", thumbnailUrl: "", publishedAt: "2026-08-31T21:16:39+09:00" }),
+    "https://i.pximg.net/img-master/img/2026/08/31/21/16/39/149119754_p0_master1200.jpg"
+  );
 });
 
 test("missing direct image URL blocks before text could be sent", async () => {
