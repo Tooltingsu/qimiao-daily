@@ -1,0 +1,37 @@
+name: QQ selected artwork preflight (no send)
+
+on:
+  workflow_dispatch:
+    inputs:
+      reportDate:
+        description: Locked report date (yyyy-MM-dd)
+        required: true
+        type: string
+      revision:
+        description: Locked revision
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Install QQ test utilities only
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Download and validate selected artwork without QQ access
+        env:
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+          INPUT_REVISION: ${{ inputs.revision }}
+        run: node tools/qq-test/artwork-preflight.mjs

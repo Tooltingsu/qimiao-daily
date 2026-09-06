@@ -31,6 +31,8 @@
 
 旧版直接 URL 策略已用真实 `qq-test` workflow 验证：[34017924578](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578) 在准备发送之前返回 `PUBLISH_MEDIA_FAILED`；测试日志记录 `messages: []`、`mediaCount: 0`，证明失败时没有先发送文本日报，也没有新建测试帖子。现已改为候选 master-preview URL 的下载校验策略；它尚未运行真实发送测试，避免在机器人尚无删帖权限时重新留下测试帖。
 
+`qq-artwork-preflight.yml` 是仅手动、无 QQ Secret、无 QQ API 调用的前置校验：它验证 locked revision hash 后才临时下载图片，并总在退出时清理临时文件。只有该 Gate 通过，才有资格请求一次需要人工删帖配合的实际图片发送测试。
+
 ## 测试帖删除
 
 用户要求测试完成后立即删除。清理工作流只匹配 `【测试】绮喵日报 V4-C`，且要求手动输入 `DELETE_TEST_POSTS`。第一次真实删除调用曾被 QQ 拒绝：`HTTP 400 / 11264 / 频道未对机器人授权`，没有把该次失败写成删除成功。随后运行 [34017690886](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017690886) 成功读取当前可见列表，匹配为 **0**，因此未尝试删除任何帖子；这证明当前读取窗口内没有残留的标记测试帖。接口返回 `is_finish=否/未知`，所以它不是跨全部历史页面的绝对证明；若 QQ 客户端仍看到标记测试帖，请人工删除，或授予机器人论坛删帖权限后再运行清理工作流。
