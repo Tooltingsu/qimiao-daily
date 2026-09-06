@@ -300,6 +300,16 @@
     "fetchedAt": "2026-08-29T15:45:21.4214153+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=pzXW1FydqnE",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Myriad Celestia Trailer: \u0022Deep Waters\u0022 | Honkai: Star Rail",
+    "sourceUrl": "https://www.youtube.com/watch?v=pzXW1FydqnE",
+    "publishedAt": "2026-09-06T12:00:26+08:00",
+    "reviewStatus": "PENDING",
+    "fetchedAt": "2026-09-06T12:55:08.1012131+00:00"
+  },
+  {
     "id": "e5776095-af3b-4a39-9a26-3ac461e3d9cc",
     "game": "STARRAIL",
     "type": "VIDEO",
