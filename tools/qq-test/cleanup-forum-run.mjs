@@ -46,7 +46,10 @@ try {
   const response = await bot.api.get(`/channels/${encodeURIComponent(channelId)}/threads`);
   const plan = cleanupPlan(response, titlePrefix);
   markdown = renderCleanupMarkdown(plan, response?.is_finish);
-  if (Number(response?.is_finish) !== 1) throw new Error("帖子列表未确认完整，拒绝执行清理以避免遗漏测试帖。");
+  // QQ deployments differ on whether this field is returned as 1, true, or
+  // omitted. An incomplete list can leave old test posts behind, but never
+  // broadens deletion: every deletion still requires the explicit V4-C title
+  // prefix and a concrete thread ID returned by this call.
   for (const item of plan) {
     await deleteWithRetry(bot, item.threadId);
     await new Promise(resolve => setTimeout(resolve, 250));

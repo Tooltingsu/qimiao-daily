@@ -69,5 +69,5 @@
 | GitHub-hosted Runner 论坛发帖 | 仅得到创建 `task_id`；8 分钟后只读帖子列表仍无匹配测试帖，**不视为发布成功** |
 | 论坛可见性核验 | 已实现只读 `GET /channels/{channel_id}/threads` 工作流；无匹配帖子会失败，`task_id` 仅代表创建任务被接收，不能单独等同于前台可见 |
 | 当前阻塞 | 腾讯论坛发帖接口标注 `<PrivateDomain/>`，即仅私域机器人可用。选定的外部 Guild 论坛目标很可能因此在异步审核阶段未通过；在确认机器人为该 Guild 的私域机器人前，禁止继续发送长文本、图片或完整日报 |
-| 测试帖清理 | `qq-forum-test-cleanup.yml` 仅手动运行，并且必须输入 `DELETE_TEST_POSTS`；只删除标题以 `【测试】绮喵日报 V4-C` 开头且从完整列表读取到的论坛测试帖 |
+| 测试帖清理 | `qq-forum-test-cleanup.yml` 仅手动运行，并且必须输入 `DELETE_TEST_POSTS`；只删除本次官方列表返回、标题以 `【测试】绮喵日报 V4-C` 开头的论坛测试帖，绝不按模糊标题或日期删除 |
 | Production QQ 自动发布 | 仍关闭 |
