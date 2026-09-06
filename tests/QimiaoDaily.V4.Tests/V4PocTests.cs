@@ -182,6 +182,31 @@ public sealed class V4PocTests
     }
 
     [Fact]
+    public void ManualVisibilityConfirmationPromotesOnlyTheMatchingPendingProductionSubmission()
+    {
+        using var fixture = new RepositoryFixture();
+        var generated = new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit-a", fixture.Now);
+        var publisher = new V4PublishService(fixture.Repository);
+        publisher.Lock(fixture.Date, true, fixture.Now.AddMinutes(1));
+        fixture.Repository.Write(new PublishLog
+        {
+            Date = fixture.Date,
+            Attempts = [new PublishAttempt(generated.Revision, generated.ReportHash, generated.SourceCommit, "task-id", null,
+                fixture.Now.AddMinutes(2), null, "run", "SUBMITTED_VISIBILITY_PENDING", null, false, "TEXT_ONLY")]
+        }, "publish-log", fixture.Date.ToString("yyyy-MM-dd") + ".json");
+
+        var confirmed = publisher.ConfirmManualVisibility(fixture.Date, generated.Revision, fixture.Now.AddMinutes(3), "QQ 客户端人工确认可见");
+
+        Assert.Equal("PUBLISHED", confirmed.Status);
+        Assert.False(confirmed.DryRun);
+        Assert.Contains("MANUAL_USER_VISIBILITY_CONFIRMED", confirmed.Reason);
+        var manifest = fixture.Repository.Read<ReportManifest>("reports", fixture.Date.ToString("yyyy-MM-dd"), "manifest.json");
+        Assert.Equal(ReportState.Published, manifest.State);
+        Assert.NotNull(manifest.PublishedAt);
+        Assert.Empty(fixture.Repository.Read<List<ArtworkQueueEntry>>("data", "artwork-queue.json"));
+    }
+
+    [Fact]
     public void ConfirmedArtworkQueueRejectsAmbiguousPositiveOrder()
     {
         using var fixture = new RepositoryFixture();

@@ -2,11 +2,11 @@
   "date": "2026-09-06",
   "latestRevision": 5,
   "lockedRevision": 4,
-  "state": "LOCKED_MANUAL",
+  "state": "PUBLISHED",
   "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
   "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
   "generatedAt": "2026-09-06T13:06:28.8875038+00:00",
   "lockedAt": "2026-09-06T14:59:07.590045+00:00",
   "lockReason": "MANUAL_REPLACEMENT: \u7528\u6237\u786E\u8BA4\u5148\u53D1\u5E03\u6587\u5B57\u65E5\u62A5\uFF0C\u7F8E\u56FE\u4FDD\u7559\u786E\u8BA4\u961F\u5217",
-  "publishedAt": null
+  "publishedAt": "2026-09-06T15:47:22.940397+00:00"
 }

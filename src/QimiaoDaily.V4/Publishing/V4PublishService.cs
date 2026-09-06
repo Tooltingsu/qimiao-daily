@@ -101,6 +101,54 @@ public sealed class V4PublishService(V4Repository repository)
         return attempt;
     }
 
+    // The QQ forum read API can lag behind a successful create request.  When
+    // the operator has checked the actual QQ client, record that evidence
+    // explicitly instead of pretending it was verified by the API.
+    public PublishAttempt ConfirmManualVisibility(DateOnly date, int revisionNumber, DateTimeOffset now, string reason)
+    {
+        if (revisionNumber < 1) throw new ArgumentOutOfRangeException(nameof(revisionNumber));
+        if (string.IsNullOrWhiteSpace(reason)) throw new ArgumentException("A manual confirmation reason is required.", nameof(reason));
+
+        var folder = date.ToString("yyyy-MM-dd");
+        var manifest = repository.Read<ReportManifest>("reports", folder, "manifest.json");
+        if (manifest.LockedRevision != revisionNumber)
+            throw new InvalidOperationException("Manual confirmation requires the manifest's locked revision.");
+
+        var revision = repository.Read<ReportRevision>("reports", folder, "revisions", revisionNumber.ToString("000") + ".json");
+        // This confirmation applies to the text-only production submission.
+        // Its image metadata remains queued and was not transmitted, so image
+        // payload validation is intentionally not part of this audit step.
+        VerifyTextOnly(revision);
+        if (revision.ReportHash != manifest.ReportHash)
+            throw new InvalidDataException("Locked report hash does not match the manifest.");
+
+        var log = repository.Read<PublishLog>("publish-log", folder + ".json");
+        var index = log.Attempts.FindLastIndex(x =>
+            x.Revision == revisionNumber &&
+            x.ReportHash == revision.ReportHash &&
+            x.Status == "SUBMITTED_VISIBILITY_PENDING" &&
+            !x.DryRun);
+        if (index < 0)
+            throw new InvalidOperationException("No pending production submission matches this locked revision.");
+
+        var attempt = log.Attempts[index] with
+        {
+            Status = "PUBLISHED",
+            PublishedAt = now,
+            Error = null,
+            Reason = $"{log.Attempts[index].Reason}; MANUAL_USER_VISIBILITY_CONFIRMED: {reason.Trim()}"
+        };
+        log.Attempts[index] = attempt;
+        revision.State = ReportState.Published;
+        revision.PublishedAt = now;
+        manifest.State = ReportState.Published;
+        manifest.PublishedAt = now;
+        repository.Write(log, "publish-log", folder + ".json");
+        repository.Write(revision, "reports", folder, "revisions", revisionNumber.ToString("000") + ".json");
+        repository.Write(manifest, "reports", folder, "manifest.json");
+        return attempt;
+    }
+
     public ReportRevision PrepareRepublication(DateOnly date, string sourceCommit, DateTimeOffset now, string reason)
     {
         if (string.IsNullOrWhiteSpace(reason)) throw new ArgumentException("A republication reason is required.", nameof(reason));
@@ -125,5 +173,12 @@ public sealed class V4PublishService(V4Repository repository)
         foreach (var image in revision.SelectedArtwork)
             if (!image.SelectedForReport || !image.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase))
                 throw new InvalidDataException("Publish payload contains unselected/unconfirmed artwork.");
+    }
+
+    private static void VerifyTextOnly(ReportRevision revision)
+    {
+        var hash = "sha256:" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(revision.Content))).ToLowerInvariant();
+        if (hash != revision.ReportHash) throw new InvalidDataException("Locked report hash mismatch.");
+        if (revision.ValidationState != "VALID") throw new InvalidDataException("Revision is not VALID.");
     }
 }

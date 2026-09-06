@@ -7,13 +7,13 @@
       "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
       "qqPostId": "1788708377729986054",
       "qqMessageId": null,
-      "attemptedAt": "2026-09-06T15:26:15.305Z",
-      "publishedAt": null,
+      "attemptedAt": "2026-09-06T15:26:15.305+00:00",
+      "publishedAt": "2026-09-06T15:47:22.940397+00:00",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34042288996",
-      "status": "SUBMITTED_VISIBILITY_PENDING",
+      "status": "PUBLISHED",
       "error": null,
       "dryRun": false,
-      "reason": "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
+      "reason": "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained; MANUAL_USER_VISIBILITY_CONFIRMED: QQ\u5BA2\u6237\u7AEF\u4EBA\u5DE5\u786E\u8BA4\u5E16\u5B50\u5DF2\u53D1\u5E03\u4E14\u53EF\u89C1"
     }
   ]
 }
