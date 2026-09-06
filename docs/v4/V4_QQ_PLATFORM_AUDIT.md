@@ -62,7 +62,7 @@
 | --- | --- |
 | 真实生产日期恢复 | PASS：Pages projection 已恢复为 2026-09-06，默认 workflow 空日期仍取 Shanghai 当日 |
 | 官方 SDK 方案与最小 workflow | READY |
-| qq-test 环境 | CREATED，尚无变量/Secrets |
-| GitHub-hosted Runner Auth | `BLOCKED_BY_USER_CONFIGURATION` |
-| GitHub-hosted Runner 频道文字/图片 | `BLOCKED_BY_USER_CONFIGURATION` |
+| qq-test 环境 | AppID/AppSecret 与 `QQ_TEST_TARGET_TYPE=CHANNEL` 已配置；目标 ID 待用户选定 |
+| GitHub-hosted Runner Auth / 只读 OpenAPI | VERIFIED：运行 [34006072572](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34006072572) 成功列出 1 个 Guild、33 个子频道和 2 个 type=0 文字子频道，未发送消息 |
+| GitHub-hosted Runner 频道文字/图片 | 目标 ID 待用户选定后测试 |
 | Production QQ 自动发布 | 仍关闭 |
