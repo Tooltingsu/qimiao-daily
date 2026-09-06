@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-06",
+  "attempts": [
+    {
+      "revision": 4,
+      "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
+      "qqPostId": "1788708377729986054",
+      "qqMessageId": null,
+      "attemptedAt": "2026-09-06T15:26:15.305Z",
+      "publishedAt": null,
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34042288996",
+      "status": "SUBMITTED_VISIBILITY_PENDING",
+      "error": null,
+      "dryRun": false,
+      "reason": "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
+    }
+  ]
+}
