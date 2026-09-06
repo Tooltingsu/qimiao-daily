@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-06",
+  "environment": "qq-test",
+  "attempts": [
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "auth",
+      "targetType": "FORUM",
+      "status": "AUTHENTICATED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34007041491",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [],
+      "messages": [],
+      "mediaCount": 0,
+      "attemptedAt": "2026-09-06T02:39:38.348Z",
+      "completedAt": "2026-09-06T02:39:39.312Z",
+      "error": null
+    }
+  ]
+}
