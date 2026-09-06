@@ -1,12 +1,12 @@
 {
   "date": "2026-09-06",
   "latestRevision": 5,
-  "lockedRevision": 1,
+  "lockedRevision": 4,
   "state": "LOCKED_MANUAL",
-  "sourceCommit": "098732cc935f09c0d58268aa8c2862cda33b1129",
-  "reportHash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
-  "generatedAt": "2026-09-05T14:48:00.3550732+00:00",
-  "lockedAt": "2026-09-05T14:48:58.0015248+00:00",
-  "lockReason": "MANUAL_CONFIRMATION",
+  "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
+  "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+  "generatedAt": "2026-09-06T13:06:28.8875038+00:00",
+  "lockedAt": "2026-09-06T14:59:07.590045+00:00",
+  "lockReason": "MANUAL_REPLACEMENT: \u7528\u6237\u786E\u8BA4\u5148\u53D1\u5E03\u6587\u5B57\u65E5\u62A5\uFF0C\u7F8E\u56FE\u4FDD\u7559\u786E\u8BA4\u961F\u5217",
   "publishedAt": null
 }
