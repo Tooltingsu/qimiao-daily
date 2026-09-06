@@ -68,11 +68,11 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "TEST_SUBMITTED",
+    "status": "TEST_FAILED",
     "mode": "report",
-    "messageCount": 1,
+    "messageCount": 0,
     "mediaCount": 0,
-    "completedAt": "2026-09-06T04:21:35.271+00:00",
-    "error": null
+    "completedAt": "2026-09-06T06:59:28.107+00:00",
+    "error": "PUBLISH_MEDIA_FAILED: artwork 149119754 has no HTTPS image URL."
   }
 }

@@ -257,6 +257,29 @@
       "attemptedAt": "2026-09-06T04:21:32.585Z",
       "completedAt": "2026-09-06T04:21:35.271Z",
       "error": null
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "report",
+      "targetType": "FORUM",
+      "status": "TEST_FAILED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017924578",
+      "reportRevision": 1,
+      "reportHash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:508aaadb46c5b413540e83f1b3dcba9b50ded1764782a23288d75af8c3a760e0",
+          "characters": 946
+        }
+      ],
+      "messages": [],
+      "mediaCount": 0,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06",
+      "attemptedAt": "2026-09-06T06:59:26.611Z",
+      "completedAt": "2026-09-06T06:59:28.107Z",
+      "error": "PUBLISH_MEDIA_FAILED: artwork 149119754 has no HTTPS image URL."
     }
   ]
 }
