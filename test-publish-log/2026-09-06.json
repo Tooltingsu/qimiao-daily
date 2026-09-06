@@ -17,6 +17,36 @@
       "attemptedAt": "2026-09-06T02:39:38.348Z",
       "completedAt": "2026-09-06T02:39:39.312Z",
       "error": null
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "text",
+      "targetType": "FORUM",
+      "status": "TEST_PUBLISHED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34007089213",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [
+        {
+          "sequence": 1,
+          "text": "【测试】绮喵日报 V4-C QQ 官方机器人连接测试",
+          "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c"
+        }
+      ],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "text",
+          "postTaskId": "1788662447505992226",
+          "createTime": "1788662447",
+          "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c"
+        }
+      ],
+      "mediaCount": 0,
+      "attemptedAt": "2026-09-06T02:40:43.938Z",
+      "completedAt": "2026-09-06T02:40:47.622Z",
+      "error": null
     }
   ]
 }

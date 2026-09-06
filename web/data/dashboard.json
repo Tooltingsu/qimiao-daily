@@ -68,11 +68,11 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "AUTHENTICATED",
-    "mode": "auth",
-    "messageCount": 0,
+    "status": "TEST_PUBLISHED",
+    "mode": "text",
+    "messageCount": 1,
     "mediaCount": 0,
-    "completedAt": "2026-09-06T02:39:39.312+00:00",
+    "completedAt": "2026-09-06T02:40:47.622+00:00",
     "error": null
   }
 }
