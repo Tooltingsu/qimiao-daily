@@ -66,7 +66,10 @@ jobs:
           QQ_TEST_TARGET_TYPE: ${{ vars.QQ_TEST_TARGET_TYPE }}
           QQ_TEST_GUILD_ID: ${{ vars.QQ_TEST_GUILD_ID }}
           QQ_TEST_CHANNEL_ID: ${{ vars.QQ_TEST_CHANNEL_ID }}
-          QQ_TEST_IMAGE_URL: https://raw.githubusercontent.com/Tooltingsu/qimiao-daily/main/tools/qq-test/fixture.png
+          # A self-authored opaque 96×96 PNG served from this repository's Pages
+          # origin. The tiny transparent raw-GitHub fixture is retained only as
+          # a source artifact and is not used for the visible forum-image test.
+          QQ_TEST_IMAGE_URL: https://tooltingsu.github.io/qimiao-daily/assets/qq-test-fixture.png
           QQ_TEST_MAX_TEXT_CHARS: "1800"
         run: |
           if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
