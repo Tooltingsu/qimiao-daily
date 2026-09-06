@@ -33,6 +33,7 @@ const result = {
   textChunks: [],
   messages: [],
   mediaCount: 0,
+  testTitlePrefix: null,
   attemptedAt: new Date().toISOString(),
   completedAt: null,
   error: null
@@ -128,6 +129,12 @@ function successfulSendStatus() {
   return targetType === "FORUM" ? "TEST_SUBMITTED" : "TEST_PUBLISHED";
 }
 
+function titlePrefix(modeName) {
+  // This is metadata for a later *read-only* visibility verifier.  It is not
+  // a target identifier and deliberately contains no credentials.
+  return forumTitle(modeName, date).replace(/（1\/1）$/, "");
+}
+
 async function persist() {
   result.completedAt = new Date().toISOString();
   await mkdir(dirname(testLogPath), { recursive: true });
@@ -155,12 +162,14 @@ try {
     if (mode === "auth") {
       result.status = "AUTHENTICATED";
     } else if (mode === "text") {
+      result.testTitlePrefix = titlePrefix(mode);
       const text = "【测试】绮喵日报 V4-C QQ 官方机器人连接测试";
       const chunk = { sequence: 1, text, hash: sha256(text) };
       result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
       await sendWithRetry(() => sendText(bot, "text", chunk, 1), chunk);
       result.status = successfulSendStatus();
     } else if (mode === "medium") {
+      result.testTitlePrefix = titlePrefix(mode);
       const text = "【测试】绮喵日报 V4-C 中等长度文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(25);
       const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
@@ -170,6 +179,7 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "long") {
+      result.testTitlePrefix = titlePrefix(mode);
       const text = "【测试】绮喵日报 V4-C 长文本测试\n" + "本消息用于验证 QQ 官方机器人在测试目标的文本承载与稳定分段能力。\n".repeat(55);
       const chunks = chunkReport(text, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
@@ -179,6 +189,7 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "richtext") {
+      result.testTitlePrefix = titlePrefix(mode);
       const text = "【测试】绮喵日报 V4-C 富文本结构测试：仅包含官方 RichText 的文本元素，用于定位图片测试失败原因。";
       const chunk = { sequence: 1, text, hash: sha256(text) };
       result.textChunks = [{ sequence: chunk.sequence, hash: chunk.hash, characters: chunk.text.length }];
@@ -191,6 +202,7 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "report") {
+      result.testTitlePrefix = titlePrefix(mode);
       const revision = await loadLockedRevision();
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
@@ -200,6 +212,7 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "image") {
+      result.testTitlePrefix = titlePrefix(mode);
       const image = process.env.QQ_TEST_IMAGE_URL || "";
       if (!/^https:\/\//.test(image)) throw new Error("图片测试需要 HTTPS 的 QQ_TEST_IMAGE_URL。");
       const chunk = { sequence: 1, hash: sha256(image) };

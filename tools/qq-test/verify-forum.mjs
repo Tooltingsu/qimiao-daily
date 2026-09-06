@@ -9,6 +9,7 @@ const targetType = (process.env.QQ_TEST_TARGET_TYPE || "").toUpperCase();
 const channelId = process.env.QQ_TEST_CHANNEL_ID || "";
 const titlePrefix = process.env.QQ_TEST_TITLE_PREFIX || "【测试】绮喵日报 V4-C";
 const output = process.env.FORUM_VERIFY_OUTPUT || process.env.GITHUB_STEP_SUMMARY;
+const jsonOutput = process.env.FORUM_VERIFY_JSON_OUTPUT || "";
 
 function safeError(error) {
   if (error instanceof ApiError) {
@@ -33,6 +34,7 @@ try {
   const all = Array.isArray(response?.threads) ? response.threads : [];
   const matches = matchingForumThreads(response, titlePrefix);
   markdown = renderForumVerificationMarkdown(matches, all.length);
+  if (jsonOutput) await writeFile(jsonOutput, JSON.stringify({ titlePrefix, matchCount: matches.length }, null, 2) + "\n", "utf8");
   if (!matches.length) process.exitCode = 3;
 } catch (error) {
   markdown = `# QQ 论坛测试帖核验失败\n\n${safeError(error)}\n\n未发送 QQ 消息；未输出 AppSecret 或 access token。`;

@@ -170,6 +170,8 @@ public sealed class QqTestPublishAttempt
     public string? ReportHash { get; init; }
     public List<QqTestMessage> Messages { get; init; } = [];
     public int MediaCount { get; init; }
+    public string? TestTitlePrefix { get; init; }
+    public DateTimeOffset? VerifiedAt { get; init; }
     public DateTimeOffset AttemptedAt { get; init; }
     public DateTimeOffset? CompletedAt { get; init; }
     public string? Error { get; init; }

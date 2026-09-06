@@ -1,7 +1,7 @@
 # V4-C QQ 官方机器人平台审计
 
 审计日期：2026-09-06（Asia/Shanghai）  
-结论：**已选定腾讯维护的官方 Node.js SDK；已确认测试目标为 type=10007 论坛子频道。真实网络、鉴权、论坛发帖和图片能力仍待 `qq-test` GitHub-hosted Runner 实测。**
+结论：**已选定腾讯维护的官方 Node.js SDK；已确认测试目标为 type=10007 论坛子频道。GitHub-hosted Runner 已完成真实鉴权、论坛文本、长文本、RichText、图片和锁定日报测试。生产自动发送仍关闭。**
 
 ## 采用的官方 SDK
 
@@ -64,10 +64,10 @@
 | --- | --- |
 | 真实生产日期恢复 | PASS：Pages projection 已恢复为 2026-09-06，默认 workflow 空日期仍取 Shanghai 当日 |
 | 官方 SDK 方案与最小 workflow | READY |
-| qq-test 环境 | AppID/AppSecret 已配置；用户已选 type=10007 论坛目标，代码支持 `QQ_TEST_TARGET_TYPE=FORUM`，待写入目标变量 |
+| qq-test 环境 | VERIFIED：仅在 `qq-test` Environment 中读取凭据与目标变量；没有读取 production Environment |
 | GitHub-hosted Runner Auth / 只读 OpenAPI | VERIFIED：运行 [34006072572](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34006072572) 成功列出 1 个 Guild、33 个子频道和 2 个 type=0 文字子频道，未发送消息 |
-| GitHub-hosted Runner 论坛发帖 | 仅得到创建 `task_id`；8 分钟后只读帖子列表仍无匹配测试帖，**不视为发布成功** |
+| GitHub-hosted Runner 论坛发帖 | VERIFIED：新机器人实测成功；论坛创建响应返回 `task_id`，并通过只读帖子列表确认可见。最初旧机器人一次 `TEST_NOT_VISIBLE` 记录保留为历史诊断，不混同为成功。 |
 | 论坛可见性核验 | 已实现只读 `GET /channels/{channel_id}/threads` 工作流；无匹配帖子会失败，`task_id` 仅代表创建任务被接收，不能单独等同于前台可见 |
-| 当前阻塞 | 腾讯论坛发帖接口标注 `<PrivateDomain/>`，即仅私域机器人可用。选定的外部 Guild 论坛目标很可能因此在异步审核阶段未通过；在确认机器人为该 Guild 的私域机器人前，禁止继续发送长文本、图片或完整日报 |
-| 测试帖清理 | `qq-forum-test-cleanup.yml` 仅手动运行，并且必须输入 `DELETE_TEST_POSTS`；只删除本次官方列表返回、标题以 `【测试】绮喵日报 V4-C` 开头的论坛测试帖，绝不按模糊标题或日期删除 |
+| GitHub-hosted Runner IP/网络 | VERIFIED：真实 GitHub-hosted Runner 可完成鉴权与创建/读取论坛帖子，未出现 IP 白名单或出口 ACL 拒绝。 |
+| 测试帖清理 | `qq-forum-test-cleanup.yml` 仅手动运行，并且必须输入 `DELETE_TEST_POSTS`；只删除本次官方列表返回、标题以 `【测试】绮喵日报 V4-C` 开头的论坛测试帖，绝不按模糊标题或日期删除。2026-09-06 实测删除被 QQ 以 `HTTP 400 / 11264 / 频道未对机器人授权` 拒绝；因此不会假称已删除，需用户手动删除或为机器人授予论坛删帖权限后再运行。 |
 | Production QQ 自动发布 | 仍关闭 |
