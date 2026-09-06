@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { tmpdir } from "node:os";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
@@ -132,6 +132,11 @@ function successfulSendStatus() {
   return targetType === "FORUM" ? "TEST_SUBMITTED" : "TEST_PUBLISHED";
 }
 
+function maskedTargetId(value) {
+  const text = String(value ?? "");
+  return text.length > 4 ? `${"*".repeat(Math.max(4, text.length - 4))}${text.slice(-4)}` : "****";
+}
+
 function titlePrefix(modeName) {
   // This is metadata for a later *read-only* visibility verifier.  It is not
   // a target identifier and deliberately contains no credentials.
@@ -150,6 +155,26 @@ async function persist() {
   existing.environment = "qq-test";
   existing.attempts.push(result);
   await writeFile(testLogPath, JSON.stringify(existing, null, 2) + "\n", "utf8");
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    const elapsedMs = Math.max(0, Date.now() - new Date(result.attemptedAt).getTime());
+    const ids = result.messages.map(message => message.postTaskId ?? message.messageId ?? "<missing>").join(", ") || "无";
+    const chunks = result.textChunks.map(chunk => `${chunk.sequence}:${chunk.characters}:${chunk.hash}`).join("<br>") || "无";
+    const summary = [
+      "# QimiaoDaily QQ test publish",
+      "",
+      `- 日期：${result.date}`,
+      `- Revision：${result.reportRevision ?? "无"}`,
+      `- 报告 Hash：${result.reportHash ?? "无"}`,
+      `- 目标：${result.targetType ?? "未知"} / ${maskedTargetId(channelId)}`,
+      `- 文本分段（序号:字符数:Hash）：${chunks}`,
+      `- 图片数：${result.mediaCount}`,
+      `- QQ 返回 ID：${ids}`,
+      `- 结果：${result.status}`,
+      `- 耗时：${elapsedMs}ms`,
+      result.error ? `- 错误：${mask(result.error)}` : ""
+    ].filter(Boolean).join("\n") + "\n\n";
+    await appendFile(process.env.GITHUB_STEP_SUMMARY, summary, "utf8");
+  }
   console.log(JSON.stringify({ status: result.status, mode: result.mode, date: result.date, messages: result.messages.length, error: result.error }));
 }
 
