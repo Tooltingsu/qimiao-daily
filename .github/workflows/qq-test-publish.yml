@@ -23,7 +23,7 @@ on:
         default: true
         type: boolean
       includeArtwork:
-        description: Disabled until the explicit forum image stage has passed
+        description: Validate and send selected artwork after the verified explicit image stage
         required: true
         default: false
         type: boolean
@@ -71,12 +71,9 @@ jobs:
           # a source artifact and is not used for the visible forum-image test.
           QQ_TEST_IMAGE_URL: https://tooltingsu.github.io/qimiao-daily/assets/qq-test-fixture.png
           QQ_TEST_MAX_TEXT_CHARS: "1800"
+          INPUT_INCLUDE_ARTWORK: ${{ inputs.includeArtwork }}
         run: |
           if [ -z "${INPUT_REPORT_DATE}" ]; then export INPUT_REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"; fi
-          if [ "${{ inputs.includeArtwork }}" = "true" ]; then
-            echo "includeArtwork is blocked until the explicit forum image test succeeds." >&2
-            exit 2
-          fi
           node tools/qq-test/run.mjs
       - name: Build Pages projection and persist the sanitized test result
         if: always()

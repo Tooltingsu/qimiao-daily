@@ -1,9 +1,11 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
+import { tmpdir } from "node:os";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
 import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { chunkReport, sha256 } from "./chunking.mjs";
 import { forumImagePayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "./forum.mjs";
+import { withValidatedArtwork } from "./artwork-media.mjs";
 
 const root = resolve(process.env.GITHUB_WORKSPACE || process.cwd());
 const mode = process.env.INPUT_MODE || "auth";
@@ -20,6 +22,7 @@ const workflowRun = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITO
   ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
   : "LOCAL_QQ_TEST";
 const testLogPath = process.env.QQ_TEST_LOG_PATH || resolve(root, "test-publish-log", `${date}.json`);
+const includeArtwork = process.env.INPUT_INCLUDE_ARTWORK === "true";
 
 const result = {
   date,
@@ -206,9 +209,26 @@ try {
       const revision = await loadLockedRevision();
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
-      for (const chunk of chunks) {
-        await sendWithRetry(() => sendText(bot, "report", chunk, chunks.length), chunk);
-        await new Promise(resolve => setTimeout(resolve, 250));
+      const sendReport = async validatedArtwork => {
+        for (const chunk of chunks) {
+          await sendWithRetry(() => sendText(bot, "report", chunk, chunks.length), chunk);
+          await new Promise(resolve => setTimeout(resolve, 250));
+        }
+        for (const image of validatedArtwork) {
+          const chunk = { sequence: result.messages.length + 1, hash: sha256(image.sourceUrl) };
+          if (targetType !== "FORUM") throw new Error("PUBLISH_MEDIA_FAILED: V4-C only verified forum artwork delivery.");
+          await sendWithRetry(() => bot.api.put(
+            `/channels/${encodeURIComponent(channelId)}/threads`,
+            forumImagePayload(forumTitle("report-artwork", date), "【测试】绮喵日报 V4-C 已选美图", image.sourceUrl)), chunk, "artwork");
+          result.mediaCount++;
+        }
+      };
+      // Validate every selected image before the first report text chunk. A
+      // media failure therefore cannot leave a falsely "complete" text report.
+      if (includeArtwork) {
+        await withValidatedArtwork(revision.selectedArtwork, resolve(tmpdir(), `qimiao-v4-qq-${process.pid}-${Date.now()}`), sendReport);
+      } else {
+        await sendReport([]);
       }
       result.status = successfulSendStatus();
     } else if (mode === "image") {

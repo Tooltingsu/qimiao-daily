@@ -31,6 +31,7 @@
 
 - 当前 SDK 为正常文字子频道提供 `sendChannelMessage`，并提供受鉴权保护的原始 REST 出口。论坛子频道不能误调用文字消息 endpoint。
 - 论坛文本用 Markdown `format=3` 创建主题；论坛图片测试用官方 `format=4` RichText JSON 的 `ImageElem.third_url`，使用 Pages 上的自制不透明 96×96 PNG。先前 1×1 透明 raw-GitHub 图片未能形成可见帖子，不能视为图片能力通过；成功或失败均以真实 API 返回为准。
+- 当前官方 SDK 的 `uploadMedia/sendImage` 是其普通消息 target 模型的上传通道；论坛 RichText endpoint 实测采用远程 `third_url`。因此日报已选图片先在 Runner 临时下载、校验 MIME/非空/≤30MB，随后把同一 HTTPS URL 交给 QQ 论坛服务端抓取；临时文件在 `finally` 中删除，仓库不保存 Pixiv 原图。没有直接图片 URL、下载失败、格式不对或超限会在任何日报文字发送前以 `PUBLISH_MEDIA_FAILED` 阻止本次完整发布，除非未来用户明确开启文本降级策略。
 - SDK/当前页面未给出可直接依赖的频道单条文本上限。本项目以可配置的保守值 `1800` 先做真实阶段测试，不宣称它是平台上限；完整日报会按段落/条目确定性分段，遇到单条目超限会阻止发送，绝不从活动名称中间截断。
 - 每条分段保存 SHA-256；同一 locked revision 的分段结果确定不变。
 
