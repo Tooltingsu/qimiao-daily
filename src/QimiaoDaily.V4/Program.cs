@@ -55,6 +55,12 @@ try
             EnsureValid(repository);
             Print(new V4PublishService(repository).Lock(date, (Option("--mode") ?? "manual") == "manual", now));
             break;
+        case "replace-lock":
+            EnsureValid(repository);
+            if (!int.TryParse(Option("--revision"), out var requestedRevision))
+                throw new ArgumentException("replace-lock requires --revision.");
+            Print(new V4PublishService(repository).ReplaceUnpublishedLock(date, requestedRevision, now, Option("--reason") ?? string.Empty));
+            break;
         case "publish":
             EnsureDryRun();
             EnsureValid(repository);
@@ -111,7 +117,7 @@ try
             Print(new V4PagesBuilder(repository).Build(date));
             break;
         default:
-            Console.WriteLine("QimiaoDaily V4 POC commands: export-v3, validate, calculate, collect-bgi, generate, lock, publish, republish, build-pages");
+            Console.WriteLine("QimiaoDaily V4 POC commands: export-v3, validate, calculate, collect-bgi, generate, lock, replace-lock, publish, republish, build-pages");
             break;
     }
 }

@@ -55,6 +55,25 @@ public sealed class V4PocTests
     }
 
     [Fact]
+    public void ExplicitReplacementLockSupersedesOnlyAnUnpublishedPriorLock()
+    {
+        using var fixture = new RepositoryFixture();
+        var generator = new V4ReportGenerator(fixture.Repository);
+        generator.Generate(fixture.Date, "commit-a", fixture.Now);
+        var publisher = new V4PublishService(fixture.Repository);
+        publisher.Lock(fixture.Date, true, fixture.Now);
+        generator.Generate(fixture.Date, "commit-b", fixture.Now.AddMinutes(1));
+
+        var replacement = publisher.ReplaceUnpublishedLock(fixture.Date, 2, fixture.Now.AddMinutes(2), "采用用户确认的最新版");
+        var manifest = fixture.Repository.Read<ReportManifest>("reports", fixture.Date.ToString("yyyy-MM-dd"), "manifest.json");
+        var old = fixture.Repository.Read<ReportRevision>("reports", fixture.Date.ToString("yyyy-MM-dd"), "revisions", "001.json");
+        Assert.Equal(2, replacement.Revision);
+        Assert.Equal(2, manifest.LockedRevision);
+        Assert.Equal(ReportState.Superseded, old.State);
+        Assert.Equal(ReportState.LockedManual, replacement.State);
+    }
+
+    [Fact]
     public void WatchdogUsesShanghaiWindowInsteadOfAssumingCronIsExact()
     {
         var guard = new PublishWindowGuard(new V4Settings { PublishTime = "18:30" });

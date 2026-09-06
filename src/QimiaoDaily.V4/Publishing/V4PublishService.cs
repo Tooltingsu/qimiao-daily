@@ -27,6 +27,49 @@ public sealed class V4PublishService(V4Repository repository)
         return revision;
     }
 
+    // A user may explicitly replace an unpublished lock after reviewing a
+    // newer revision. This is never implicit: the caller supplies both the
+    // exact revision and an audit reason. A published lock cannot be replaced.
+    public ReportRevision ReplaceUnpublishedLock(DateOnly date, int revisionNumber, DateTimeOffset now, string reason)
+    {
+        if (revisionNumber < 1) throw new ArgumentOutOfRangeException(nameof(revisionNumber));
+        if (string.IsNullOrWhiteSpace(reason)) throw new ArgumentException("A replacement-lock reason is required.", nameof(reason));
+        var folder = date.ToString("yyyy-MM-dd");
+        var manifest = repository.Read<ReportManifest>("reports", folder, "manifest.json");
+        if (manifest.PublishedAt is not null)
+            throw new InvalidOperationException("A published lock cannot be replaced; use republish instead.");
+        if (manifest.LockedRevision == revisionNumber)
+            return repository.Read<ReportRevision>("reports", folder, "revisions", revisionNumber.ToString("000") + ".json");
+
+        var replacement = repository.Read<ReportRevision>("reports", folder, "revisions", revisionNumber.ToString("000") + ".json");
+        if (replacement.State != ReportState.Ready)
+            throw new InvalidOperationException("Replacement lock requires a READY revision.");
+        Verify(replacement);
+
+        if (manifest.LockedRevision is { } priorNumber)
+        {
+            var prior = repository.Read<ReportRevision>("reports", folder, "revisions", priorNumber.ToString("000") + ".json");
+            if (prior.PublishedAt is not null)
+                throw new InvalidOperationException("A published lock cannot be replaced; use republish instead.");
+            prior.State = ReportState.Superseded;
+            repository.Write(prior, "reports", folder, "revisions", priorNumber.ToString("000") + ".json");
+        }
+
+        replacement.State = ReportState.LockedManual;
+        replacement.LockedAt = now;
+        replacement.LockReason = "MANUAL_REPLACEMENT: " + reason.Trim();
+        manifest.LockedRevision = replacement.Revision;
+        manifest.State = replacement.State;
+        manifest.SourceCommit = replacement.SourceCommit;
+        manifest.ReportHash = replacement.ReportHash;
+        manifest.GeneratedAt = replacement.GeneratedAt;
+        manifest.LockedAt = replacement.LockedAt;
+        manifest.LockReason = replacement.LockReason;
+        repository.Write(replacement, "reports", folder, "revisions", replacement.Revision.ToString("000") + ".json");
+        repository.Write(manifest, "reports", folder, "manifest.json");
+        return replacement;
+    }
+
     public PublishAttempt PublishDryRun(DateOnly date, string workflowRun, DateTimeOffset now, bool force = false, string? reason = null)
     {
         var folder = date.ToString("yyyy-MM-dd");

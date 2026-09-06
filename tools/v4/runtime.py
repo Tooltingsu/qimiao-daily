@@ -49,7 +49,15 @@ def main():
             result = cli(kind, date, *options)
             cli('build-pages', date)
         elif kind == 'lock':
-            result = cli('lock', date, '--mode', 'manual')
+            requested_revision = os.environ.get('INPUT_REVISION', '')
+            if requested_revision:
+                lock_reason = os.environ.get('INPUT_LOCK_REASON', '').strip()
+                if not lock_reason:
+                    raise ValueError('Replacing an existing lock requires INPUT_LOCK_REASON.')
+                result = cli('replace-lock', date, '--revision', requested_revision,
+                             '--reason', lock_reason)
+            else:
+                result = cli('lock', date, '--mode', 'manual')
         elif kind == 'publish':
             options = ['--dry-run', 'true', '--workflow-run', os.environ['RUN_URL'], '--watchdog', 'true']
             if os.environ.get('SIMULATE_DEADLINE') == 'true':

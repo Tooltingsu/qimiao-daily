@@ -7,6 +7,14 @@ on:
         description: Report date (yyyy-MM-dd)
         required: true
         type: string
+      revision:
+        description: Optional exact READY revision. When supplied, explicitly replaces an unpublished older lock.
+        required: false
+        type: string
+      reason:
+        description: Required explanation when replacing an existing lock.
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -31,5 +39,7 @@ jobs:
       - name: Validate and lock the latest ready revision
         env:
           INPUT_DATE: ${{ inputs.date }}
+          INPUT_REVISION: ${{ inputs.revision }}
+          INPUT_LOCK_REASON: ${{ inputs.reason }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python3 tools/v4/runtime.py lock
