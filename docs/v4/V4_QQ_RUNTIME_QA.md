@@ -54,6 +54,7 @@
 
 - [完整日报文字帖（2026-09-06）](evidence/qq-runtime/2026-09-06-forum-full-report-text-visible.png)：可见测试标题与完整日报正文。这是早期文本链路的前台证据，独立 `qq-test` 目标仍以本节的 2026-09-07 API 核验为准。
 - [论坛美图帖（2026-09-07）](evidence/qq-runtime/2026-09-07-forum-artwork-visible.png)：可见 `【测试】绮喵日报 V4-C report-artwork 2026-09-06` 主题及完整图片渲染；与最新独立测试目标的完整 Revision 4 图像步骤对应。
+- [GitHub test-publish Summary（2026-09-06）](evidence/qq-runtime/2026-09-06-github-test-publish-summary.png)：显示测试日期、Revision、Hash、论坛目标脱敏尾号、真实 QQ 返回 ID 和 `TEST_SUBMITTED` 写回结果；它与本地前台截图及后续 `TEST_VISIBLE` API 核验互为审计证据。
 
 ## GitHub Pages 中转美图实测（2026-09-07）
 
