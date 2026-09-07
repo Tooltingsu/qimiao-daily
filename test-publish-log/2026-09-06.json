@@ -471,6 +471,29 @@
       "attemptedAt": "2026-09-07T04:41:58.445Z",
       "completedAt": "2026-09-07T04:41:59.290Z",
       "error": null
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "text",
+      "targetType": "FORUM",
+      "status": "TEST_FAILED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084115456",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c",
+          "characters": 26
+        }
+      ],
+      "messages": [],
+      "mediaCount": 0,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 连接测试 2026-09-06",
+      "attemptedAt": "2026-09-07T04:42:52.291Z",
+      "completedAt": "2026-09-07T04:42:55.132Z",
+      "error": "QQ API 调用失败：HTTP 400，错误码 11263，频道不存在"
     }
   ]
 }
