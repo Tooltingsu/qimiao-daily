@@ -57,6 +57,8 @@
 - [完整日报文字帖（2026-09-06）](evidence/qq-runtime/2026-09-06-forum-full-report-text-visible.png)：可见测试标题与完整日报正文。这是早期文本链路的前台证据，独立 `qq-test` 目标仍以本节的 2026-09-07 API 核验为准。
 - [论坛美图帖（2026-09-07）](evidence/qq-runtime/2026-09-07-forum-artwork-visible.png)：可见 `【测试】绮喵日报 V4-C report-artwork 2026-09-06` 主题及完整图片渲染；与最新独立测试目标的完整 Revision 4 图像步骤对应。
 - [长文本与测试子频道（2026-09-07）](evidence/qq-runtime/2026-09-07-forum-long-text-and-test-channel-visible.png)：QQ 客户端可见 `【测试】绮喵日报 V4-C 长文本测试 2026-09-06（1/2）`、`中等长度测试` 和左上方已选的 `绮喵小课堂` 子频道；这提供了长文本前台渲染和测试目标归属的直接证据。
+- [最小文本列表（2026-09-07）](evidence/qq-runtime/2026-09-07-qq-client-minimal-text-list-visible.png)：QQ 客户端在 `绮喵小课堂` 测试子频道中可见最新 `【测试】绮喵日报 V4-C 连接测试 2026-09-07` 帖子。
+- [最小文本详情（2026-09-07）](evidence/qq-runtime/2026-09-07-qq-client-minimal-text-detail-visible.png)：QQ 客户端展开最新连接测试帖，显示正文、来源子频道和发布时间。
 - [GitHub test-publish Summary（2026-09-06）](evidence/qq-runtime/2026-09-06-github-test-publish-summary.png)：显示测试日期、Revision、Hash、论坛目标脱敏尾号、真实 QQ 返回 ID 和 `TEST_SUBMITTED` 写回结果；它与本地前台截图及后续 `TEST_VISIBLE` API 核验互为审计证据。
 
 ## GitHub Pages 中转美图实测（2026-09-07）
@@ -73,7 +75,7 @@
 
 ## 尚待补齐的证据
 
-1. QQ 客户端中**最小文本**的脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。长文本、图片、完整日报文字和测试子频道归属截图均已归档；最新独立目标的完整链路由两个 `TEST_VISIBLE` API 核验和美图截图共同证明。
+QQ 客户端的最小文本、长文本、图片、完整日报文字及测试子频道归属截图均已归档。Pages 的 `web/data/dashboard.json` 以 `qqTest.status = TEST_VISIBLE` 投影测试发布状态；真实测试日志是 `test-publish-log/`，不会污染生产 `publish-log/`。
 
 在这些项目完成前，不宣布 V4-C PASS，也不进入 V4-D。
 
@@ -92,7 +94,7 @@
 | 部分失败、恢复、重试 | QQ Node test 16/16 通过，其中覆盖 retry、partial failure、resume 不重复已发 chunk | PASS |
 | Secrets 扫描与 Pages 状态 | GitHub validate run `34086374501` 成功；工作流测试 `secret_scan.py` | PASS |
 | 生产自动真实发送关闭 | `publish.yml` 仍为 DRY RUN，`qq-test-publish.yml` 只有 `workflow_dispatch` | PASS |
-| QQ 客户端前台截图归档 | 已归档完整日报文字、美图、长文本和测试子频道归属；仍缺最小文本截图 | **待用户提供** |
+| QQ 客户端前台截图归档 | 已归档最小文本、长文本、完整日报文字、美图及测试子频道归属 | PASS |
 
 ## 最小文本补发（2026-09-07）
 
@@ -102,3 +104,9 @@
 - 只读可见性核验：[34122454054](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34122454054)，结果为 `TEST_VISIBLE`。
 - 最新 `test-publish-log/2026-09-07.json` 保存了真实论坛 `postTaskId`、26 字文本 Hash 和 `verifiedAt`；未保存 Secret 或 token。
 - 待用户提供该新帖的 QQ 客户端脱敏截图后，截图证据项即可闭合。
+
+用户随后提供了最小文本列表和详情截图，现已归档至上述 evidence 目录；该项已闭合。
+
+## V4-C 结论
+
+**V4-C — PASS（2026-09-07）**。QQ 官方机器人已在独立 `qq-test` 论坛子频道完成 GitHub-hosted Runner 的真实鉴权、最小/中等/长文本、图片和锁定完整 Revision 的发送与可见性验证。测试日志保存真实 QQ 返回任务 ID，测试状态与生产状态隔离，重试/部分失败恢复/Secret Scan 均通过。`publish.yml` 仍是 QQ-free DRY RUN，`qq-test` 没有 schedule；本阶段到此停止，不启用 V4-D 的正式自动发布。
