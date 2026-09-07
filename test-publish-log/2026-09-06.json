@@ -633,6 +633,31 @@
       "attemptedAt": "2026-09-07T04:54:35.456Z",
       "completedAt": "2026-09-07T04:54:38.180Z",
       "error": null
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "image",
+      "targetType": "FORUM",
+      "status": "TEST_SUBMITTED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085032249",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "image",
+          "postTaskId": "1788757093214098570",
+          "createTime": "1788757093",
+          "hash": "sha256:a2f08e1245443e6b85f5be314cb7079d80e507618576ff0c6fd82a1c90a4f3c3"
+        }
+      ],
+      "mediaCount": 1,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 图片测试 2026-09-06",
+      "attemptedAt": "2026-09-07T04:58:10.277Z",
+      "completedAt": "2026-09-07T04:58:13.328Z",
+      "error": null
     }
   ]
 }
