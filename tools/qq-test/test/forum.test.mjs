@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { forumImagePayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "../forum.mjs";
+import { forumImagePayload, forumReportWithArtworkPayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "../forum.mjs";
 
 test("forum text payload uses documented Markdown format", () => {
   assert.deepEqual(forumThreadPayload("【测试】标题", "正文"), {
@@ -17,6 +17,15 @@ test("forum image payload uses documented RichText JSON image element", () => {
   assert.deepEqual(richText.paragraphs[0].elems[1], {
     type: 2, image: { third_url: "https://example.test/image.png", width_percent: 1 }
   });
+});
+
+test("forum full-report payload keeps text and artwork in one RichText thread", () => {
+  const payload = forumReportWithArtworkPayload("绮喵日报 260907", "日报正文", ["https://example.test/art.jpg"]);
+  assert.equal(payload.format, 4);
+  const elems = JSON.parse(payload.content).paragraphs[0].elems;
+  assert.deepEqual(elems.map(item => item.type), [1, 2]);
+  assert.equal(elems[0].text.text, "日报正文");
+  assert.equal(elems[1].image.third_url, "https://example.test/art.jpg");
 });
 
 test("forum text-only RichText payload isolates the structured format", () => {

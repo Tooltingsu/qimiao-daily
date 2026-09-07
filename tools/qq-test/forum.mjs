@@ -18,6 +18,19 @@ export function forumImagePayload(title, caption, imageUrl) {
   return forumThreadPayload(title, JSON.stringify(richText), 4);
 }
 
+// A production daily report is one forum thread: text first, then its chosen
+// artwork. Creating separate text and image threads breaks the report's
+// single-revision audit boundary.
+export function forumReportWithArtworkPayload(title, content, images) {
+  if (!Array.isArray(images) || images.length === 0) throw new Error("完整日报至少需要一张已验证美图。");
+  const elems = [{ type: 1, text: { text: String(content) } }];
+  for (const imageUrl of images) {
+    if (!/^https:\/\//.test(String(imageUrl))) throw new Error("论坛美图必须使用 HTTPS URL。");
+    elems.push({ type: 2, image: { third_url: String(imageUrl), width_percent: 1 } });
+  }
+  return forumThreadPayload(title, JSON.stringify({ paragraphs: [{ elems }] }), 4);
+}
+
 export function forumRichTextPayload(title, text) {
   const richText = {
     paragraphs: [{ elems: [{ type: 1, text: { text: String(text) } }] }]

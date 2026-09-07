@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { QQBot } from "@tencent-connect/qqbot-nodejs";
 import { ApiError } from "@tencent-connect/qqbot-nodejs/protocol";
 import { chunkReport, sha256 } from "./chunking.mjs";
-import { forumImagePayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "./forum.mjs";
+import { forumImagePayload, forumReportWithArtworkPayload, forumRichTextPayload, forumThreadPayload, forumTitle } from "./forum.mjs";
 import { withValidatedArtwork } from "./artwork-media.mjs";
 import { retryDelayMs } from "./retry.mjs";
 
@@ -203,7 +203,7 @@ async function persistProduction() {
     status: result.status,
     error: result.error,
     dryRun: false,
-    reason: "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
+    reason: includeArtwork ? "USER_AUTHORIZED_FULL_REPORT_WITH_ARTWORK" : "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
   });
   await mkdir(dirname(productionLogPath), { recursive: true });
   await writeFile(productionLogPath, JSON.stringify(log, null, 2) + "\n", "utf8");
@@ -300,14 +300,24 @@ try {
       }
       result.status = successfulSendStatus();
     } else if (mode === "report") {
-      if (isProductionRelease && process.env.INPUT_TEXT_ONLY !== "true")
-        throw new Error("Production release currently requires explicit INPUT_TEXT_ONLY=true.");
+      if (isProductionRelease && process.env.INPUT_TEXT_ONLY !== "true" && !includeArtwork)
+        throw new Error("生产发布必须明确选择纯文字，或选择已验证美图的完整日报。");
       result.testTitlePrefix = titlePrefix(mode);
       const revision = await loadLockedRevision();
       if (isProductionRelease) await assertProductionIdempotency();
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
       const sendReport = async validatedArtwork => {
+        if (isProductionRelease && targetType === "FORUM" && includeArtwork) {
+          if (chunks.length !== 1)
+            throw new Error("完整日报超过单篇帖子安全长度，不能拆分为多篇文字+美图帖子。请先缩短日报内容。");
+          const chunk = { sequence: 1, hash: sha256(`${revision.content}\n${validatedArtwork.map(x => x.sourceUrl).join("\n")}`) };
+          await sendWithRetry(() => bot.api.put(
+            `/channels/${encodeURIComponent(channelId)}/threads`,
+            forumReportWithArtworkPayload(releaseTitle(), revision.content, validatedArtwork.map(x => x.sourceUrl))), chunk, "report-with-artwork");
+          result.mediaCount = validatedArtwork.length;
+          return;
+        }
         for (const chunk of chunks) {
           const modeName = isProductionRelease ? "release" : "report";
           if (isProductionRelease && targetType === "FORUM") {
