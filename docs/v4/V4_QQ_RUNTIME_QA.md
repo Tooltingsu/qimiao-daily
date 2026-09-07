@@ -35,6 +35,21 @@
 
 实际发送已于 [34018791395](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018791395) 执行：locked Revision 1 的文本与一张已选 Pixiv 美图均收到 QQ 论坛 `task_id`。随后 [34018840573](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018840573) 和 [34018924256](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018924256) 的只读列表确认了文本帖可见，但当前读取窗口没有对应图片帖。之后又以图片帖的精确标题进行只读核验：[34039795981](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34039795981)，仍未找到该帖；因此测试日志被明确标记为 `TEST_PARTIAL_VISIBILITY`，**不把图片 task_id 误写成图片发布成功**。这说明当前可用能力已可可靠发布文本，但尚不能证明 Pixiv 直链可由 QQ 论坛服务端取图并展示。
 
+## 独立 qq-test 目标复验（2026-09-07）
+
+已确认 `qq-test` 与 `production` 配置为不同的论坛子频道；工作流仍只读取 `qq-test` Environment。
+
+| 阶段 | 结果 | 运行 / 核验 |
+| --- | --- | --- |
+| Auth only | PASS | [34084056790](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084056790) |
+| 最小文本 | TEST_VISIBLE | 发送 [34084493834](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084493834)；核验 [34084582522](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084582522) |
+| 中等文本 | TEST_VISIBLE | 发送 [34084644548](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084644548)；核验 [34084693301](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084693301) |
+| 长文本 | TEST_VISIBLE（2 段） | 发送 [34084760216](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084760216)；核验 [34084976339](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084976339) |
+| 自制测试图片 | TEST_VISIBLE | 发送 [34085032249](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085032249)；核验 [34085092011](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085092011) |
+| 完整 locked Revision 4（文字 + 1 张美图） | TEST_VISIBLE | 发送 [34085161551](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085161551)；核验 [34085233684](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085233684) |
+
+完整测试 Attempt 保存两个真实论坛 `postTaskId`（文字、图片各一个）、Revision、Hash、分段 Hash 和媒体数；仅写入 `test-publish-log/`。论坛只读 API 已确认测试帖标题可见；仍需要 QQ 客户端截图来保存图片实际渲染的前台证据。
+
 ## GitHub Pages 中转美图实测（2026-09-07）
 
 - 测试运行：[34082915741](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34082915741)。
