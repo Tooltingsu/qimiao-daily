@@ -68,11 +68,11 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "TEST_FAILED",
+    "status": "TEST_SUBMITTED",
     "mode": "text",
-    "messageCount": 0,
+    "messageCount": 1,
     "mediaCount": 0,
-    "completedAt": "2026-09-07T04:42:55.132+00:00",
-    "error": "QQ API \u8C03\u7528\u5931\u8D25\uFF1AHTTP 400\uFF0C\u9519\u8BEF\u7801 11263\uFF0C\u9891\u9053\u4E0D\u5B58\u5728"
+    "completedAt": "2026-09-07T04:49:02.624+00:00",
+    "error": null
   }
 }
