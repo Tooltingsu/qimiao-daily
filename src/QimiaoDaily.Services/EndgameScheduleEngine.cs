@@ -178,8 +178,8 @@ public sealed class EndgameScheduleEngine
 
 public static class EndgameScheduleRules
 {
-    // 2026-08-21 is Friday. DateOnly prevents a fabricated HH:mm value in UI or storage.
-    public static EndgameScheduleRule OuterRealm { get; } = new("NTE_OUTER_REALM", "NTE", "异环·轨外之境", new DateOnly(2026, 8, 21), 14, EndgameTimePrecision.DateOnly);
+    // All periodic gameplay windows use Shanghai 04:00 for both their start and end.
+    public static EndgameScheduleRule OuterRealm { get; } = new("NTE_OUTER_REALM", "NTE", "异环·轨外之境", new DateOnly(2026, 8, 21), 14, EndgameTimePrecision.Exact, new TimeOnly(4, 0));
     public static EndgameScheduleRule StarRailMemoryOfChaos { get; } = Exact("STARRAIL_MEMORY_OF_CHAOS", "混沌回忆", new DateOnly(2026, 8, 17));
     public static EndgameScheduleRule StarRailApocalypticShadow { get; } = Exact("STARRAIL_APOCALYPTIC_SHADOW", "末日幻影", new DateOnly(2026, 8, 31));
     public static EndgameScheduleRule StarRailPureFiction { get; } = Exact("STARRAIL_PURE_FICTION", "虚构叙事", new DateOnly(2026, 9, 14));

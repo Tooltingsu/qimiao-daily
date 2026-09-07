@@ -8,7 +8,7 @@ namespace QimiaoDaily.IntegrationTests;
 public sealed class V3PersistenceAdapterTests
 {
     [Fact]
-    public async Task EndgameStore_PersistsDateOnlyAnchorOverridesAndReplacesCurrentPlusNextTwo()
+    public async Task EndgameStore_PersistsExactAnchorOverridesAndReplacesCurrentPlusNextTwo()
     {
         await using var database = await CreateDatabaseAsync();
         var engine = new EndgameScheduleEngine();
@@ -22,11 +22,12 @@ public sealed class V3PersistenceAdapterTests
         var occurrences = await database.EndgameOccurrences.OrderBy(x => x.Sequence).ToListAsync();
         Assert.Equal("NTE_OUTER_REALM", persistedRule.RuleKey);
         Assert.Equal(new DateOnly(2026, 8, 28), anchor.AnchorDate);
-        Assert.Equal("DATE_ONLY", persistedRule.TimePrecision);
-        Assert.Null(persistedRule.StartTime);
+        Assert.Equal("EXACT", persistedRule.TimePrecision);
+        Assert.Equal(new TimeOnly(4, 0), persistedRule.StartTime);
         Assert.Equal(3, occurrences.Count);
-        Assert.All(occurrences, x => Assert.Equal("DATE_ONLY", x.TimePrecision));
-        Assert.All(occurrences, x => Assert.Null(x.StartTime));
+        Assert.All(occurrences, x => Assert.Equal("EXACT", x.TimePrecision));
+        Assert.All(occurrences, x => Assert.Equal(new TimeOnly(4, 0), x.StartTime));
+        Assert.All(occurrences, x => Assert.Equal(new TimeOnly(4, 0), x.EndTime));
         Assert.Equal([new DateOnly(2026, 8, 28), new DateOnly(2026, 9, 12), new DateOnly(2026, 9, 26)], occurrences.Select(x => x.OccurrenceDate));
         Assert.Equal("维护顺延", occurrences[1].Notes);
         Assert.True(occurrences[1].IsOverride);

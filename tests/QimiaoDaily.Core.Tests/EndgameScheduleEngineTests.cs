@@ -59,14 +59,16 @@ public sealed class EndgameScheduleEngineTests
     }
 
     [Fact]
-    public void BuildCurrentAndNextTwo_UsesDateOnlyFourteenDayFridayCycleForOuterRealm()
+    public void BuildCurrentAndNextTwo_UsesShanghaiFourForOuterRealm()
     {
         var rule = EndgameScheduleRules.OuterRealm;
 
         var result = new EndgameScheduleEngine().BuildCurrentAndNextTwo(rule, new DateOnly(2026, 8, 25));
 
         Assert.Equal([new DateOnly(2026, 8, 21), new DateOnly(2026, 9, 4), new DateOnly(2026, 9, 18)], result.Select(x => x.StartsOn));
-        Assert.All(result, x => Assert.Equal(EndgameTimePrecision.DateOnly, x.Precision));
+        Assert.All(result, x => Assert.Equal(EndgameTimePrecision.Exact, x.Precision));
+        Assert.All(result, x => Assert.Equal(new TimeOnly(4, 0), x.StartTime));
+        Assert.All(result, x => Assert.Equal(new TimeOnly(4, 0), x.EndTime));
         Assert.All(result, x => Assert.Equal(DayOfWeek.Friday, x.StartsOn.DayOfWeek));
     }
 
