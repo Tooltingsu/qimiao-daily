@@ -659,6 +659,45 @@
       "completedAt": "2026-09-07T04:58:13.328Z",
       "error": null,
       "verifiedAt": "2026-09-07T04:59:52.112237Z"
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "report",
+      "targetType": "FORUM",
+      "status": "TEST_SUBMITTED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085161551",
+      "reportRevision": 4,
+      "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+          "characters": 919
+        }
+      ],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "text",
+          "postTaskId": "1788757231947147151",
+          "createTime": "1788757231",
+          "hash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466"
+        },
+        {
+          "sequence": 2,
+          "kind": "artwork",
+          "postTaskId": "1788757232586169691",
+          "createTime": "1788757232",
+          "hash": "sha256:e59d72bccd1c2beb0542c297be598bb198d24efdb18bdd3e4651f2f5f336ac93"
+        }
+      ],
+      "mediaCount": 1,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06",
+      "attemptedAt": "2026-09-07T05:00:29.387Z",
+      "completedAt": "2026-09-07T05:00:32.672Z",
+      "error": null,
+      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158"
     }
   ]
 }
