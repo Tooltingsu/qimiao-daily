@@ -11,7 +11,7 @@ export function forumImagePayload(title, caption, imageUrl) {
     paragraphs: [{
       elems: [
         { type: 1, text: { text: String(caption) } },
-        { type: 2, image: { third_url: imageUrl, width_percent: 1 } }
+        { type: 2, image: { third_url: imageUrl, width_percent: 100 } }
       ]
     }]
   };
@@ -29,7 +29,7 @@ export function forumReportWithArtworkPayload(title, content, images) {
     // Mobile QQ lays an image following text in the same paragraph out as a
     // tiny inline glyph. A dedicated paragraph makes it a block image in both
     // mobile and desktop clients.
-    paragraphs.push({ elems: [{ type: 2, image: { third_url: String(imageUrl), width_percent: 1 } }] });
+    paragraphs.push({ elems: [{ type: 2, image: { third_url: String(imageUrl), width_percent: 100 } }] });
   }
   return forumThreadPayload(title, JSON.stringify({ paragraphs }), 4);
 }

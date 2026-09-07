@@ -15,7 +15,7 @@ test("forum image payload uses documented RichText JSON image element", () => {
   assert.equal(payload.format, 4);
   const richText = JSON.parse(payload.content);
   assert.deepEqual(richText.paragraphs[0].elems[1], {
-    type: 2, image: { third_url: "https://example.test/image.png", width_percent: 1 }
+    type: 2, image: { third_url: "https://example.test/image.png", width_percent: 100 }
   });
 });
 
