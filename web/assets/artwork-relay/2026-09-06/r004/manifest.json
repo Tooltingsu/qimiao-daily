@@ -1,0 +1,20 @@
+{
+  "reportDate": "2026-09-06",
+  "revision": 4,
+  "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+  "generatedAt": "2026-09-07T04:04:50.817Z",
+  "retention": "TEMPORARY_PAGES_RELAY; remove manually only after QQ visibility is confirmed",
+  "items": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149119754",
+      "character": "胡桃",
+      "franchise": "GENSHIN",
+      "file": "149119754.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 1324862,
+      "sha256": "sha256:4703fb5d063b0330c28bf295db81a57ca72791204bc805a8392f0a0de149cc44",
+      "relayUrl": "https://tooltingsu.github.io/qimiao-daily/assets/artwork-relay/2026-09-06/r004/149119754.jpg"
+    }
+  ]
+}
