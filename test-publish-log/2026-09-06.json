@@ -532,7 +532,7 @@
       "environment": "qq-test",
       "mode": "medium",
       "targetType": "FORUM",
-      "status": "TEST_SUBMITTED",
+      "status": "TEST_VISIBLE",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34084644548",
       "reportRevision": null,
       "reportHash": null,
@@ -556,7 +556,8 @@
       "testTitlePrefix": "【测试】绮喵日报 V4-C 中等长度测试 2026-09-06",
       "attemptedAt": "2026-09-07T04:51:32.834Z",
       "completedAt": "2026-09-07T04:51:35.876Z",
-      "error": null
+      "error": null,
+      "verifiedAt": "2026-09-07T04:52:53.339567Z"
     }
   ]
 }
