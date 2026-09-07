@@ -27,6 +27,7 @@ const workflowRun = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITO
 const testLogPath = process.env.QQ_TEST_LOG_PATH || resolve(root, "test-publish-log", `${date}.json`);
 const productionLogPath = process.env.QQ_PUBLISH_LOG_PATH || resolve(root, "publish-log", `${date}.json`);
 const includeArtwork = process.env.INPUT_INCLUDE_ARTWORK === "true";
+const forceRepublish = process.env.INPUT_FORCE_REPUBLISH === "true";
 const pagesBaseUrl = (process.env.ARTWORK_RELAY_PAGES_BASE_URL || "https://tooltingsu.github.io/qimiao-daily").replace(/\/$/, "");
 
 const result = {
@@ -177,7 +178,7 @@ async function assertProductionIdempotency() {
   let log;
   try { log = JSON.parse(await readFile(productionLogPath, "utf8")); } catch { return; }
   const attempts = Array.isArray(log?.attempts) ? log.attempts : [];
-  if (attempts.some(item => item?.reportHash === result.reportHash && ["PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(item?.status)))
+  if (!forceRepublish && attempts.some(item => item?.reportHash === result.reportHash && ["PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(item?.status)))
     throw new Error("Idempotency guard: this locked report is already submitted or published.");
 }
 
@@ -203,7 +204,9 @@ async function persistProduction() {
     status: result.status,
     error: result.error,
     dryRun: false,
-    reason: includeArtwork ? "USER_AUTHORIZED_FULL_REPORT_WITH_ARTWORK" : "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
+    reason: forceRepublish
+      ? "USER_AUTHORIZED_FORCED_REPUBLISH: mobile artwork block-layout correction"
+      : includeArtwork ? "USER_AUTHORIZED_FULL_REPORT_WITH_ARTWORK" : "USER_AUTHORIZED_TEXT_ONLY; artwork queue retained"
   });
   await mkdir(dirname(productionLogPath), { recursive: true });
   await writeFile(productionLogPath, JSON.stringify(log, null, 2) + "\n", "utf8");

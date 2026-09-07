@@ -15,6 +15,11 @@ on:
         description: Type RELEASE_LOCKED_REPORT_WITH_ARTWORK to authorize one complete production post
         required: true
         type: string
+      force:
+        description: Explicitly allow a corrected repost of an already-submitted locked report
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -50,6 +55,7 @@ jobs:
           INPUT_MODE: report
           INPUT_TEXT_ONLY: "false"
           INPUT_INCLUDE_ARTWORK: "true"
+          INPUT_FORCE_REPUBLISH: ${{ inputs.force }}
           INPUT_REPORT_DATE: ${{ inputs.reportDate }}
           INPUT_REVISION: ${{ inputs.revision }}
           QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}

@@ -23,12 +23,15 @@ export function forumImagePayload(title, caption, imageUrl) {
 // single-revision audit boundary.
 export function forumReportWithArtworkPayload(title, content, images) {
   if (!Array.isArray(images) || images.length === 0) throw new Error("完整日报至少需要一张已验证美图。");
-  const elems = [{ type: 1, text: { text: String(content) } }];
+  const paragraphs = [{ elems: [{ type: 1, text: { text: String(content) } }] }];
   for (const imageUrl of images) {
     if (!/^https:\/\//.test(String(imageUrl))) throw new Error("论坛美图必须使用 HTTPS URL。");
-    elems.push({ type: 2, image: { third_url: String(imageUrl), width_percent: 1 } });
+    // Mobile QQ lays an image following text in the same paragraph out as a
+    // tiny inline glyph. A dedicated paragraph makes it a block image in both
+    // mobile and desktop clients.
+    paragraphs.push({ elems: [{ type: 2, image: { third_url: String(imageUrl), width_percent: 1 } }] });
   }
-  return forumThreadPayload(title, JSON.stringify({ paragraphs: [{ elems }] }), 4);
+  return forumThreadPayload(title, JSON.stringify({ paragraphs }), 4);
 }
 
 export function forumRichTextPayload(title, text) {

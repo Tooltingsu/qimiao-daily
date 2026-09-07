@@ -22,10 +22,10 @@ test("forum image payload uses documented RichText JSON image element", () => {
 test("forum full-report payload keeps text and artwork in one RichText thread", () => {
   const payload = forumReportWithArtworkPayload("绮喵日报 260907", "日报正文", ["https://example.test/art.jpg"]);
   assert.equal(payload.format, 4);
-  const elems = JSON.parse(payload.content).paragraphs[0].elems;
-  assert.deepEqual(elems.map(item => item.type), [1, 2]);
-  assert.equal(elems[0].text.text, "日报正文");
-  assert.equal(elems[1].image.third_url, "https://example.test/art.jpg");
+  const paragraphs = JSON.parse(payload.content).paragraphs;
+  assert.equal(paragraphs.length, 2);
+  assert.equal(paragraphs[0].elems[0].text.text, "日报正文");
+  assert.equal(paragraphs[1].elems[0].image.third_url, "https://example.test/art.jpg");
 });
 
 test("forum text-only RichText payload isolates the structured format", () => {
