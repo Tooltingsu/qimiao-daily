@@ -110,3 +110,12 @@ QQ 客户端的最小文本、长文本、图片、完整日报文字及测试�
 ## V4-C 结论
 
 **V4-C — PASS（2026-09-07）**。QQ 官方机器人已在独立 `qq-test` 论坛子频道完成 GitHub-hosted Runner 的真实鉴权、最小/中等/长文本、图片和锁定完整 Revision 的发送与可见性验证。测试日志保存真实 QQ 返回任务 ID，测试状态与生产状态隔离，重试/部分失败恢复/Secret Scan 均通过。`publish.yml` 仍是 QQ-free DRY RUN，`qq-test` 没有 schedule；本阶段到此停止，不启用 V4-D 的正式自动发布。
+
+## 当日日报完整测试（2026-09-07）
+
+按用户请求，已将当天不可变的 `2026-09-07 / Revision 2` **仅发布到 `qq-test`**：
+
+- 图片中转准备：[34124342221](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34124342221) 成功；临时 Pages 路径按日期和 Revision 隔离。
+- 完整日报（1074 字文本 + 1 张已选美图）发送：[34124560646](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34124560646) 成功。
+- 只读论坛核验：[34124675144](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34124675144) 成功，`test-publish-log/2026-09-07.json` 记录状态 `TEST_VISIBLE`、Revision、不可变 Hash、文字和图片各一个真实 `postTaskId`。
+- 此操作没有读取 production Environment、没有写生产 `publish-log/`、没有改变任何生产自动发布开关。
