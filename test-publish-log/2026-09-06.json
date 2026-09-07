@@ -419,7 +419,7 @@
       "environment": "qq-test",
       "mode": "report",
       "targetType": "FORUM",
-      "status": "TEST_SUBMITTED",
+      "status": "TEST_PUBLISHED",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34082915741",
       "reportRevision": 4,
       "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
@@ -451,7 +451,9 @@
       "attemptedAt": "2026-09-07T04:23:43.451Z",
       "completedAt": "2026-09-07T04:23:47.455Z",
       "error": null,
-      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158"
+      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
+      "manualVisibilityConfirmedAt": "2026-09-07T04:30:00Z",
+      "manualVisibilityConfirmation": "用户在 QQ 客户端确认：美图测试无问题，文字与图片均可见。"
     }
   ]
 }

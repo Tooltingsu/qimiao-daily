@@ -35,13 +35,21 @@
 
 实际发送已于 [34018791395](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018791395) 执行：locked Revision 1 的文本与一张已选 Pixiv 美图均收到 QQ 论坛 `task_id`。随后 [34018840573](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018840573) 和 [34018924256](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018924256) 的只读列表确认了文本帖可见，但当前读取窗口没有对应图片帖。之后又以图片帖的精确标题进行只读核验：[34039795981](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34039795981)，仍未找到该帖；因此测试日志被明确标记为 `TEST_PARTIAL_VISIBILITY`，**不把图片 task_id 误写成图片发布成功**。这说明当前可用能力已可可靠发布文本，但尚不能证明 Pixiv 直链可由 QQ 论坛服务端取图并展示。
 
+## GitHub Pages 中转美图实测（2026-09-07）
+
+- 测试运行：[34082915741](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34082915741)。
+- 输入：已锁定的 2026-09-06 Revision 4，文本 1 段、已选 Pixiv 美图 1 张。
+- 中转：Runner 临时下载图片，再从 GitHub Pages 临时目录提供 QQ 可访问的 HTTPS URL；本次实际图片任务 `postTaskId` 为 `1788755027343757988`。
+- 结果：用户已在 QQ 客户端人工确认文字与美图均可见；测试日志已从 `TEST_SUBMITTED` 审计提升为 `TEST_PUBLISHED`。这不是 QQ 只读 API 自动核验。
+- 队列：这是 qq-test 测试，不消耗正式美图确认队列。Pages 中转文件暂保留，待正式发布策略确定后再受控清理。
+
 ## 测试帖删除
 
 此前用户要求测试完成后立即删除，清理工作流因此只匹配 `【测试】绮喵日报 V4-C`，且要求手动输入 `DELETE_TEST_POSTS`。真实删除调用曾被 QQ 拒绝：`HTTP 400 / 11264 / 频道未对机器人授权`，没有把该次失败写成删除成功。随后运行 [34017690886](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34017690886) 成功读取当前可见列表，匹配为 **0**，因此未尝试删除任何帖子；实际选图测试后的 [34018882951](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34018882951) 仍收到同一错误。用户现已明确同意暂时**不以删帖能力作为发帖测试的前置条件**；删帖工作流保持手动、默认不运行，也不影响文本发帖路径。
 
 ## 尚待补齐的证据
 
-1. 对一张**已确认且可合法临时下载**的实际 Pixiv 选图完成下载、校验、QQ 图片发布和清理的测试；
-2. QQ 客户端中最小文本、长文本、图片、完整日报四张脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。
+1. QQ 客户端中最小文本、长文本、图片、完整日报四张脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。
+2. 测试目标与生产目标的最终独立配置证据（当前只确认了 Environment 读取隔离）。
 
 在这些项目完成前，不宣布 V4-C PASS，也不进入 V4-D。
