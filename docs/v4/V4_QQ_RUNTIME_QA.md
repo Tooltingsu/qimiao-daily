@@ -37,7 +37,7 @@
 
 ## 独立 qq-test 目标复验（2026-09-07）
 
-已确认 `qq-test` 与 `production` 配置为不同的论坛子频道；工作流仍只读取 `qq-test` Environment。
+已确认 `qq-test` 与 `production` 配置为不同的论坛子频道；工作流仍只读取 `qq-test` Environment。2026-09-07 通过 GitHub Environments 变量的脱敏比较复核：两侧目标字段都已配置、目标类型和 Guild 相同、`sameChannel=false`；因此测试发帖不会落到正式日报子频道，且本文不记录任何目标 ID。
 
 | 阶段 | 结果 | 运行 / 核验 |
 | --- | --- | --- |
@@ -65,6 +65,6 @@
 ## 尚待补齐的证据
 
 1. QQ 客户端中最小文本、长文本、图片、完整日报四张脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。
-2. 测试目标与生产目标的最终独立配置证据（当前只确认了 Environment 读取隔离）。
+2. QQ 客户端截图中的测试子频道归属信息（当前已完成 GitHub Environment 的脱敏变量比较，证明测试与生产 Channel 不同）。
 
 在这些项目完成前，不宣布 V4-C PASS，也不进入 V4-D。
