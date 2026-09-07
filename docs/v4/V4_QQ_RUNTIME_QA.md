@@ -50,6 +50,11 @@
 
 完整测试 Attempt 保存两个真实论坛 `postTaskId`（文字、图片各一个）、Revision、Hash、分段 Hash 和媒体数；仅写入 `test-publish-log/`。论坛只读 API 已确认测试帖标题可见；仍需要 QQ 客户端截图来保存图片实际渲染的前台证据。
 
+已归档的 QQ 客户端前台证据：
+
+- [完整日报文字帖（2026-09-06）](evidence/qq-runtime/2026-09-06-forum-full-report-text-visible.png)：可见测试标题与完整日报正文。这是早期文本链路的前台证据，独立 `qq-test` 目标仍以本节的 2026-09-07 API 核验为准。
+- [论坛美图帖（2026-09-07）](evidence/qq-runtime/2026-09-07-forum-artwork-visible.png)：可见 `【测试】绮喵日报 V4-C report-artwork 2026-09-06` 主题及完整图片渲染；与最新独立测试目标的完整 Revision 4 图像步骤对应。
+
 ## GitHub Pages 中转美图实测（2026-09-07）
 
 - 测试运行：[34082915741](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34082915741)。
@@ -64,7 +69,7 @@
 
 ## 尚待补齐的证据
 
-1. QQ 客户端中最小文本、长文本、图片、完整日报四张脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。
+1. QQ 客户端中**最小文本**和**长文本**的脱敏截图，保存到 `docs/v4/evidence/qq-runtime/`。图片与完整日报文字前台截图已归档；最新独立目标的完整链路由两个 `TEST_VISIBLE` API 核验和美图截图共同证明。
 2. QQ 客户端截图中的测试子频道归属信息（当前已完成 GitHub Environment 的脱敏变量比较，证明测试与生产 Channel 不同）。
 
 在这些项目完成前，不宣布 V4-C PASS，也不进入 V4-D。
@@ -84,4 +89,4 @@
 | 部分失败、恢复、重试 | QQ Node test 16/16 通过，其中覆盖 retry、partial failure、resume 不重复已发 chunk | PASS |
 | Secrets 扫描与 Pages 状态 | GitHub validate run `34086374501` 成功；工作流测试 `secret_scan.py` | PASS |
 | 生产自动真实发送关闭 | `publish.yml` 仍为 DRY RUN，`qq-test-publish.yml` 只有 `workflow_dispatch` | PASS |
-| QQ 客户端前台截图归档 | 仍缺最小文本、长文本、图片、完整日报的脱敏截图 | **待用户提供** |
+| QQ 客户端前台截图归档 | 已归档完整日报文字和美图；仍缺最小文本、长文本与测试子频道归属的脱敏截图 | **待用户提供** |
