@@ -68,7 +68,7 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "TEST_SUBMITTED",
+    "status": "TEST_VISIBLE",
     "mode": "text",
     "messageCount": 1,
     "mediaCount": 0,

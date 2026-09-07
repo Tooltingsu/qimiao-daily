@@ -39,7 +39,7 @@
       "environment": "qq-test",
       "mode": "text",
       "targetType": "FORUM",
-      "status": "TEST_SUBMITTED",
+      "status": "TEST_VISIBLE",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34122331551",
       "reportRevision": null,
       "reportHash": null,
@@ -63,7 +63,8 @@
       "testTitlePrefix": "【测试】绮喵日报 V4-C 连接测试 2026-09-07",
       "attemptedAt": "2026-09-07T12:31:48.152Z",
       "completedAt": "2026-09-07T12:31:50.719Z",
-      "error": null
+      "error": null,
+      "verifiedAt": "2026-09-07T12:33:30.575092Z"
     }
   ]
 }
