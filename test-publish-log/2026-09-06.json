@@ -665,7 +665,7 @@
       "environment": "qq-test",
       "mode": "report",
       "targetType": "FORUM",
-      "status": "TEST_SUBMITTED",
+      "status": "TEST_VISIBLE",
       "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34085161551",
       "reportRevision": 4,
       "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
@@ -697,7 +697,8 @@
       "attemptedAt": "2026-09-07T05:00:29.387Z",
       "completedAt": "2026-09-07T05:00:32.672Z",
       "error": null,
-      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158"
+      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158",
+      "verifiedAt": "2026-09-07T05:02:00.345753Z"
     }
   ]
 }
