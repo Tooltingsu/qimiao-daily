@@ -93,3 +93,12 @@
 | Secrets 扫描与 Pages 状态 | GitHub validate run `34086374501` 成功；工作流测试 `secret_scan.py` | PASS |
 | 生产自动真实发送关闭 | `publish.yml` 仍为 DRY RUN，`qq-test-publish.yml` 只有 `workflow_dispatch` | PASS |
 | QQ 客户端前台截图归档 | 已归档完整日报文字、美图、长文本和测试子频道归属；仍缺最小文本截图 | **待用户提供** |
+
+## 最小文本补发（2026-09-07）
+
+因用户确认早期最小文本帖可能被误删，已按用户请求只向 `qq-test` 子频道补发一条最小文本；没有读取 production Environment，也没有影响生产 `publish-log/`。
+
+- 发送：[34122331551](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34122331551)。
+- 只读可见性核验：[34122454054](https://github.com/Tooltingsu/qimiao-daily/actions/runs/34122454054)，结果为 `TEST_VISIBLE`。
+- 最新 `test-publish-log/2026-09-07.json` 保存了真实论坛 `postTaskId`、26 字文本 Hash 和 `verifiedAt`；未保存 Secret 或 token。
+- 待用户提供该新帖的 QQ 客户端脱敏截图后，截图证据项即可闭合。
