@@ -27,6 +27,7 @@ const workflowRun = process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITO
 const testLogPath = process.env.QQ_TEST_LOG_PATH || resolve(root, "test-publish-log", `${date}.json`);
 const productionLogPath = process.env.QQ_PUBLISH_LOG_PATH || resolve(root, "publish-log", `${date}.json`);
 const includeArtwork = process.env.INPUT_INCLUDE_ARTWORK === "true";
+const pagesBaseUrl = (process.env.ARTWORK_RELAY_PAGES_BASE_URL || "https://tooltingsu.github.io/qimiao-daily").replace(/\/$/, "");
 
 const result = {
   date,
@@ -136,6 +137,25 @@ function successfulSendStatus() {
   // thread ID; only the audit event or read-back can prove final visibility.
   if (isProductionRelease) return targetType === "FORUM" ? "SUBMITTED_VISIBILITY_PENDING" : "PUBLISHED";
   return targetType === "FORUM" ? "TEST_SUBMITTED" : "TEST_PUBLISHED";
+}
+
+async function loadPagesRelayedArtwork(revision) {
+  const folder = `assets/artwork-relay/${date}/r${String(revision.revision).padStart(3, "0")}`;
+  let relay;
+  try {
+    relay = JSON.parse(await readFile(resolve(root, "web", folder, "manifest.json"), "utf8"));
+  } catch {
+    throw new Error("PUBLISH_MEDIA_FAILED：未准备 GitHub Pages 临时美图中转。请先运行 Prepare selected artwork Pages relay。");
+  }
+  if (relay.reportHash !== revision.reportHash || relay.revision !== revision.revision) {
+    throw new Error("PUBLISH_MEDIA_FAILED：Pages 美图中转与 locked revision 不匹配。");
+  }
+  const items = new Map((relay.items || []).map(item => [String(item.artworkId), item]));
+  return revision.selectedArtwork.map(artwork => {
+    const item = items.get(String(artwork.artworkId));
+    if (!item?.file) throw new Error(`PUBLISH_MEDIA_FAILED：Pages 中转缺少美图 ${artwork.artworkId}。`);
+    return { ...artwork, thumbnailUrl: `${pagesBaseUrl}/${folder}/${item.file}` };
+  });
 }
 
 function maskedTargetId(value) {
@@ -311,7 +331,8 @@ try {
       // Validate every selected image before the first report text chunk. A
       // media failure therefore cannot leave a falsely "complete" text report.
       if (includeArtwork) {
-        await withValidatedArtwork(revision.selectedArtwork, resolve(tmpdir(), `qimiao-v4-qq-${process.pid}-${Date.now()}`), sendReport);
+        const relayedArtwork = await loadPagesRelayedArtwork(revision);
+        await withValidatedArtwork(relayedArtwork, resolve(tmpdir(), `qimiao-v4-qq-${process.pid}-${Date.now()}`), sendReport);
       } else {
         await sendReport([]);
       }

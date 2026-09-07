@@ -70,6 +70,7 @@ jobs:
           # origin. The tiny transparent raw-GitHub fixture is retained only as
           # a source artifact and is not used for the visible forum-image test.
           QQ_TEST_IMAGE_URL: https://tooltingsu.github.io/qimiao-daily/assets/qq-test-fixture.png
+          ARTWORK_RELAY_PAGES_BASE_URL: https://tooltingsu.github.io/qimiao-daily
           QQ_TEST_MAX_TEXT_CHARS: "1800"
           INPUT_INCLUDE_ARTWORK: ${{ inputs.includeArtwork }}
         run: |

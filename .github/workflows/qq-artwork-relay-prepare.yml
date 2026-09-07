@@ -1,0 +1,51 @@
+name: Prepare selected artwork Pages relay
+
+on:
+  workflow_dispatch:
+    inputs:
+      reportDate:
+        description: Locked report date (yyyy-MM-dd)
+        required: true
+        type: string
+      revision:
+        description: Exact locked revision
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qimiao-v4-artwork-relay
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Install image relay utilities
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Download the locked selected artwork and create a Pages relay
+        env:
+          INPUT_REPORT_DATE: ${{ inputs.reportDate }}
+          INPUT_REVISION: ${{ inputs.revision }}
+          ARTWORK_RELAY_PAGES_BASE_URL: https://tooltingsu.github.io/qimiao-daily
+        run: node tools/qq-test/artwork-relay.mjs
+      - name: Commit temporary public relay files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/assets/artwork-relay
+          git commit -m "chore(artwork): prepare Pages relay ${{ inputs.reportDate }} r${{ inputs.revision }}"
+          git pull --rebase origin main
+          git push origin HEAD:main
