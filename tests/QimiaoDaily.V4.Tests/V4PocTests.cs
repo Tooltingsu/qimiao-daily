@@ -107,6 +107,56 @@ public sealed class V4PocTests
     }
 
     [Fact]
+    public void GeneratorUsesDesktopCompatibleReminderSectionsInsteadOfDumpingAllActiveRecords()
+    {
+        using var fixture = new RepositoryFixture();
+        var today = fixture.Date;
+        var tomorrow = today.AddDays(1);
+        var shanghai = TimeSpan.FromHours(8);
+        fixture.Repository.Write(new List<ManualEventRecord>
+        {
+            new("old", "GENSHIN", "不应列出的长期活动", new DateTimeOffset(2026, 9, 1, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 10, 4, 0, 0, shanghai), "", true),
+            new("start", "GENSHIN", "今日开始活动", new DateTimeOffset(2026, 9, 5, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 8, 4, 0, 0, shanghai), "", true),
+            new("end", "NTE", "今日结束活动", new DateTimeOffset(2026, 9, 1, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 5, 20, 0, 0, shanghai), "", true)
+        }, "data", "activities.json");
+        fixture.Repository.Write(new List<BannerRecord>
+        {
+            new("banner", "STARRAIL", "明日卡池", "下半卡池", new DateTimeOffset(2026, 9, 6, 12, 0, 0, shanghai), new DateTimeOffset(2026, 9, 20, 4, 0, 0, shanghai), ["角色A", "角色B"], "", true)
+        }, "data", "banners.json");
+        fixture.Repository.Write(new List<CalculatedEndgameRecord>
+        {
+            new("endgame", "GENSHIN", "深境螺旋", tomorrow, tomorrow, "EXACT", new TimeOnly(4, 0), null, null, null, "")
+        }, "generated", "endgame.json");
+        fixture.Repository.Write(new List<VideoRecord>
+        {
+            new("video", "NTE", "VIDEO", "今日官方视频", "https://example.test/video", fixture.Now, "CONFIRMED", fixture.Now)
+        }, "collected", "videos.json");
+        fixture.Repository.Write(new List<BgiCommitRecord>
+        {
+            new("babalae/better-genshin-impact", "abcdef123", "本体提交", "", fixture.Now, fixture.Now)
+        }, "collected", "bgi-main.json");
+        fixture.Repository.Write(new List<BgiCommitRecord>
+        {
+            new("babalae/bettergi-scripts-list", "123456789", "脚本提交", "", fixture.Now, fixture.Now)
+        }, "collected", "bgi-scripts.json");
+
+        var report = new V4ReportGenerator(fixture.Repository).Generate(today, "commit", fixture.Now);
+
+        Assert.Contains("游戏活动预览", report.Content);
+        Assert.Contains("-原神 活动「今日开始活动」今日04:00开始", report.Content);
+        Assert.Contains("-异环 活动「今日结束活动」剩余 0天3小时，将于今日20:00结束", report.Content);
+        Assert.Contains("-崩坏：星穹铁道 下半卡池「明日卡池（角色A、角色B）」明日12:00开始", report.Content);
+        Assert.Contains("-原神 周期玩法「深境螺旋」明日04:00刷新", report.Content);
+        Assert.Contains("-异环 发布视频【今日官方视频】", report.Content);
+        Assert.DoesNotContain("不应列出的长期活动", report.Content);
+        Assert.Contains("BGI更新预告（所有改动随下一版本同步）", report.Content);
+        Assert.Contains("BGI仓库更新", report.Content);
+        Assert.Contains("-本体提交 (abcdef1)", report.Content);
+        Assert.Contains("-脚本提交 (1234567)", report.Content);
+        Assert.Contains("——————————————————", report.Content);
+    }
+
+    [Fact]
     public void PagesExposeQqTestStateWithoutChangingProductionPublishLog()
     {
         using var fixture = new RepositoryFixture();
