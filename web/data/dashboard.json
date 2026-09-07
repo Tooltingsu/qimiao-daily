@@ -70,9 +70,9 @@
     "environment": "qq-test",
     "status": "TEST_SUBMITTED",
     "mode": "report",
-    "messageCount": 1,
-    "mediaCount": 0,
-    "completedAt": "2026-09-07T03:17:14.738+00:00",
+    "messageCount": 2,
+    "mediaCount": 1,
+    "completedAt": "2026-09-07T03:27:12.379+00:00",
     "error": null
   }
 }
