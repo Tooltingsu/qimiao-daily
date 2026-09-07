@@ -14,6 +14,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: qimiao-v4-artwork-relay
@@ -46,6 +48,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add web/assets/artwork-relay
-          git commit -m "chore(artwork): prepare Pages relay ${{ inputs.reportDate }} r${{ inputs.revision }}"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(artwork): prepare Pages relay ${{ inputs.reportDate }} r${{ inputs.revision }}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      # A commit made with GITHUB_TOKEN does not start another push workflow.
+      # Deploy here so that the next QQ test can retrieve the exact relay URL.
+      - name: Scan the Pages relay before deployment
+        run: python3 tools/v4/secret_scan.py --tree web --output $RUNNER_TEMP/pages-secret-scan.json
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web
+      - name: Deploy the temporary artwork relay to Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
