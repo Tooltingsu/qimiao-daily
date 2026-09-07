@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-07",
+  "environment": "qq-test",
+  "attempts": [
+    {
+      "date": "2026-09-07",
+      "environment": "qq-test",
+      "mode": "text",
+      "targetType": "FORUM",
+      "status": "TEST_SUBMITTED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34097617903",
+      "reportRevision": null,
+      "reportHash": null,
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c",
+          "characters": 26
+        }
+      ],
+      "messages": [
+        {
+          "sequence": 1,
+          "kind": "text",
+          "postTaskId": "1788767551766507186",
+          "createTime": "1788767551",
+          "hash": "sha256:6d9789ab60de0ac8cf5da36f66123934d09a203516592809b09c6846e022442c"
+        }
+      ],
+      "mediaCount": 0,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 连接测试 2026-09-07",
+      "attemptedAt": "2026-09-07T07:52:29.492Z",
+      "completedAt": "2026-09-07T07:52:31.859Z",
+      "error": null
+    }
+  ]
+}
