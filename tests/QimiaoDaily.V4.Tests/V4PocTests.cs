@@ -116,7 +116,7 @@ public sealed class V4PocTests
         fixture.Repository.Write(new List<ManualEventRecord>
         {
             new("old", "GENSHIN", "不应列出的长期活动", new DateTimeOffset(2026, 9, 1, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 10, 4, 0, 0, shanghai), "", true),
-            new("start", "GENSHIN", "今日开始活动", new DateTimeOffset(2026, 9, 5, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 8, 4, 0, 0, shanghai), "", true),
+            new("start", "GENSHIN", "活动「今日开始活动」", new DateTimeOffset(2026, 9, 5, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 8, 4, 0, 0, shanghai), "", true),
             new("end", "NTE", "今日结束活动", new DateTimeOffset(2026, 9, 1, 4, 0, 0, shanghai), new DateTimeOffset(2026, 9, 5, 20, 0, 0, shanghai), "", true)
         }, "data", "activities.json");
         fixture.Repository.Write(new List<BannerRecord>
@@ -144,6 +144,7 @@ public sealed class V4PocTests
 
         Assert.Contains("游戏活动预览", report.Content);
         Assert.Contains("-原神 活动「今日开始活动」今日04:00开始", report.Content);
+        Assert.DoesNotContain("活动「活动「今日开始活动」」", report.Content);
         Assert.Contains("-异环 活动「今日结束活动」剩余 0天3小时，将于今日20:00结束", report.Content);
         Assert.Contains("-崩坏：星穹铁道 下半卡池「明日卡池（角色A、角色B）」明日12:00开始", report.Content);
         Assert.Contains("-原神 周期玩法「深境螺旋」明日04:00刷新", report.Content);

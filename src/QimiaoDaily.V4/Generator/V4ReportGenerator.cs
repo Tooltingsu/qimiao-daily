@@ -151,6 +151,7 @@ public sealed class V4ReportGenerator(V4Repository repository)
     private static void AddManualReminder(List<string> lines, string game, string label, string name,
         DateTimeOffset startAt, DateTimeOffset endAt, DateOnly date, DateOnly tomorrow, DateTimeOffset now)
     {
+        name = UnwrapAlreadyLabeledName(label, name);
         var start = Local(startAt);
         if (DateOnly.FromDateTime(start.Date) is var startDate && (startDate == date || startDate == tomorrow))
         {
@@ -165,6 +166,18 @@ public sealed class V4ReportGenerator(V4Repository repository)
             var remainingText = remaining > TimeSpan.Zero ? $"剩余 {Duration(remaining)}，" : string.Empty;
             lines.Add($"-{DisplayGame(game)} {label}「{name}」{remainingText}将于{day}{end:HH:mm}结束");
         }
+    }
+
+    // Calendar imports sometimes carry the human-facing label in the name
+    // (for example, 活动「禁界拟想阵地战」).  The desktop formatter owns those
+    // wrappers, so remove an identical outer wrapper before composing it.
+    private static string UnwrapAlreadyLabeledName(string label, string name)
+    {
+        var value = name.Trim();
+        var prefix = label + "「";
+        return value.StartsWith(prefix, StringComparison.Ordinal) && value.EndsWith('」')
+            ? value[prefix.Length..^1].Trim()
+            : value;
     }
 
     private List<string> BgiLines()
