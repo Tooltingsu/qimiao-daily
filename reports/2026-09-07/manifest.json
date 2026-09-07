@@ -1,12 +1,12 @@
 {
   "date": "2026-09-07",
   "latestRevision": 5,
-  "lockedRevision": 2,
-  "state": "DRY_RUN_SUCCEEDED",
-  "sourceCommit": "e349be97dc3fca9cbb58a4a485f06655b55a2b27",
-  "reportHash": "sha256:777b068eac5c062ebf4d0e4c937f215e4b990809b273c0befe4443964db28297",
-  "generatedAt": "2026-09-05T14:57:00.800645+00:00",
-  "lockedAt": "2026-09-05T14:57:00.800645+00:00",
-  "lockReason": "MANUAL_CONFIRMATION",
+  "lockedRevision": 5,
+  "state": "LOCKED_MANUAL",
+  "sourceCommit": "a84a6460b08c29f48e323186edc05140bb6b711c",
+  "reportHash": "sha256:5a71dfe7c7bc8c22460ffe86d36eb54c1618a190852168b3e135fec15c4401b0",
+  "generatedAt": "2026-09-07T13:48:01.3332833+00:00",
+  "lockedAt": "2026-09-07T14:39:23.4646932+00:00",
+  "lockReason": "MANUAL_REPLACEMENT: Replace earlier dry-run lock with corrected 04:00 report for user-authorized full repost",
   "publishedAt": null
 }
