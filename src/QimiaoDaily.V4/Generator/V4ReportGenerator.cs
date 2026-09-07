@@ -68,8 +68,6 @@ public sealed class V4ReportGenerator(V4Repository repository)
     {
         var lines = new List<string>
         {
-            $"绮喵日报 {date:yyMMdd}",
-            string.Empty,
             $"今天是{date.Year}年{date.Month}月{date.Day}日，星期{Weekday(date.DayOfWeek)}"
         };
 

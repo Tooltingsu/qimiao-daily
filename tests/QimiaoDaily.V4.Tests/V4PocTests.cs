@@ -143,6 +143,8 @@ public sealed class V4PocTests
         var report = new V4ReportGenerator(fixture.Repository).Generate(today, "commit", fixture.Now);
 
         Assert.Contains("游戏活动预览", report.Content);
+        Assert.StartsWith("今天是2026年", report.Content);
+        Assert.DoesNotContain("绮喵日报 260", report.Content);
         Assert.Contains("-原神 活动「今日开始活动」今日04:00开始", report.Content);
         Assert.DoesNotContain("活动「活动「今日开始活动」」", report.Content);
         Assert.Contains("-异环 活动「今日结束活动」剩余 0天3小时，将于今日20:00结束", report.Content);
