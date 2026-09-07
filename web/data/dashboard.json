@@ -68,11 +68,11 @@
   ],
   "qqTest": {
     "environment": "qq-test",
-    "status": "TEST_SUBMITTED",
+    "status": "TEST_FAILED",
     "mode": "report",
-    "messageCount": 2,
-    "mediaCount": 1,
-    "completedAt": "2026-09-07T03:27:12.379+00:00",
-    "error": null
+    "messageCount": 0,
+    "mediaCount": 0,
+    "completedAt": "2026-09-07T04:15:49.803+00:00",
+    "error": "PUBLISH_MEDIA_FAILED\uFF1A\u7F8E\u56FE 149119754 \u4E0D\u662F\u53EF\u4E0B\u8F7D\u56FE\u7247\uFF08HTTP 404\uFF0Ctext/html; charset=utf-8\uFF09\u3002"
   }
 }

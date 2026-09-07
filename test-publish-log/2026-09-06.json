@@ -389,6 +389,30 @@
       "completedAt": "2026-09-07T03:27:12.379Z",
       "error": null,
       "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158"
+    },
+    {
+      "date": "2026-09-06",
+      "environment": "qq-test",
+      "mode": "report",
+      "targetType": "FORUM",
+      "status": "TEST_FAILED",
+      "workflowRun": "https://github.com/Tooltingsu/qimiao-daily/actions/runs/34082428226",
+      "reportRevision": 4,
+      "reportHash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+      "textChunks": [
+        {
+          "sequence": 1,
+          "hash": "sha256:9af68c311b37821dbf022d812d2966125c49acea01ed080a08dc90a3becc8466",
+          "characters": 919
+        }
+      ],
+      "messages": [],
+      "mediaCount": 0,
+      "testTitlePrefix": "【测试】绮喵日报 V4-C 完整日报测试 2026-09-06",
+      "attemptedAt": "2026-09-07T04:15:48.767Z",
+      "completedAt": "2026-09-07T04:15:49.803Z",
+      "error": "PUBLISH_MEDIA_FAILED：美图 149119754 不是可下载图片（HTTP 404，text/html; charset=utf-8）。",
+      "sourceCommit": "360aefbf513e36344c7bd1f0451694eacece0158"
     }
   ]
 }
