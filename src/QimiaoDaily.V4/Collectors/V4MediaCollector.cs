@@ -29,8 +29,18 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
                 foreach (var c in candidates)
                 {
                     var url = c.Evidence.FirstOrDefault()?.SourceUrl ?? "";
-                    if (videos.Any(x => x.SourceUrl == url)) continue;
-                    videos.Add(new(url, game, c.ItemType, c.Title, url, c.NormalizedTime, "PENDING", now));
+                    if (string.IsNullOrWhiteSpace(url)) continue;
+                    var index = videos.FindIndex(x => x.SourceUrl == url);
+                    var officialVideo = new VideoRecord(url, game, c.ItemType, c.Title, url, c.NormalizedTime, "CONFIRMED", now);
+                    if (index < 0)
+                        videos.Add(officialVideo);
+                    else
+                        // Official RSS/Bilibili candidates are the automatic
+                        // source of truth for videos.  A prior collection used
+                        // PENDING here, which accidentally hid every video
+                        // from the daily report and required a review UI that
+                        // V4 intentionally does not have.
+                        videos[index] = officialVideo;
                 }
                 statuses.Add(new("Video:" + game, "HEALTHY", $"Fetched {candidates.Count} official candidates.", now));
             }

@@ -160,6 +160,24 @@ public sealed class V4PocTests
     }
 
     [Fact]
+    public void GeneratorIncludesAutomaticallyConfirmedOfficialVideosOnlyOnTheirPublishDate()
+    {
+        using var fixture = new RepositoryFixture();
+        fixture.Repository.Write(new List<VideoRecord>
+        {
+            new("today", "STARRAIL", "VIDEO", "今日官方视频", "https://example.test/today", fixture.Now, "CONFIRMED", fixture.Now),
+            new("older", "GENSHIN", "VIDEO", "旧官方视频", "https://example.test/older", fixture.Now.AddDays(-1), "CONFIRMED", fixture.Now),
+            new("unverified", "NTE", "VIDEO", "未确认视频", "https://example.test/pending", fixture.Now, "PENDING", fixture.Now)
+        }, "collected", "videos.json");
+
+        var report = new V4ReportGenerator(fixture.Repository).Generate(fixture.Date, "commit", fixture.Now);
+
+        Assert.Contains("-崩坏：星穹铁道 发布视频【今日官方视频】", report.Content);
+        Assert.DoesNotContain("旧官方视频", report.Content);
+        Assert.DoesNotContain("未确认视频", report.Content);
+    }
+
+    [Fact]
     public void PagesExposeQqTestStateWithoutChangingProductionPublishLog()
     {
         using var fixture = new RepositoryFixture();
