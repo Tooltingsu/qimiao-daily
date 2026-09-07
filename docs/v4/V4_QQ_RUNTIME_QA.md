@@ -68,3 +68,20 @@
 2. QQ 客户端截图中的测试子频道归属信息（当前已完成 GitHub Environment 的脱敏变量比较，证明测试与生产 Channel 不同）。
 
 在这些项目完成前，不宣布 V4-C PASS，也不进入 V4-D。
+
+## V4-C PASS Gate 审计（2026-09-07）
+
+| 强制 Gate | 当前证据 | 结论 |
+| --- | --- | --- |
+| 官方 SDK、REST 单次发布与平台调研 | `V4_QQ_PLATFORM_AUDIT.md`；固定 `@tencent-connect/qqbot-nodejs@1.0.4` | PASS |
+| GitHub-hosted Runner 鉴权与网络 | Auth run `34084056790`，后续真实论坛创建/读取成功 | PASS |
+| 测试与生产目标分离 | 两个 Environment 均已配置；脱敏变量比较 `sameChannel=false`；工作流只读取 `qq-test` | PASS |
+| 最小 / 中等 / 长文本 | `34084493834` / `34084644548` / `34084760216` 均为 `TEST_VISIBLE` | PASS |
+| 确定性、按段落安全切分 | Node test `chunks deterministically at section boundaries`、`does not cut an individual report item` | PASS |
+| 图片路径 | 图片 run `34085032249` 为 `TEST_VISIBLE`；完整 Revision 4 使用 Pages 中转图 | PASS（API 侧） |
+| 锁定 Revision、Hash 和真实 QQ ID | 完整 run `34085161551`；`test-publish-log/2026-09-06.json` 保存 Revision 4、Hash、两个 `postTaskId` | PASS |
+| 测试 / 正式发布记录隔离 | 只写 `test-publish-log/`；生产 `publish-log/` 不被 qq-test 占用 | PASS |
+| 部分失败、恢复、重试 | QQ Node test 16/16 通过，其中覆盖 retry、partial failure、resume 不重复已发 chunk | PASS |
+| Secrets 扫描与 Pages 状态 | GitHub validate run `34086374501` 成功；工作流测试 `secret_scan.py` | PASS |
+| 生产自动真实发送关闭 | `publish.yml` 仍为 DRY RUN，`qq-test-publish.yml` 只有 `workflow_dispatch` | PASS |
+| QQ 客户端前台截图归档 | 仍缺最小文本、长文本、图片、完整日报的脱敏截图 | **待用户提供** |
