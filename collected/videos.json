@@ -220,6 +220,16 @@
     "fetchedAt": "2026-08-29T15:45:21.4277234+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=DffpDIBe158",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Summer Spotlight | Challenging the Waves",
+    "sourceUrl": "https://www.youtube.com/watch?v=DffpDIBe158",
+    "publishedAt": "2026-09-07T12:00:19+08:00",
+    "reviewStatus": "PENDING",
+    "fetchedAt": "2026-09-07T15:05:24.795823+00:00"
+  },
+  {
     "id": "a818aad1-dd01-45f6-991f-974ec69310e8",
     "game": "STARRAIL",
     "type": "VIDEO",

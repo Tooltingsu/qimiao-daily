@@ -1,10 +1,10 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "bbd5a1b806f8c9218ccb6443f94f7b9d73cb375e",
-    "subject": "\u4FEE\u590D\u56FE\u7247\u4FDD\u5B58\u65F6\u5019\u5BF9\u8C61\u88AB\u63D0\u524D\u91CA\u653E\u7684\u95EE\u9898",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/bbd5a1b806f8c9218ccb6443f94f7b9d73cb375e",
-    "committedAt": "2026-09-05T13:40:54+00:00",
-    "fetchedAt": "2026-09-06T12:55:08.1012131+00:00"
+    "sha": "b3e46b3004b8e4a1065846243a3a2a518b9a214d",
+    "subject": "Update AI model version in repo-bot configuration",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/b3e46b3004b8e4a1065846243a3a2a518b9a214d",
+    "committedAt": "2026-09-06T14:52:13+00:00",
+    "fetchedAt": "2026-09-07T15:05:24.795823+00:00"
   }
 ]
