@@ -178,8 +178,11 @@ async function assertProductionIdempotency() {
   let log;
   try { log = JSON.parse(await readFile(productionLogPath, "utf8")); } catch { return; }
   const attempts = Array.isArray(log?.attempts) ? log.attempts : [];
-  if (!forceRepublish && attempts.some(item => item?.reportHash === result.reportHash && ["PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(item?.status)))
-    throw new Error("Idempotency guard: this locked report is already submitted or published.");
+  // A normal daily release may create at most one real submission for a date.
+  // A corrected repost is possible only through the workflow's explicit force
+  // input, which leaves an auditable second attempt in the publish log.
+  if (!forceRepublish && attempts.some(item => ["PUBLISHED", "SUBMITTED_VISIBILITY_PENDING"].includes(item?.status)))
+    throw new Error("Idempotency guard: this date already has a submitted or published report.");
 }
 
 async function persistProduction() {
