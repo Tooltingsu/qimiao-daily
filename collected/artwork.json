@@ -2252,5 +2252,33 @@
     "selectedForReport": false,
     "publishedAt": "2026-09-08T20:49:21+09:00",
     "fetchedAt": "2026-09-08T12:22:57.994091+00:00"
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149432429",
+    "character": "\u521D\u97F3\u672A\u6765",
+    "franchise": "\u865A\u62DF\u6B4C\u624B",
+    "title": "\u521D\u97F3\u30DF\u30AF",
+    "author": "\u3086\u304D\u307E\u7D0D\u8C46\u5E97",
+    "sourceUrl": "https://www.pixiv.net/artworks/149432429",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/08/21/01/29/149432429_p0_square1200.jpg",
+    "reviewStatus": "PENDING",
+    "selectedForReport": false,
+    "publishedAt": "2026-09-08T21:01:29+09:00",
+    "fetchedAt": "2026-09-08T12:28:21.3396233+00:00"
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149432591",
+    "character": "\u540E\u85E4\u4E00\u91CC",
+    "franchise": "\u5B64\u72EC\u6447\u6EDA",
+    "title": "\u30E9\u30FC\u30E1\u30F3\u5C4B\u306B\u884C\u304D\u305F\u3044\u559C\u591A\u3061\u3083\u3093",
+    "author": "AI\u30C6\u30A3\u30C3\u30D4\u30FC\u99C6\u9664\u696D\u8005",
+    "sourceUrl": "https://www.pixiv.net/artworks/149432591",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/08/21/04/22/149432591_p0_square1200.jpg",
+    "reviewStatus": "PENDING",
+    "selectedForReport": false,
+    "publishedAt": "2026-09-08T21:04:22+09:00",
+    "fetchedAt": "2026-09-08T12:28:22.3970683+00:00"
   }
 ]
