@@ -2,43 +2,43 @@
   {
     "provider": "GitHub:babalae/better-genshin-impact",
     "status": "HEALTHY",
-    "message": "1 commits in [2026-09-06T18:00:00.0000000\u002B08:00, 2026-09-07T18:00:00.0000000\u002B08:00); complete window",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
+    "message": "0 commits in [2026-09-07T18:00:00.0000000\u002B08:00, 2026-09-08T18:00:00.0000000\u002B08:00); complete window",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
     "usedCachedData": false
   },
   {
     "provider": "GitHub:babalae/bettergi-scripts-list",
     "status": "HEALTHY",
-    "message": "1 commits in [2026-09-06T18:00:00.0000000\u002B08:00, 2026-09-07T18:00:00.0000000\u002B08:00); complete window",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
+    "message": "2 commits in [2026-09-07T18:00:00.0000000\u002B08:00, 2026-09-08T18:00:00.0000000\u002B08:00); complete window",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:GENSHIN",
     "status": "HEALTHY",
     "message": "Fetched 15 official candidates.",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:STARRAIL",
     "status": "HEALTHY",
     "message": "Fetched 15 official candidates.",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Video:NTE",
     "status": "FAILED",
-    "message": "Bilibili API code -799.",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
+    "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
     "usedCachedData": false
   },
   {
     "provider": "Pixiv",
-    "status": "LOGIN_REQUIRED",
-    "message": "PIXIV_SESSION is not configured; retained metadata cache.",
-    "checkedAt": "2026-09-07T15:34:06.102616+00:00",
-    "usedCachedData": true
+    "status": "HEALTHY",
+    "message": "Added 27 candidates and refreshed 27 thumbnail metadata; no original images downloaded.",
+    "checkedAt": "2026-09-08T12:06:53.8062521+00:00",
+    "usedCachedData": false
   }
 ]
