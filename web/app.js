@@ -1,98 +1,28 @@
-const stateLabels = {
-  NOT_GENERATED: "尚未生成", READY: "已生成 · 待自动发布", LOCKED_MANUAL: "已人工锁定",
-  LOCKED_AUTO: "已自动锁定", PUBLISHED: "已真实发布", DRY_RUN_SUCCEEDED: "演练完成",
-  REPUBLICATION_READY: "准备重新发布", SUPERSEDED: "已被后续版本替代", FAILED: "失败"
-};
-
-const providerStatusLabels = {
-  HEALTHY: "正常", DEGRADED: "部分来源异常", LOGIN_REQUIRED: "需要登录凭据",
-  RATE_LIMITED: "请求受限", BLOCKED: "来源访问受阻", FAILED: "失败", UNKNOWN: "未知"
-};
-
-const providerLabels = {
-  "Video:GENSHIN": "原神官方视频",
-  "Video:STARRAIL": "星铁官方视频",
-  "Video:NTE": "异环官方视频",
-  "Pixiv": "Pixiv 美图"
-};
-
-const qqTestStatusLabels = {
-  NOT_TESTED: "尚未测试", BLOCKED_BY_USER: "等待测试环境配置", AUTHENTICATED: "鉴权成功",
-  TEST_SUBMITTED: "论坛帖子已提交，待核验", TEST_VISIBLE: "测试帖子已核验可见", TEST_NOT_VISIBLE: "论坛帖子未显示",
-    TEST_PUBLISHED: "测试发布成功", TEST_FAILED: "测试发布失败", PARTIAL_FAILURE: "部分发送失败",
-    TEST_PARTIAL_VISIBILITY: "部分帖子可见，图片待核验"
-};
-
-async function loadDashboard() {
-  const [dashboardResponse, reportResponse] = await Promise.all([
-    fetch("data/dashboard.json", { cache: "no-store" }),
-    fetch("data/report.txt", { cache: "no-store" })
-  ]);
-  if (!dashboardResponse.ok) throw new Error("控制中心数据尚未生成");
-  const data = await dashboardResponse.json();
-  const report = reportResponse.ok ? await reportResponse.text() : "今日日报尚未生成。";
-  document.querySelector("#report-date").textContent = `${data.date} · Asia/Shanghai`;
-  document.querySelector("#state").textContent = stateLabels[data.state] ?? data.state;
-  document.querySelector("#publish-time").textContent = data.publishTime;
-  document.querySelector("#revision").textContent = data.revision;
-  document.querySelector("#generated-at").textContent = formatTime(data.generatedAt);
-  document.querySelector("#health").textContent = providerStatusLabels[data.health] ?? data.health;
-  document.querySelector("#artwork-pending").textContent = data.artworkPending;
-  document.querySelector("#conflicts").textContent = data.conflictCount;
-  renderQqTest(data.qqTest);
-  document.querySelector("#report-preview").textContent = report;
-  document.querySelector("#state-dot").className = `status-dot ${data.state === "FAILED" ? "failed" : data.health === "HEALTHY" ? "healthy" : ""}`;
-  renderMetrics("#manual-counts", data.manualCounts);
-  renderMetrics("#automatic-counts", data.automaticCounts);
-  renderProviders(data.providers);
-  const repo = data.repositoryUrl.replace(/\/$/, "");
-  document.querySelector("#review-artwork").href = "review.html";
-  document.querySelector("#edit-data").href = `${repo}/tree/main/data`;
-  document.querySelector("#run-generate").href = `${repo}/actions/workflows/generate.yml`;
-  document.querySelector("#lock-report").href = `${repo}/actions/workflows/lock.yml`;
-  document.querySelector("#republish-report").href = `${repo}/actions/workflows/republish.yml`;
-  document.querySelector("#view-actions").href = `${repo}/actions`;
-}
-
-function renderQqTest(test) {
-  const value = test ?? { environment: "qq-test", status: "NOT_TESTED", messageCount: 0 };
-  document.querySelector("#qq-test-environment").textContent = value.environment === "qq-test" ? "qq-test（测试环境）" : "未知环境";
-  document.querySelector("#qq-test-status").textContent = qqTestStatusLabels[value.status] ?? value.status;
-  document.querySelector("#qq-test-messages").textContent = `${value.messageCount ?? 0}${value.mediaCount ? `（含 ${value.mediaCount} 张图片）` : ""}`;
-  document.querySelector("#qq-test-detail").textContent = value.error
-    ? value.error
-    : value.completedAt ? `最近测试：${formatTime(value.completedAt)}${value.mode ? ` · ${value.mode}` : ""}` : "测试发布不会影响正式发布记录。";
-}
-
-function renderMetrics(selector, metrics) {
-  document.querySelector(selector).innerHTML = Object.entries(metrics)
-    .map(([name, count]) => `<div><span>${escapeHtml(name)}</span><strong>${count}</strong></div>`).join("");
-}
-
-function renderProviders(providers) {
-  if (!providers?.length) return;
-  document.querySelector("#providers").innerHTML = providers.map(item => `
-    <div class="provider-row"><div><strong>${escapeHtml(providerLabels[item.provider] ?? item.provider)}</strong><p>${escapeHtml(item.message)}</p></div>
-    <span class="provider-status ${item.status === "HEALTHY" ? "" : "bad"}">${escapeHtml(providerStatusLabels[item.status] ?? item.status)}</span></div>`).join("");
-}
-
-function formatTime(value) {
-  if (!value) return "尚未生成";
-  return new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour12: false, month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
-}
-
-function escapeHtml(value) {
-  return String(value).replace(/[&<>'"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[character]);
-}
-
-document.querySelector("#copy-report").addEventListener("click", async event => {
-  await navigator.clipboard.writeText(document.querySelector("#report-preview").textContent);
-  event.currentTarget.textContent = "已复制";
-  setTimeout(() => event.currentTarget.textContent = "复制日报", 1500);
-});
-
-loadDashboard().catch(error => {
-  document.querySelector("#state").textContent = "数据不可用";
-  document.querySelector("#report-preview").textContent = error.message;
-  document.querySelector("#state-dot").className = "status-dot failed";
-});
+const $ = selector => document.querySelector(selector);
+const names = { GENSHIN: "原神", STARRAIL: "崩坏：星穹铁道", NTE: "异环", HI3: "崩坏3", ZZZ: "绝区零", WUWA: "鸣潮" };
+const stateLabels = { NOT_GENERATED: "尚未生成", READY: "已生成 · 待自动发布", LOCKED_MANUAL: "已人工锁定", LOCKED_AUTO: "已自动锁定", PUBLISHED: "已真实发布", FAILED: "失败" };
+let dashboard, workspace, report;
+const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+const game = value => names[value] ?? value ?? "未指定";
+const when = value => value ? new Intl.DateTimeFormat("zh-CN", { timeZone:"Asia/Shanghai", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false }).format(new Date(value)) : "未知";
+const dateOnly = value => value ? String(value).slice(0,10) : "未知";
+function editLink(file) { return `${(dashboard?.repositoryUrl || "https://github.com/Tooltingsu/qimiao-daily").replace(/\/$/, "")}/edit/main/data/${file}`; }
+function toolbar(file, label="编辑") { return `<a class="mini-button" href="${editLink(file)}" target="_blank" rel="noreferrer">${label}</a>`; }
+function panel(title, body, extra="") { return `<section class="desktop-panel"><div class="panel-heading"><h2>${title}</h2>${extra}</div>${body}</section>`; }
+function empty(text="暂无数据") { return `<div class="empty-state">${text}</div>`; }
+function tabs(items) { return `<div class="fake-tabs">${items.map((x,i)=>`<button class="${i===0?"selected":""}">${x}</button>`).join("")}</div>`; }
+function renderOverview() { const d=dashboard; const metrics=Object.entries({...d.manualCounts,...d.automaticCounts}).map(([k,v])=>`<div class="metric-row"><span>${esc(k)}</span><strong>${v}</strong></div>`).join(""); return `<div class="summary-grid desktop-summary"><article class="summary-card"><span>日报状态</span><strong>${esc(stateLabels[d.state]||d.state)}</strong></article><article class="summary-card"><span>发布时间</span><strong>${esc(d.publishTime)}</strong></article><article class="summary-card"><span>日报版本</span><strong>Revision ${d.revision}</strong></article><article class="summary-card"><span>来源健康</span><strong>${esc(d.health)}</strong></article></div><div class="two-column"><div>${panel("今日绮喵日报实时预览",`<pre class="report-text">${esc(report)}</pre>`,`<button class="mini-button" id="copy-report">复制日报</button>`)}${panel("数据概览",`<div class="metric-list">${metrics}</div>`)}</div><div>${panel("需要处理",`<div class="attention-row"><span>美图待审核</span><strong>${d.artworkPending}</strong></div><div class="attention-row"><span>数据冲突</span><strong>${d.conflictCount}</strong></div>`,`<a class="mini-button" href="review.html">进入审核</a>`)}${panel("QQ 官方机器人",`<div class="metric-list"><div class="metric-row"><span>状态</span><strong>${esc(d.qqTest?.status||"尚未测试")}</strong></div><div class="metric-row"><span>消息</span><strong>${d.qqTest?.messageCount||0}</strong></div></div>`)}</div></div>`; }
+function groupedRows(items, row) { const groups={}; items.filter(x=>x.enabled!==false).forEach(x=>(groups[game(x.game)]??=[]).push(x)); return Object.entries(groups).sort().map(([g,list])=>`<details open class="data-group"><summary>${esc(g)} <small>${list.length} 条</small></summary>${list.map(row).join("")}</details>`).join("")||empty(); }
+function timeRange(x) { return `${when(x.startAt)} ～ ${when(x.endAt)}`; }
+function renderActivities() { const activities=groupedRows(workspace.activities,x=>`<div class="data-row"><div><b>${esc(x.name)}</b><small>${esc(x.notes||"人工维护")}</small></div><span>${timeRange(x)}</span>${toolbar("activities.json")}</div>`); const banners=groupedRows(workspace.banners,x=>`<div class="data-row"><div><b>${esc(x.name)}</b><small>${esc(x.type)} · ${esc((x.characters||[]).join("、"))}</small></div><span>${timeRange(x)}</span>${toolbar("banners.json")}</div>`); const endgame=groupedRows(workspace.calculatedEndgame,x=>`<div class="data-row"><div><b>${esc(x.name)}</b><small>${esc(x.versionNumber?`版本 ${x.versionNumber}`:"周期计算")}</small></div><span>${dateOnly(x.startsOn)} 04:00 ～ ${dateOnly(x.endsOn)} 04:00</span>${toolbar("endgame-overrides.json")}</div>`); const versions=groupedRows(workspace.versions,x=>`<div class="data-row"><div><b>${esc(x.versionNumber)} ${esc(x.versionName)}</b><small>${esc(game(x.game))}</small></div><span>${timeRange(x)}</span>${toolbar("versions.json")}</div>`); return `${tabs(["活动","卡池","深渊","版本管理"])}${panel("已存游戏活动",activities,toolbar("activities.json","新增活动"))}${panel("已确认卡池",banners,toolbar("banners.json","新增卡池"))}${panel("周期玩法",endgame,toolbar("endgame-overrides.json","调整周期"))}${panel("游戏版本",versions,toolbar("versions.json","新增版本"))}`; }
+function renderCalendar() { const birthdays=workspace.birthdays.filter(x=>x.enabled!==false).sort((a,b)=>a.month-b.month||a.day-b.day).map(x=>`<div class="data-row"><div><b>${esc(x.character)}</b><small>${esc(game(x.franchise))}</small></div><span>${x.month}/${x.day}</span>${toolbar("birthdays.json")}</div>`).join(""); const anniversaries=[...workspace.anniversaries.map(x=>({...x,detail:`${dateOnly(x.startedOn)} 起`})),...workspace.calendarEvents.filter(x=>x.enabled!==false)].map(x=>`<div class="data-row"><div><b>${esc(x.title)}</b><small>${esc(x.detail||x.notes||x.kind||"纪念日")}</small></div><span>${dateOnly(x.startedOn||x.eventDate)}</span>${toolbar(x.kind?"calendar-events.json":"anniversaries.json")}</div>`).join(""); return `${panel("全年日历与生日",`<div class="filter-line"><input id="calendar-search" placeholder="搜索角色、日期或事件"><span class="muted">共 ${workspace.birthdays.length} 个生日</span></div><div id="birthday-list" class="data-list">${birthdays||empty()}</div>`,toolbar("birthdays.json","新建生日"))}${panel("纪念日",anniversaries||empty(),toolbar("anniversaries.json","新建纪念日"))}`; }
+function renderArtwork() { return panel("美图分享",`<p class="muted">美图候选、确认队列和排序使用独立审核页面，确认后的图片按顺序进入日报。</p><a class="button primary" href="review.html">打开美图审核</a>`); }
+function renderBgi() { const rows=[...(workspace.bgiMain||[]).map(x=>({...x,repo:"BGI 本体"})),...(workspace.bgiScripts||[]).map(x=>({...x,repo:"BGI Scripts"}))].sort((a,b)=>String(b.committedAt).localeCompare(String(a.committedAt))).map(x=>`<div class="data-row"><div><b>${esc(x.subject)}</b><small>${esc(x.repo)} · ${esc(x.sha?.slice(0,8))}</small></div><span>${when(x.committedAt)}</span><a class="mini-button" href="${esc(x.url)}" target="_blank">查看</a></div>`).join(""); return panel("BGI 更新",rows||empty(),`<a class="mini-button" href="${(dashboard.repositoryUrl||"")}/actions/workflows/collect.yml" target="_blank">重新采集</a>`); }
+function renderReport() { return panel("日报编辑器",`<pre class="report-text report-editor">${esc(report)}</pre><div class="actions"><button class="button primary" id="copy-report-2">复制日报</button><a class="button secondary" href="${dashboard.repositoryUrl}/actions/workflows/generate.yml" target="_blank">运行重新生成</a><a class="button secondary" href="${dashboard.repositoryUrl}/actions/workflows/lock.yml" target="_blank">确认并锁定</a></div>`); }
+function renderHealth() { const rows=(dashboard.providers||[]).map(x=>`<div class="data-row"><div><b>${esc(x.provider)}</b><small>${esc(x.message)}</small></div><strong class="status-pill ${x.status==='HEALTHY'?"good":"bad"}">${esc(x.status)}</strong></div>`).join(""); return panel("来源健康",rows||empty()); }
+function renderPage(page) { const titles={overview:["概览","今日绮喵日报"],activities:["游戏活动","活动、卡池、深渊与版本"],artwork:["美图分享","候选与确认队列"],calendar:["日历与生日","生日与纪念日"],bgi:["BGI 更新","自动采集记录"],report:["日报编辑器","查看与操作日报"],health:["来源健康","自动来源状态"],archive:["归档","历史日报"],settings:["设置","仓库与自动化设置"]}; const [k,t]=titles[page]||titles.overview; $("#page-kicker").textContent=k; $("#page-title").textContent=t; const root=$("#workspace-content"); if(page==='overview') root.innerHTML=renderOverview(); else if(page==='activities') root.innerHTML=renderActivities(); else if(page==='calendar') root.innerHTML=renderCalendar(); else if(page==='artwork') root.innerHTML=renderArtwork(); else if(page==='bgi') root.innerHTML=renderBgi(); else if(page==='report') root.innerHTML=renderReport(); else if(page==='health') root.innerHTML=renderHealth(); else if(page==='archive') root.innerHTML=panel("历史日报",`<p class="muted">历史版本保存在 GitHub 的 reports/ 目录。</p><a class="button secondary" href="${dashboard.repositoryUrl}/tree/main/reports" target="_blank">打开日报归档</a>`); else root.innerHTML=panel("设置",`<div class="metric-list"><div class="metric-row"><span>仓库</span><strong>${esc(dashboard.repositoryUrl)}</strong></div><div class="metric-row"><span>时区</span><strong>Asia/Shanghai</strong></div><div class="metric-row"><span>自动发布</span><strong>每日 ${esc(dashboard.publishTime)}</strong></div></div>`); bindPage(); }
+function bindPage(){ $("#copy-report")?.addEventListener("click",copy); $("#copy-report-2")?.addEventListener("click",copy); $("#calendar-search")?.addEventListener("input",e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll("#birthday-list .data-row").forEach(x=>x.hidden=!x.textContent.toLowerCase().includes(q));}); }
+async function copy(e){ await navigator.clipboard.writeText(report); e.currentTarget.textContent="已复制"; }
+document.querySelectorAll("#side-nav button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#side-nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPage(b.dataset.page);}));
+async function start(){ const fresh=`?v=${Date.now()}`; [dashboard,workspace,report]=await Promise.all([fetch(`data/dashboard.json${fresh}`,{cache:"no-store"}).then(r=>r.json()),fetch(`data/workspace.json${fresh}`,{cache:"no-store"}).then(r=>r.json()),fetch(`data/report.txt${fresh}`,{cache:"no-store"}).then(r=>r.text())]); $("#github-root").href=dashboard.repositoryUrl; renderPage("overview"); }
+start().catch(e=>$("#workspace-content").innerHTML=panel("数据不可用",`<p class="muted">${esc(e.message)}</p>`));
