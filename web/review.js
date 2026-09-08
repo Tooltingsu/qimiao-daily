@@ -39,8 +39,12 @@ async function save() {
   showNotice(`已提交到 GitHub：${result.commitUrl || "等待 Actions 校验"}`, "success");
 }
 async function start(){
-  const [items, queue, config]=await Promise.all([fetch("data/artwork-review.json",{cache:"no-store"}).then(r=>r.json()),fetch("data/artwork-queue.json",{cache:"no-store"}).then(r=>r.json()),fetch("data/editor-config.json",{cache:"no-store"}).then(r=>r.json())]);
-  state.items=items;state.config=config;const lookup=new Map(items.map(x=>[keyOf(x),x]));state.queue=queue.sort((a,b)=>a.queueOrder-b.queueOrder).map(entry=>lookup.get(keyOf(entry))).filter(Boolean);
+  // GitHub Pages can retain a previous deployment briefly. A per-load query
+  // prevents a stale review projection from making the confirmation queue
+  // appear empty after its JSON was changed.
+  const fresh = `?v=${Date.now()}`;
+  const [items, queue, config]=await Promise.all([fetch(`data/artwork-review.json${fresh}`,{cache:"no-store"}).then(r=>r.json()),fetch(`data/artwork-queue.json${fresh}`,{cache:"no-store"}).then(r=>r.json()),fetch(`data/editor-config.json${fresh}`,{cache:"no-store"}).then(r=>r.json())]);
+  state.items=items;state.config=config;const lookup=new Map(items.map(x=>[keyOf(x),x]));state.queue=queue.sort((a,b)=>a.queueOrder-b.queueOrder).map(entry=>lookup.get(keyOf(entry)) ?? ({ ...entry, character: "已确认图片", franchise: "", title: "候选资料等待刷新", author: "", sourceUrl: `https://www.pixiv.net/artworks/${entry.artworkId}`, thumbnailUrl: "" }));
   $("#github-edit").href=`https://github.com/${config.repository}/edit/${config.branch}/data/artwork-queue.json`;
   render();showNotice("可在此审核、排序并暂存队列。保存方式取决于是否已配置安全编辑服务。", "success");
 }
