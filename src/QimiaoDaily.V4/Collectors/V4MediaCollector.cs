@@ -79,13 +79,52 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
                         added++;
                     }
                 }
+                // Older metadata-only candidates predate the web review UI and
+                // have no thumbnail. Once an authorized session is available,
+                // backfill the current queue first, then a bounded number of
+                // visible candidates. This requests only Pixiv metadata, never
+                // original artwork files.
+                var queueKeys = repository.ReadOr(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json")
+                    .OrderBy(x => x.QueueOrder)
+                    .Select(x => ArtworkKey(x.Platform, x.ArtworkId))
+                    .ToHashSet(StringComparer.OrdinalIgnoreCase);
+                var backfill = artworks.Where(x => string.IsNullOrWhiteSpace(x.ThumbnailUrl))
+                    .OrderByDescending(x => queueKeys.Contains(ArtworkKey(x.Platform, x.ArtworkId)))
+                    .ThenByDescending(x => x.FetchedAt)
+                    .Take(Math.Max(1, settings.ArtworkTargetCount))
+                    .ToList();
+                var refreshed = 0;
+                foreach (var prior in backfill)
+                {
+                    var metadata = await provider.FetchAsync(prior.ArtworkId);
+                    if (metadata.Status != ArtworkFetchStatus.Healthy || metadata.Candidate is null)
+                    {
+                        if (metadata.Status is ArtworkFetchStatus.Blocked or ArtworkFetchStatus.LoginRequired) status = metadata.Status == ArtworkFetchStatus.Blocked ? "BLOCKED" : "LOGIN_REQUIRED";
+                        break;
+                    }
+                    var index = artworks.FindIndex(x => ArtworkKey(x.Platform, x.ArtworkId) == ArtworkKey(prior.Platform, prior.ArtworkId));
+                    if (index < 0) continue;
+                    var fresh = metadata.Candidate;
+                    artworks[index] = prior with
+                    {
+                        Title = fresh.Title,
+                        Author = fresh.Author,
+                        SourceUrl = fresh.SourceUrl,
+                        ThumbnailUrl = fresh.ThumbnailUrl,
+                        PublishedAt = fresh.PublishedAt,
+                        FetchedAt = fresh.FetchedAt
+                    };
+                    refreshed++;
+                }
                 repository.Write(artworks, "collected", "artwork.json");
-                statuses.Add(new("Pixiv", status, $"Added {added} metadata candidates; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
+                statuses.Add(new("Pixiv", status, $"Added {added} candidates and refreshed {refreshed} thumbnail metadata; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
             }
             catch (Exception ex) { statuses.Add(new("Pixiv", "FAILED", SafeError(ex), now, artworks.Count > 0)); }
         }
         repository.Write(statuses, "collected", "provider-status.json");
     }
+
+    private static string ArtworkKey(string platform, string artworkId) => platform.Trim() + "\u001f" + artworkId.Trim();
 
     private static string SafeError(Exception ex) => ex switch
     {
