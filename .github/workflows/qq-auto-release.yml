@@ -119,13 +119,18 @@ jobs:
           QQ_TEST_MAX_TEXT_CHARS: "1800"
           QQ_PUBLISH_LOG_PATH: ${{ github.workspace }}/publish-log/${{ steps.locked.outputs.date }}.json
         run: node tools/qq-test/run.mjs
+      - name: Consume the FIFO artwork entry after QQ accepts the production post
+        if: steps.window.outputs.within_window == 'true' && success()
+        env:
+          INPUT_DATE: ${{ steps.locked.outputs.date }}
+        run: dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- consume-artwork --root . --date "$INPUT_DATE"
       - name: Build Pages status and persist the sanitized release log
         if: steps.window.outputs.within_window == 'true' && always()
         run: |
           dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- build-pages --root . --date '${{ steps.locked.outputs.date }}'
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add publish-log web/data
+          git add data/artwork-queue.json publish-log web/data
           if ! git diff --cached --quiet; then
             git commit -m "chore(release): automatic submit ${{ steps.locked.outputs.date }} r${{ steps.locked.outputs.revision }}"
             git pull --rebase origin main
