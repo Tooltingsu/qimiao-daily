@@ -128,14 +128,14 @@ public sealed class V4PagesBuilder(V4Repository repository)
         // validated repository data. It is a public read-only projection;
         // edits continue through GitHub or the configured editor service.
         repository.Write(new WorkspaceData(
-            repository.Read<List<ManualEventRecord>>("data", "activities.json"),
-            repository.Read<List<BannerRecord>>("data", "banners.json"),
-            repository.Read<List<VersionRecord>>("data", "versions.json"),
-            repository.Read<List<EndgameRuleRecord>>("data", "endgame-rules.json"),
+            repository.ReadOr(new List<ManualEventRecord>(), "data", "activities.json"),
+            repository.ReadOr(new List<BannerRecord>(), "data", "banners.json"),
+            repository.ReadOr(new List<VersionRecord>(), "data", "versions.json"),
+            repository.ReadOr(new List<EndgameRuleRecord>(), "data", "endgame-rules.json"),
             repository.ReadOr(new List<CalculatedEndgameRecord>(), "generated", "endgame.json"),
-            repository.Read<List<BirthdayRecord>>("data", "birthdays.json"),
-            repository.Read<List<AnniversaryRecord>>("data", "anniversaries.json"),
-            repository.Read<List<ManualCalendarEventRecord>>("data", "calendar-events.json"),
+            repository.ReadOr(new List<BirthdayRecord>(), "data", "birthdays.json"),
+            repository.ReadOr(new List<AnniversaryRecord>(), "data", "anniversaries.json"),
+            repository.ReadOr(new List<ManualCalendarEventRecord>(), "data", "calendar-events.json"),
             repository.ReadOr(new List<VideoRecord>(), "collected", "videos.json"),
             repository.ReadOr(new List<BgiCommitRecord>(), "collected", "bgi-main.json"),
             repository.ReadOr(new List<BgiCommitRecord>(), "collected", "bgi-scripts.json")),
