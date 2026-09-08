@@ -6,14 +6,15 @@
 
 游戏活动预览
 -异环 活动「夺金大作战」将于今日04:00结束
+-崩坏：星穹铁道 发布视频【False Constance | Summer? Aventurine! Ice Cream!】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--Update AI model version in repo-bot configuration (b3e46b3)
 
 BGI仓库更新
--update repo.json [skip ci] (6e7cbe8)
+-update repo.json [skip ci] (d2559d8)
+- 锄地一条龙,至冬加小怪 (#3630) (a8ccab2)
 
 ——————————————————
 
