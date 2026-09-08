@@ -7,10 +7,14 @@ namespace QimiaoDaily.V4.Publishing;
 // path, so a queued image is never lost merely because it was previewed.
 public sealed class ArtworkQueueService(V4Repository repository)
 {
-    public int ConsumeAfterProductionPublication(ReportRevision revision, PublishAttempt attempt)
+    public int ConsumeAfterProductionSubmission(ReportRevision revision, PublishAttempt attempt)
     {
-        if (attempt.DryRun || !string.Equals(attempt.Status, "PUBLISHED", StringComparison.Ordinal))
-            throw new InvalidOperationException("Artwork queue may only advance after a real PUBLISHED attempt.");
+        // QQ forum creation is asynchronous: task_id means the real production
+        // submission was accepted, even though visibility is recorded later.
+        // The user's FIFO rule is to consume the image once it has been used in
+        // that accepted daily submission, never for a preview or dry run.
+        if (attempt.DryRun || attempt.Status is not ("PUBLISHED" or "SUBMITTED_VISIBILITY_PENDING"))
+            throw new InvalidOperationException("Artwork queue may only advance after a real production submission.");
         if (!string.Equals(attempt.ReportHash, revision.ReportHash, StringComparison.Ordinal))
             throw new InvalidDataException("Artwork queue consumption requires the published revision hash.");
 
