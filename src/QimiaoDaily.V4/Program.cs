@@ -67,6 +67,10 @@ try
                 throw new ArgumentException("confirm-publish requires --revision.");
             Print(new V4PublishService(repository).ConfirmManualVisibility(date, confirmedRevision, now, Option("--reason") ?? string.Empty));
             break;
+        case "consume-artwork":
+            EnsureValid(repository);
+            Print(ConsumeSubmittedArtwork(repository, date));
+            break;
         case "publish":
             EnsureDryRun();
             EnsureValid(repository);
@@ -123,7 +127,7 @@ try
             Print(new V4PagesBuilder(repository).Build(date));
             break;
         default:
-            Console.WriteLine("QimiaoDaily V4 POC commands: export-v3, validate, calculate, collect-bgi, generate, lock, replace-lock, confirm-publish, publish, republish, build-pages");
+            Console.WriteLine("QimiaoDaily V4 POC commands: export-v3, validate, calculate, collect-bgi, generate, lock, replace-lock, confirm-publish, consume-artwork, publish, republish, build-pages");
             break;
     }
 }
@@ -143,6 +147,23 @@ void EnsureDryRun()
 {
     if (!bool.TryParse(Option("--dry-run") ?? "true", out var dryRun) || !dryRun)
         throw new InvalidOperationException("BLOCKED_BY_USER: production QQ publishing is disabled during V4-B.");
+}
+
+static object ConsumeSubmittedArtwork(V4Repository repo, DateOnly targetDate)
+{
+    var folder = targetDate.ToString("yyyy-MM-dd");
+    var manifest = repo.Read<ReportManifest>("reports", folder, "manifest.json");
+    if (manifest.LockedRevision is not { } locked)
+        throw new InvalidOperationException("Artwork consumption requires a locked revision.");
+    var revision = repo.Read<ReportRevision>("reports", folder, "revisions", locked.ToString("000") + ".json");
+    var log = repo.Read<PublishLog>("publish-log", folder + ".json");
+    var attempt = log.Attempts.LastOrDefault(x =>
+        !x.DryRun && x.Revision == locked && x.ReportHash == revision.ReportHash &&
+        (x.Status is "PUBLISHED" or "SUBMITTED_VISIBILITY_PENDING"));
+    if (attempt is null)
+        throw new InvalidOperationException("Artwork consumption requires an accepted production submission for the locked revision.");
+    var removed = new ArtworkQueueService(repo).ConsumeAfterProductionSubmission(revision, attempt);
+    return new { date = targetDate, revision = locked, removed };
 }
 
 static void EnsureValid(V4Repository repo)
