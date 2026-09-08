@@ -7,9 +7,9 @@ const gameName = value => ({ GENSHIN: "原神", STARRAIL: "崩坏：星穹铁道
 function queuePayload() { return state.queue.map((item, index) => ({ platform: item.platform, artworkId: item.artworkId, queueOrder: index + 1 })); }
 function showNotice(message, kind = "") { const node=$("#editor-notice"); node.textContent=message; node.className=`editor-notice ${kind}`; }
 function imageMarkup(item) {
-  return item.thumbnailUrl
-    ? `<img loading="lazy" src="${escapeHtml(item.thumbnailUrl)}" alt="${escapeHtml(item.character)}" onerror="this.replaceWith(document.createTextNode('缩略图不可用'))">`
-    : `<div class="art-placeholder">无公开缩略图</div>`;
+  return item.previewUrl
+    ? `<img loading="lazy" src="${escapeHtml(item.previewUrl)}" alt="${escapeHtml(item.character)}" onerror="this.replaceWith(document.createTextNode('本地预览加载失败'))">`
+    : `<div class="art-placeholder">预览图将在下一次采集后生成</div>`;
 }
 function renderQueue() {
   $("#queue-count").textContent=String(state.queue.length);
