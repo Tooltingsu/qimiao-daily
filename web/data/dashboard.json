@@ -2,8 +2,8 @@
   "date": "2026-09-08",
   "state": "READY",
   "publishTime": "20:00",
-  "revision": 4,
-  "generatedAt": "2026-09-08T10:36:17.4353632+00:00",
+  "revision": 5,
+  "generatedAt": "2026-09-08T11:06:03.3648749+00:00",
   "publishedAt": null,
   "health": "DEGRADED",
   "manualCounts": {
