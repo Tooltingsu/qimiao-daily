@@ -31,6 +31,11 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+      # Contents-API edits can arrive while a push-triggered run is being
+      # scheduled. Keep only the checked-out trusted-main source before the
+      # guarded writeback compares automatic output paths.
+      - name: Reset tracked checkout changes before guarded writeback
+        run: git reset --hard HEAD
       - name: Generate immutable revision and Pages projection
         env:
           INPUT_DATE: ${{ inputs.date }}
