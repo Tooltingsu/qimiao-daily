@@ -20,10 +20,16 @@ ALLOWED = {
 def git(*args, cwd=None, check=True):
     return subprocess.run(['git', *args], cwd=cwd, check=check, capture_output=True, text=True)
 
-def persist(kind, message, cwd=None, branch='main'):
+def persist(kind, message, cwd=None, branch='main', ignored_existing=()):
     roots = ALLOWED[kind]
+    ignored = set(ignored_existing)
     changed = git('diff', '--name-only', 'HEAD', cwd=cwd).stdout.splitlines()
     changed += git('ls-files', '--others', '--exclude-standard', cwd=cwd).stdout.splitlines()
+    # A push-triggered runner can start while GitHub Contents API changes are
+    # still propagating through checkout metadata. These files existed before
+    # the automatic operation and are never staged by this function. Keep the
+    # output allow-list strict for every *new* change made by the operation.
+    changed = [p for p in changed if p not in ignored]
     illegal = [p for p in changed if not p.startswith(roots)]
     if illegal:
         raise RuntimeError('Write-path violation: ' + ', '.join(illegal))
@@ -40,6 +46,7 @@ def persist(kind, message, cwd=None, branch='main'):
     # commit before rebasing; never stash, discard, or stage arbitrary files.
     residual = git('diff', '--name-only', 'HEAD', cwd=cwd).stdout.splitlines()
     residual += git('ls-files', '--others', '--exclude-standard', cwd=cwd).stdout.splitlines()
+    residual = [p for p in residual if p not in ignored]
     illegal_residual = [p for p in residual if not p.startswith(roots)]
     if illegal_residual:
         raise RuntimeError('Write-path violation after staging: ' + ', '.join(illegal_residual))
