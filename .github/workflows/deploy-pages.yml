@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths: ["web/**"]
   workflow_run:
-    workflows: ["Generate V4 report revision", "Republish V4 corrected revision (DRY RUN)"]
+    workflows: ["Collect V4 automatic sources", "Generate V4 report revision", "Republish V4 corrected revision (DRY RUN)"]
     types: [completed]
   workflow_dispatch:
 
