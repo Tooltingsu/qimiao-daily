@@ -2,8 +2,8 @@
   "date": "2026-09-08",
   "state": "READY",
   "publishTime": "20:00",
-  "revision": 7,
-  "generatedAt": "2026-09-08T12:35:21.2429887+00:00",
+  "revision": 8,
+  "generatedAt": "2026-09-08T12:36:08.8452477+00:00",
   "publishedAt": null,
   "health": "DEGRADED",
   "manualCounts": {
@@ -27,42 +27,42 @@
       "provider": "GitHub:babalae/better-genshin-impact",
       "status": "HEALTHY",
       "message": "0 commits in [2026-09-07T18:00:00.0000000\u002B08:00, 2026-09-08T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     },
     {
       "provider": "GitHub:babalae/bettergi-scripts-list",
       "status": "HEALTHY",
       "message": "2 commits in [2026-09-07T18:00:00.0000000\u002B08:00, 2026-09-08T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:GENSHIN",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:STARRAIL",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:NTE",
       "status": "FAILED",
       "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Pixiv",
       "status": "HEALTHY",
       "message": "Added 0 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
-      "checkedAt": "2026-09-08T12:35:06.232231+00:00",
+      "checkedAt": "2026-09-08T12:35:55.6345222+00:00",
       "usedCachedData": false
     }
   ],
