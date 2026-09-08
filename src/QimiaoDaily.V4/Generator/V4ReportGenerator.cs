@@ -137,9 +137,12 @@ public sealed class V4ReportGenerator(V4Repository repository)
             lines.Add($"-{DisplayGame(item.Game)} 周期玩法「{item.Name}」{day}{time}刷新");
         }
 
+        var (videoStart, videoEnd) = ShanghaiClock.VideoWindow(date);
         foreach (var item in repository.ReadOr(new List<VideoRecord>(), "collected", "videos.json")
                      .Where(x => x.ReviewStatus.Equals("CONFIRMED", StringComparison.OrdinalIgnoreCase)
-                                 && x.PublishedAt is { } published && LocalDate(published) == date))
+                                 && x.PublishedAt is { } published
+                                 && published >= videoStart && published < videoEnd)
+                     .OrderBy(x => x.PublishedAt).ThenBy(x => x.Game, StringComparer.Ordinal))
         {
             lines.Add($"-{DisplayGame(item.Game)} 发布视频【{item.Title}】");
         }
@@ -194,7 +197,6 @@ public sealed class V4ReportGenerator(V4Repository repository)
     }
 
     private static DateTimeOffset Local(DateTimeOffset value) => TimeZoneInfo.ConvertTime(value, TimeZoneInfo.FindSystemTimeZoneById("Asia/Shanghai"));
-    private static DateOnly LocalDate(DateTimeOffset value) => DateOnly.FromDateTime(Local(value).Date);
     private static string Duration(TimeSpan duration)
     {
         var totalHours = Math.Max(0, (int)Math.Floor(duration.TotalHours));
