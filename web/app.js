@@ -46,6 +46,7 @@ async function loadDashboard() {
   renderMetrics("#automatic-counts", data.automaticCounts);
   renderProviders(data.providers);
   const repo = data.repositoryUrl.replace(/\/$/, "");
+  document.querySelector("#review-artwork").href = "review.html";
   document.querySelector("#edit-data").href = `${repo}/tree/main/data`;
   document.querySelector("#run-generate").href = `${repo}/actions/workflows/generate.yml`;
   document.querySelector("#lock-report").href = `${repo}/actions/workflows/lock.yml`;
