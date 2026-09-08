@@ -1,8 +1,8 @@
 name: Publish V4 report watchdog (DRY RUN)
 
 on:
-  schedule:
-    - cron: "25,30,35,40,45,50 10 * * *"
+  # Kept as a manual QQ-free verification tool. Production scheduling is owned
+  # by qq-auto-release.yml so a dry run cannot race the real 20:00 release.
   workflow_dispatch:
     inputs:
       date:
