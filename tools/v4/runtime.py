@@ -57,7 +57,10 @@ def main():
                 result = cli('replace-lock', date, '--revision', requested_revision,
                              '--reason', lock_reason)
             else:
-                result = cli('lock', date, '--mode', 'manual')
+                lock_mode = os.environ.get('INPUT_LOCK_MODE', 'manual').strip().lower()
+                if lock_mode not in ('manual', 'auto'):
+                    raise ValueError('INPUT_LOCK_MODE must be manual or auto.')
+                result = cli('lock', date, '--mode', lock_mode)
         elif kind == 'publish':
             options = ['--dry-run', 'true', '--workflow-run', os.environ['RUN_URL'], '--watchdog', 'true']
             if os.environ.get('SIMULATE_DEADLINE') == 'true':
