@@ -7,6 +7,15 @@ namespace QimiaoDaily.V4.Publishing;
 // path, so a queued image is never lost merely because it was previewed.
 public sealed class ArtworkQueueService(V4Repository repository)
 {
+    // Kept for existing callers that only consume after an explicitly
+    // visibility-confirmed publication.
+    public int ConsumeAfterProductionPublication(ReportRevision revision, PublishAttempt attempt)
+    {
+        if (!string.Equals(attempt.Status, "PUBLISHED", StringComparison.Ordinal))
+            throw new InvalidOperationException("Artwork queue may only advance after a real PUBLISHED attempt.");
+        return ConsumeAfterProductionSubmission(revision, attempt);
+    }
+
     public int ConsumeAfterProductionSubmission(ReportRevision revision, PublishAttempt attempt)
     {
         // QQ forum creation is asynchronous: task_id means the real production
