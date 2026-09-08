@@ -11,4 +11,9 @@ public static class ShanghaiClock
     }
     public static (DateTimeOffset Start, DateTimeOffset End) BgiWindow(DateOnly date)
         => (At(date.AddDays(-1), new TimeOnly(18, 0)), At(date, new TimeOnly(18, 0)));
+
+    // The video portion of the daily report follows the same fixed Shanghai
+    // cutoff as BGI: yesterday 18:00 inclusive through today 18:00 exclusive.
+    public static (DateTimeOffset Start, DateTimeOffset End) VideoWindow(DateOnly date)
+        => (At(date.AddDays(-1), new TimeOnly(18, 0)), At(date, new TimeOnly(18, 0)));
 }
