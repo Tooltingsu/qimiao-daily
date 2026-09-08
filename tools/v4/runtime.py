@@ -35,6 +35,11 @@ def main():
     summary = {'workflow': kind, 'started': started, 'sourceCommit': source, 'date': date,
                'status': 'RUNNING', 'new': 0, 'updated': 0, 'skipped': 0, 'conflicts': 0}
     before = fingerprint()
+    # See writeback.persist: remember only pre-existing non-output changes so
+    # the guarded writer can never stage them, while still rejecting any new
+    # path outside its allow-list.
+    existing_dirty = set(git('diff', '--name-only', 'HEAD').stdout.splitlines())
+    existing_dirty.update(git('ls-files', '--others', '--exclude-standard').stdout.splitlines())
     try:
         cli('validate', date)
         if kind == 'collect':
@@ -77,7 +82,7 @@ def main():
         summary.update({'status': 'PASS', 'result': result, 'generatedRevision': manifest.get('latestRevision'),
             'reportHash': manifest.get('reportHash'), 'lockStatus': manifest.get('lockReason'),
             'publishStatus': manifest.get('state'), 'degradedSources': [x for x in providers if x['status'] != 'HEALTHY']})
-        summary['writeback'] = persist(kind, f"chore(auto): {kind} {date} r{manifest.get('latestRevision', 0):03d}")
+        summary['writeback'] = persist(kind, f"chore(auto): {kind} {date} r{manifest.get('latestRevision', 0):03d}", ignored_existing=existing_dirty)
         summary['updated'] = summary['writeback'].get('files', 0)
         summary['skipped'] = int(result.get('status', '').startswith('SKIPPED') or result.get('skipped', False))
     except Exception as exc:
