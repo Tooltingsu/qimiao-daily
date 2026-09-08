@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>美图审核 · 绮喵日报</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell editor-shell">
+    <header class="hero editor-hero">
+      <div><p class="eyebrow">美图分享 · 人工审核</p><h1>美图审核队列</h1><p class="date">候选图仅为元数据；确认区按从上到下的顺序每日使用一张。</p></div>
+      <a class="button ghost" href="index.html">返回控制中心</a>
+    </header>
+    <section id="editor-notice" class="editor-notice" role="status">正在读取候选美图…</section>
+    <section class="editor-layout">
+      <aside class="panel queue-panel">
+        <div class="panel-heading"><div><p class="eyebrow">确认区</p><h2>待发队列</h2></div><strong id="queue-count" class="queue-count">0</strong></div>
+        <p class="muted">可用上下按钮调整顺序；移除不会删除 Pixiv 候选资料。</p>
+        <ol id="queue-list" class="queue-list"></ol>
+        <div class="editor-actions">
+          <button id="save-queue" class="button primary" type="button">保存审核结果</button>
+          <button id="download-queue" class="button secondary" type="button">下载队列 JSON</button>
+          <a id="github-edit" class="button ghost" href="#" target="_blank" rel="noreferrer">在 GitHub 编辑</a>
+        </div>
+      </aside>
+      <section class="panel candidates-panel">
+        <div class="panel-heading"><div><p class="eyebrow">候选区</p><h2>选择美图</h2></div><input id="artwork-search" class="editor-input" type="search" placeholder="搜索角色、出处、作者或标题"></div>
+        <div id="candidate-list" class="candidate-grid" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+  <script src="review.js" defer></script>
+</body>
+</html>
