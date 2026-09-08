@@ -18,6 +18,18 @@ public sealed record DashboardData(
     IReadOnlyList<ProviderStatusRecord> Providers,
     QqTestDashboardStatus QqTest);
 
+public sealed record ArtworkReviewItem(
+    string Platform,
+    string ArtworkId,
+    string Character,
+    string Franchise,
+    string Title,
+    string Author,
+    string SourceUrl,
+    string ThumbnailUrl,
+    string ReviewStatus,
+    int? QueueOrder);
+
 public sealed record QqTestDashboardStatus(
     string Environment,
     string Status,
@@ -80,6 +92,23 @@ public sealed class V4PagesBuilder(V4Repository repository)
                 qqTestAttempt?.Error));
         repository.Write(data, "web", "data", "dashboard.json");
         repository.WriteText(displayedReport?.Content ?? "今日日报尚未生成。", "web", "data", "report.txt");
+
+        // Pages receives a deliberately public, metadata-only projection for
+        // the artwork editor. Collector files and any local cache paths never
+        // need to be exposed to the browser.
+        var queue = repository.ReadOr(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json");
+        var queueOrders = queue.ToDictionary(x => ArtworkKey(x.Platform, x.ArtworkId), x => x.QueueOrder, StringComparer.OrdinalIgnoreCase);
+        var reviewItems = artworks.Select(item => new ArtworkReviewItem(
+            item.Platform, item.ArtworkId, item.Character, item.Franchise, item.Title, item.Author,
+            PublicHttps(item.SourceUrl), PublicHttps(item.ThumbnailUrl), item.ReviewStatus,
+            queueOrders.TryGetValue(ArtworkKey(item.Platform, item.ArtworkId), out var order) ? order : null))
+            .OrderBy(x => x.QueueOrder ?? int.MaxValue).ThenBy(x => x.Character, StringComparer.Ordinal)
+            .ToList();
+        repository.Write(reviewItems, "web", "data", "artwork-review.json");
+        repository.Write(queue.OrderBy(x => x.QueueOrder).ToList(), "web", "data", "artwork-queue.json");
         return data;
     }
+    private static string ArtworkKey(string platform, string artworkId) => platform.Trim() + "\u001f" + artworkId.Trim();
+    private static string PublicHttps(string value) => Uri.TryCreate(value, UriKind.Absolute, out var uri) && uri.Scheme == Uri.UriSchemeHttps ? value : string.Empty;
+
 }
