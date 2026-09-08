@@ -2280,5 +2280,19 @@
     "selectedForReport": false,
     "publishedAt": "2026-09-08T21:04:22+09:00",
     "fetchedAt": "2026-09-08T12:28:22.3970683+00:00"
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149432886",
+    "character": "\u521D\u97F3\u672A\u6765",
+    "franchise": "\u865A\u62DF\u6B4C\u624B",
+    "title": "\u521D\u97F3\u30DF\u30AF\u751F\u8A95\u796D",
+    "author": "\u9ED2\u753000",
+    "sourceUrl": "https://www.pixiv.net/artworks/149432886",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/08/21/11/25/149432886_p0_square1200.jpg",
+    "reviewStatus": "PENDING",
+    "selectedForReport": false,
+    "publishedAt": "2026-09-08T21:11:25+09:00",
+    "fetchedAt": "2026-09-08T12:29:43.8685886+00:00"
   }
 ]
