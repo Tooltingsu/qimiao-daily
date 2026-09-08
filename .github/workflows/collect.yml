@@ -31,6 +31,11 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 8.0.x
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
       - run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
       - name: Collect BGI, official videos and Pixiv metadata
         env:
@@ -42,3 +47,25 @@ jobs:
           BILIBILI_SESSDATA: ${{ secrets.BILIBILI_SESSDATA }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python3 tools/v4/runtime.py collect
+      - name: Install safe thumbnail relay utilities
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Build bounded same-origin Pixiv thumbnail previews
+        env:
+          INPUT_ARTWORK_PREVIEW_LIMIT: "30"
+        run: node tools/qq-test/artwork-preview-relay.mjs
+      - name: Commit temporary review previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/assets/artwork-preview web/data/artwork-preview.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(artwork): refresh Pages review thumbnails"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Generate the post-collection report and Pages projection
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 tools/v4/runtime.py generate
