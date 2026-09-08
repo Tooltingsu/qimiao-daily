@@ -61,12 +61,9 @@ jobs:
           git add web/assets/artwork-preview web/data/artwork-preview.json
           if ! git diff --cached --quiet; then
             git commit -m "chore(artwork): refresh Pages review thumbnails"
-            # The guarded collector may have observed an in-flight Contents API
-            # update. The relay is committed already; discard only residual
-            # runner dirt before the safe fetch/rebase/push sequence.
-            git reset --hard HEAD
-            git clean -fd
-            git pull --rebase origin main
+            # The collector's guarded writeback has already pushed its own
+            # commit. Push this relay child directly; a concurrent remote
+            # update fails safely rather than overwriting it.
             git push origin HEAD:main
           fi
       - name: Generate the post-collection report and Pages projection
