@@ -37,5 +37,8 @@ jobs:
           INPUT_DATE: ${{ inputs.date }}
           GITHUB_TOKEN: ${{ github.token }}
           PIXIV_SESSION: ${{ secrets.PIXIV_SESSION }}
+          # Optional. Browser-like headers are always used; this session is
+          # only a fallback if Bilibili applies stronger cloud-IP risk control.
+          BILIBILI_SESSDATA: ${{ secrets.BILIBILI_SESSDATA }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: python3 tools/v4/runtime.py collect
