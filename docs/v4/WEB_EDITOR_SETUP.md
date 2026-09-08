@@ -1,6 +1,6 @@
 # 网页美图审核器部署
 
-`web/review.html` 已提供候选预览、确认队列、排序、移除与本地 JSON 下载。要让“保存审核结果”直接写入 GitHub，需要部署 `workers/github-editor`；GitHub Pages 本身不能安全持有写入凭据。
+`web/review.html` 已提供候选预览、确认队列、排序、移除与本地 JSON 下载；主页工作台也提供活动、卡池、版本、生日与纪念日的弹窗编辑。要让“保存审核结果”直接写入 GitHub，需要部署 `workers/github-editor`；GitHub Pages 本身不能安全持有写入凭据。
 
 ## 一次性配置
 
@@ -26,4 +26,4 @@ OAuth Token 仅保留在 Worker KV 的一小时会话中，以 HttpOnly Cookie �
 
 ## 审核操作
 
-打开 Pages 的“美图审核”：选择候选图、加入确认区、用上下按钮排序，然后点击“保存审核结果”。保存会直接提交 `data/artwork-queue.json`，GitHub Actions 随后校验并生成新的日报 Revision。
+打开 Pages 的“美图审核”：选择候选图、加入确认区、用上下按钮排序，然后点击“保存审核结果”。保存会直接提交 `data/artwork-queue.json`；工作台保存会提交对应的人工 JSON。GitHub Actions 随后校验并生成新的日报 Revision。
