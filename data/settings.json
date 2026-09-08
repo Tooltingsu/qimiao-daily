@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/settings.schema.json",
   "timeZone": "Asia/Shanghai",
-  "publishTime": "18:30",
+  "publishTime": "20:00",
   "defaultBranch": "main",
   "repositoryUrl": "https://github.com/Tooltingsu/qimiao-daily",
   "artworkTargetCount": 30,
