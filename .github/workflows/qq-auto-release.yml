@@ -1,0 +1,145 @@
+name: QQ daily automatic release (text + artwork)
+
+on:
+  # 20:05–20:20 Asia/Shanghai (UTC+8). GitHub schedules are best-effort, so
+  # several watchdog invocations make a delayed 20:00 release recoverable.
+  schedule:
+    - cron: "5,10,15,20 12 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  # Shared with the explicit manual production release. A normal automatic run
+  # and an operator release can therefore never submit the same date in parallel.
+  group: qimiao-v4-production-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/qq-test/package-lock.json
+      - name: Build the trusted-main release tools
+        run: dotnet build src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -c Release --nologo
+      - name: Check the Shanghai 20:00 release window
+        id: window
+        run: |
+          now="$(TZ=Asia/Shanghai date +%H:%M)"
+          today="$(TZ=Asia/Shanghai date +%F)"
+          minutes=$((10#${now%:*} * 60 + 10#${now#*:}))
+          if [ "$minutes" -lt 1200 ] || [ "$minutes" -gt 1220 ]; then
+            echo "within_window=false" >> "$GITHUB_OUTPUT"
+            echo "Outside the 20:00–20:20 Shanghai watchdog window: $now"
+          else
+            echo "within_window=true" >> "$GITHUB_OUTPUT"
+            echo "report_date=$today" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Lock the exact ready revision (manual lock wins; otherwise auto-lock)
+        if: steps.window.outputs.within_window == 'true'
+        env:
+          INPUT_DATE: ${{ steps.window.outputs.report_date }}
+          INPUT_LOCK_MODE: auto
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 tools/v4/runtime.py lock
+      - name: Read the locked revision
+        if: steps.window.outputs.within_window == 'true'
+        id: locked
+        run: |
+          date='${{ steps.window.outputs.report_date }}'
+          revision="$(jq -r '.lockedRevision // empty' "reports/$date/manifest.json")"
+          test -n "$revision"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+      - name: Install image relay utilities
+        if: steps.window.outputs.within_window == 'true'
+        run: npm ci --ignore-scripts
+        working-directory: tools/qq-test
+      - name: Prepare the locked artwork in the temporary Pages relay
+        if: steps.window.outputs.within_window == 'true'
+        env:
+          INPUT_REPORT_DATE: ${{ steps.locked.outputs.date }}
+          INPUT_REVISION: ${{ steps.locked.outputs.revision }}
+          ARTWORK_RELAY_PAGES_BASE_URL: https://tooltingsu.github.io/qimiao-daily
+        run: node tools/qq-test/artwork-relay.mjs
+      - name: Commit the temporary public artwork relay
+        if: steps.window.outputs.within_window == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/assets/artwork-relay
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(artwork): prepare daily relay ${{ steps.locked.outputs.date }} r${{ steps.locked.outputs.revision }}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Deploy relay before the QQ API receives its image URL
+        if: steps.window.outputs.within_window == 'true'
+        run: python3 tools/v4/secret_scan.py --tree web --output "$RUNNER_TEMP/pages-relay-secret-scan.json"
+      - if: steps.window.outputs.within_window == 'true'
+        uses: actions/configure-pages@v6
+      - if: steps.window.outputs.within_window == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: web
+      - name: Publish the relay to GitHub Pages
+        if: steps.window.outputs.within_window == 'true'
+        uses: actions/deploy-pages@v5
+      - name: Submit one locked daily forum post containing text and artwork
+        if: steps.window.outputs.within_window == 'true'
+        env:
+          INPUT_ENVIRONMENT: production
+          INPUT_MODE: report
+          INPUT_TEXT_ONLY: "false"
+          INPUT_INCLUDE_ARTWORK: "true"
+          INPUT_FORCE_REPUBLISH: "false"
+          INPUT_REPORT_DATE: ${{ steps.locked.outputs.date }}
+          INPUT_REVISION: ${{ steps.locked.outputs.revision }}
+          QQ_BOT_APP_ID: ${{ secrets.QQ_BOT_APP_ID }}
+          QQ_BOT_APP_SECRET: ${{ secrets.QQ_BOT_APP_SECRET }}
+          QQ_TARGET_TYPE: ${{ vars.QQ_PROD_TARGET_TYPE }}
+          QQ_TARGET_GUILD_ID: ${{ vars.QQ_PROD_GUILD_ID }}
+          QQ_TARGET_CHANNEL_ID: ${{ vars.QQ_PROD_CHANNEL_ID }}
+          ARTWORK_RELAY_PAGES_BASE_URL: https://tooltingsu.github.io/qimiao-daily
+          QQ_TEST_MAX_TEXT_CHARS: "1800"
+          QQ_PUBLISH_LOG_PATH: ${{ github.workspace }}/publish-log/${{ steps.locked.outputs.date }}.json
+        run: node tools/qq-test/run.mjs
+      - name: Build Pages status and persist the sanitized release log
+        if: steps.window.outputs.within_window == 'true' && always()
+        run: |
+          dotnet run --project src/QimiaoDaily.V4/QimiaoDaily.V4.csproj -- build-pages --root . --date '${{ steps.locked.outputs.date }}'
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publish-log web/data
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(release): automatic submit ${{ steps.locked.outputs.date }} r${{ steps.locked.outputs.revision }}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Refresh Pages with the final publish status
+        if: steps.window.outputs.within_window == 'true' && always()
+        run: python3 tools/v4/secret_scan.py --tree web --output "$RUNNER_TEMP/pages-release-secret-scan.json"
+      - if: steps.window.outputs.within_window == 'true' && always()
+        uses: actions/configure-pages@v6
+      - if: steps.window.outputs.within_window == 'true' && always()
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: web
+      - name: Deploy final Pages status
+        if: steps.window.outputs.within_window == 'true' && always()
+        uses: actions/deploy-pages@v5
