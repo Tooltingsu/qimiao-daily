@@ -27,6 +27,7 @@ public sealed record ArtworkReviewItem(
     string Author,
     string SourceUrl,
     string ThumbnailUrl,
+    string PreviewUrl,
     string ReviewStatus,
     int? QueueOrder);
 
@@ -98,9 +99,12 @@ public sealed class V4PagesBuilder(V4Repository repository)
         // need to be exposed to the browser.
         var queue = repository.ReadOr(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json");
         var queueOrders = queue.ToDictionary(x => ArtworkKey(x.Platform, x.ArtworkId), x => x.QueueOrder, StringComparer.OrdinalIgnoreCase);
+        var previewMap = repository.ReadOr(new Dictionary<string, string>(), "web", "data", "artwork-preview.json");
         var reviewItems = artworks.Select(item => new ArtworkReviewItem(
             item.Platform, item.ArtworkId, item.Character, item.Franchise, item.Title, item.Author,
-            PublicHttps(item.SourceUrl), PublicHttps(item.ThumbnailUrl), item.ReviewStatus,
+            PublicHttps(item.SourceUrl), PublicHttps(item.ThumbnailUrl),
+            previewMap.TryGetValue(ArtworkKey(item.Platform, item.ArtworkId), out var preview) ? PublicRelativePreview(preview) : string.Empty,
+            item.ReviewStatus,
             queueOrders.TryGetValue(ArtworkKey(item.Platform, item.ArtworkId), out var order) ? order : null))
             .OrderBy(x => x.QueueOrder ?? int.MaxValue).ThenBy(x => x.Character, StringComparer.Ordinal)
             .ToList();
@@ -110,5 +114,6 @@ public sealed class V4PagesBuilder(V4Repository repository)
     }
     private static string ArtworkKey(string platform, string artworkId) => platform.Trim() + "\u001f" + artworkId.Trim();
     private static string PublicHttps(string value) => Uri.TryCreate(value, UriKind.Absolute, out var uri) && uri.Scheme == Uri.UriSchemeHttps ? value : string.Empty;
+    private static string PublicRelativePreview(string value) => value.StartsWith("assets/artwork-preview/", StringComparison.Ordinal) ? value : string.Empty;
 
 }
