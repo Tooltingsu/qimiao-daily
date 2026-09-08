@@ -9,6 +9,26 @@ function random() { return crypto.randomUUID().replaceAll("-", ""); }
 async function github(url, token, init = {}) { const response = await fetch(`https://api.github.com${url}`, { ...init, headers: { Accept: "application/vnd.github+json", Authorization: `Bearer ${token}`, "X-GitHub-Api-Version": "2022-11-28", ...(init.headers || {}) } }); if (!response.ok) throw new Error(`GitHub API ${response.status}`); return response; }
 async function session(request, env) { const id = cookie(request, "qimiao_editor_session"); return id ? await env.SESSIONS.get(`session:${id}`) : null; }
 function validateQueue(queue) { if (!Array.isArray(queue)) throw new Error("queue 必须是数组。"); const seen = new Set(); return queue.map((item, index) => { const platform = String(item?.platform || "").trim().toUpperCase(), artworkId = String(item?.artworkId || "").trim(); if (!platform || !artworkId || !/^[\w.-]+$/.test(artworkId)) throw new Error(`第 ${index + 1} 项图片标识无效。`); const key = `${platform}\u001f${artworkId}`; if (seen.has(key)) throw new Error("确认区不能有重复图片。"); seen.add(key); return { platform, artworkId, queueOrder: index + 1 }; }); }
+const editableDataFiles = new Set(["activities.json", "banners.json", "versions.json", "birthdays.json", "anniversaries.json", "calendar-events.json", "endgame-rules.json", "endgame-overrides.json"]);
+function validateManualRecords(file, records) {
+  if (!editableDataFiles.has(file)) throw new Error("不允许编辑该文件。");
+  if (!Array.isArray(records)) throw new Error("数据必须是数组。");
+  if (records.length > 2000) throw new Error("数据量超过限制。");
+  const ids = new Set();
+  for (const [index, record] of records.entries()) {
+    if (!record || typeof record !== "object" || Array.isArray(record)) throw new Error(`第 ${index + 1} 项必须是对象。`);
+    const id = String(record.id || record.ruleId || "").trim();
+    if (!id || ids.has(id)) throw new Error(`第 ${index + 1} 项缺少唯一标识。`);
+    ids.add(id);
+  }
+  return records;
+}
+async function writeDataFile(file, records, token, env) {
+  const path = `data/${file}`;
+  const existing = await (await github(`/repos/${env.REPOSITORY}/contents/${path}?ref=${encodeURIComponent(env.BRANCH)}`, token)).json();
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(records, null, 2) + "\n")));
+  return (await github(`/repos/${env.REPOSITORY}/contents/${path}`, token, { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify({ message: `chore(data): update ${file}`, content, sha: existing.sha, branch: env.BRANCH }) })).json();
+}
 
 export default { async fetch(request, env) {
   const url = new URL(request.url);
@@ -19,6 +39,8 @@ export default { async fetch(request, env) {
     if (url.pathname === "/api/login") { const state = random(); await env.SESSIONS.put(`state:${state}`, url.searchParams.get("returnTo") || env.PAGES_ORIGIN, { expirationTtl: 600 }); const login = new URL("https://github.com/login/oauth/authorize"); login.search = new URLSearchParams({ client_id: env.GITHUB_OAUTH_CLIENT_ID, redirect_uri: `${url.origin}/api/callback`, scope: "public_repo", state }); return new Response(null, { status: 302, headers: { Location: login, "Set-Cookie": `qimiao_oauth_state=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600` } }); }
     if (url.pathname === "/api/callback") { const state = url.searchParams.get("state") || ""; if (!state || state !== cookie(request, "qimiao_oauth_state")) return new Response("Invalid OAuth state", { status: 400 }); const returnTo = await env.SESSIONS.get(`state:${state}`); if (!returnTo) return new Response("Expired OAuth state", { status: 400 }); const response = await fetch("https://github.com/login/oauth/access_token", { method: "POST", headers: { Accept: "application/json", "content-type": "application/json" }, body: JSON.stringify({ client_id: env.GITHUB_OAUTH_CLIENT_ID, client_secret: env.GITHUB_OAUTH_CLIENT_SECRET, code: url.searchParams.get("code") }) }); const token = await response.json(); if (!token.access_token) return new Response("GitHub authorization failed", { status: 401 }); const id = random(); await env.SESSIONS.put(`session:${id}`, token.access_token, { expirationTtl: 3600 }); return new Response(null, { status: 302, headers: { Location: returnTo, "Set-Cookie": `qimiao_editor_session=${id}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600` } }); }
     if (url.pathname === "/api/artwork-queue" && request.method === "PUT") { const token = await session(request, env); if (!token) return cors(request, env, json({ error: "请先登录 GitHub。" }, { status: 401 })); const queue = validateQueue((await request.json()).queue); const path = "data/artwork-queue.json"; const existing = await (await github(`/repos/${env.REPOSITORY}/contents/${path}?ref=${encodeURIComponent(env.BRANCH)}`, token)).json(); const content = btoa(unescape(encodeURIComponent(JSON.stringify(queue, null, 2) + "\n"))); const saved = await (await github(`/repos/${env.REPOSITORY}/contents/${path}`, token, { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify({ message: `chore(artwork): update confirmed queue (${queue.length})`, content, sha: existing.sha, branch: env.BRANCH }) })).json(); return cors(request, env, json({ ok: true, commitUrl: saved.commit?.html_url || null })); }
+    const dataMatch = url.pathname.match(/^\/api\/data\/([a-z-]+\.json)$/);
+    if (dataMatch && request.method === "PUT") { const token = await session(request, env); if (!token) return cors(request, env, json({ error: "请先登录 GitHub。" }, { status: 401 })); const file = dataMatch[1]; const records = validateManualRecords(file, (await request.json()).records); const saved = await writeDataFile(file, records, token, env); return cors(request, env, json({ ok: true, commitUrl: saved.commit?.html_url || null })); }
     return cors(request, env, json({ error: "Not found" }, { status: 404 }));
   } catch (error) { return cors(request, env, json({ error: error instanceof Error ? error.message : "服务异常" }, { status: 500 })); }
 } };
