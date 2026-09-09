@@ -61,6 +61,15 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
             {
                 var provider = new PixivArtworkProvider(client, session);
                 var settings = repository.Read<V4Settings>("data", "settings.json");
+                var replaceCandidates = string.Equals(Environment.GetEnvironmentVariable("INPUT_REPLACE_ARTWORK_CANDIDATES"), "true", StringComparison.OrdinalIgnoreCase);
+                // A manual refresh replaces the review inbox. Never discard queue entries:
+                // they are user-approved FIFO choices and must remain publishable.
+                var queueKeys = repository.ReadOr(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json")
+                    .OrderBy(x => x.QueueOrder)
+                    .Select(x => ArtworkKey(x.Platform, x.ArtworkId))
+                    .ToHashSet(StringComparer.OrdinalIgnoreCase);
+                if (replaceCandidates)
+                    artworks = artworks.Where(x => queueKeys.Contains(ArtworkKey(x.Platform, x.ArtworkId))).ToList();
                 var status = "HEALTHY";
                 var added = 0;
                 foreach (var search in ArtworkCharacterCatalog.GetDailySelection(settings.ArtworkTargetCount, date))
@@ -84,10 +93,6 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
                 // backfill the current queue first, then a bounded number of
                 // visible candidates. This requests only Pixiv metadata, never
                 // original artwork files.
-                var queueKeys = repository.ReadOr(new List<ArtworkQueueEntry>(), "data", "artwork-queue.json")
-                    .OrderBy(x => x.QueueOrder)
-                    .Select(x => ArtworkKey(x.Platform, x.ArtworkId))
-                    .ToHashSet(StringComparer.OrdinalIgnoreCase);
                 var backfill = artworks.Where(x => string.IsNullOrWhiteSpace(x.ThumbnailUrl))
                     .OrderByDescending(x => queueKeys.Contains(ArtworkKey(x.Platform, x.ArtworkId)))
                     .ThenByDescending(x => x.FetchedAt)
@@ -117,7 +122,7 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
                     refreshed++;
                 }
                 repository.Write(artworks, "collected", "artwork.json");
-                statuses.Add(new("Pixiv", status, $"Added {added} candidates and refreshed {refreshed} thumbnail metadata; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
+                statuses.Add(new("Pixiv", status, $"{(replaceCandidates ? "Replaced unqueued candidates; " : "Added ")}{added} candidates and refreshed {refreshed} thumbnail metadata; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
             }
             catch (Exception ex) { statuses.Add(new("Pixiv", "FAILED", SafeError(ex), now, artworks.Count > 0)); }
         }
