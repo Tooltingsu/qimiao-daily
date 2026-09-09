@@ -11,6 +11,11 @@ on:
         description: Report date (yyyy-MM-dd); blank uses Shanghai today
         required: false
         type: string
+      replace_artwork_candidates:
+        description: Replace unqueued artwork candidates with this collection result
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -42,6 +47,7 @@ jobs:
           INPUT_DATE: ${{ inputs.date }}
           GITHUB_TOKEN: ${{ github.token }}
           PIXIV_SESSION: ${{ secrets.PIXIV_SESSION }}
+          INPUT_REPLACE_ARTWORK_CANDIDATES: ${{ inputs.replace_artwork_candidates }}
           # Optional. Browser-like headers are always used; this session is
           # only a fallback if Bilibili applies stronger cloud-IP risk control.
           BILIBILI_SESSDATA: ${{ secrets.BILIBILI_SESSDATA }}
