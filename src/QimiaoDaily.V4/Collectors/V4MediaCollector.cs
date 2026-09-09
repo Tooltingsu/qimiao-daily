@@ -121,8 +121,20 @@ public sealed class V4MediaCollector(V4Repository repository, HttpClient client)
                     };
                     refreshed++;
                 }
+                if (replaceCandidates)
+                {
+                    // Keep the inbox intentionally small after a manual refresh:
+                    // 20 fresh candidates plus any separately confirmed queue entries.
+                    var queuedItems = artworks.Where(x => queueKeys.Contains(ArtworkKey(x.Platform, x.ArtworkId))).ToList();
+                    var newestCandidates = artworks.Where(x => !queueKeys.Contains(ArtworkKey(x.Platform, x.ArtworkId)))
+                        .OrderByDescending(x => x.FetchedAt)
+                        .ThenBy(x => x.ArtworkId, StringComparer.Ordinal)
+                        .Take(20)
+                        .ToList();
+                    artworks = queuedItems.Concat(newestCandidates).ToList();
+                }
                 repository.Write(artworks, "collected", "artwork.json");
-                statuses.Add(new("Pixiv", status, $"{(replaceCandidates ? "Replaced unqueued candidates; " : "Added ")}{added} candidates and refreshed {refreshed} thumbnail metadata; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
+                statuses.Add(new("Pixiv", status, $"{(replaceCandidates ? "Replaced unqueued candidates with the latest 20; " : "Added ")}{added} candidates and refreshed {refreshed} thumbnail metadata; no original images downloaded.", now, status != "HEALTHY" && artworks.Count > 0));
             }
             catch (Exception ex) { statuses.Add(new("Pixiv", "FAILED", SafeError(ex), now, artworks.Count > 0)); }
         }
