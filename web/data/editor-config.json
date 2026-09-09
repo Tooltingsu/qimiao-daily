@@ -1,5 +1,5 @@
 {
-  "apiBase": "",
+  "apiBase": "https://qimiao-github-editor.tooltingsu.workers.dev",
   "repository": "Tooltingsu/qimiao-daily",
   "branch": "main"
 }
