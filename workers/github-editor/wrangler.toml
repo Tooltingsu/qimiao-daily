@@ -5,10 +5,10 @@ compatibility_date = "2026-09-08"
 # Create this KV namespace in your Cloudflare account and set its id here.
 [[kv_namespaces]]
 binding = "SESSIONS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "e6d73a8c779a4d8196f7122e6f61eed9"
 
 [vars]
 REPOSITORY = "Tooltingsu/qimiao-daily"
 BRANCH = "main"
 PAGES_ORIGIN = "https://tooltingsu.github.io"
-GITHUB_OAUTH_CLIENT_ID = "REPLACE_WITH_GITHUB_OAUTH_CLIENT_ID"
+GITHUB_OAUTH_CLIENT_ID = "Ov23liT4YdluhCk9xgqi"
