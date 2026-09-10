@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-10",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "29453829c78dafa8175bf9f2bd7adfa35b05d6c5",
+  "reportHash": "sha256:85d883c530fbbf690d79c0d0c66b0cd25cb6d2762a1514d5dd3420f5c371ee98",
+  "generatedAt": "2026-09-10T14:56:04.8904873+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670810\u65E5\uFF0C\u661F\u671F\u56DB\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6E05\u98CE\u9A91\u65C5\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u53D1\u5E03\u89C6\u9891\u3010\u2728Honkai: Star Rail Sparxie \u00D7 MOONDROP | Now Available \u2728\u3011\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u53D1\u5E03\u89C6\u9891\u3010Aventurine \u2022 Waveflair Character Trailer: \u0022Exclusive Scoop\u0022 | Honkai: Star Rail\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010HoYoFair 2026 \u0022Project: Nord Express\u0022 Teaser released! #GenshinImpact #HoYoFair\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-fix: \u4FEE\u590D\u65E5\u5FD7\u6846\u9690\u85CF\u72B6\u6001\u4E0B\u91CD\u542F\u540E\u5FEB\u6377\u952E\u65E0\u6CD5\u6062\u590D\u65E5\u5FD7\u663E\u793A (#3638) (97c90aa)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (ad68aae)\n-feat: \u5207\u6362\u5C0F\u9053\u5177\u589E\u52A0\u4FBF\u643A\u8425\u517B\u888B (#3633) (67236f5)\n-\u81EA\u52A8\u8D2D\u4E70\u72D7\u7CAE 2.6.5 (#3635) (e4e4c62)\n-\u4FEE\u6B63\u56FE\u7247\u76EE\u5F55 (#3638) (67707c5)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u80E1\u6843 \u539F\u795E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149119754",
+      "character": "\u80E1\u6843",
+      "franchise": "GENSHIN",
+      "title": "260831",
+      "author": "\u5B89\u54C8\u5A1C",
+      "sourceUrl": "https://www.pixiv.net/artworks/149119754",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/custom-thumb/img/2026/08/31/21/16/39/149119754_p0_custom1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-08-31T12:16:00+00:00",
+      "fetchedAt": "2026-09-08T12:07:01.573647+00:00"
+    }
+  ],
+  "payloadHash": "sha256:ead37184d24df3a7f6e3a809444b6dc743d38a7f40bf7653296935043e3edd56",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-09T18:00:00.0000000\u002B08:00, 2026-09-10T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-09-09T18:00:00.0000000\u002B08:00, 2026-09-10T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
