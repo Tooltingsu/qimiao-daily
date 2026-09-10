@@ -32,11 +32,11 @@ async function save() {
   const api=(state.config.apiBase || "").replace(/\/$/,"");
   if(!api){ download(); showNotice("审核结果已下载。要从网页直接保存到仓库，请按仓库 docs/v4/WEB_EDITOR_SETUP.md 部署 GitHub OAuth Worker。", "warning"); return; }
   showNotice("正在保存到 GitHub…");
-  const response=await fetch(`${api}/api/artwork-queue`,{method:"PUT",credentials:"include",headers:{"content-type":"application/json"},body:JSON.stringify({queue:queuePayload()})});
-  if(response.status===401){ window.location.href=`${api}/api/login?returnTo=${encodeURIComponent(location.href)}`; return; }
+  try { const response=await fetch(`${api}/api/artwork-queue`,{method:"PUT",credentials:"include",headers:{"content-type":"application/json"},body:JSON.stringify({queue:queuePayload()})});
   const result=await response.json().catch(()=>({}));
   if(!response.ok) throw new Error(result.error || "保存失败");
-  showNotice(`已提交到 GitHub：${result.commitUrl || "等待 Actions 校验"}`, "success");
+  showNotice(`已保存到 GitHub。Pages 将在约一分钟内更新。${result.commitUrl ? " 查看提交" : ""}`, "success");
+  } catch(error) { showNotice(`保存失败：${error.message || "网络异常"}`, "error"); }
 }
 async function start(){
   // GitHub Pages can retain a previous deployment briefly. A per-load query
