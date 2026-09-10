@@ -32,7 +32,7 @@ async function writeDataFile(file, records, token, env) {
 
 export default { async fetch(request, env) {
   const url = new URL(request.url);
-  if (request.method === "OPTIONS") return cors(request, env, new Response(null, { headers: { "Access-Control-Allow-Methods": "GET,PUT,OPTIONS", "Access-Control-Allow-Headers": "content-type" } }));
+  if (request.method === "OPTIONS") return cors(request, env, new Response(null, { headers: { "Access-Control-Allow-Methods": "GET,POST,PUT,OPTIONS", "Access-Control-Allow-Headers": "content-type,authorization" } }));
   if (!originAllowed(request, env)) return new Response("Forbidden origin", { status: 403 });
   try {
     if (url.pathname === "/api/session") return cors(request, env, json({ authenticated: Boolean(await session(request, env)) }));
