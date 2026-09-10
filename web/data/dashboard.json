@@ -2,8 +2,8 @@
   "date": "2026-09-10",
   "state": "READY",
   "publishTime": "20:00",
-  "revision": 1,
-  "generatedAt": "2026-09-10T14:56:04.8904873+00:00",
+  "revision": 2,
+  "generatedAt": "2026-09-10T15:20:38.0810639+00:00",
   "publishedAt": null,
   "health": "DEGRADED",
   "manualCounts": {
@@ -17,9 +17,9 @@
     "\u5B98\u65B9\u89C6\u9891": 40,
     "BGI \u672C\u4F53": 1,
     "BGI Scripts": 4,
-    "\u7F8E\u56FE\u5019\u9009": 203
+    "\u7F8E\u56FE\u5019\u9009": 21
   },
-  "artworkPending": 201,
+  "artworkPending": 20,
   "conflictCount": 0,
   "repositoryUrl": "https://github.com/Tooltingsu/qimiao-daily",
   "providers": [
@@ -27,42 +27,42 @@
       "provider": "GitHub:babalae/better-genshin-impact",
       "status": "HEALTHY",
       "message": "1 commits in [2026-09-09T18:00:00.0000000\u002B08:00, 2026-09-10T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     },
     {
       "provider": "GitHub:babalae/bettergi-scripts-list",
       "status": "HEALTHY",
       "message": "4 commits in [2026-09-09T18:00:00.0000000\u002B08:00, 2026-09-10T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:GENSHIN",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:STARRAIL",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:NTE",
       "status": "FAILED",
-      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Pixiv",
       "status": "HEALTHY",
-      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
-      "checkedAt": "2026-09-10T14:55:48.5627722+00:00",
+      "message": "Replaced unqueued candidates with the latest 20; 30 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-10T15:20:21.4652888+00:00",
       "usedCachedData": false
     }
   ],
