@@ -47,7 +47,7 @@ async function forceArtworkRefresh(){
   button.disabled=true;status.textContent="正在提交美图检索任务…";
   try {
     const r=await fetch(`${api}/api/collect-artwork`,{method:"POST",credentials:"include",headers:editorHeaders()});
-    if(r.status===401||r.status===403){button.disabled=false;status.textContent=r.status===403?"需要更新 GitHub 授权以允许启动 Actions：已在新窗口打开授权页。完成后回到此页，再点击一次“强制刷新候选”。":"需要 GitHub 授权：已在新窗口打开登录页。完成后回到此页，再点击一次“强制刷新候选”。";window.open(`${api}/api/login?returnTo=${encodeURIComponent(location.href)}`,"qimiao-github-auth","popup,width=620,height=760");return;}
+    if(r.status===403){button.disabled=false;localStorage.removeItem(editorSessionKey);status.textContent="当前 GitHub 授权仍是旧权限，无法启动 Actions。请先在 GitHub 的 Authorized OAuth Apps 页面撤销 “Qimiao Daily Web Editor”，然后回到此页再点按钮以重新授权。";const link=document.createElement("a");link.href="https://github.com/settings/applications";link.target="_blank";link.rel="noreferrer";link.textContent=" 打开 GitHub 授权管理";status.append(link);return;}if(r.status===401){button.disabled=false;status.textContent="需要 GitHub 授权：已在新窗口打开登录页。完成后回到此页，再点击一次“强制刷新候选”。";window.open(`${api}/api/login?returnTo=${encodeURIComponent(location.href)}`,"qimiao-github-auth","popup,width=620,height=760");return;}
     const result=await r.json().catch(()=>({}));
     if(!r.ok){button.disabled=false;status.textContent=result.error||"触发失败";return;}
     status.textContent="请求已提交，等待 GitHub 创建采集任务…";trackArtworkRefresh(api,result.requestedAt,button,status);
