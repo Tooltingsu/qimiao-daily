@@ -1,34 +1,50 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "ad68aae966d619343f02dda156833e47cf810ac9",
+    "sha": "d0235776157ab7ebffbe069cd311752772d0a3aa",
+    "subject": "AutoPlan\u81EA\u52A8\u4F53\u529B\u8BA1\u5212-0.1.4 (#3628)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/d0235776157ab7ebffbe069cd311752772d0a3aa",
+    "committedAt": "2026-09-10T11:31:57+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "4dcec436b856552df19397a38b28aa3161e2e540",
+    "subject": "\u6728\u5076\u661F\u8D85\u5BFC\u3001\u68A6\u89C1\u5965\u9EDB\u5854  \u81EA\u52A8\u6218\u6597\u811A\u672C (#3639)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/4dcec436b856552df19397a38b28aa3161e2e540",
+    "committedAt": "2026-09-10T11:40:13+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "e3953bab38eefb995969056d32a1d45c984d2ce2",
+    "subject": "\u63D0\u74E6\u7279\u98DF\u6750\u4E00\u6761\u9F99 (#3641)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/e3953bab38eefb995969056d32a1d45c984d2ce2",
+    "committedAt": "2026-09-10T12:20:31+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "22a9642692eadc089565346bb31dc5cd9ff55725",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/ad68aae966d619343f02dda156833e47cf810ac9",
-    "committedAt": "2026-09-09T14:18:08+00:00",
-    "fetchedAt": "2026-09-10T15:20:21.4652888+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/22a9642692eadc089565346bb31dc5cd9ff55725",
+    "committedAt": "2026-09-10T14:11:12+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "67236f5a68f82309eec8b15b974bd9cfb7859904",
-    "subject": "feat: \u5207\u6362\u5C0F\u9053\u5177\u589E\u52A0\u4FBF\u643A\u8425\u517B\u888B (#3633)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/67236f5a68f82309eec8b15b974bd9cfb7859904",
-    "committedAt": "2026-09-10T04:41:26+00:00",
-    "fetchedAt": "2026-09-10T15:20:21.4652888+00:00"
+    "sha": "f5a7331ddd1b6afb036cbe931e7482099c01ab8f",
+    "subject": "\u5207\u6362\u961F\u4F0D\uFF08BgiTools\u7248\uFF09 (#3629)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/f5a7331ddd1b6afb036cbe931e7482099c01ab8f",
+    "committedAt": "2026-09-10T15:23:46+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "e4e4c62500a9a303665276331ef15fd49ea7c9e5",
-    "subject": "\u81EA\u52A8\u8D2D\u4E70\u72D7\u7CAE 2.6.5 (#3635)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/e4e4c62500a9a303665276331ef15fd49ea7c9e5",
-    "committedAt": "2026-09-10T04:45:49+00:00",
-    "fetchedAt": "2026-09-10T15:20:21.4652888+00:00"
-  },
-  {
-    "repository": "babalae/bettergi-scripts-list",
-    "sha": "67707c50e12f2a8115c18f3f815a215dcd845a8f",
-    "subject": "\u4FEE\u6B63\u56FE\u7247\u76EE\u5F55 (#3638)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/67707c50e12f2a8115c18f3f815a215dcd845a8f",
-    "committedAt": "2026-09-10T04:46:11+00:00",
-    "fetchedAt": "2026-09-10T15:20:21.4652888+00:00"
+    "sha": "22d10e633fc9e03385b7766a66772d9a1aad2936",
+    "subject": "chore(deps): bump sharp from 0.35.3 to 0.35.4 in /repo/js/ArtifactScore (#3645)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/22d10e633fc9e03385b7766a66772d9a1aad2936",
+    "committedAt": "2026-09-11T05:42:14+00:00",
+    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
   }
 ]
