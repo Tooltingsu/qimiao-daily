@@ -1,32 +1,6 @@
 [
   {
     "platform": "PIXIV",
-    "artworkId": "149119754",
-    "character": "\u80E1\u6843",
-    "franchise": "GENSHIN",
-    "title": "260831",
-    "author": "\u5B89\u54C8\u5A1C",
-    "sourceUrl": "https://www.pixiv.net/artworks/149119754",
-    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/custom-thumb/img/2026/08/31/21/16/39/149119754_p0_custom1200.jpg",
-    "previewUrl": "assets/artwork-preview/pixiv-149119754.jpg",
-    "reviewStatus": "CONFIRMED",
-    "queueOrder": 1
-  },
-  {
-    "platform": "PIXIV",
-    "artworkId": "149246332",
-    "character": "\u4ECA\u6C50",
-    "franchise": "\u9E23\u6F6E",
-    "title": "\u4ECA\u6C50",
-    "author": "\u662F\u54B8\u9C7C\u554A",
-    "sourceUrl": "https://www.pixiv.net/artworks/149246332",
-    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
-    "previewUrl": "assets/artwork-preview/pixiv-149246332.jpg",
-    "reviewStatus": "PENDING",
-    "queueOrder": null
-  },
-  {
-    "platform": "PIXIV",
     "artworkId": "149357144",
     "character": "\u4ECA\u6C50",
     "franchise": "\u9E23\u6F6E",
@@ -36,7 +10,20 @@
     "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/06/21/25/19/149357144_p0_square1200.jpg",
     "previewUrl": "assets/artwork-preview/pixiv-149357144.jpg",
     "reviewStatus": "PENDING",
-    "queueOrder": null
+    "queueOrder": 1
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149453197",
+    "character": "\u5361\u8299\u5361",
+    "franchise": "STARRAIL",
+    "title": "\u30AB\u30D5\u30AB\uFF08\u5D29\u58CA\uFF1A\u30B9\u30BF\u30FC\u30EC\u30A4\u30EB\uFF09",
+    "author": "manest",
+    "sourceUrl": "https://www.pixiv.net/artworks/149453197",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/09/10/37/48/149453197_p0_square1200.jpg",
+    "previewUrl": "assets/artwork-preview/pixiv-149453197.jpg",
+    "reviewStatus": "PENDING",
+    "queueOrder": 2
   },
   {
     "platform": "PIXIV",
@@ -49,18 +36,44 @@
     "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/07/23/43/33/149402851_p0_square1200.jpg",
     "previewUrl": "assets/artwork-preview/pixiv-149402851.jpg",
     "reviewStatus": "PENDING",
-    "queueOrder": null
+    "queueOrder": 3
   },
   {
     "platform": "PIXIV",
-    "artworkId": "149453197",
-    "character": "\u5361\u8299\u5361",
-    "franchise": "STARRAIL",
-    "title": "\u30AB\u30D5\u30AB\uFF08\u5D29\u58CA\uFF1A\u30B9\u30BF\u30FC\u30EC\u30A4\u30EB\uFF09",
-    "author": "manest",
-    "sourceUrl": "https://www.pixiv.net/artworks/149453197",
-    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/09/10/37/48/149453197_p0_square1200.jpg",
-    "previewUrl": "assets/artwork-preview/pixiv-149453197.jpg",
+    "artworkId": "149403724",
+    "character": "\u742A\u4E9A\u5A1C",
+    "franchise": "HI3",
+    "title": "Playful Kiana",
+    "author": "Feroz",
+    "sourceUrl": "https://www.pixiv.net/artworks/149403724",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/08/00/00/15/149403724_p0_square1200.jpg",
+    "previewUrl": "assets/artwork-preview/pixiv-149403724.jpg",
+    "reviewStatus": "PENDING",
+    "queueOrder": 4
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149490572",
+    "character": "\u8299\u5B81\u5A1C",
+    "franchise": "GENSHIN",
+    "title": "\u52A0\u5F3A\u8299\u8299",
+    "author": "\u767D\u98DE\u98DE",
+    "sourceUrl": "https://www.pixiv.net/artworks/149490572",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/10/10/17/49/149490572_p0_square1200.jpg",
+    "previewUrl": "assets/artwork-preview/pixiv-149490572.jpg",
+    "reviewStatus": "PENDING",
+    "queueOrder": 5
+  },
+  {
+    "platform": "PIXIV",
+    "artworkId": "149246332",
+    "character": "\u4ECA\u6C50",
+    "franchise": "\u9E23\u6F6E",
+    "title": "\u4ECA\u6C50",
+    "author": "\u662F\u54B8\u9C7C\u554A",
+    "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+    "previewUrl": "assets/artwork-preview/pixiv-149246332.jpg",
     "reviewStatus": "PENDING",
     "queueOrder": null
   },
@@ -170,19 +183,6 @@
   },
   {
     "platform": "PIXIV",
-    "artworkId": "149403724",
-    "character": "\u742A\u4E9A\u5A1C",
-    "franchise": "HI3",
-    "title": "Playful Kiana",
-    "author": "Feroz",
-    "sourceUrl": "https://www.pixiv.net/artworks/149403724",
-    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/08/00/00/15/149403724_p0_square1200.jpg",
-    "previewUrl": "assets/artwork-preview/pixiv-149403724.jpg",
-    "reviewStatus": "PENDING",
-    "queueOrder": null
-  },
-  {
-    "platform": "PIXIV",
     "artworkId": "149412298",
     "character": "\u742A\u4E9A\u5A1C",
     "franchise": "HI3",
@@ -209,15 +209,15 @@
   },
   {
     "platform": "PIXIV",
-    "artworkId": "149490572",
-    "character": "\u8299\u5B81\u5A1C",
+    "artworkId": "149119754",
+    "character": "\u80E1\u6843",
     "franchise": "GENSHIN",
-    "title": "\u52A0\u5F3A\u8299\u8299",
-    "author": "\u767D\u98DE\u98DE",
-    "sourceUrl": "https://www.pixiv.net/artworks/149490572",
-    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/10/10/17/49/149490572_p0_square1200.jpg",
-    "previewUrl": "assets/artwork-preview/pixiv-149490572.jpg",
-    "reviewStatus": "PENDING",
+    "title": "260831",
+    "author": "\u5B89\u54C8\u5A1C",
+    "sourceUrl": "https://www.pixiv.net/artworks/149119754",
+    "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/custom-thumb/img/2026/08/31/21/16/39/149119754_p0_custom1200.jpg",
+    "previewUrl": "assets/artwork-preview/pixiv-149119754.jpg",
+    "reviewStatus": "CONFIRMED",
     "queueOrder": null
   },
   {
