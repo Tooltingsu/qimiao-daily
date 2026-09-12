@@ -17,7 +17,17 @@
     "sourceUrl": "https://www.youtube.com/watch?v=2uJw3z-cYlc",
     "publishedAt": "2026-08-26T18:00:39+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=Bi2Ldfr9In8",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Teyvat\u00A0Talks\u00A0-\u00A0\u0022Six\u00A0Years\u00A0of\u00A0Wonder\u0022\u00A0|\u00A06th\u00A0Anniversary\u00A0Messages\u00A0from\u00A0the\u00A0Voice\u00A0Cast #GenshinImpact",
+    "sourceUrl": "https://www.youtube.com/watch?v=Bi2Ldfr9In8",
+    "publishedAt": "2026-09-12T21:40:12+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=D6JMBQzxb_Y",
@@ -40,6 +50,56 @@
     "fetchedAt": "2026-09-09T15:03:20.6339184+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=Et8dXXOqQZA",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 Trailer (Extract 2) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=Et8dXXOqQZA",
+    "publishedAt": "2026-09-12T21:17:37+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=EwWbahV3qmU",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 \u0022A Rekviem for the Underworld\u0022 Trailer | Genshin Impact #StoriesofFrostSnow",
+    "sourceUrl": "https://www.youtube.com/watch?v=EwWbahV3qmU",
+    "publishedAt": "2026-09-12T21:15:38+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=fSwBYIeAieo",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Genshin Impact Version 7.1 Special Program #StoriesofFrostSnow #GenshinSnezhnaya #SpecialProgram",
+    "sourceUrl": "https://www.youtube.com/watch?v=fSwBYIeAieo",
+    "publishedAt": "2026-09-12T20:00:06+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=J7cCSEX1zuE",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "\u0022Snowy Banquet\u0027s Sharp Blade\u0022 Vesna | Riding the Winds, Subduing the Snowlands #Vesna",
+    "sourceUrl": "https://www.youtube.com/watch?v=J7cCSEX1zuE",
+    "publishedAt": "2026-09-12T12:00:10+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=JbrNt_gewBI",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 \u0022A Rekviem for the Underworld\u0022 Events Overview | Genshin Impact #StoriesofFrostSnow",
+    "sourceUrl": "https://www.youtube.com/watch?v=JbrNt_gewBI",
+    "publishedAt": "2026-09-12T21:20:17+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=jV-WWLmmPNA",
     "game": "GENSHIN",
     "type": "VIDEO",
@@ -47,7 +107,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=jV-WWLmmPNA",
     "publishedAt": "2026-09-10T13:00:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=LmkcqLBdn5o",
@@ -57,7 +117,17 @@
     "sourceUrl": "https://www.youtube.com/watch?v=LmkcqLBdn5o",
     "publishedAt": "2026-08-25T18:00:28+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=lo7gcAwVMdo",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 Event Wishes Announcement #StoriesofFrostSnow #GenshinSnezhnaya #Vesna #Vodyanitsa",
+    "sourceUrl": "https://www.youtube.com/watch?v=lo7gcAwVMdo",
+    "publishedAt": "2026-09-12T21:35:17+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mh3CY72-Hlc",
@@ -70,6 +140,16 @@
     "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=NI1Xor5XOWI",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 Trailer (Extract 4) | Genshin Impact #NewVersion #StoriesofFrostSnow #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=NI1Xor5XOWI",
+    "publishedAt": "2026-09-12T21:19:07+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=nPYBrMzc6ew",
     "game": "GENSHIN",
     "type": "VIDEO",
@@ -78,6 +158,16 @@
     "publishedAt": "2026-08-21T18:00:15+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=r6Ez40caiEE",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 Trailer (Extract 3) | Genshin Impact #NewVersion #StoriesofFrostSnow #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=r6Ez40caiEE",
+    "publishedAt": "2026-09-12T21:18:32+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=s5u5aSDvk0A",
@@ -137,7 +227,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=UpPSe3HbZDI",
     "publishedAt": "2026-08-31T11:00:16+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=Uxk2SMt-fIY",
@@ -148,6 +238,26 @@
     "publishedAt": "2026-08-21T12:00:31+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=yDcKPxia30Q",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "\u0022Lingering Siren-Song\u0022 Vodyanitsa | Fleet of Form, Sweet of Song #GenshinSnezhnaya #Vodyanitsa",
+    "sourceUrl": "https://www.youtube.com/watch?v=yDcKPxia30Q",
+    "publishedAt": "2026-09-12T12:00:04+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=yELkSvTU-VQ",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Version 7.1 Trailer (Extract 1) | Genshin Impact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=yELkSvTU-VQ",
+    "publishedAt": "2026-09-12T21:16:05+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=YridTO5hKfM",
@@ -177,7 +287,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=_6We4RCsbto",
     "publishedAt": "2026-09-08T12:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=-Tb0gXqTFdM",
@@ -187,7 +297,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=-Tb0gXqTFdM",
     "publishedAt": "2026-08-22T12:00:38+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=0sYwFEhy5Xk",
@@ -207,7 +317,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=aaYSx9xe2wo",
     "publishedAt": "2026-08-31T12:00:24+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=AWXzM3TaCH0",
@@ -217,7 +327,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=AWXzM3TaCH0",
     "publishedAt": "2026-09-09T18:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=Ayy5xkqRlhs",
@@ -227,7 +337,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=Ayy5xkqRlhs",
     "publishedAt": "2026-09-04T11:00:13+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "7ad50172-5192-493e-9813-61c9fb282855",
@@ -257,7 +367,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=DffpDIBe158",
     "publishedAt": "2026-09-07T12:00:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=ELm5wbyWeUw",
@@ -267,7 +377,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=ELm5wbyWeUw",
     "publishedAt": "2026-09-11T20:00:15+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=F5FrLb4pjY4",
@@ -277,7 +387,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=F5FrLb4pjY4",
     "publishedAt": "2026-09-04T12:00:05+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=f9V2PM5-Y_g",
@@ -287,7 +397,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=f9V2PM5-Y_g",
     "publishedAt": "2026-08-26T11:00:15+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=fCnZYvBjOSA",
@@ -297,7 +407,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=fCnZYvBjOSA",
     "publishedAt": "2026-09-10T12:00:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=hpqKHn0yS7I",
@@ -307,7 +417,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=hpqKHn0yS7I",
     "publishedAt": "2026-08-25T12:00:39+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "cdca9c2b-2df7-4351-a1ca-089608a63296",
@@ -327,7 +437,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=iF654p9vwsk",
     "publishedAt": "2026-08-26T17:00:10+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=MwGRX73a4f4",
@@ -347,7 +457,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=oMw1Wtcn20Q",
     "publishedAt": "2026-08-27T20:00:13+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=p1LQunqUYnE",
@@ -367,7 +477,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=pzXW1FydqnE",
     "publishedAt": "2026-09-06T12:00:26+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=r2ZUaFTmQ9g",
@@ -407,6 +517,6 @@
     "sourceUrl": "https://www.youtube.com/watch?v=ZiHFH-4uIsw",
     "publishedAt": "2026-08-25T20:00:32+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+    "fetchedAt": "2026-09-12T13:55:39.8125459+00:00"
   }
 ]
