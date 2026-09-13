@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-13",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "dc295c8799a78ee39cf8c113efa04e567e59bf46",
+  "reportHash": "sha256:1e486a9032c43acf4f1b6e7d6e133789fc6da3ff5ca6d69108e4a96071620e45",
+  "generatedAt": "2026-09-13T14:51:53.6965446+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670813\u65E5\uFF0C\u661F\u671F\u65E5\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u963F\u8D1D\u591A\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6DD8\u65B9\u65AF\u8BB0\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u5468\u671F\u73A9\u6CD5\u300C\u865A\u6784\u53D9\u4E8B\u300D\u660E\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Genshin Impact Version 7.1 Special Program #StoriesofFrostSnow #GenshinSnezhnaya #SpecialProgram\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 \u0022A Rekviem for the Underworld\u0022 Trailer | Genshin Impact #StoriesofFrostSnow\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 Trailer (Extract 1) | Genshin Impact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 Trailer (Extract 2) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 Trailer (Extract 3) | Genshin Impact #NewVersion #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 Trailer (Extract 4) | Genshin Impact #NewVersion #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 \u0022A Rekviem for the Underworld\u0022 Events Overview | Genshin Impact #StoriesofFrostSnow\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.1 Event Wishes Announcement #StoriesofFrostSnow #GenshinSnezhnaya #Vesna #Vodyanitsa\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Teyvat\u00A0Talks\u00A0-\u00A0\u0022Six\u00A0Years\u00A0of\u00A0Wonder\u0022\u00A0|\u00A06th\u00A0Anniversary\u00A0Messages\u00A0from\u00A0the\u00A0Voice\u00A0Cast #GenshinImpact\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-\u4E16\u754C\u8FCE\u6765\u4E86\u0022\u5927LLM\u65F6\u4EE3\u0022 (#3584) (4f5ef08)\n-\u66F4\u65B0 TemplateMatch \u5730\u56FE\u8FFD\u8E2A\u76F8\u5173\u8D44\u6E90\u5230 7.0 (7eb493b)\n-Update version to 0.64.2-alpha.3 (4662118)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (8d827d2)\n-\u81EA\u52A8\u8D2D\u4E70\u5546\u54C1 3.6.1 \u0026 3.6.2 (#3649) (999a95e)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:fe72aa954e84f15cfbe2aae031b8d1a2f32c61e4ce3d93a1629be8b0cf2e4f50",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-12T18:00:00.0000000\u002B08:00, 2026-09-13T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-09-12T18:00:00.0000000\u002B08:00, 2026-09-13T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 19 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-13T14:51:38.0174181+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
