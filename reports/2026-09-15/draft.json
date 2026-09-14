@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-15",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "558753eb4a74736a7f98de61d2237471fef148a4",
+  "reportHash": "sha256:b61178062afb2b74fad142ecf3b4e8645dde8ea8d6b89546e78d5c8cfbb4ed95",
+  "generatedAt": "2026-09-14T16:51:51.9114025+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670815\u65E5\uFF0C\u661F\u671F\u4E8C\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u6D3B\u52A8\u300C\u9669\u5883\u5F81\u8005\u7ADE\u950B\u5927\u8D5B\u300D\u5269\u4F59 0\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5076\u7D20\u6EA2\u51FA\u300D\u5269\u4F59 0\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u539F\u795E \u6D3B\u52A8\u300C\u76DB\u6750\u79FB\u6D8C\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u539F\u795E \u5468\u671F\u73A9\u6CD5\u300C\u6DF1\u5883\u87BA\u65CB\u300D\u660E\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010See these little things flying around me? #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u53D1\u5E03\u89C6\u9891\u3010Honkai: Star Rail Version 4.6 \u0022Dance With the Beast Before Moonrise\u0022 Special Program\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-AutoCombo \u4FEE\u8865\u82E5\u5E72\u5219 (#3668) (7519ccb)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (fd9008b)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:67255751d0dca078309933376b4b7d0751faa2866b91f74a4674e59dd4cff73b",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-14T18:00:00.0000000\u002B08:00, 2026-09-15T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-14T18:00:00.0000000\u002B08:00, 2026-09-15T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 22 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-14T16:51:34.9504101+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
