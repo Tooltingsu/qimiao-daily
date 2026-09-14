@@ -1,26 +1,10 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "4f5ef08c1f845ab51c305f270a58fb8d4be274b0",
-    "subject": "\u4E16\u754C\u8FCE\u6765\u4E86\u0022\u5927LLM\u65F6\u4EE3\u0022 (#3584)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/4f5ef08c1f845ab51c305f270a58fb8d4be274b0",
-    "committedAt": "2026-09-12T16:21:39+00:00",
-    "fetchedAt": "2026-09-13T14:51:38.0174181+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "7eb493bc335621f5557d308c19362b546e8af000",
-    "subject": "\u66F4\u65B0 TemplateMatch \u5730\u56FE\u8FFD\u8E2A\u76F8\u5173\u8D44\u6E90\u5230 7.0",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/7eb493bc335621f5557d308c19362b546e8af000",
-    "committedAt": "2026-09-13T04:25:09+00:00",
-    "fetchedAt": "2026-09-13T14:51:38.0174181+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "4662118f59eb923bf870020cbb8c22762f0c9080",
-    "subject": "Update version to 0.64.2-alpha.3",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/4662118f59eb923bf870020cbb8c22762f0c9080",
-    "committedAt": "2026-09-13T04:41:27+00:00",
-    "fetchedAt": "2026-09-13T14:51:38.0174181+00:00"
+    "sha": "7519ccb9e4c101b38928ca1249131962aa77b254",
+    "subject": "AutoCombo \u4FEE\u8865\u82E5\u5E72\u5219 (#3668)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/7519ccb9e4c101b38928ca1249131962aa77b254",
+    "committedAt": "2026-09-14T15:18:56+00:00",
+    "fetchedAt": "2026-09-14T16:51:34.9504101+00:00"
   }
 ]
