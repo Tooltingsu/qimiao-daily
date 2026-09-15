@@ -1,17 +1,19 @@
 今天是2026年9月15日，星期二
 
 游戏活动预览
--原神 活动「险境征者竞锋大赛」剩余 0天3小时，将于今日04:00结束
--异环 活动「偶素溢出」剩余 0天3小时，将于今日04:00结束
+-原神 活动「险境征者竞锋大赛」将于今日04:00结束
+-异环 活动「偶素溢出」将于今日04:00结束
 -原神 活动「盛材移涌」今日04:00开始
 -原神 周期玩法「深境螺旋」明日04:00刷新
 -原神 发布视频【See these little things flying around me? #Vesna #StoriesofFrostSnow #GenshinSnezhnaya】
 -崩坏：星穹铁道 发布视频【Honkai: Star Rail Version 4.6 "Dance With the Beast Before Moonrise" Special Program】
+-崩坏：星穹铁道 发布视频【"Aha Instant" | #AeonAha】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
 -AutoCombo 修补若干则 (#3668) (7519ccb)
+-Revert "fix: 提高背包尘歌壶进入流程可靠性" (#3672) (05b074c)
 
 BGI仓库更新
 -update repo.json [skip ci] (fd9008b)
