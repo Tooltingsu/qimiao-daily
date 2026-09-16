@@ -1,18 +1,5 @@
 [
   {
-    "ruleId": "GENSHIN_SPIRAL_ABYSS",
-    "game": "GENSHIN",
-    "name": "\u6DF1\u5883\u87BA\u65CB",
-    "scheduledStart": "2026-08-16",
-    "startsOn": "2026-08-16",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-09-16",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_MEMORY_OF_CHAOS",
     "game": "STARRAIL",
     "name": "\u6DF7\u6C8C\u56DE\u5FC6",
@@ -229,6 +216,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2026-12-21",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "GENSHIN_SPIRAL_ABYSS",
+    "game": "GENSHIN",
+    "name": "\u6DF1\u5883\u87BA\u65CB",
+    "scheduledStart": "2026-11-16",
+    "startsOn": "2026-11-16",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2026-12-16",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
