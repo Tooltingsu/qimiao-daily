@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-16",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "5c3e443aec8f9902c722b2dd3d22c4edcfd3506f",
+  "reportHash": "sha256:86fa6e6220755b36f8b0b4ec2b3577f3bb54fd814b4082242d5788110a91362b",
+  "generatedAt": "2026-09-16T15:22:13.3867834+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670816\u65E5\uFF0C\u661F\u671F\u4E09\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u6D3B\u52A8\u300C\u7981\u754C\u62DF\u60F3\u9635\u5730\u6218\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u539F\u795E \u5468\u671F\u73A9\u6CD5\u300C\u6DF1\u5883\u87BA\u65CB\u300D\u4ECA\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010You fell for it, Danica! Hehe~ #GenshinImpact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Character Teaser - \u0022Vesna: The \u0027Vilatrace\u0027\u0022 | Genshin Impact #Vesna #StoriesofFrostSnow\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Vesna\u0027s Character Teaser (Extract 1) | Genshin Impact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Vesna\u0027s Character Teaser (Extract 2) | Genshin Impact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Vesna\u0027s Character Teaser (Extract 3) | Genshin Impact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010\u0022A new day! Good morning, Snezhnograd!\u0022 #GenshinImpact #Vesna #StoriesofFrostSnow\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-Feat/wgcv2 freethreaded \u65B0\u589Ewgcv2\u622A\u56FE (#3630) (491b55b)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-AutoFishingTeyvat\u3010\u66F4\u65B0\u3011 (#3513) (55fb3a4)\n-update repo.json [skip ci] (a8f03e6)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:a38172c064004ed695a1e92be3edfc1d231b9e93fd2d73e1ec46f655bc1fe778",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-15T18:00:00.0000000\u002B08:00, 2026-09-16T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-09-15T18:00:00.0000000\u002B08:00, 2026-09-16T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "FAILED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 18 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-16T15:21:56.2639382+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
