@@ -1,18 +1,10 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "7519ccb9e4c101b38928ca1249131962aa77b254",
-    "subject": "AutoCombo \u4FEE\u8865\u82E5\u5E72\u5219 (#3668)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/7519ccb9e4c101b38928ca1249131962aa77b254",
-    "committedAt": "2026-09-14T15:18:56+00:00",
-    "fetchedAt": "2026-09-15T15:29:37.2301959+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "05b074ccd4e108a2899689c801b625cf08ff1576",
-    "subject": "Revert \u0022fix: \u63D0\u9AD8\u80CC\u5305\u5C18\u6B4C\u58F6\u8FDB\u5165\u6D41\u7A0B\u53EF\u9760\u6027\u0022 (#3672)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/05b074ccd4e108a2899689c801b625cf08ff1576",
-    "committedAt": "2026-09-14T18:21:02+00:00",
-    "fetchedAt": "2026-09-15T15:29:37.2301959+00:00"
+    "sha": "491b55bcb5fd99bf45e4a0aa4e8d888d2c1204d3",
+    "subject": "Feat/wgcv2 freethreaded \u65B0\u589Ewgcv2\u622A\u56FE (#3630)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/491b55bcb5fd99bf45e4a0aa4e8d888d2c1204d3",
+    "committedAt": "2026-09-16T06:08:28+00:00",
+    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
   }
 ]

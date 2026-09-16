@@ -1,10 +1,18 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "fd9008b55e20a5add57992805470c9bcf094f026",
+    "sha": "55fb3a434b6b8c4d1220b7bab7ebc59d28518c72",
+    "subject": "AutoFishingTeyvat\u3010\u66F4\u65B0\u3011 (#3513)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/55fb3a434b6b8c4d1220b7bab7ebc59d28518c72",
+    "committedAt": "2026-09-15T13:48:40+00:00",
+    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "a8f03e601d65bf5e4c929cc531c0c5f56f67fbfd",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/fd9008b55e20a5add57992805470c9bcf094f026",
-    "committedAt": "2026-09-14T16:15:56+00:00",
-    "fetchedAt": "2026-09-15T15:29:37.2301959+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/a8f03e601d65bf5e4c929cc531c0c5f56f67fbfd",
+    "committedAt": "2026-09-15T14:46:30+00:00",
+    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
   }
 ]
