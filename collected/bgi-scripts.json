@@ -1,18 +1,42 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "55fb3a434b6b8c4d1220b7bab7ebc59d28518c72",
-    "subject": "AutoFishingTeyvat\u3010\u66F4\u65B0\u3011 (#3513)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/55fb3a434b6b8c4d1220b7bab7ebc59d28518c72",
-    "committedAt": "2026-09-15T13:48:40+00:00",
-    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
+    "sha": "38c45e63d8f31a8e4a8ab70cd6d3218598bd6e6f",
+    "subject": "AutoFishingTeyvat\u3001AutoFishingTeyvat_Bait\u3001AutoYuanQin\u3010\u66F4\u65B0\u3011 (#3658)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/38c45e63d8f31a8e4a8ab70cd6d3218598bd6e6f",
+    "committedAt": "2026-09-16T14:01:22+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "a8f03e601d65bf5e4c929cc531c0c5f56f67fbfd",
+    "sha": "c13f63fa9586f0270cac4f252da5ba1ef877f1b2",
+    "subject": "\u540C\u6B65 AutoCommissionNova 1.0.4 (#3657)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/c13f63fa9586f0270cac4f252da5ba1ef877f1b2",
+    "committedAt": "2026-09-16T14:02:59+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "fce69e865cfedcafdb75a3165813702d6120a90e",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/a8f03e601d65bf5e4c929cc531c0c5f56f67fbfd",
-    "committedAt": "2026-09-15T14:46:30+00:00",
-    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/fce69e865cfedcafdb75a3165813702d6120a90e",
+    "committedAt": "2026-09-16T14:44:59+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "9f0eba86e76e9c3f19cc67f26c0166303b3316dc",
+    "subject": "\u66F4\u65B0 (#3659)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/9f0eba86e76e9c3f19cc67f26c0166303b3316dc",
+    "committedAt": "2026-09-17T05:09:53+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "33564010a1dbffb05c2d8cf0f075b3c5a68691c1",
+    "subject": "\u66F4\u65B02.1.1 (#3660)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/33564010a1dbffb05c2d8cf0f075b3c5a68691c1",
+    "committedAt": "2026-09-17T05:10:09+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
   }
 ]

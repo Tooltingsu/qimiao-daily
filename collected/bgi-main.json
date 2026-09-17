@@ -1,10 +1,10 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "491b55bcb5fd99bf45e4a0aa4e8d888d2c1204d3",
-    "subject": "Feat/wgcv2 freethreaded \u65B0\u589Ewgcv2\u622A\u56FE (#3630)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/491b55bcb5fd99bf45e4a0aa4e8d888d2c1204d3",
-    "committedAt": "2026-09-16T06:08:28+00:00",
-    "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
+    "sha": "f29b0828ab4f8f91d9087152dcb487719e80fa16",
+    "subject": "Update version to 0.65.0",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/f29b0828ab4f8f91d9087152dcb487719e80fa16",
+    "committedAt": "2026-09-16T16:30:34+00:00",
+    "fetchedAt": "2026-09-17T15:28:39.5121326+00:00"
   }
 ]
