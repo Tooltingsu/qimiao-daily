@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-17",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "22a5a66bd12eaa89cbaead54610b22343e534a9b",
+  "reportHash": "sha256:c9d272a290394f96a83028fcf0c1bcf99aec204e28bba16b5ec19d789d9a399b",
+  "generatedAt": "2026-09-17T15:28:54.3820036+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670817\u65E5\uFF0C\u661F\u671F\u56DB\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u6D3B\u52A8\u300C\u7981\u754C\u62DF\u60F3\u9635\u5730\u6218\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5468\u671F\u73A9\u6CD5\u300C\u8F68\u5916\u4E4B\u5883\u300D\u660E\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Where Mercy Endures - Disc 1: Swept in Frost\uFF5CGenshin Impact #GenshinImpact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Where Mercy Endures - Disc 2: The Endless Road\uFF5CGenshin Impact #GenshinImpact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Where Mercy Endures - Disc 3: Untroubled Bliss\uFF5CGenshin Impact #GenshinImpact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Where Mercy Endures - Disc 4: Shifting Shadows, Wavering Minds\uFF5CGenshin Impact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Now it\u0027s time to get out on patrol. C\u0027mon, let\u0027s go~ #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u5F02\u73AF \u53D1\u5E03\u89C6\u9891\u3010\u300A\u5F02\u73AF\u300B1.4\u7248\u672C\u524D\u77BB\u7279\u522B\u8282\u76EE\u56DE\u987E\u3011\n-\u5F02\u73AF \u53D1\u5E03\u89C6\u9891\u3010\u300A\u5F02\u73AF\u300B1.4\u7248\u672CPV\u300C\u7977\u6B4C\u4E3A\u8C01\u800C\u8BF5\u300D\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Character Teaser - \u0022Vodyanitsa: A Song from the Heart\u0022 | Genshin Impact #Vodyanitsa\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Vodyanitsa\u0027s Character Teaser (Extract 1) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Vodyanitsa\u0027s Character Teaser (Extract 2) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-Update version to 0.65.0 (f29b082)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-AutoFishingTeyvat\u3001AutoFishingTeyvat_Bait\u3001AutoYuanQin\u3010\u66F4\u65B0\u3011 (#3658) (38c45e6)\n-\u540C\u6B65 AutoCommissionNova 1.0.4 (#3657) (c13f63f)\n-update repo.json [skip ci] (fce69e8)\n-\u66F4\u65B0 (#3659) (9f0eba8)\n-\u66F4\u65B02.1.1 (#3660) (3356401)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "HEALTHY",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:044d8469aee872bd996908c2dc8150062edca15f9c5593202b467076632d75fe",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-16T18:00:00.0000000\u002B08:00, 2026-09-17T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "5 commits in [2026-09-16T18:00:00.0000000\u002B08:00, 2026-09-17T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 22 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-17T15:28:39.5121326+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
