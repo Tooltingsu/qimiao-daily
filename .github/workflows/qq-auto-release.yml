@@ -1,10 +1,11 @@
 name: QQ daily automatic release (text + artwork)
 
 on:
-  # 20:05–20:20 Asia/Shanghai (UTC+8). GitHub schedules are best-effort, so
-  # several watchdog invocations make a delayed 20:00 release recoverable.
+  # 20:05–20:20 Asia/Shanghai (UTC+8). The standard UTC-12 watchdog is
+  # retained, and UTC-08 is an observed scheduler-offset fallback. The runtime
+  # gate below is authoritative, so the non-matching watchdog safely exits.
   schedule:
-    - cron: "5,10,15,20 12 * * *"
+    - cron: "5,10,15,20 8,12 * * *"
 
 permissions:
   contents: write
