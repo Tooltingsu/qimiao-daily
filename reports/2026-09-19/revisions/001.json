@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-19",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "24eb9cb4d3b11e59a53003cf1edf97d37057ef3f",
+  "reportHash": "sha256:b0be59d211e6f935fa54e47dc05e4391c5db3e4a510fee905dee5706d35235ea",
+  "generatedAt": "2026-09-19T14:14:10.3151094+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670819\u65E5\uFF0C\u661F\u671F\u516D\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u5F02\u5668\u76C8\u754C\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u53D1\u5E03\u89C6\u9891\u3010\u300A\u5F02\u73AF\u300B\u89D2\u8272\u5B9E\u673A\u6218\u6597\u4E28\u9ED1\u7FBD\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (05da167)\n-js\uFF0C\u4FEE\u590D\u80CC\u5305\u6750\u6599\u7EDF\u8BA1js\uFF0C\u8BA1\u7B97\u4F4E\u6570\u91CF\u6750\u6599\u662F\uFF0C\u77FF\u77F3\u6570\u91CF\u672A/10\u7684bug (#3665) (33495fe)\n-\u5730\u56FE\u8FFD\u8E2A\u811A\u672C-\u654C\u4EBA\u4E0E\u9B54\u7269-\u5148\u9A71\u79D8\u6E90\u7EDF\u8F96\u9635\u5217 (#3662) (4a894b0)\n-js\uFF0C\u81EA\u52A8\u5BFB\u602A\uFF0C\u9700\u624B\u52A8\u6218\u6597 (#3646) (c657339)\n-AccountSwitchStateMachine\u4FEE\u590D\u767B\u5F55\u6846\u754C\u9762\u53EF\u80FD\u4F1A\u5047\u6027\u8BC6\u522B\u5BFC\u81F4\u7A0B\u5E8F\u5F02\u5E38\u7684\u60C5\u51B5 (#3587) (6ed5a42)\n-js\uFF1A\u65B0\u589E\u51B0\u9020\u7269 NPC \u70B9\u8D5E\u81EA\u52A8\u5316\u811A\u672C (#3613) (56dec40)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "HEALTHY",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:9d3aba26f6d5676ff6a9cd14457324065681f4f84f45d500fbd7cae46cf28c52",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "0 commits in [2026-09-18T18:00:00.0000000\u002B08:00, 2026-09-19T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "6 commits in [2026-09-18T18:00:00.0000000\u002B08:00, 2026-09-19T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 19 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-19T14:13:55.2867404+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
