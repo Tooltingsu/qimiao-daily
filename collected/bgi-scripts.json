@@ -1,50 +1,34 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "05da16794d9550463c00e6af13fbaf65304210a0",
+    "sha": "496e49770c6a740041efa3c41e53012487012b6e",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/05da16794d9550463c00e6af13fbaf65304210a0",
-    "committedAt": "2026-09-18T14:16:08+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/496e49770c6a740041efa3c41e53012487012b6e",
+    "committedAt": "2026-09-19T13:48:53+00:00",
+    "fetchedAt": "2026-09-20T14:37:10.6216897+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "33495fe5a2397b69153cd717fb3524614601dd8e",
-    "subject": "js\uFF0C\u4FEE\u590D\u80CC\u5305\u6750\u6599\u7EDF\u8BA1js\uFF0C\u8BA1\u7B97\u4F4E\u6570\u91CF\u6750\u6599\u662F\uFF0C\u77FF\u77F3\u6570\u91CF\u672A/10\u7684bug (#3665)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/33495fe5a2397b69153cd717fb3524614601dd8e",
-    "committedAt": "2026-09-18T16:07:29+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
+    "sha": "4a1f9f2101fe091f72558562461c6c28bd0eaf56",
+    "subject": "AIPC\u73CD\u8D35\u5B9D\u7BB1\u65E0\u9650\u5237 \u4FEE\u5FA9 (#3667)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/4a1f9f2101fe091f72558562461c6c28bd0eaf56",
+    "committedAt": "2026-09-19T16:46:04+00:00",
+    "fetchedAt": "2026-09-20T14:37:10.6216897+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "4a894b071123be8d16a7d273f34bd920640e683d",
-    "subject": "\u5730\u56FE\u8FFD\u8E2A\u811A\u672C-\u654C\u4EBA\u4E0E\u9B54\u7269-\u5148\u9A71\u79D8\u6E90\u7EDF\u8F96\u9635\u5217 (#3662)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/4a894b071123be8d16a7d273f34bd920640e683d",
-    "committedAt": "2026-09-18T16:13:12+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
+    "sha": "898712e9c9dd147a570ed2e12bfa8352a2ab03d9",
+    "subject": "fix: \u5168\u81EA\u52A8\u5468\u4E00\u65F6\u95F4\u6821\u9A8C (#3655)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/898712e9c9dd147a570ed2e12bfa8352a2ab03d9",
+    "committedAt": "2026-09-19T16:54:06+00:00",
+    "fetchedAt": "2026-09-20T14:37:10.6216897+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "c657339e58d555c0f5d75439b2792e94b62f1964",
-    "subject": "js\uFF0C\u81EA\u52A8\u5BFB\u602A\uFF0C\u9700\u624B\u52A8\u6218\u6597 (#3646)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/c657339e58d555c0f5d75439b2792e94b62f1964",
-    "committedAt": "2026-09-18T16:13:44+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
-  },
-  {
-    "repository": "babalae/bettergi-scripts-list",
-    "sha": "6ed5a42d5257f3b700ccc63d3ebc75238002a502",
-    "subject": "AccountSwitchStateMachine\u4FEE\u590D\u767B\u5F55\u6846\u754C\u9762\u53EF\u80FD\u4F1A\u5047\u6027\u8BC6\u522B\u5BFC\u81F4\u7A0B\u5E8F\u5F02\u5E38\u7684\u60C5\u51B5 (#3587)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/6ed5a42d5257f3b700ccc63d3ebc75238002a502",
-    "committedAt": "2026-09-18T16:16:03+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
-  },
-  {
-    "repository": "babalae/bettergi-scripts-list",
-    "sha": "56dec40ab538635f87468d15e14cd6bb93a24641",
-    "subject": "js\uFF1A\u65B0\u589E\u51B0\u9020\u7269 NPC \u70B9\u8D5E\u81EA\u52A8\u5316\u811A\u672C (#3613)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/56dec40ab538635f87468d15e14cd6bb93a24641",
-    "committedAt": "2026-09-18T16:27:26+00:00",
-    "fetchedAt": "2026-09-19T14:13:55.2867404+00:00"
+    "sha": "b1e7be8af92f58e2e82743777067b6065a9fb5e7",
+    "subject": "js\uFF1A\u4F18\u5316\u51B0\u9020\u7269 NPC \u70B9\u8D5E\u8DEF\u7EBF\u5E76\u65B0\u589E Point 10 (#3666)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/b1e7be8af92f58e2e82743777067b6065a9fb5e7",
+    "committedAt": "2026-09-19T16:58:36+00:00",
+    "fetchedAt": "2026-09-20T14:37:10.6216897+00:00"
   }
 ]
