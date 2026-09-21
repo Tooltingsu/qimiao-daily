@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-22",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "dccc65cb063828566e6e99498f57bd07ac70c7f4",
+  "reportHash": "sha256:42bc08410f3c6376e1182ce2c172191bd426b9542ec337fba157dcc383183da3",
+  "generatedAt": "2026-09-21T16:53:12.3378407+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670822\u65E5\uFF0C\u661F\u671F\u4E8C\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u827E\u6885\u8389\u57C3\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u6D3B\u52A8\u300C\u9B54\u795E\u4EFB\u52A1\u300C\u65E0\u795E\u601C\u7231\u7684\u96EA\u56FD\u300D\u9650\u5B9A\u5956\u52B1\u300D\u5269\u4F59 1\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u4F4D\u9762\u5206\u88C2\u300D\u5269\u4F59 0\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6DD8\u65B9\u65AF\u8BB0\u300D\u5269\u4F59 0\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u539F\u795E \u4E0B\u534A\u5361\u6C60\u300C7.0\u4E0B\u534A\uFF08\u83F2\u6797\u65AF\u3001\u4F0A\u6D85\u8299\uFF09\u300D\u5269\u4F59 0\u59293\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Isn\u0027t this outfit just gorgeous? #GenshinImpact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-Update version to 0.65.1-alpha.2 (248e1f0)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-\u63D0\u9AD8\u8DEF\u5F84\u517C\u5BB9\u6027 (#3671) (f1c037c)\n-update repo.json [skip ci] (b494fef)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:5224673f46da6bac8ccbd918f145b96484c640c3b7a208cab52b9c2e7a425119",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-09-21T18:00:00.0000000\u002B08:00, 2026-09-22T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-09-21T18:00:00.0000000\u002B08:00, 2026-09-22T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 12 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-21T16:52:56.5584693+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
