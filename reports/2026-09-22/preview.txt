@@ -5,11 +5,18 @@
 ——————————————————
 
 游戏活动预览
--原神 活动「魔神任务「无神怜爱的雪国」限定奖励」剩余 1天3小时，将于明日04:00结束
--崩坏：星穹铁道 活动「位面分裂」剩余 0天3小时，将于今日04:00结束
--异环 活动「淘方斯记」剩余 0天3小时，将于今日04:00结束
--原神 下半卡池「7.0下半（菲林斯、伊涅芙）」剩余 0天3小时，将于今日04:00结束
+-原神 活动「魔神任务「无神怜爱的雪国」限定奖励」剩余 0天4小时，将于明日04:00结束
+-崩坏：星穹铁道 活动「位面分裂」将于今日04:00结束
+-异环 活动「淘方斯记」将于今日04:00结束
+-原神 下半卡池「7.0下半（菲林斯、伊涅芙）」将于今日04:00结束
 -原神 发布视频【Isn't this outfit just gorgeous? #GenshinImpact #Vesna #StoriesofFrostSnow #GenshinSnezhnaya】
+-崩坏：星穹铁道 发布视频【Character Preview | Pearl】
+-崩坏：星穹铁道 发布视频【Keeping Up With Star Rail — Pearl: Deep Learning in Progress | Honkai: Star Rail】
+-原神 发布视频【Character Trailer - "Vodyanitsa: Tonight, We Sink as One" | Genshin Impact #Vodyanitsa】
+-原神 发布视频【Vodyanitsa's Character Trailer (Extract 1) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow】
+-原神 发布视频【Vodyanitsa's Character Trailer (Extract 2) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow】
+-原神 发布视频【Vodyanitsa's Character Trailer (Extract 3) | Genshin Impact #Vodyanitsa #StoriesofFrostSnow】
+-原神 发布视频【Let's watch the HoYoFair 2026 "Project: Nord Express" Special Program together! #HoYoFair】
 
 ——————————————————
 
@@ -19,6 +26,7 @@ BGI更新预告（所有改动随下一版本同步）
 BGI仓库更新
 -提高路径兼容性 (#3671) (f1c037c)
 -update repo.json [skip ci] (b494fef)
+-根据反馈调整问题路线，统一矿物名称 (#3677) (6106fe8)
 
 ——————————————————
 
