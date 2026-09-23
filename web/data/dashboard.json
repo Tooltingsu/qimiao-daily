@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "state": "READY",
   "publishTime": "20:00",
-  "revision": 2,
-  "generatedAt": "2026-09-22T15:28:07.7875689+00:00",
+  "revision": 1,
+  "generatedAt": "2026-09-23T15:22:22.0879078+00:00",
   "publishedAt": null,
-  "health": "DEGRADED",
+  "health": "HEALTHY",
   "manualCounts": {
     "\u6D3B\u52A8": 23,
     "\u5361\u6C60": 6,
@@ -13,56 +13,56 @@
     "\u7EAA\u5FF5\u65E5": 0
   },
   "automaticCounts": {
-    "\u5468\u671F\u73A9\u6CD5": 20,
-    "\u5B98\u65B9\u89C6\u9891": 121,
-    "BGI \u672C\u4F53": 1,
-    "BGI Scripts": 3,
-    "\u7F8E\u56FE\u5019\u9009": 230
+    "\u5468\u671F\u73A9\u6CD5": 19,
+    "\u5B98\u65B9\u89C6\u9891": 127,
+    "BGI \u672C\u4F53": 0,
+    "BGI Scripts": 1,
+    "\u7F8E\u56FE\u5019\u9009": 240
   },
-  "artworkPending": 229,
+  "artworkPending": 239,
   "conflictCount": 0,
   "repositoryUrl": "https://github.com/Tooltingsu/qimiao-daily",
   "providers": [
     {
       "provider": "GitHub:babalae/better-genshin-impact",
       "status": "HEALTHY",
-      "message": "1 commits in [2026-09-21T18:00:00.0000000\u002B08:00, 2026-09-22T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
+      "message": "0 commits in [2026-09-22T18:00:00.0000000\u002B08:00, 2026-09-23T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
       "usedCachedData": false
     },
     {
       "provider": "GitHub:babalae/bettergi-scripts-list",
       "status": "HEALTHY",
-      "message": "3 commits in [2026-09-21T18:00:00.0000000\u002B08:00, 2026-09-22T18:00:00.0000000\u002B08:00); complete window",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
+      "message": "1 commits in [2026-09-22T18:00:00.0000000\u002B08:00, 2026-09-23T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:GENSHIN",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:STARRAIL",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:NTE",
-      "status": "DEGRADED",
-      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
-      "usedCachedData": true
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
+      "usedCachedData": false
     },
     {
       "provider": "Pixiv",
       "status": "HEALTHY",
-      "message": "Added 9 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
-      "checkedAt": "2026-09-22T15:27:53.2884566+00:00",
+      "message": "Added 10 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-23T15:22:06.6577464+00:00",
       "usedCachedData": false
     }
   ],
