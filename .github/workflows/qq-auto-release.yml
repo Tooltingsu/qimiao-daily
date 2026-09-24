@@ -1,11 +1,11 @@
 name: QQ daily automatic release (text + artwork)
 
 on:
-  # 20:05–20:20 Asia/Shanghai (UTC+8). The standard UTC-12 watchdog is
-  # retained, and UTC-08 is an observed scheduler-offset fallback. The runtime
-  # gate below is authoritative, so the non-matching watchdog safely exits.
+  # Run every five minutes through the evening; GitHub may delay scheduled
+  # workflows, so the runtime gate accepts 20:00–22:00 Asia/Shanghai.
+  # Idempotency in publish-log still allows only one successful post per date.
   schedule:
-    - cron: "5,10,15,20 8,12 * * *"
+    - cron: "*/5 11-14 * * *"
 
 permissions:
   contents: write
@@ -44,9 +44,9 @@ jobs:
           now="$(TZ=Asia/Shanghai date +%H:%M)"
           today="$(TZ=Asia/Shanghai date +%F)"
           minutes=$((10#${now%:*} * 60 + 10#${now#*:}))
-          if [ "$minutes" -lt 1200 ] || [ "$minutes" -gt 1220 ]; then
+          if [ "$minutes" -lt 1200 ] || [ "$minutes" -gt 1320 ]; then
             echo "within_window=false" >> "$GITHUB_OUTPUT"
-            echo "Outside the 20:00–20:20 Shanghai watchdog window: $now"
+            echo "Outside the 20:00–22:00 Shanghai watchdog window: $now"
           else
             echo "within_window=true" >> "$GITHUB_OUTPUT"
             echo "report_date=$today" >> "$GITHUB_OUTPUT"
