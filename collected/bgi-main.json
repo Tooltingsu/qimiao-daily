@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "e14b28ddbaa66eb904bb2fbaf6d77ae8db70ab97",
+    "subject": "feat: \u4FEE\u6539\u9ED8\u8BA4\u7684\u56FE\u6807\u8BC6\u522B\u6A21\u578B (#3644)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/e14b28ddbaa66eb904bb2fbaf6d77ae8db70ab97",
+    "committedAt": "2026-09-23T16:02:17+00:00",
+    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "6efd4152905263fb24c9abc3f81b3173aae47212",
+    "subject": "fix: \u6218\u6597\u7B56\u7565\u5339\u914D\u4EBA\u6570\u76F8\u540C\u65F6\u4F18\u5148\u9009\u62E9\u5339\u914D\u6BD4\u4F8B\u66F4\u9AD8\u7684\u7B56\u7565 (#3698)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/6efd4152905263fb24c9abc3f81b3173aae47212",
+    "committedAt": "2026-09-23T16:05:57+00:00",
+    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "3b7ea40ba9b2e9129962fafb9007d44a75ca6cae",
+    "subject": "Reapply \u0022feat: \u81EA\u52A8\u8BC6\u522Bitem\u6240\u5C5E\u80CC\u5305\u9875,\u6839\u636E\u7269\u54C1\u7684\u987A\u5E8F\u63D0\u524D\u7ED3\u675F\u626B\u63CF\u8BA1\u6570\u0022 (#3657) (#3705)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/3b7ea40ba9b2e9129962fafb9007d44a75ca6cae",
+    "committedAt": "2026-09-23T16:08:50+00:00",
+    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+  }
+]
