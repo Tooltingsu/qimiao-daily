@@ -1,0 +1,20 @@
+{
+  "reportDate": "2026-09-25",
+  "revision": 1,
+  "reportHash": "sha256:38571c4de2562561ea668f229b649d1febdfe6d47e334c1a77e5fbd2a181d423",
+  "generatedAt": "2026-09-25T16:21:54.696Z",
+  "retention": "TEMPORARY_PAGES_RELAY; remove manually only after QQ visibility is confirmed",
+  "items": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "今汐",
+      "franchise": "鸣潮",
+      "file": "149246332.jpg",
+      "contentType": "image/jpeg",
+      "bytes": 13521,
+      "sha256": "sha256:5d8774b2097d162a5768016ab904c00724d7e025354705df0d565e0840fdc657",
+      "relayUrl": "https://tooltingsu.github.io/qimiao-daily/assets/artwork-relay/2026-09-25/r001/149246332.jpg"
+    }
+  ]
+}
