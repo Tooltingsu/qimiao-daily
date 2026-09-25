@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-25",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "660848a05b2d802eb0b02bce2ca2720ae553e2fa",
+  "reportHash": "sha256:38571c4de2562561ea668f229b649d1febdfe6d47e334c1a77e5fbd2a181d423",
+  "generatedAt": "2026-09-25T14:54:29.4724505+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670825\u65E5\uFF0C\u661F\u671F\u4E94\n\n\u4ECA\u5929\u662F\u8282\u65E5 \u4E2D\u79CB\n\u4ECA\u5929\u662F\u3010\u5F02\u73AF \u963F\u5FB7\u52D2\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u4E89\u950B\u5BA3\u8A00\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5355\u9A91\u7834\u6D6A\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6392\u7403\u4E4B\u661F\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u73AF\u671F\u8D60\u793C\u3008\u4E03\u65E5\u7B7E\u5230\u3009\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u9057\u95FB\u5BFB\u73CD\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u8F68\u5916\u56DE\u54CD\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6E05\u98CE\u9A91\u65C5\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u4E0B\u534A\u5361\u6C60\u300C1.3\u4E0B\u534A\uFF08\u7075\u53EF\u3001\u6D54\uFF09\u300D\u5C06\u4E8E\u4ECA\u65E505:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u53D1\u5E03\u89C6\u9891\u3010Ding-Dong, A Voice Message From Your Friend: Pearl\u0027s \u0022Beautiful Voice Generator\u0022\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Sing With Me! #GenshinImpact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Heehee, look at my fish tail! #GenshinImpact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-feat: \u4FEE\u6539\u9ED8\u8BA4\u7684\u56FE\u6807\u8BC6\u522B\u6A21\u578B (#3644) (e14b28d)\n-fix: \u6218\u6597\u7B56\u7565\u5339\u914D\u4EBA\u6570\u76F8\u540C\u65F6\u4F18\u5148\u9009\u62E9\u5339\u914D\u6BD4\u4F8B\u66F4\u9AD8\u7684\u7B56\u7565 (#3698) (6efd415)\n-Reapply \u0022feat: \u81EA\u52A8\u8BC6\u522Bitem\u6240\u5C5E\u80CC\u5305\u9875,\u6839\u636E\u7269\u54C1\u7684\u987A\u5E8F\u63D0\u524D\u7ED3\u675F\u626B\u63CF\u8BA1\u6570\u0022 (#3657) (#3705) (3b7ea40)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (c342d25)\n-typos \u5207\u6362\u961F\u4F0D-\u003E\u5207\u6362\u59D4\u6258\u961F\u4F0D (#3681) (108aa53)\n-\u914D\u5BF9\u754C\u9762\u5207\u6362\u89D2\u8272 \u66F4\u65B07.1\u89D2\u8272\u8CC7\u8A0A (#3683) (0844541)\n-fix: \u4FEE\u590D\u591A\u91CD\u5F39\u7A97\u53EF\u80FD\u5BFC\u81F4\u5956\u52B1\u9886\u53D6\u4E0D\u5B8C\u6574 (#3684) (06adbd1)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:6ce12333068e8c29696e5a4afc5705f96deb3350dd0436750a6cc6bcb7836dab",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-23T18:00:00.0000000\u002B08:00, 2026-09-24T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-09-23T18:00:00.0000000\u002B08:00, 2026-09-24T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 13 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-24T15:45:33.5421198+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
