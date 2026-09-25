@@ -17,19 +17,22 @@
 -崩坏：星穹铁道 发布视频【Ding-Dong, A Voice Message From Your Friend: Pearl's "Beautiful Voice Generator"】
 -原神 发布视频【Sing With Me! #GenshinImpact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya】
 -原神 发布视频【Heehee, look at my fish tail! #GenshinImpact #Vodyanitsa #StoriesofFrostSnow #GenshinSnezhnaya】
+-崩坏：星穹铁道 发布视频【"If you have no other matters to attend to, stay and admire this autumn moon with me."】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--feat: 修改默认的图标识别模型 (#3644) (e14b28d)
--fix: 战斗策略匹配人数相同时优先选择匹配比例更高的策略 (#3698) (6efd415)
--Reapply "feat: 自动识别item所属背包页,根据物品的顺序提前结束扫描计数" (#3657) (#3705) (3b7ea40)
+-fix(pathing): 修复配置组禁用时的配置回退与战斗参数传递 (#3579) (6eef898)
+-AutoCombo-Avatar重构为上下文、重构使得技能可以打断Attack (#3691) (7849b67)
+-feat: 一条龙自动boss累计运行上限 (#3683) (d99d2c2)
+-#3674 支持繁体中文的动态翻译 (e1afc4b)
+-Merge remote-tracking branch 'origin/main' (fd33d06)
 
 BGI仓库更新
--update repo.json [skip ci] (c342d25)
--typos 切换队伍->切换委托队伍 (#3681) (108aa53)
--配对界面切换角色 更新7.1角色資訊 (#3683) (0844541)
--fix: 修复多重弹窗可能导致奖励领取不完整 (#3684) (06adbd1)
+-update repo.json [skip ci] (3a9dd67)
+-fix: 营养袋吃药统计 (#3685) (8c06d5f)
+-同步 批量讨伐角色养成材料BOSS 0.8.1 (#3686) (6d92d71)
+-feat: 增加7.1新角色数据 (#3687) (419c720)
 
 ——————————————————
 
