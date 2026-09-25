@@ -1,34 +1,34 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "c342d259b6f13c30f168fe5b4e8d96a76a608f3f",
+    "sha": "3a9dd6748d705da5717fd24697d4c8000cd06948",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/c342d259b6f13c30f168fe5b4e8d96a76a608f3f",
-    "committedAt": "2026-09-23T14:49:18+00:00",
-    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/3a9dd6748d705da5717fd24697d4c8000cd06948",
+    "committedAt": "2026-09-24T14:47:29+00:00",
+    "fetchedAt": "2026-09-25T15:46:02.0608598+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "108aa538bd854551fdb22219a6687ba693494503",
-    "subject": "typos \u5207\u6362\u961F\u4F0D-\u003E\u5207\u6362\u59D4\u6258\u961F\u4F0D (#3681)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/108aa538bd854551fdb22219a6687ba693494503",
-    "committedAt": "2026-09-24T02:32:35+00:00",
-    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+    "sha": "8c06d5f36708d4bd0b15c14015a31c9738e01a89",
+    "subject": "fix: \u8425\u517B\u888B\u5403\u836F\u7EDF\u8BA1 (#3685)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/8c06d5f36708d4bd0b15c14015a31c9738e01a89",
+    "committedAt": "2026-09-24T18:57:56+00:00",
+    "fetchedAt": "2026-09-25T15:46:02.0608598+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "084454183a1ecedd025d03092cb8c8af18f68273",
-    "subject": "\u914D\u5BF9\u754C\u9762\u5207\u6362\u89D2\u8272 \u66F4\u65B07.1\u89D2\u8272\u8CC7\u8A0A (#3683)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/084454183a1ecedd025d03092cb8c8af18f68273",
-    "committedAt": "2026-09-24T02:32:51+00:00",
-    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+    "sha": "6d92d719ffefaaa82035052456f2725b3fe3b8a4",
+    "subject": "\u540C\u6B65 \u6279\u91CF\u8BA8\u4F10\u89D2\u8272\u517B\u6210\u6750\u6599BOSS 0.8.1 (#3686)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/6d92d719ffefaaa82035052456f2725b3fe3b8a4",
+    "committedAt": "2026-09-24T18:58:28+00:00",
+    "fetchedAt": "2026-09-25T15:46:02.0608598+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "06adbd188bff24b5111d4fcabfcfd7fcf1ce388c",
-    "subject": "fix: \u4FEE\u590D\u591A\u91CD\u5F39\u7A97\u53EF\u80FD\u5BFC\u81F4\u5956\u52B1\u9886\u53D6\u4E0D\u5B8C\u6574 (#3684)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/06adbd188bff24b5111d4fcabfcfd7fcf1ce388c",
-    "committedAt": "2026-09-24T02:34:12+00:00",
-    "fetchedAt": "2026-09-24T15:45:33.5421198+00:00"
+    "sha": "419c7206fbd9097fd8ac742f6bac77ba76e1ae21",
+    "subject": "feat: \u589E\u52A07.1\u65B0\u89D2\u8272\u6570\u636E (#3687)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/419c7206fbd9097fd8ac742f6bac77ba76e1ae21",
+    "committedAt": "2026-09-25T04:06:58+00:00",
+    "fetchedAt": "2026-09-25T15:46:02.0608598+00:00"
   }
 ]
