@@ -47,9 +47,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- web/assets/artwork-relay; then
-            git pull --rebase origin main
-            git add web/assets/artwork-relay
+          git add web/assets/artwork-relay
+          if ! git diff --cached --quiet; then
             git commit -m "chore(artwork): prepare Pages relay ${{ inputs.reportDate }} r${{ inputs.revision }}"
             git push origin HEAD:main
           fi
