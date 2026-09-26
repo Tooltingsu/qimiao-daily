@@ -28,5 +28,25 @@
     "endAt": "2026-09-24T04:00:00+08:00",
     "notes": "",
     "enabled": true
+  },
+  {
+    "id": "4ffcd0b0-06db-4726-b88d-f07e495d799d",
+    "game": "GENSHIN",
+    "versionNumber": "7.1",
+    "versionName": "",
+    "startAt": "2026-09-23T04:00:00+08:00",
+    "endAt": "2026-11-03T03:59:00+08:00",
+    "notes": "User-provided 7.1/1.4 activity calendar image",
+    "enabled": true
+  },
+  {
+    "id": "37edad3c-5cf0-410b-93fa-72fc2dd0f85d",
+    "game": "NTE",
+    "versionNumber": "1.4",
+    "versionName": "",
+    "startAt": "2026-09-24T04:00:00+08:00",
+    "endAt": "2026-11-05T04:00:00+08:00",
+    "notes": "User-provided 7.1/1.4 activity calendar image",
+    "enabled": true
   }
 ]
