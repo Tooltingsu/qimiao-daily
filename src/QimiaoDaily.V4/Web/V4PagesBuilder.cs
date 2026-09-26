@@ -42,6 +42,7 @@ public sealed record QqTestDashboardStatus(
 
 public sealed record WorkspaceData(
     IReadOnlyList<ManualEventRecord> Activities,
+    IReadOnlyList<ManualEventRecord> ActivityArchive,
     IReadOnlyList<BannerRecord> Banners,
     IReadOnlyList<VersionRecord> Versions,
     IReadOnlyList<EndgameRuleRecord> EndgameRules,
@@ -127,8 +128,19 @@ public sealed class V4PagesBuilder(V4Repository repository)
         // The Pages workbench mirrors the desktop navigation using the same
         // validated repository data. It is a public read-only projection;
         // edits continue through GitHub or the configured editor service.
+        var allActivities = repository.ReadOr(new List<ManualEventRecord>(), "data", "activities.json");
+        var archiveCutoff = DateTimeOffset.UtcNow.AddDays(-3);
+        var activityArchive = allActivities
+            .Where(x => x.EndAt.ToUniversalTime() <= archiveCutoff)
+            .OrderByDescending(x => x.EndAt)
+            .ToList();
+        var visibleActivities = allActivities
+            .Where(x => x.EndAt.ToUniversalTime() > archiveCutoff)
+            .ToList();
+        repository.Write(activityArchive, "web", "data", "activity-archive.json");
         repository.Write(new WorkspaceData(
-            repository.ReadOr(new List<ManualEventRecord>(), "data", "activities.json"),
+            visibleActivities,
+            activityArchive,
             repository.ReadOr(new List<BannerRecord>(), "data", "banners.json"),
             repository.ReadOr(new List<VersionRecord>(), "data", "versions.json"),
             repository.ReadOr(new List<EndgameRuleRecord>(), "data", "endgame-rules.json"),
