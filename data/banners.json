@@ -90,7 +90,9 @@
     "type": "自选邀请",
     "startAt": "2026-09-23T04:00:00+08:00",
     "endAt": "2026-11-03T03:59:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -101,7 +103,9 @@
     "type": "自选邀请",
     "startAt": "2026-09-23T04:00:00+08:00",
     "endAt": "2026-11-03T03:59:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -112,7 +116,9 @@
     "type": "祈愿",
     "startAt": "2026-09-23T04:00:00+08:00",
     "endAt": "2026-10-13T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -123,7 +129,9 @@
     "type": "祈愿",
     "startAt": "2026-09-23T04:00:00+08:00",
     "endAt": "2026-10-13T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -134,7 +142,9 @@
     "type": "限定招募",
     "startAt": "2026-09-24T04:00:00+08:00",
     "endAt": "2026-10-15T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -145,7 +155,9 @@
     "type": "限定招募",
     "startAt": "2026-10-15T04:00:00+08:00",
     "endAt": "2026-11-05T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -156,7 +168,9 @@
     "type": "限定招募",
     "startAt": "2026-09-24T04:00:00+08:00",
     "endAt": "2026-10-15T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -167,7 +181,9 @@
     "type": "弧盒研募",
     "startAt": "2026-09-24T04:00:00+08:00",
     "endAt": "2026-10-15T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -178,7 +194,9 @@
     "type": "弧盒研募",
     "startAt": "2026-09-24T04:00:00+08:00",
     "endAt": "2026-10-15T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   },
@@ -189,7 +207,9 @@
     "type": "弧盒研募",
     "startAt": "2026-10-15T04:00:00+08:00",
     "endAt": "2026-11-05T04:00:00+08:00",
-    "characters": [],
+    "characters": [
+      "待确认"
+    ],
     "notes": "User-provided 7.1/1.4 activity calendar image",
     "enabled": true
   }
