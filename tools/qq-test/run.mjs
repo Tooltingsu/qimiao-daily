@@ -314,7 +314,10 @@ try {
       const chunks = chunkReport(revision.content, Number(process.env.QQ_TEST_MAX_TEXT_CHARS || "1800"));
       result.textChunks = chunks.map(({ sequence, hash, text: chunkText }) => ({ sequence, hash, characters: chunkText.length }));
       const sendReport = async validatedArtwork => {
-        if (isProductionRelease && targetType === "FORUM" && includeArtwork) {
+        // A complete report always stays in one forum thread in both test and
+        // production environments.  The test channel must exercise the same
+        // text-plus-artwork layout that production will use.
+        if (targetType === "FORUM" && includeArtwork) {
           if (chunks.length !== 1)
             throw new Error("完整日报超过单篇帖子安全长度，不能拆分为多篇文字+美图帖子。请先缩短日报内容。");
           const chunk = { sequence: 1, hash: sha256(`${revision.content}\n${validatedArtwork.map(x => x.sourceUrl).join("\n")}`) };
