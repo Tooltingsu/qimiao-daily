@@ -104,6 +104,32 @@
     "notes": ""
   },
   {
+    "ruleId": "GENSHIN_FRENZIED_ONSLAUGHT",
+    "game": "GENSHIN",
+    "name": "\u5E7D\u5883\u5371\u6218\u00B7\u7EB7\u4E71\u7206\u53D1",
+    "scheduledStart": "2026-09-30",
+    "startsOn": "2026-09-30",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2026-10-10",
+    "endTime": "04:00:00",
+    "versionNumber": "7.1",
+    "notes": ""
+  },
+  {
+    "ruleId": "GENSHIN_STYGIAN_ONSLAUGHT",
+    "game": "GENSHIN",
+    "name": "\u5E7D\u5883\u5371\u6218",
+    "scheduledStart": "2026-09-30",
+    "startsOn": "2026-09-30",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2026-11-03",
+    "endTime": "03:59:00",
+    "versionNumber": "7.1",
+    "notes": "User-provided 7.1/1.4 activity calendar image"
+  },
+  {
     "ruleId": "GENSHIN_IMAGINARIUM_THEATER",
     "game": "GENSHIN",
     "name": "\u5E7B\u60F3\u771F\u5883\u5267\u8BD7",
@@ -112,9 +138,9 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2026-11-01",
-    "endTime": "04:00:00",
+    "endTime": "03:59:00",
     "versionNumber": null,
-    "notes": ""
+    "notes": "User-provided 7.1/1.4 activity calendar image"
   },
   {
     "ruleId": "NTE_OUTER_REALM",
