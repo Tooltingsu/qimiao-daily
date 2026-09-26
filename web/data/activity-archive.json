@@ -1,0 +1,92 @@
+[
+  {
+    "id": "d8bc2236-e9d5-4d6b-8cfb-f7f9a9917b95",
+    "game": "GENSHIN",
+    "name": "魔神任务「无神怜爱的雪国」限定奖励",
+    "startAt": "2026-08-12T04:00:00+08:00",
+    "endAt": "2026-09-23T04:00:00+08:00",
+    "notes": "Migrated from calendar event cf6458984bf240af9c6b640e5a83c089；原神 | 2026-08-12 - 2026-09-22 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "289647e6-fce6-4f69-a259-d3568bfcbffd",
+    "game": "STARRAIL",
+    "name": "位面分裂",
+    "startAt": "2026-09-07T04:00:00+08:00",
+    "endAt": "2026-09-22T04:00:00+08:00",
+    "notes": "Migrated from calendar event 6ac7f30031b049ea8a822ecf2f0c5468；崩坏：星穹铁道 | 2026-09-07 - 2026-09-21 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "47237a4c-ce71-4ce7-af54-8d40d807314f",
+    "game": "NTE",
+    "name": "淘方斯记",
+    "startAt": "2026-09-14T04:00:00+08:00",
+    "endAt": "2026-09-22T04:00:00+08:00",
+    "notes": "Migrated from calendar event 41bbf1b2743f43bfb570c28b6ac4cd5c；异环 | 2026-09-14 - 2026-09-21 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "669cb960-42ab-428f-887c-0b4cc41280b9",
+    "game": "GENSHIN",
+    "name": "活动「盛材移涌」",
+    "startAt": "2026-09-15T04:00:00+08:00",
+    "endAt": "2026-09-21T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  },
+  {
+    "id": "5d65db4a-0aa8-490d-ba6c-49ee047d9799",
+    "game": "GENSHIN",
+    "name": "活动「禁界拟想阵地战」",
+    "startAt": "2026-09-07T04:00:00+08:00",
+    "endAt": "2026-09-17T04:00:00+08:00",
+    "notes": "",
+    "enabled": true
+  },
+  {
+    "id": "27fc75db-d355-406d-b5e7-80747dd54602",
+    "game": "NTE",
+    "name": "偶素溢出",
+    "startAt": "2026-09-07T04:00:00+08:00",
+    "endAt": "2026-09-15T04:00:00+08:00",
+    "notes": "Migrated from calendar event c8ce8837a82546499af4f56cfcdd9585；异环 | 2026-09-07 - 2026-09-14 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "4826d988-735f-46b7-a22c-efc03deadcd9",
+    "game": "GENSHIN",
+    "name": "活动「险境征者竞锋大赛」",
+    "startAt": "2026-08-28T04:00:00+08:00",
+    "endAt": "2026-09-15T04:00:00+08:00",
+    "notes": "Migrated from calendar event ac7c684ab8e343a3af8c4ec68487d9a7；原神 | 2026-08-28 - 2026-09-14 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "fdd8fc6b-5e9d-440c-8df0-d553ea1468d6",
+    "game": "NTE",
+    "name": "夺金大作战",
+    "startAt": "2026-08-24T04:00:00+08:00",
+    "endAt": "2026-09-08T04:00:00+08:00",
+    "notes": "Migrated from calendar event e107f9feb0d94658aa064b9b24a33fd1；异环 | 2026-08-24 - 2026-09-07 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "56d4cf0e-d902-4380-8d87-3edf903fa759",
+    "game": "NTE",
+    "name": "活力燃能",
+    "startAt": "2026-08-17T04:00:00+08:00",
+    "endAt": "2026-08-25T04:00:00+08:00",
+    "notes": "Migrated from calendar event 3152738af3b649d1ae407c05f7e3b081；异环 | 2026-08-17 - 2026-08-24 | User-provided calendar screenshot",
+    "enabled": true
+  },
+  {
+    "id": "f829bd7e-0976-454f-9d5f-ed001a2264ee",
+    "game": "GENSHIN",
+    "name": "活动「新芽相助·初探雪原」",
+    "startAt": "2026-08-12T04:00:00+08:00",
+    "endAt": "2026-08-25T04:00:00+08:00",
+    "notes": "Migrated from calendar event 146b194550c843bfb3449ceefc06e19d；原神 | 2026-08-12 - 2026-08-24 | User-provided calendar screenshot",
+    "enabled": true
+  }
+]
