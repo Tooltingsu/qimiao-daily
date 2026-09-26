@@ -116,6 +116,186 @@
       "endAt": "2026-11-04T04:00:00+08:00",
       "notes": "Migrated from calendar event 5b823816e97c4521ac00e44a73908667；原神 | 2026-08-12 - 2026-11-03 | User-provided calendar screenshot",
       "enabled": true
+    },
+    {
+      "id": "040503a6-c0ac-41b8-aa36-0e43433dcbb2",
+      "game": "GENSHIN",
+      "name": "邮件答谢&累计登录",
+      "startAt": "2026-09-28T04:00:00+08:00",
+      "endAt": "2026-11-03T03:59:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "dcc83a16-5d77-47dd-8264-f761697a8c7b",
+      "game": "GENSHIN",
+      "name": "魔神任务「往冥府的安魂歌」",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-11-03T03:59:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "79938b85-9ff8-462c-be45-f041662862db",
+      "game": "GENSHIN",
+      "name": "活动「银翎溯月，玄鸟结璘」",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-12T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "9e7f1678-771c-483a-a48c-03b2e2f551f4",
+      "game": "GENSHIN",
+      "name": "活动「判测胜券本征」",
+      "startAt": "2026-10-12T04:00:00+08:00",
+      "endAt": "2026-10-20T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "0f0d1bb9-91e7-42c3-83d4-cf3a742257e3",
+      "game": "NTE",
+      "name": "黑羽·开市预演",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "5a5bf80e-7d9f-4ab6-abee-54bda6a09442",
+      "game": "NTE",
+      "name": "明音澜·开市预演",
+      "startAt": "2026-10-15T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "256722a4-70fe-4367-a755-6ca440354c01",
+      "game": "NTE",
+      "name": "安魂曲·开市预演",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "9de5bf96-1d61-429d-bf61-525221fe2e92",
+      "game": "NTE",
+      "name": "魔卡乐园游记",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "37387ecc-72ee-4061-b2c1-bfa868a9a9a3",
+      "game": "NTE",
+      "name": "全站深境",
+      "startAt": "2026-09-28T04:00:00+08:00",
+      "endAt": "2026-12-17T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "668c5f00-8137-466b-8e7c-c7dce5a4c60b",
+      "game": "NTE",
+      "name": "炭团的宝藏",
+      "startAt": "2026-09-30T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "dc0f0718-4953-41f3-85fb-43a997b120ef",
+      "game": "NTE",
+      "name": "咔滋！黄金双腔",
+      "startAt": "2026-10-15T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "98ed15f6-456b-45e2-8460-7a9d54d02299",
+      "game": "NTE",
+      "name": "魔卡翻翻乐",
+      "startAt": "2026-10-23T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "88f5e1c3-68d4-4664-8f4e-8d09d0d33449",
+      "game": "NTE",
+      "name": "活力燃能",
+      "startAt": "2026-09-28T04:00:00+08:00",
+      "endAt": "2026-10-12T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "2b79ad25-6595-46e1-a43d-f66511661812",
+      "game": "NTE",
+      "name": "偶素溢出",
+      "startAt": "2026-10-12T04:00:00+08:00",
+      "endAt": "2026-10-19T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "1e6ed3ee-275f-4458-be7b-fe529672789a",
+      "game": "NTE",
+      "name": "守金大作战",
+      "startAt": "2026-10-19T04:00:00+08:00",
+      "endAt": "2026-11-02T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "2d9af5de-ed67-4d67-90e1-a62b4a4806d8",
+      "game": "NTE",
+      "name": "星流环绕〈轨外之境〉",
+      "startAt": "2026-09-18T04:00:00+08:00",
+      "endAt": "2026-10-02T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "f1614ec1-f036-469b-9ddd-11b5948a1263",
+      "game": "NTE",
+      "name": "夕照环绕〈轨外之境〉",
+      "startAt": "2026-10-02T04:00:00+08:00",
+      "endAt": "2026-10-16T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "9e0e4ebd-ef62-4019-9706-57ca0f9da929",
+      "game": "NTE",
+      "name": "澄明环绕〈轨外之境〉",
+      "startAt": "2026-10-16T04:00:00+08:00",
+      "endAt": "2026-10-30T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "9225b1b6-bc2d-4ff8-913a-1b7c2be3ab3e",
+      "game": "NTE",
+      "name": "飞芒环绕〈轨外之境〉",
+      "startAt": "2026-10-30T04:00:00+08:00",
+      "endAt": "2026-11-13T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "41a8b056-2160-4638-b175-8ac166017f89",
+      "game": "NTE",
+      "name": "环期明耀七日签到",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
     }
   ],
   "banners": [
@@ -202,6 +382,116 @@
       ],
       "notes": "",
       "enabled": true
+    },
+    {
+      "id": "76967abf-f471-4bea-89e4-13b54fb58620",
+      "game": "GENSHIN",
+      "name": "自选邀请·限定5星角色",
+      "type": "自选邀请",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-11-03T03:59:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "3f42f793-964a-4798-ac4a-ccbe090e6a52",
+      "game": "GENSHIN",
+      "name": "自选邀请·常驻祈愿5星角色",
+      "type": "自选邀请",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-11-03T03:59:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "46b8c8b9-f217-4211-ace5-6f87d81a12c5",
+      "game": "GENSHIN",
+      "name": "7.1祈愿（第一期）",
+      "type": "祈愿",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-10-13T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "10819314-cc41-412f-a344-9882ae16fa38",
+      "game": "GENSHIN",
+      "name": "7.1祈愿（第二期）",
+      "type": "祈愿",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-10-13T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "ad32890f-9193-4414-b54b-66570d6b3695",
+      "game": "NTE",
+      "name": "预言终幕时",
+      "type": "限定招募",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "e5de9cbb-1e07-46c2-8302-e1f7f54ee6d5",
+      "game": "NTE",
+      "name": "灿烂的星",
+      "type": "限定招募",
+      "startAt": "2026-10-15T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "00314068-015c-45f5-bc97-9fb60f83b926",
+      "game": "NTE",
+      "name": "久梦初醒时",
+      "type": "限定招募",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "2e295301-724c-4e20-9a5d-a3a372a8b8e0",
+      "game": "NTE",
+      "name": "栖羽特刊",
+      "type": "弧盒研募",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "7bea6a06-4c18-4f14-843f-64560425c699",
+      "game": "NTE",
+      "name": "夜曲特刊",
+      "type": "弧盒研募",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-10-15T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "5eb81306-2d17-42ca-924f-c1338d592168",
+      "game": "NTE",
+      "name": "日月星特刊",
+      "type": "弧盒研募",
+      "startAt": "2026-10-15T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "characters": [],
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
     }
   ],
   "versions": [
@@ -233,6 +523,26 @@
       "startAt": "2026-08-13T11:00:00+08:00",
       "endAt": "2026-09-24T04:00:00+08:00",
       "notes": "",
+      "enabled": true
+    },
+    {
+      "id": "4ffcd0b0-06db-4726-b88d-f07e495d799d",
+      "game": "GENSHIN",
+      "versionNumber": "7.1",
+      "versionName": "",
+      "startAt": "2026-09-23T04:00:00+08:00",
+      "endAt": "2026-11-03T03:59:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
+      "enabled": true
+    },
+    {
+      "id": "37edad3c-5cf0-410b-93fa-72fc2dd0f85d",
+      "game": "NTE",
+      "versionNumber": "1.4",
+      "versionName": "",
+      "startAt": "2026-09-24T04:00:00+08:00",
+      "endAt": "2026-11-05T04:00:00+08:00",
+      "notes": "User-provided 7.1/1.4 activity calendar image",
       "enabled": true
     }
   ],
@@ -3118,12 +3428,12 @@
   },
   "activityArchive": [
     {
-      "id": "d8bc2236-e9d5-4d6b-8cfb-f7f9a9917b95",
-      "game": "GENSHIN",
-      "name": "魔神任务「无神怜爱的雪国」限定奖励",
-      "startAt": "2026-08-12T04:00:00+08:00",
-      "endAt": "2026-09-23T04:00:00+08:00",
-      "notes": "Migrated from calendar event cf6458984bf240af9c6b640e5a83c089；原神 | 2026-08-12 - 2026-09-22 | User-provided calendar screenshot",
+      "id": "27fc75db-d355-406d-b5e7-80747dd54602",
+      "game": "NTE",
+      "name": "偶素溢出",
+      "startAt": "2026-09-07T04:00:00+08:00",
+      "endAt": "2026-09-15T04:00:00+08:00",
+      "notes": "Migrated from calendar event c8ce8837a82546499af4f56cfcdd9585；异环 | 2026-09-07 - 2026-09-14 | User-provided calendar screenshot",
       "enabled": true
     },
     {
@@ -3145,48 +3455,12 @@
       "enabled": true
     },
     {
-      "id": "669cb960-42ab-428f-887c-0b4cc41280b9",
-      "game": "GENSHIN",
-      "name": "活动「盛材移涌」",
-      "startAt": "2026-09-15T04:00:00+08:00",
-      "endAt": "2026-09-21T04:00:00+08:00",
-      "notes": "",
-      "enabled": true
-    },
-    {
-      "id": "5d65db4a-0aa8-490d-ba6c-49ee047d9799",
-      "game": "GENSHIN",
-      "name": "活动「禁界拟想阵地战」",
-      "startAt": "2026-09-07T04:00:00+08:00",
-      "endAt": "2026-09-17T04:00:00+08:00",
-      "notes": "",
-      "enabled": true
-    },
-    {
-      "id": "27fc75db-d355-406d-b5e7-80747dd54602",
-      "game": "NTE",
-      "name": "偶素溢出",
-      "startAt": "2026-09-07T04:00:00+08:00",
-      "endAt": "2026-09-15T04:00:00+08:00",
-      "notes": "Migrated from calendar event c8ce8837a82546499af4f56cfcdd9585；异环 | 2026-09-07 - 2026-09-14 | User-provided calendar screenshot",
-      "enabled": true
-    },
-    {
       "id": "4826d988-735f-46b7-a22c-efc03deadcd9",
       "game": "GENSHIN",
       "name": "活动「险境征者竞锋大赛」",
       "startAt": "2026-08-28T04:00:00+08:00",
       "endAt": "2026-09-15T04:00:00+08:00",
       "notes": "Migrated from calendar event ac7c684ab8e343a3af8c4ec68487d9a7；原神 | 2026-08-28 - 2026-09-14 | User-provided calendar screenshot",
-      "enabled": true
-    },
-    {
-      "id": "fdd8fc6b-5e9d-440c-8df0-d553ea1468d6",
-      "game": "NTE",
-      "name": "夺金大作战",
-      "startAt": "2026-08-24T04:00:00+08:00",
-      "endAt": "2026-09-08T04:00:00+08:00",
-      "notes": "Migrated from calendar event e107f9feb0d94658aa064b9b24a33fd1；异环 | 2026-08-24 - 2026-09-07 | User-provided calendar screenshot",
       "enabled": true
     },
     {
@@ -3199,12 +3473,48 @@
       "enabled": true
     },
     {
+      "id": "d8bc2236-e9d5-4d6b-8cfb-f7f9a9917b95",
+      "game": "GENSHIN",
+      "name": "魔神任务「无神怜爱的雪国」限定奖励",
+      "startAt": "2026-08-12T04:00:00+08:00",
+      "endAt": "2026-09-23T04:00:00+08:00",
+      "notes": "Migrated from calendar event cf6458984bf240af9c6b640e5a83c089；原神 | 2026-08-12 - 2026-09-22 | User-provided calendar screenshot",
+      "enabled": true
+    },
+    {
       "id": "f829bd7e-0976-454f-9d5f-ed001a2264ee",
       "game": "GENSHIN",
       "name": "活动「新芽相助·初探雪原」",
       "startAt": "2026-08-12T04:00:00+08:00",
       "endAt": "2026-08-25T04:00:00+08:00",
       "notes": "Migrated from calendar event 146b194550c843bfb3449ceefc06e19d；原神 | 2026-08-12 - 2026-08-24 | User-provided calendar screenshot",
+      "enabled": true
+    },
+    {
+      "id": "fdd8fc6b-5e9d-440c-8df0-d553ea1468d6",
+      "game": "NTE",
+      "name": "夺金大作战",
+      "startAt": "2026-08-24T04:00:00+08:00",
+      "endAt": "2026-09-08T04:00:00+08:00",
+      "notes": "Migrated from calendar event e107f9feb0d94658aa064b9b24a33fd1；异环 | 2026-08-24 - 2026-09-07 | User-provided calendar screenshot",
+      "enabled": true
+    },
+    {
+      "id": "5d65db4a-0aa8-490d-ba6c-49ee047d9799",
+      "game": "GENSHIN",
+      "name": "活动「禁界拟想阵地战」",
+      "startAt": "2026-09-07T04:00:00+08:00",
+      "endAt": "2026-09-17T04:00:00+08:00",
+      "notes": "",
+      "enabled": true
+    },
+    {
+      "id": "669cb960-42ab-428f-887c-0b4cc41280b9",
+      "game": "GENSHIN",
+      "name": "活动「盛材移涌」",
+      "startAt": "2026-09-15T04:00:00+08:00",
+      "endAt": "2026-09-21T04:00:00+08:00",
+      "notes": "",
       "enabled": true
     }
   ]
