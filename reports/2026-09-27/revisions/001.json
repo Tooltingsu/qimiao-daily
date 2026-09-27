@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-27",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "702db28743077422eeb908346cadc3de8bec1a0d",
+  "reportHash": "sha256:6b99bea2c5edb68c2f65367928162a04765a37b9c47fa6b9d39277e95c3ffed1",
+  "generatedAt": "2026-09-27T04:43:08.3024791+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670827\u65E5\uFF0C\u661F\u671F\u65E5\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5168\u7AD9\u6DF1\u5883\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6D3B\u529B\u71C3\u80FD\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u539F\u795E \u6D3B\u52A8\u300C\u90AE\u4EF6\u7B54\u8C22\u0026\u7D2F\u8BA1\u767B\u5F55\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u4E0B\u534A\u5361\u6C60\u300C4.5\u4E0B\u534A\uFF08\u7802\u91D1\u00B7\u620F\u6D6A\u3001\u4E0D\u6B7B\u9014\uFF09\u300D\u5269\u4F59 0\u592915\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u5468\u671F\u73A9\u6CD5\u300C\u6DF7\u6C8C\u56DE\u5FC6\u300D\u660E\u65E504:00\u5237\u65B0\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-feat: 7.1\u65B0\u89D2\u8272\u4FE1\u606F (#3714) (92b6dda)\n-\u66F4\u65B0\u4F9D\u8D56 (1878146)\n-\u4FEE\u6B63skill\u683C\u5F0F (29aff3e)\n-Update version to 0.66.0 (e0deb20)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (bb2fe56)\n-\u4E3A\u81F3\u51AC\u8679\u6EF4\u6676\u817E\u51FA\u4F4D\u7F6E (#3689) (40e95ec)\n-\u6218\u6597\u7B56\u7565\uFF1A\u4E07\u80FD\u7B56\u7565\u65B0\u589E\u5BF9\u201C\u6C83\u96C5\u59AE\u838E\u201D\u002B\u201C\u8587\u65AF\u7EB3\u201D\u7684\u652F\u6301 (#3690) (82d9f68)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:02bcd3122a6e8a5a2b5466bc3de7652c61d7339bd80e1bd4c75d0a5f75260cec",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-09-25T18:00:00.0000000\u002B08:00, 2026-09-26T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-25T18:00:00.0000000\u002B08:00, 2026-09-26T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-26T14:55:48.4307627+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
