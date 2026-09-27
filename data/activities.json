@@ -128,7 +128,7 @@
   {
     "id": "dcc83a16-5d77-47dd-8264-f761697a8c7b",
     "game": "GENSHIN",
-    "name": "魔神任务「往冥府的安魂歌」限时奖励",
+    "name": "魔神任务「往冥府的安魂歌」",
     "startAt": "2026-09-23T04:00:00+08:00",
     "endAt": "2026-11-03T03:59:00+08:00",
     "notes": "User-provided 7.1/1.4 activity calendar image",
@@ -182,7 +182,7 @@
   {
     "id": "9de5bf96-1d61-429d-bf61-525221fe2e92",
     "game": "NTE",
-    "name": "魔卡乐园游记",
+    "name": "噗卡乐园游记",
     "startAt": "2026-09-24T04:00:00+08:00",
     "endAt": "2026-11-05T04:00:00+08:00",
     "notes": "User-provided 7.1/1.4 activity calendar image",
