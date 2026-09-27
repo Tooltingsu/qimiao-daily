@@ -2,13 +2,13 @@
   "date": "2026-09-27",
   "state": "READY",
   "publishTime": "20:00",
-  "revision": 1,
-  "generatedAt": "2026-09-27T04:43:08.3024791+00:00",
+  "revision": 2,
+  "generatedAt": "2026-09-27T04:58:46.4478484+00:00",
   "publishedAt": null,
   "health": "DEGRADED",
   "manualCounts": {
     "\u6D3B\u52A8": 43,
-    "\u5361\u6C60": 16,
+    "\u5361\u6C60": 14,
     "\u7248\u672C": 5,
     "\u7EAA\u5FF5\u65E5": 0
   },
