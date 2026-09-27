@@ -1,34 +1,10 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "92b6dda2746c85ae1accd492a9291023dfe1a85f",
-    "subject": "feat: 7.1\u65B0\u89D2\u8272\u4FE1\u606F (#3714)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/92b6dda2746c85ae1accd492a9291023dfe1a85f",
-    "committedAt": "2026-09-26T02:58:15+00:00",
-    "fetchedAt": "2026-09-26T14:55:48.4307627+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "18781460a1164a0ec42a11fe6fcb654d1a2cd144",
-    "subject": "\u66F4\u65B0\u4F9D\u8D56",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/18781460a1164a0ec42a11fe6fcb654d1a2cd144",
-    "committedAt": "2026-09-26T03:38:28+00:00",
-    "fetchedAt": "2026-09-26T14:55:48.4307627+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "29aff3ed75d94abaa9c38a0761eb1fc9cd17d58f",
-    "subject": "\u4FEE\u6B63skill\u683C\u5F0F",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/29aff3ed75d94abaa9c38a0761eb1fc9cd17d58f",
-    "committedAt": "2026-09-26T03:46:28+00:00",
-    "fetchedAt": "2026-09-26T14:55:48.4307627+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "e0deb2049f236239f3b9a4be86ca837c901876cb",
-    "subject": "Update version to 0.66.0",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/e0deb2049f236239f3b9a4be86ca837c901876cb",
-    "committedAt": "2026-09-26T04:05:04+00:00",
-    "fetchedAt": "2026-09-26T14:55:48.4307627+00:00"
+    "sha": "0af68c28f6b0e714d5304625ce644736d508022e",
+    "subject": "chore: \u66F4\u65B0\u81F3\u51ACBOSS\u8DEF\u7EBF (#3717)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/0af68c28f6b0e714d5304625ce644736d508022e",
+    "committedAt": "2026-09-26T10:39:23+00:00",
+    "fetchedAt": "2026-09-27T15:33:56.7935423+00:00"
   }
 ]
