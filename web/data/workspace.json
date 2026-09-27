@@ -384,32 +384,6 @@
       "enabled": true
     },
     {
-      "id": "76967abf-f471-4bea-89e4-13b54fb58620",
-      "game": "GENSHIN",
-      "name": "自选邀请·限定5星角色",
-      "type": "自选邀请",
-      "startAt": "2026-09-23T04:00:00+08:00",
-      "endAt": "2026-11-03T03:59:00+08:00",
-      "characters": [
-        "待确认"
-      ],
-      "notes": "User-provided 7.1/1.4 activity calendar image",
-      "enabled": true
-    },
-    {
-      "id": "3f42f793-964a-4798-ac4a-ccbe090e6a52",
-      "game": "GENSHIN",
-      "name": "自选邀请·常驻祈愿5星角色",
-      "type": "自选邀请",
-      "startAt": "2026-09-23T04:00:00+08:00",
-      "endAt": "2026-11-03T03:59:00+08:00",
-      "characters": [
-        "待确认"
-      ],
-      "notes": "User-provided 7.1/1.4 activity calendar image",
-      "enabled": true
-    },
-    {
       "id": "46b8c8b9-f217-4211-ace5-6f87d81a12c5",
       "game": "GENSHIN",
       "name": "7.1祈愿（第一期）",
