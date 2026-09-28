@@ -1,10 +1,34 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "0af68c28f6b0e714d5304625ce644736d508022e",
-    "subject": "chore: \u66F4\u65B0\u81F3\u51ACBOSS\u8DEF\u7EBF (#3717)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/0af68c28f6b0e714d5304625ce644736d508022e",
-    "committedAt": "2026-09-26T10:39:23+00:00",
-    "fetchedAt": "2026-09-27T15:33:56.7935423+00:00"
+    "sha": "24201751c959933ae35ed8ee52f909c59b2a73be",
+    "subject": "Change QQ group number in feedback section",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/24201751c959933ae35ed8ee52f909c59b2a73be",
+    "committedAt": "2026-09-28T15:44:38+00:00",
+    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "4951ce7f08fed96b658e2d083fd9f6245b48e7d7",
+    "subject": "#3724 \u5C06\u542F\u52A8\u65F6\u7684\u5168\u5C40\u64CD\u4F5C\u9650\u5236\u4E3A\u4EC5\u4E3B\u5B9E\u4F8B\u6267\u884C\uFF1A\u5305\u62EC\u4E3B\u7A97\u53E3\u52A0\u8F7D\u540E\u7684\u8FC1\u79FB\u3001\u66F4\u65B0\u68C0\u67E5\u548C\u811A\u672C\u81EA\u52A8\u66F4\u65B0\uFF0C\u4EE5\u53CA\u547D\u4EE4\u884C\u542F\u52A8\u65F6\u7684\u811A\u672C\u81EA\u52A8\u66F4\u65B0\u3001URL \u534F\u8BAE\u6CE8\u518C\u3002\u684C\u9762\u5206\u8EAB\u4ECD\u4F1A\u5E94\u7528\u81EA\u8EAB\u7A97\u53E3\u7684\u4E3B\u9898\u3002",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/4951ce7f08fed96b658e2d083fd9f6245b48e7d7",
+    "committedAt": "2026-09-28T15:56:51+00:00",
+    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "6f0caa45052a701cca66da53ff53b05b459d0cce",
+    "subject": "Merge remote-tracking branch \u0027origin/main\u0027",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/6f0caa45052a701cca66da53ff53b05b459d0cce",
+    "committedAt": "2026-09-28T15:57:54+00:00",
+    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "44510b49eff253acbe42c8d8089bbce99a8086e0",
+    "subject": "#3713 \u81EA\u52A8\u5173\u95ED Win11 \u7A97\u53E3\u5316\u4F18\u5316\u7684\u6761\u4EF6\u4E0E\u5173\u95ED\u65B9\u5F0F\u4FEE\u6539",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/44510b49eff253acbe42c8d8089bbce99a8086e0",
+    "committedAt": "2026-09-28T16:17:03+00:00",
+    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
   }
 ]
