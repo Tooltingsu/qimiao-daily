@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-29",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "3a2a8b76240ec36c9ae5fa22e8b140f3584b4e31",
+  "reportHash": "sha256:146e579cf911efd06f4d7a1eb98f6166c8bcfe06def243ae264429f585b3f3b0",
+  "generatedAt": "2026-09-28T18:32:42.1970993+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E749\u670829\u65E5\uFF0C\u661F\u671F\u4E8C\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u5C3C\u53EF\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u5DE1\u661F\u4E4B\u793C\u300D\u5269\u4F59 0\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u8D85\u9650\uFF1A\u72C2\u98D9\u5927\u5956\u8D5B\u300D\u5269\u4F59 0\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u65B9\u5BF8\u5927\u5192\u9669\u300D\u5269\u4F59 0\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u6D3B\u52A8\u300C\u5F02\u5668\u76C8\u754C\u300D\u5269\u4F59 0\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u70AD\u56E2\u7684\u5B9D\u85CF\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u539F\u795E \u5468\u671F\u73A9\u6CD5\u300C\u5E7D\u5883\u5371\u6218\u300D\u660E\u65E504:00\u5237\u65B0\n-\u539F\u795E \u5468\u671F\u73A9\u6CD5\u300C\u5E7D\u5883\u5371\u6218\u00B7\u7EB7\u4E71\u7206\u53D1\u300D\u660E\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Teyvat Adventures Commemorative Video: 6th Anniversary Letter | Genshin Impact\u3011\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u53D1\u5E03\u89C6\u9891\u3010Fluffy Across the Blue \u2014 Pet Park Blind Box Draws\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Hehehe, lemme see if I can make out what they\u0027re saying\u2026 #Vodyanitsa #StoriesofFrostSnow\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-Change QQ group number in feedback section (2420175)\n-#3724 \u5C06\u542F\u52A8\u65F6\u7684\u5168\u5C40\u64CD\u4F5C\u9650\u5236\u4E3A\u4EC5\u4E3B\u5B9E\u4F8B\u6267\u884C\uFF1A\u5305\u62EC\u4E3B\u7A97\u53E3\u52A0\u8F7D\u540E\u7684\u8FC1\u79FB\u3001\u66F4\u65B0\u68C0\u67E5\u548C\u811A\u672C\u81EA\u52A8\u66F4\u65B0\uFF0C\u4EE5\u53CA\u547D\u4EE4\u884C\u542F\u52A8\u65F6\u7684\u811A\u672C\u81EA\u52A8\u66F4\u65B0\u3001URL \u534F\u8BAE\u6CE8\u518C\u3002\u684C\u9762\u5206\u8EAB\u4ECD\u4F1A\u5E94\u7528\u81EA\u8EAB\u7A97\u53E3\u7684\u4E3B\u9898\u3002 (4951ce7)\n-Merge remote-tracking branch \u0027origin/main\u0027 (6f0caa4)\n-#3713 \u81EA\u52A8\u5173\u95ED Win11 \u7A97\u53E3\u5316\u4F18\u5316\u7684\u6761\u4EF6\u4E0E\u5173\u95ED\u65B9\u5F0F\u4FEE\u6539 (44510b4)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-\u589E\u52A0\u7EB3\u5854\u7ED2\u7FFC\u9F99\u91C7\u96C6\u79BD\u8089\u8DEF\u7EBF (#3702) (5cd2088)\n-js: \u6269\u5C55\u51B0\u9020\u7269 NPC \u70B9\u8D5E\u8DEF\u7EBF\u81F3 12 \u70B9 (#3700) (2752667)\n-update repo.json [skip ci] (8c1d313)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:3d13cbaa8b0dcf0c5b9880e7f05556b45d08fc9533667f8749b63933c533f7ee",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-09-28T18:00:00.0000000\u002B08:00, 2026-09-29T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-09-28T18:00:00.0000000\u002B08:00, 2026-09-29T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 23 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-09-28T18:32:23.9573983+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
