@@ -1,18 +1,5 @@
 [
   {
-    "ruleId": "STARRAIL_MEMORY_OF_CHAOS",
-    "game": "STARRAIL",
-    "name": "\u6DF7\u6C8C\u56DE\u5FC6",
-    "scheduledStart": "2026-08-17",
-    "startsOn": "2026-08-17",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-09-28",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_SECTOR_ARBITRATION",
     "game": "STARRAIL",
     "name": "\u5F02\u76F8\u4EF2\u88C1",
@@ -268,6 +255,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2027-01-18",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "STARRAIL_MEMORY_OF_CHAOS",
+    "game": "STARRAIL",
+    "name": "\u6DF7\u6C8C\u56DE\u5FC6",
+    "scheduledStart": "2026-12-21",
+    "startsOn": "2026-12-21",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2027-02-01",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
