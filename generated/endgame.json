@@ -1,18 +1,5 @@
 [
   {
-    "ruleId": "STARRAIL_SECTOR_ARBITRATION",
-    "game": "STARRAIL",
-    "name": "\u5F02\u76F8\u4EF2\u88C1",
-    "scheduledStart": "2026-08-26",
-    "startsOn": "2026-08-26",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-09-29",
-    "endTime": "04:00:00",
-    "versionNumber": "4.5",
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_APOCALYPTIC_SHADOW",
     "game": "STARRAIL",
     "name": "\u672B\u65E5\u5E7B\u5F71",
