@@ -20,6 +20,16 @@
     "fetchedAt": "2026-09-27T15:33:56.7935423+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=0lcI9ZXq6ps",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Snezhnaya Cultural Co-Creation Series: \u0022A Winter Night\u0027s Aria\u0022 Opera Collaboration #GenshinImpact",
+    "sourceUrl": "https://www.youtube.com/watch?v=0lcI9ZXq6ps",
+    "publishedAt": "2026-09-29T18:05:36+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=0oPvFaBTE8M",
     "game": "GENSHIN",
     "type": "VIDEO",
@@ -67,7 +77,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=6KUUnj75MbA",
     "publishedAt": "2026-09-24T11:30:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=7eS4fYbizL4",
@@ -77,7 +87,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=7eS4fYbizL4",
     "publishedAt": "2026-09-28T17:00:25+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=7tSg_OT57ks",
@@ -87,7 +97,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=7tSg_OT57ks",
     "publishedAt": "2026-09-23T11:30:33+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=8Ty-Btue6OI",
@@ -107,7 +117,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9GAWAmHkiGQ",
     "publishedAt": "2026-09-28T18:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=acwaALHhDY0",
@@ -117,7 +127,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=acwaALHhDY0",
     "publishedAt": "2026-09-28T16:00:15+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=aFUCA2KK4pI",
@@ -207,7 +217,17 @@
     "sourceUrl": "https://www.youtube.com/watch?v=DGaHn4FJU9E",
     "publishedAt": "2026-09-23T11:30:26+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=dgm5ltqQ2SQ",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Paimon\u0027s been keeping track of all the memories made on our journey! #AnniversaryMemoriesAlbum",
+    "sourceUrl": "https://www.youtube.com/watch?v=dgm5ltqQ2SQ",
+    "publishedAt": "2026-09-29T16:00:02+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=DKfiPcFAZ78",
@@ -217,7 +237,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=DKfiPcFAZ78",
     "publishedAt": "2026-09-25T18:00:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=EkKVLA5Z6oQ",
@@ -317,7 +337,17 @@
     "sourceUrl": "https://www.youtube.com/watch?v=HG26dhG3zxQ",
     "publishedAt": "2026-09-28T18:00:15+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=iVHs8wOGYio",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Valeriy: Fort Fulguration #GenshinImpact #Valeriy #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=iVHs8wOGYio",
+    "publishedAt": "2026-09-29T18:00:00+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=J7cCSEX1zuE",
@@ -357,7 +387,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=JVvjtShhUVk",
     "publishedAt": "2026-09-24T18:00:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=KA8Z0SYYJWU",
@@ -457,7 +487,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=ntcyVm9ebYI",
     "publishedAt": "2026-09-28T12:00:21+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=nTnZDggKvi8",
@@ -547,7 +577,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=t6ytiFY32TU",
     "publishedAt": "2026-09-24T20:00:02+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=tGSk1UK7SuI",
@@ -638,6 +668,16 @@
     "publishedAt": "2026-09-19T18:00:21+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-22T15:27:53.2884566+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=y1SIHvgh4Lo",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Mitya: Rules Set at Naught #GenshinImpact #Mitya #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=y1SIHvgh4Lo",
+    "publishedAt": "2026-09-29T12:01:01+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=yDcKPxia30Q",
@@ -1077,7 +1117,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=11EJu2H3i10",
     "publishedAt": "2026-09-22T11:00:16+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=aaYSx9xe2wo",
@@ -1127,7 +1167,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=C6uku9_GEaU",
     "publishedAt": "2026-09-28T12:00:04+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=c6WRaqkbTd8",
@@ -1137,7 +1177,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=c6WRaqkbTd8",
     "publishedAt": "2026-09-23T12:00:35+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "112b7e68-e68b-460c-86ff-7c1ae1b85795",
@@ -1167,7 +1207,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=drFgtruoPe8",
     "publishedAt": "2026-09-20T20:11:11+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=ELm5wbyWeUw",
@@ -1207,7 +1247,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=FcjfCOtad8k",
     "publishedAt": "2026-09-27T20:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=fCnZYvBjOSA",
@@ -1220,6 +1260,16 @@
     "fetchedAt": "2026-09-26T14:55:48.4307627+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=fH0yXrZopgc",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Astral Glamor | Pearl",
+    "sourceUrl": "https://www.youtube.com/watch?v=fH0yXrZopgc",
+    "publishedAt": "2026-09-29T20:00:19+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
     "game": "STARRAIL",
     "type": "VIDEO",
@@ -1227,7 +1277,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
     "publishedAt": "2026-09-20T20:40:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=GpykEcVpzGs",
@@ -1237,7 +1287,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=GpykEcVpzGs",
     "publishedAt": "2026-09-20T20:20:22+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=hpqKHn0yS7I",
@@ -1287,7 +1337,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=lvdpafREDLk",
     "publishedAt": "2026-09-24T18:00:10+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=Lw3A27Y7lW0",
@@ -1297,7 +1347,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=Lw3A27Y7lW0",
     "publishedAt": "2026-09-25T12:00:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mqV0MLdZ1Jw",
@@ -1307,7 +1357,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=mqV0MLdZ1Jw",
     "publishedAt": "2026-09-22T12:00:03+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=MwGRX73a4f4",
@@ -1377,7 +1427,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=RHm2CRtHVQM",
     "publishedAt": "2026-09-26T12:00:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=roinkC5lcBI",
@@ -1387,7 +1437,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=roinkC5lcBI",
     "publishedAt": "2026-09-28T11:00:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=twrZobrx0ZM",
@@ -1397,7 +1447,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=twrZobrx0ZM",
     "publishedAt": "2026-09-27T12:00:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "523412d1-3375-407c-9f70-a18abc9a662d",
@@ -1427,7 +1477,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=YKEufDzuNx8",
     "publishedAt": "2026-09-28T18:00:25+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-09-28T18:32:23.9573983+00:00"
+    "fetchedAt": "2026-09-29T16:50:05.877711+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=zgad2zJnk-0",
