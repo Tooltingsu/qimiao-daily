@@ -13,19 +13,6 @@
     "notes": ""
   },
   {
-    "ruleId": "GENSHIN_IMAGINARIUM_THEATER",
-    "game": "GENSHIN",
-    "name": "\u5E7B\u60F3\u771F\u5883\u5267\u8BD7",
-    "scheduledStart": "2026-09-01",
-    "startsOn": "2026-09-01",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-10-01",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_PURE_FICTION",
     "game": "STARRAIL",
     "name": "\u865A\u6784\u53D9\u4E8B",
@@ -229,6 +216,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2027-01-04",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "GENSHIN_IMAGINARIUM_THEATER",
+    "game": "GENSHIN",
+    "name": "\u5E7B\u60F3\u771F\u5883\u5267\u8BD7",
+    "scheduledStart": "2026-12-01",
+    "startsOn": "2026-12-01",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2027-01-01",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
