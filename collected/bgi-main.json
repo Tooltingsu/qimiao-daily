@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "5bd55682d30e06edfc213a4605bf989970979759",
+    "subject": "feat: \u66FF\u6362 Ookii \u5BF9\u8BDD\u6846\uFF0C\u7CFB\u7EDF\u83DC\u5355\u652F\u6301\u6DF1\u8272\u6A21\u5F0F (#3743)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/5bd55682d30e06edfc213a4605bf989970979759",
+    "committedAt": "2026-10-01T16:28:44+00:00",
+    "fetchedAt": "2026-10-01T17:18:44.8627585+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "1dd1e2aa16956744281dca8192db9aa0ca722a84",
+    "subject": "fix(music): \u81EA\u52A8\u6F14\u594F\u541E\u91CD\u590D\u97F3\u3001\u6309\u952E\u957F\u6309\u4E0D\u653E (#3747)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/1dd1e2aa16956744281dca8192db9aa0ca722a84",
+    "committedAt": "2026-10-01T17:13:51+00:00",
+    "fetchedAt": "2026-10-01T17:18:44.8627585+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "a0bc552a8a1e73430adccede7c14ea6fb5a28b99",
+    "subject": "Add new ElementalCollectAvatars (#3752)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/a0bc552a8a1e73430adccede7c14ea6fb5a28b99",
+    "committedAt": "2026-10-01T17:16:34+00:00",
+    "fetchedAt": "2026-10-01T17:18:44.8627585+00:00"
+  }
+]
