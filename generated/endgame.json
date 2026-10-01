@@ -39,19 +39,6 @@
     "notes": ""
   },
   {
-    "ruleId": "NTE_OUTER_REALM",
-    "game": "NTE",
-    "name": "\u8F68\u5916\u4E4B\u5883",
-    "scheduledStart": "2026-09-18",
-    "startsOn": "2026-09-18",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-10-02",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_MEMORY_OF_CHAOS",
     "game": "STARRAIL",
     "name": "\u6DF7\u6C8C\u56DE\u5FC6",
@@ -164,6 +151,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2026-12-07",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "NTE_OUTER_REALM",
+    "game": "NTE",
+    "name": "\u8F68\u5916\u4E4B\u5883",
+    "scheduledStart": "2026-10-30",
+    "startsOn": "2026-10-30",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2026-11-13",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
