@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-08",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "855439bdda80e09909d37c0e5182ca481128c174",
+  "reportHash": "sha256:9b376860a24a259d06eafd470a3efbdfd3218ba1d1541d0d4cf86048721ddc46",
+  "generatedAt": "2026-10-07T17:43:04.0291348+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7410\u67088\u65E5\uFF0C\u661F\u671F\u56DB\n\n\u4ECA\u5929\u662F\u4E8C\u5341\u56DB\u8282\u6C14 \u5BD2\u9732\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (46713b9)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "HEALTHY",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:6314f747233330fa97d355dccec7260d8f5d59cad84cd9f373c8e9fa76389710",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "0 commits in [2026-10-07T18:00:00.0000000\u002B08:00, 2026-10-08T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-10-07T18:00:00.0000000\u002B08:00, 2026-10-08T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 9 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-10-07T17:42:49.4932626+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
