@@ -1,10 +1,18 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "46713b930cd7a528d126dd718812f102d13503c3",
+    "sha": "3ed574ee87e0aa181fce156bb2055c3d0eb192ab",
+    "subject": "AutoYuanQin\uFF1A\u952E\u76D8\u8C31\u8F6C\u6362\u5668 (#3729)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/3ed574ee87e0aa181fce156bb2055c3d0eb192ab",
+    "committedAt": "2026-10-08T12:51:17+00:00",
+    "fetchedAt": "2026-10-08T17:47:17.3964623+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "5ab26bc0df12a1ff954181d7e0376201f28154a6",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/46713b930cd7a528d126dd718812f102d13503c3",
-    "committedAt": "2026-10-07T17:22:11+00:00",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/5ab26bc0df12a1ff954181d7e0376201f28154a6",
+    "committedAt": "2026-10-08T17:18:49+00:00",
+    "fetchedAt": "2026-10-08T17:47:17.3964623+00:00"
   }
 ]
