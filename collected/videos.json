@@ -1,5 +1,15 @@
 [
   {
+    "id": "https://www.youtube.com/watch?v=_4e3SdPNtI0",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Cutscene Animation: \u0022Bequest\u0022 | Genshin Impact #GenshinImpact #StoriesofFrostSnow #GenshinSnezhnaya",
+    "sourceUrl": "https://www.youtube.com/watch?v=_4e3SdPNtI0",
+    "publishedAt": "2026-10-10T12:00:14+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=_8i1biMeuwA",
     "game": "GENSHIN",
     "type": "VIDEO",
@@ -27,7 +37,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=0lcI9ZXq6ps",
     "publishedAt": "2026-09-29T18:05:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=0oPvFaBTE8M",
@@ -67,7 +77,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=3v93vjZQumA",
     "publishedAt": "2026-10-04T12:00:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=5qDZpIyRfEk",
@@ -77,7 +87,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=5qDZpIyRfEk",
     "publishedAt": "2026-10-07T12:00:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=6I1SNW0tVYk",
@@ -137,7 +147,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9GAWAmHkiGQ",
     "publishedAt": "2026-09-28T18:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=9wwm86um-UU",
@@ -147,7 +157,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9wwm86um-UU",
     "publishedAt": "2026-10-02T12:00:26+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=acwaALHhDY0",
@@ -207,7 +217,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=CQmxJqv4QnM",
     "publishedAt": "2026-09-30T11:00:03+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=D0ec1yN5i3Y",
@@ -267,7 +277,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=dgm5ltqQ2SQ",
     "publishedAt": "2026-09-29T16:00:02+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=DKfiPcFAZ78",
@@ -347,7 +357,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=fj_3aa897zo",
     "publishedAt": "2026-10-08T12:00:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=fSwBYIeAieo",
@@ -397,7 +407,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=iVHs8wOGYio",
     "publishedAt": "2026-09-29T18:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=J7cCSEX1zuE",
@@ -567,7 +577,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=Q-ipLPGL8Qg",
     "publishedAt": "2026-09-30T18:00:32+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=qS4cAVd_hVg",
@@ -597,7 +607,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=rEoZ_t5oBmQ",
     "publishedAt": "2026-10-06T12:00:14+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=reYxhP7LYpA",
@@ -747,7 +757,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=y1SIHvgh4Lo",
     "publishedAt": "2026-09-29T12:01:01+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=y2wLSlTRZ_Q",
@@ -757,7 +767,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=y2wLSlTRZ_Q",
     "publishedAt": "2026-10-05T12:00:23+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=yDcKPxia30Q",
@@ -787,7 +797,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=yjdA21x1ak8",
     "publishedAt": "2026-10-09T12:00:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=YridTO5hKfM",
@@ -827,7 +837,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV11f7J6LEwU",
     "publishedAt": "2026-06-28T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV12BKU6AEW1",
@@ -837,7 +847,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV12BKU6AEW1",
     "publishedAt": "2026-06-30T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV12iKU6eEyj",
@@ -847,7 +857,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV12iKU6eEyj",
     "publishedAt": "2026-07-01T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV13ZLw6KEhF",
@@ -877,7 +887,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV15DgA6wEyF",
     "publishedAt": "2026-08-15T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV15gM16kE1g",
@@ -887,7 +897,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV15gM16kE1g",
     "publishedAt": "2026-08-10T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV18btt6NEJw",
@@ -897,7 +907,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV18btt6NEJw",
     "publishedAt": "2026-09-03T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV18dEr6DErw",
@@ -907,7 +917,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV18dEr6DErw",
     "publishedAt": "2026-06-17T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV19tej6oE3H",
@@ -917,7 +927,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV19tej6oE3H",
     "publishedAt": "2026-09-24T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1adTj6sEU1",
@@ -927,7 +937,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1adTj6sEU1",
     "publishedAt": "2026-07-04T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1Bo736yE99",
@@ -937,7 +947,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1Bo736yE99",
     "publishedAt": "2026-06-27T20:25:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1egM16kE9D",
@@ -947,7 +957,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1egM16kE9D",
     "publishedAt": "2026-08-09T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1eihe6YEf4",
@@ -957,7 +967,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1eihe6YEf4",
     "publishedAt": "2026-09-23T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1gdEr6QE1a",
@@ -987,7 +997,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1iWej6hEe6",
     "publishedAt": "2026-09-21T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1jVtt6LEjP",
@@ -997,7 +1007,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1jVtt6LEjP",
     "publishedAt": "2026-09-02T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1jWej6hEnK",
@@ -1007,7 +1017,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1jWej6hEnK",
     "publishedAt": "2026-09-19T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1jWej6hET5",
@@ -1017,7 +1027,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1jWej6hET5",
     "publishedAt": "2026-09-17T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1jWej6hEVt",
@@ -1027,7 +1037,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1jWej6hEVt",
     "publishedAt": "2026-09-23T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1Lxej6FEhv",
@@ -1037,7 +1047,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1Lxej6FEhv",
     "publishedAt": "2026-09-16T20:10:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1NUMy6oEgd",
@@ -1047,7 +1057,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1NUMy6oEgd",
     "publishedAt": "2026-08-08T20:30:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1PGLA6dEri",
@@ -1067,7 +1077,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1RgM16rEe6",
     "publishedAt": "2026-08-08T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1s3LA64ErQ",
@@ -1087,7 +1097,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1tcEk67EBB",
     "publishedAt": "2026-06-18T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1UU4C6kEam",
@@ -1097,7 +1107,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1UU4C6kEam",
     "publishedAt": "2026-08-30T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1VVKH6vEnH",
@@ -1107,7 +1117,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1VVKH6vEnH",
     "publishedAt": "2026-07-22T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1W1uq6zEdG",
@@ -1117,7 +1127,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1W1uq6zEdG",
     "publishedAt": "2026-08-13T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1xiKU6eED2",
@@ -1127,7 +1137,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1xiKU6eED2",
     "publishedAt": "2026-07-02T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1xwaw6aEpJ",
@@ -1137,7 +1147,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1xwaw6aEpJ",
     "publishedAt": "2026-09-28T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1y1uq6zEud",
@@ -1147,7 +1157,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1y1uq6zEud",
     "publishedAt": "2026-08-12T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1YLKH6PEPP",
@@ -1157,7 +1167,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1YLKH6PEPP",
     "publishedAt": "2026-07-19T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1YVKH6vEdg",
@@ -1167,7 +1177,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1YVKH6vEdg",
     "publishedAt": "2026-07-23T11:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.bilibili.com/video/BV1zo736yEFZ",
@@ -1177,7 +1187,7 @@
     "sourceUrl": "https://www.bilibili.com/video/BV1zo736yEFZ",
     "publishedAt": "2026-06-27T20:20:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-07T17:42:49.4932626+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=_6We4RCsbto",
@@ -1217,7 +1227,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=11EJu2H3i10",
     "publishedAt": "2026-09-22T11:00:16+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=aaYSx9xe2wo",
@@ -1267,7 +1277,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=C6uku9_GEaU",
     "publishedAt": "2026-09-28T12:00:04+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=c6WRaqkbTd8",
@@ -1277,7 +1287,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=c6WRaqkbTd8",
     "publishedAt": "2026-09-23T12:00:35+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "112b7e68-e68b-460c-86ff-7c1ae1b85795",
@@ -1347,7 +1357,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=FcjfCOtad8k",
     "publishedAt": "2026-09-27T20:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=fCnZYvBjOSA",
@@ -1367,7 +1377,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=fH0yXrZopgc",
     "publishedAt": "2026-09-29T20:00:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
@@ -1377,7 +1387,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
     "publishedAt": "2026-09-20T20:40:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=GpykEcVpzGs",
@@ -1417,7 +1427,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=idPGtq4imUE",
     "publishedAt": "2026-10-02T12:00:08+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=iF654p9vwsk",
@@ -1447,7 +1457,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=lvdpafREDLk",
     "publishedAt": "2026-09-24T18:00:10+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=Lw3A27Y7lW0",
@@ -1457,7 +1467,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=Lw3A27Y7lW0",
     "publishedAt": "2026-09-25T12:00:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mqV0MLdZ1Jw",
@@ -1467,7 +1477,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=mqV0MLdZ1Jw",
     "publishedAt": "2026-09-22T12:00:03+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=MwGRX73a4f4",
@@ -1547,7 +1557,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=RHm2CRtHVQM",
     "publishedAt": "2026-09-26T12:00:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=roinkC5lcBI",
@@ -1557,7 +1567,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=roinkC5lcBI",
     "publishedAt": "2026-09-28T11:00:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=s90i-mW48eA",
@@ -1567,7 +1577,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=s90i-mW48eA",
     "publishedAt": "2026-10-08T18:50:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=twrZobrx0ZM",
@@ -1577,7 +1587,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=twrZobrx0ZM",
     "publishedAt": "2026-09-27T12:00:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "523412d1-3375-407c-9f70-a18abc9a662d",
@@ -1607,7 +1617,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=YKEufDzuNx8",
     "publishedAt": "2026-09-28T18:00:25+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-09T17:23:01.5539516+00:00"
+    "fetchedAt": "2026-10-10T16:08:30.1660968+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=zgad2zJnk-0",
