@@ -1,18 +1,5 @@
 [
   {
-    "ruleId": "STARRAIL_APOCALYPTIC_SHADOW",
-    "game": "STARRAIL",
-    "name": "\u672B\u65E5\u5E7B\u5F71",
-    "scheduledStart": "2026-08-31",
-    "startsOn": "2026-08-31",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-10-12",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "STARRAIL_PURE_FICTION",
     "game": "STARRAIL",
     "name": "\u865A\u6784\u53D9\u4E8B",
@@ -242,6 +229,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2027-02-01",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "STARRAIL_APOCALYPTIC_SHADOW",
+    "game": "STARRAIL",
+    "name": "\u672B\u65E5\u5E7B\u5F71",
+    "scheduledStart": "2027-01-04",
+    "startsOn": "2027-01-04",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2027-02-15",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
