@@ -1,14 +1,14 @@
 {
   "date": "2026-10-14",
-  "revision": 1,
+  "revision": 2,
   "state": "READY",
-  "sourceCommit": "a2a6edf6b6a66711fb005077ef273d3e70706e91",
-  "reportHash": "sha256:1b84e5a69d7056cb389612b1f128f560978da1365d6981f541da2ce9190bac77",
-  "generatedAt": "2026-10-13T18:03:44.2122806+00:00",
+  "sourceCommit": "dffab031bbd7e8715b75aa3a437bfc80458684ce",
+  "reportHash": "sha256:2c4f9952cea8325b9b54869749cb34c38f1064641f1ac809d79d04eacc95a5dc",
+  "generatedAt": "2026-10-14T15:45:18.3764035+00:00",
   "lockedAt": null,
   "lockReason": null,
   "publishedAt": null,
-  "content": "\u4ECA\u5929\u662F2026\u5E7410\u670814\u65E5\uFF0C\u661F\u671F\u4E09\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u6B27\u6D1B\u4F26\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5B89\u9B42\u66F2\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u9ED1\u7FBD\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5494\u6ECB\uFF01\u9EC4\u91D1\u53CC\u8154\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u660E\u97F3\u6F9C\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u4E45\u68A6\u521D\u9192\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u591C\u66F2\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u6816\u7FBD\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u9884\u8A00\u7EC8\u5E55\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 1\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u65E5\u6708\u661F\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u707F\u70C2\u7684\u661F\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u660E\u65E504:00\u5F00\u59CB\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (81bc0f0)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "content": "\u4ECA\u5929\u662F2026\u5E7410\u670814\u65E5\uFF0C\u661F\u671F\u4E09\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u6B27\u6D1B\u4F26\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5B89\u9B42\u66F2\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u9ED1\u7FBD\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5494\u6ECB\uFF01\u9EC4\u91D1\u53CC\u8154\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u660E\u97F3\u6F9C\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u4E45\u68A6\u521D\u9192\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u591C\u66F2\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u6816\u7FBD\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u9884\u8A00\u7EC8\u5E55\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u65E5\u6708\u661F\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u707F\u70C2\u7684\u661F\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u660E\u65E504:00\u5F00\u59CB\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-feat: \u684C\u9762\u5206\u8EAB\u6DFB\u52A0\u89C2\u770B\u6A21\u5F0F (#3814) (704d920)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (81bc0f0)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
   "health": "DEGRADED",
   "validationState": "VALID",
   "selectedArtwork": [
@@ -27,48 +27,48 @@
       "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
     }
   ],
-  "payloadHash": "sha256:dccab9bed14dd86ee9727a5908df6e04d427d668c0f6993eb817046f97d13645",
+  "payloadHash": "sha256:da7d70558a41e669d349695ca1e655795fd2d8a361b6700510f00b9fe10818a5",
   "providerStatuses": [
     {
       "provider": "GitHub:babalae/better-genshin-impact",
       "status": "HEALTHY",
-      "message": "0 commits in [2026-10-13T18:00:00.0000000\u002B08:00, 2026-10-14T18:00:00.0000000\u002B08:00); provisional before cutoff",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "message": "1 commits in [2026-10-13T18:00:00.0000000\u002B08:00, 2026-10-14T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": false
     },
     {
       "provider": "GitHub:babalae/bettergi-scripts-list",
       "status": "HEALTHY",
-      "message": "1 commits in [2026-10-13T18:00:00.0000000\u002B08:00, 2026-10-14T18:00:00.0000000\u002B08:00); provisional before cutoff",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "message": "1 commits in [2026-10-13T18:00:00.0000000\u002B08:00, 2026-10-14T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:GENSHIN",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:STARRAIL",
       "status": "HEALTHY",
       "message": "Fetched 15 official candidates.",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": false
     },
     {
       "provider": "Video:NTE",
       "status": "DEGRADED",
       "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": true
     },
     {
       "provider": "Pixiv",
       "status": "HEALTHY",
-      "message": "Added 17 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
-      "checkedAt": "2026-10-13T18:03:28.2643296+00:00",
+      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-10-14T15:45:01.4165078+00:00",
       "usedCachedData": false
     }
   ]
