@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-15",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "efca60e1a81c603c9d1fd292bbad630802022cea",
+  "reportHash": "sha256:9099e61d96e35fb73043a64cf65dd85e06e8df7ee49273e0503c363a96d801dc",
+  "generatedAt": "2026-10-15T15:32:43.5405917+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7410\u670815\u65E5\uFF0C\u661F\u671F\u56DB\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5B89\u9B42\u66F2\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u9ED1\u7FBD\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5915\u7167\u73AF\u7ED5\u3008\u8F68\u5916\u4E4B\u5883\u3009\u300D\u5269\u4F59 0\u59294\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5494\u6ECB\uFF01\u9EC4\u91D1\u53CC\u8154\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u660E\u97F3\u6F9C\u00B7\u5F00\u5E02\u9884\u6F14\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u6F84\u660E\u73AF\u7ED5\u3008\u8F68\u5916\u4E4B\u5883\u3009\u300D\u660E\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u4E45\u68A6\u521D\u9192\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u591C\u66F2\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u6816\u7FBD\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u9884\u8A00\u7EC8\u5E55\u65F6\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5F27\u76D2\u7814\u52DF\u300C\u65E5\u6708\u661F\u7279\u520A\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u5F02\u73AF \u9650\u5B9A\u62DB\u52DF\u300C\u707F\u70C2\u7684\u661F\uFF08\u5F85\u786E\u8BA4\uFF09\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u539F\u795E \u5468\u671F\u73A9\u6CD5\u300C\u6DF1\u5883\u87BA\u65CB\u300D\u660E\u65E504:00\u5237\u65B0\n-\u5F02\u73AF \u5468\u671F\u73A9\u6CD5\u300C\u8F68\u5916\u4E4B\u5883\u300D\u660E\u65E504:00\u5237\u65B0\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-chore: \u65B0\u589E PR \u6A21\u677F\uFF0C\u89C4\u8303\u63D0\u4EA4\u786E\u8BA4\u3001\u9A8C\u8BC1\u4FE1\u606F\u4E0E\u6539\u52A8\u7C7B\u578B (c163bb0)\n-feat: \u6A21\u677F\u8BC6\u522B\u589E\u52A0\u8868\u5355\u7B7E\u540D\uFF0C\u9632\u6B62\u624B\u5199\u4F2A\u6A21\u677F\u7ED5\u8FC7 (c4f9e70)\n-feat: \u8868\u5355\u7B7E\u540D\u6539\u4E3A\u9010\u9879\u6821\u9A8C\uFF0C\u672A\u4F7F\u7528\u6A21\u677F\u6539\u7528\u72EC\u7ACB\u63D0\u793A (7a48461)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (7352bd3)\n-feat: \u6A21\u677F\u8BC6\u522B\u589E\u52A0\u8868\u5355\u7B7E\u540D\uFF0C\u9632\u6B62\u624B\u5199\u4F2A\u6A21\u677F\u7ED5\u8FC7 (5494de9)\n-feat: \u8868\u5355\u7B7E\u540D\u6539\u4E3A\u9010\u9879\u6821\u9A8C\uFF0C\u672A\u4F7F\u7528\u6A21\u677F\u6539\u7528\u72EC\u7ACB\u63D0\u793A (08950d0)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:4b27ee942044a53de4ad13872a600c1e87eefc6c5f1ad28e34cd8930f292b467",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-10-14T18:00:00.0000000\u002B08:00, 2026-10-15T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-10-14T18:00:00.0000000\u002B08:00, 2026-10-15T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 20 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-10-15T15:32:23.4359167+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
