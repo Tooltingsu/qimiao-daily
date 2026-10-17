@@ -1,18 +1,26 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "51c1aaea4ed879e8ee2d8608fc596284fcfbadfc",
-    "subject": "fix(AutoBoss): \u4FEE\u590D\u81F3\u51AC\u573A\u666F\u4E0B\u6811\u8102\u56FE\u6807\u8BEF\u8BC6\u522B\u7684\u95EE\u9898 (#3821)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/51c1aaea4ed879e8ee2d8608fc596284fcfbadfc",
-    "committedAt": "2026-10-15T16:23:25+00:00",
-    "fetchedAt": "2026-10-16T15:18:33.2415186+00:00"
+    "sha": "4dca07d17fb6e9c4721690a4625a80a319d6428c",
+    "subject": "feat: \u91CD\u6784 AI \u63A8\u7406\u8BBE\u7F6E\uFF0C\u652F\u6301\u6309\u5F15\u64CE\u9009\u62E9\u3001\u542F\u52A8\u9A8C\u8BC1\u4E0E\u72EC\u7ACB\u8FD0\u884C\u5E93 (#3819)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/4dca07d17fb6e9c4721690a4625a80a319d6428c",
+    "committedAt": "2026-10-16T19:59:50+00:00",
+    "fetchedAt": "2026-10-17T14:06:55.7481865+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "c9db8b8291fe4ac25a600aee1582298005919eb2",
-    "subject": "feat(js): JS \u811A\u672C\u652F\u6301\u8C03\u7528 Yolo ONNX \u63A8\u7406\u68C0\u6D4B (#3824)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/c9db8b8291fe4ac25a600aee1582298005919eb2",
-    "committedAt": "2026-10-16T01:55:22+00:00",
-    "fetchedAt": "2026-10-16T15:18:33.2415186+00:00"
+    "sha": "bee45ef958473b590871a6be30b8e79b2f3c5b41",
+    "subject": "JS YOLO \u652F\u6301 classify",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/bee45ef958473b590871a6be30b8e79b2f3c5b41",
+    "committedAt": "2026-10-16T20:08:40+00:00",
+    "fetchedAt": "2026-10-17T14:06:55.7481865+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "b3f90e70494320639eeccc8c559612d02d2d9ef0",
+    "subject": "\u5BF9\u5916\u5BF9\u8C61\u4F7F\u7528\u81EA\u5B9A\u4E49\u5BF9\u8C61",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/b3f90e70494320639eeccc8c559612d02d2d9ef0",
+    "committedAt": "2026-10-16T20:24:15+00:00",
+    "fetchedAt": "2026-10-17T14:06:55.7481865+00:00"
   }
 ]
