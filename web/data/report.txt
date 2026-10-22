@@ -1,13 +1,15 @@
-今天是2026年10月21日，星期三
+今天是2026年10月22日，星期四
 
 游戏活动预览
+-异环 活动「魔卡翻翻乐」明日04:00开始
+-崩坏：星穹铁道 发布视频【"The Laughter Outsmarts miHoYo" Episode 5 | Changing Fate】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
 
 BGI仓库更新
--update repo.json [skip ci] (f9899ee)
+-update repo.json [skip ci] (9756c1b)
 
 ——————————————————
 
