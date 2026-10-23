@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "523616728121ec837158550818493eebfaac3fde",
+  "reportHash": "sha256:98f407b891b917f5acef076b17058adb2788766ea16ddbeb4a202b567933d1b9",
+  "generatedAt": "2026-10-23T15:40:52.1841159+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7410\u670823\u65E5\uFF0C\u661F\u671F\u4E94\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u9B54\u5361\u7FFB\u7FFB\u4E50\u300D\u4ECA\u65E504:00\u5F00\u59CB\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010\u0022Fort Fulguration\u0022 Valeriy | Discipline Down to the Second #GenshinImpact #Valeriy #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010\u0022Rules Set at Naught\u0022 Mitya | Genius At Play #GenshinImpact #Mitya #GenshinSnezhnaya\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-feat(js): \u65B0\u589E file.deletePathSync \u5E76\u4FEE\u590D\u8DEF\u5F84\u8D8A\u754C\u5224\u65AD (#3840) (847d2c3)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (999c1ba)\n-\u66F4\u65B011\u9996\u5355\u66F2 (#3758) (25155a3)\n-\u5343\u661F\u5947\u57DF-\u7EEE\u8863\u73CD\u8D4F\u3010\u66F4\u65B0\u3011 (#3763) (879bd43)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:7d23c31d6e58f9096ed6faee6060209b7ac3e64737a6e3379778ba4758dce87c",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-10-22T18:00:00.0000000\u002B08:00, 2026-10-23T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-10-22T18:00:00.0000000\u002B08:00, 2026-10-23T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 18 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-10-23T15:40:35.7316006+00:00",
+      "usedCachedData": false
+    }
+  ]
+}

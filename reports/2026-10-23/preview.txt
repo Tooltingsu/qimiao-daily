@@ -1,0 +1,21 @@
+今天是2026年10月23日，星期五
+
+游戏活动预览
+-异环 活动「魔卡翻翻乐」今日04:00开始
+-原神 发布视频【"Fort Fulguration" Valeriy | Discipline Down to the Second #GenshinImpact #Valeriy #GenshinSnezhnaya】
+-原神 发布视频【"Rules Set at Naught" Mitya | Genius At Play #GenshinImpact #Mitya #GenshinSnezhnaya】
+
+——————————————————
+
+BGI更新预告（所有改动随下一版本同步）
+-feat(js): 新增 file.deletePathSync 并修复路径越界判断 (#3840) (847d2c3)
+
+BGI仓库更新
+-update repo.json [skip ci] (999c1ba)
+-更新11首单曲 (#3758) (25155a3)
+-千星奇域-绮衣珍赏【更新】 (#3763) (879bd43)
+
+——————————————————
+
+美图分享
+今汐 鸣潮 来源：pixiv
