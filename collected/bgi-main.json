@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "847d2c3fc1e202e6602caa50663b0f889e8e0051",
+    "subject": "feat(js): \u65B0\u589E file.deletePathSync \u5E76\u4FEE\u590D\u8DEF\u5F84\u8D8A\u754C\u5224\u65AD (#3840)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/847d2c3fc1e202e6602caa50663b0f889e8e0051",
+    "committedAt": "2026-10-22T16:57:32+00:00",
+    "fetchedAt": "2026-10-23T15:40:35.7316006+00:00"
+  }
+]
