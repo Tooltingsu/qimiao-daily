@@ -1,19 +1,32 @@
-今天是2026年10月23日，星期五
+今天是2026年10月24日，星期六
+
+今天是二十四节气 霜降
+今天是【崩坏3 爱衣・休伯利安 Λ】的生日
+
+——————————————————
 
 游戏活动预览
--异环 活动「魔卡翻翻乐」今日04:00开始
--原神 发布视频【"Fort Fulguration" Valeriy | Discipline Down to the Second #GenshinImpact #Valeriy #GenshinSnezhnaya】
--原神 发布视频【"Rules Set at Naught" Mitya | Genius At Play #GenshinImpact #Mitya #GenshinSnezhnaya】
+-原神 发布视频【Genshin Impact Version 7.2 Special Program #GenshinImpact #SpecialProgram】
+-原神 发布视频【Version 7.2 "Hour of Ruin" Trailer | Genshin Impact #GenshinImpact #GenshinSnezhnaya】
+-原神 发布视频【Version 7.2 Trailer (Extract 1) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer】
+-原神 发布视频【Version 7.2 Trailer (Extract 2) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer #Noy】
+-原神 发布视频【Version 7.2 Trailer (Extract 3) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer #Mitya】
+-原神 发布视频【Version 7.2 Trailer (Extract 4) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer】
+-原神 发布视频【Version 7.2 "Hour of Ruin" Events Overview | Genshin Impact #GenshinImpact #GenshinSnezhnaya】
+-原神 发布视频【Version 7.2 Trailer (Extract 5) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer】
+-原神 发布视频【Version 7.2 Event Wishes Announcement #GenshinSnezhnaya #GenshinImpact #Mitya #Valeriy】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--feat(js): 新增 file.deletePathSync 并修复路径越界判断 (#3840) (847d2c3)
+-7.2 元数据更新 (81919a2)
+-fix: keep Telegram notification photos within upload limit (#3850) (9a51e6a)
+-fix: preserve supported xxtui notification channels (#3849) (c1cf6b7)
+-feat: WGC V2 泵线程与按需渲染帧改造 (#3848) (14537ea)
 
 BGI仓库更新
--update repo.json [skip ci] (999c1ba)
--更新11首单曲 (#3758) (25155a3)
--千星奇域-绮衣珍赏【更新】 (#3763) (879bd43)
+-update repo.json [skip ci] (cce7d70)
+-优化了部分矿物路线 (#3767) (5016ce5)
 
 ——————————————————
 

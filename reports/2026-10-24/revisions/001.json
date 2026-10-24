@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-24",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "f67a4e84deeb1436ddbfbe7e0fbe96be01b57680",
+  "reportHash": "sha256:3d85271f489f6c0e98e4c1a16b8d86d181eadc736a19d622fb966c2f7e566002",
+  "generatedAt": "2026-10-24T14:21:48.3227087+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7410\u670824\u65E5\uFF0C\u661F\u671F\u516D\n\n\u4ECA\u5929\u662F\u4E8C\u5341\u56DB\u8282\u6C14 \u971C\u964D\n\u4ECA\u5929\u662F\u3010\u5D29\u574F3 \u7231\u8863\u30FB\u4F11\u4F2F\u5229\u5B89 \u039B\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Genshin Impact Version 7.2 Special Program #GenshinImpact #SpecialProgram\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 \u0022Hour of Ruin\u0022 Trailer | Genshin Impact #GenshinImpact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Trailer (Extract 1) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Trailer (Extract 2) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer #Noy\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Trailer (Extract 3) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer #Mitya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Trailer (Extract 4) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 \u0022Hour of Ruin\u0022 Events Overview | Genshin Impact #GenshinImpact #GenshinSnezhnaya\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Trailer (Extract 5) | Genshin Impact #GenshinSnezhnaya #NewVersion #Trailer\u3011\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Version 7.2 Event Wishes Announcement #GenshinSnezhnaya #GenshinImpact #Mitya #Valeriy\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-7.2 \u5143\u6570\u636E\u66F4\u65B0 (81919a2)\n-fix: keep Telegram notification photos within upload limit (#3850) (9a51e6a)\n-fix: preserve supported xxtui notification channels (#3849) (c1cf6b7)\n-feat: WGC V2 \u6CF5\u7EBF\u7A0B\u4E0E\u6309\u9700\u6E32\u67D3\u5E27\u6539\u9020 (#3848) (14537ea)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (cce7d70)\n-\u4F18\u5316\u4E86\u90E8\u5206\u77FF\u7269\u8DEF\u7EBF (#3767) (5016ce5)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:28249bfc7a2cf3eddb3bdb694d2ba0693a50cab475c28bdedad768f893116122",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-10-23T18:00:00.0000000\u002B08:00, 2026-10-24T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-10-23T18:00:00.0000000\u002B08:00, 2026-10-24T18:00:00.0000000\u002B08:00); complete window",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili API code -799 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-10-24T14:21:32.5261032+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
