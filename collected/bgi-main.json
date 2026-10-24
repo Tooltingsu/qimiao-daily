@@ -1,10 +1,34 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "847d2c3fc1e202e6602caa50663b0f889e8e0051",
-    "subject": "feat(js): \u65B0\u589E file.deletePathSync \u5E76\u4FEE\u590D\u8DEF\u5F84\u8D8A\u754C\u5224\u65AD (#3840)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/847d2c3fc1e202e6602caa50663b0f889e8e0051",
-    "committedAt": "2026-10-22T16:57:32+00:00",
-    "fetchedAt": "2026-10-23T15:40:35.7316006+00:00"
+    "sha": "81919a25ff3149e52502399bd01dafac7adde2e1",
+    "subject": "7.2 \u5143\u6570\u636E\u66F4\u65B0",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/81919a25ff3149e52502399bd01dafac7adde2e1",
+    "committedAt": "2026-10-23T16:10:49+00:00",
+    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "9a51e6a3e753de65fd4a9c7ab21375b37307cba7",
+    "subject": "fix: keep Telegram notification photos within upload limit (#3850)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/9a51e6a3e753de65fd4a9c7ab21375b37307cba7",
+    "committedAt": "2026-10-23T18:55:52+00:00",
+    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "c1cf6b7060ec19fba8013402a026fff53ead85e5",
+    "subject": "fix: preserve supported xxtui notification channels (#3849)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/c1cf6b7060ec19fba8013402a026fff53ead85e5",
+    "committedAt": "2026-10-23T18:58:21+00:00",
+    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "14537eae67c1070776a6be2fa9cf87be53d8386e",
+    "subject": "feat: WGC V2 \u6CF5\u7EBF\u7A0B\u4E0E\u6309\u9700\u6E32\u67D3\u5E27\u6539\u9020 (#3848)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/14537eae67c1070776a6be2fa9cf87be53d8386e",
+    "committedAt": "2026-10-23T19:07:15+00:00",
+    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
   }
 ]
