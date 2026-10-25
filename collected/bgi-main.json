@@ -1,34 +1,34 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "81919a25ff3149e52502399bd01dafac7adde2e1",
-    "subject": "7.2 \u5143\u6570\u636E\u66F4\u65B0",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/81919a25ff3149e52502399bd01dafac7adde2e1",
-    "committedAt": "2026-10-23T16:10:49+00:00",
-    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+    "sha": "e353319bc775d5c5dfb4e63a7300dce9a81a3188",
+    "subject": "fix: \u81EA\u52A8\u62FE\u53D6\u5355\u5B57\u8FC7\u6EE4\u653E\u884C\u76D0\u548C\u7CD6",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/e353319bc775d5c5dfb4e63a7300dce9a81a3188",
+    "committedAt": "2026-10-24T17:46:24+00:00",
+    "fetchedAt": "2026-10-25T14:54:15.0287231+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "9a51e6a3e753de65fd4a9c7ab21375b37307cba7",
-    "subject": "fix: keep Telegram notification photos within upload limit (#3850)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/9a51e6a3e753de65fd4a9c7ab21375b37307cba7",
-    "committedAt": "2026-10-23T18:55:52+00:00",
-    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+    "sha": "56b8a08cc84764f6b93dce3ea35023db205c0ec0",
+    "subject": "fix: OCR \u9ED8\u8BA4\u4F7F\u7528\u6E38\u620F\u6D41\u7545\u4F18\u5148\u65B9\u6848",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/56b8a08cc84764f6b93dce3ea35023db205c0ec0",
+    "committedAt": "2026-10-24T17:46:55+00:00",
+    "fetchedAt": "2026-10-25T14:54:15.0287231+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "c1cf6b7060ec19fba8013402a026fff53ead85e5",
-    "subject": "fix: preserve supported xxtui notification channels (#3849)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/c1cf6b7060ec19fba8013402a026fff53ead85e5",
-    "committedAt": "2026-10-23T18:58:21+00:00",
-    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+    "sha": "205f0303185b1f721327c6b721f5ba05e662d726",
+    "subject": "\u4F9D\u8D56\u66F4\u65B0",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/205f0303185b1f721327c6b721f5ba05e662d726",
+    "committedAt": "2026-10-24T18:23:40+00:00",
+    "fetchedAt": "2026-10-25T14:54:15.0287231+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "14537eae67c1070776a6be2fa9cf87be53d8386e",
-    "subject": "feat: WGC V2 \u6CF5\u7EBF\u7A0B\u4E0E\u6309\u9700\u6E32\u67D3\u5E27\u6539\u9020 (#3848)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/14537eae67c1070776a6be2fa9cf87be53d8386e",
-    "committedAt": "2026-10-23T19:07:15+00:00",
-    "fetchedAt": "2026-10-24T14:21:32.5261032+00:00"
+    "sha": "f154b69649fcd828a517af03d4230f6693e6832d",
+    "subject": "Update version to 0.66.3-alpha.1",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/f154b69649fcd828a517af03d4230f6693e6832d",
+    "committedAt": "2026-10-25T06:47:16+00:00",
+    "fetchedAt": "2026-10-25T14:54:15.0287231+00:00"
   }
 ]
