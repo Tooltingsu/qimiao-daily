@@ -1,22 +1,20 @@
-今天是2026年10月25日，星期日
+今天是2026年10月27日，星期二
 
-今天是【原神 优菈】的生日
+今天是【原神 纳西妲】的生日
 
 ——————————————————
 
 游戏活动预览
--崩坏：星穹铁道 周期玩法「虚构叙事」明日04:00刷新
+-原神 发布视频【Palace of Deathly Reflections #GenshinImpact #GenshinSnezhnaya】
+-原神 发布视频【Anomalies #GenshinImpact】
+-崩坏：星穹铁道 发布视频【Honkai: Star Rail Version 4.7 "Now, Lay Laughter to All Stars" Special Program】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--fix: 自动拾取单字过滤放行盐和糖 (e353319)
--fix: OCR 默认使用游戏流畅优先方案 (56b8a08)
--依赖更新 (205f030)
--Update version to 0.66.3-alpha.1 (f154b69)
 
 BGI仓库更新
--update repo.json [skip ci] (481b6a6)
+-update repo.json [skip ci] (260b317)
 
 ——————————————————
 
