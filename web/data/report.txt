@@ -1,20 +1,14 @@
-今天是2026年10月27日，星期二
-
-今天是【原神 纳西妲】的生日
-
-——————————————————
+今天是2026年10月28日，星期三
 
 游戏活动预览
--原神 发布视频【Palace of Deathly Reflections #GenshinImpact #GenshinSnezhnaya】
--原神 发布视频【Anomalies #GenshinImpact】
--崩坏：星穹铁道 发布视频【Honkai: Star Rail Version 4.7 "Now, Lay Laughter to All Stars" Special Program】
+-原神 发布视频【The veins of Kresnik Kristall stretch beneath half of Snezhnaya, creeping ever deeper #GenshinImpact】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
 
 BGI仓库更新
--update repo.json [skip ci] (260b317)
+-update repo.json [skip ci] (d775a4b)
 
 ——————————————————
 
