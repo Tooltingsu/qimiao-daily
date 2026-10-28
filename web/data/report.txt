@@ -1,14 +1,21 @@
-今天是2026年10月28日，星期三
+今天是2026年10月29日，星期四
+
+今天是【原神 枫原万叶】的生日
+
+——————————————————
 
 游戏活动预览
--原神 发布视频【The veins of Kresnik Kristall stretch beneath half of Snezhnaya, creeping ever deeper #GenshinImpact】
+-异环 活动「澄明环绕〈轨外之境〉」剩余 1天2小时，将于明日04:00结束
+-异环 活动「飞芒环绕〈轨外之境〉」明日04:00开始
+-异环 周期玩法「轨外之境」明日04:00刷新
+-原神 发布视频【Hallowed Plain #GenshinImpact】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
 
 BGI仓库更新
--update repo.json [skip ci] (d775a4b)
+-update repo.json [skip ci] (2222255)
 
 ——————————————————
 
