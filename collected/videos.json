@@ -107,7 +107,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=5jBfn4IFcVc",
     "publishedAt": "2026-10-29T12:01:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=5qDZpIyRfEk",
@@ -177,7 +177,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=8BMeEZTWi6c",
     "publishedAt": "2026-10-28T18:00:20+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=8Ty-Btue6OI",
@@ -267,7 +267,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=AVVl5utTlOw",
     "publishedAt": "2026-10-29T12:02:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=Bi2Ldfr9In8",
@@ -297,7 +297,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=BXr3A1H9nw4",
     "publishedAt": "2026-10-26T18:00:10+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=CQmxJqv4QnM",
@@ -387,7 +387,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=DmE2F7LZZm8",
     "publishedAt": "2026-10-29T12:03:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=dQhyGeyK_MU",
@@ -407,7 +407,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=dRNFyJnnNzA",
     "publishedAt": "2026-10-23T21:00:06+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=EkKVLA5Z6oQ",
@@ -527,7 +527,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=iaE0CelptSc",
     "publishedAt": "2026-10-29T12:00:03+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=iVHs8wOGYio",
@@ -597,7 +597,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=kI9LoC4a7wc",
     "publishedAt": "2026-10-29T18:00:03+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=KYE_0BSPbjY",
@@ -607,7 +607,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=KYE_0BSPbjY",
     "publishedAt": "2026-10-27T18:00:01+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=laFt44jpeN8",
@@ -617,7 +617,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=laFt44jpeN8",
     "publishedAt": "2026-10-23T20:45:14+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=LmkcqLBdn5o",
@@ -648,6 +648,26 @@
     "publishedAt": "2026-08-24T18:00:22+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=mS74ntYncz0",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "The Harbor That Never Freezes #GenshinImpact",
+    "sourceUrl": "https://www.youtube.com/watch?v=mS74ntYncz0",
+    "publishedAt": "2026-10-30T18:00:10+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=muL-0ibmab4",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "\u0022Yo, wanna go to the tavern for a bit?\u0022 | Genshin Impact #GenshinImpact #GenshinImpactCalendar",
+    "sourceUrl": "https://www.youtube.com/watch?v=muL-0ibmab4",
+    "publishedAt": "2026-10-30T11:00:11+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mZexZJv2zXY",
@@ -727,7 +747,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=oRbDyFrVxaI",
     "publishedAt": "2026-10-27T12:10:30+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=PAfHPX58iGM",
@@ -737,7 +757,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=PAfHPX58iGM",
     "publishedAt": "2026-10-26T18:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=pQlyhsaJ3p8",
@@ -808,6 +828,16 @@
     "publishedAt": "2026-08-22T18:00:32+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-11T14:55:20.9939257+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=S5upfEw5dVU",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Hey, no fair! #GenshinImpact #Mitya",
+    "sourceUrl": "https://www.youtube.com/watch?v=S5upfEw5dVU",
+    "publishedAt": "2026-10-30T18:00:30+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=s9u2iVZHnk4",
@@ -1500,6 +1530,16 @@
     "fetchedAt": "2026-10-16T15:18:33.2415186+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=3Id6j-gmaww",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Fun with Aha: Ways to Defeat the Voracity",
+    "sourceUrl": "https://www.youtube.com/watch?v=3Id6j-gmaww",
+    "publishedAt": "2026-10-30T21:00:33+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=3UzIQKJiTpQ",
     "game": "STARRAIL",
     "type": "VIDEO",
@@ -1507,7 +1547,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=3UzIQKJiTpQ",
     "publishedAt": "2026-10-12T12:00:23+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=6PRnFVdk2_Q",
@@ -1517,7 +1557,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=6PRnFVdk2_Q",
     "publishedAt": "2026-10-22T12:00:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=9IrX1lc27k8",
@@ -1527,7 +1567,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9IrX1lc27k8",
     "publishedAt": "2026-10-26T12:00:14+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=aaYSx9xe2wo",
@@ -1620,6 +1660,16 @@
     "fetchedAt": "2026-10-01T17:18:44.8627585+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=e91J24Xu4Z0",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Version 4.7 \u0022Now, Lay Laughter to All Stars\u0022 Preview",
+    "sourceUrl": "https://www.youtube.com/watch?v=e91J24Xu4Z0",
+    "publishedAt": "2026-10-30T21:55:03+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=ELm5wbyWeUw",
     "game": "STARRAIL",
     "type": "VIDEO",
@@ -1677,7 +1727,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=fH0yXrZopgc",
     "publishedAt": "2026-09-29T20:00:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
@@ -1727,7 +1777,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=idPGtq4imUE",
     "publishedAt": "2026-10-02T12:00:08+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=iF654p9vwsk",
@@ -1757,7 +1807,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=JZAp6s-NsMI",
     "publishedAt": "2026-10-27T12:00:17+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=LfvQueP0OrU",
@@ -1767,7 +1817,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=LfvQueP0OrU",
     "publishedAt": "2026-10-28T16:43:04+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=lvdpafREDLk",
@@ -1845,9 +1895,9 @@
     "type": "VIDEO",
     "title": "Honkai: Star Rail Version 4.7 \u0022Now, Lay Laughter to All Stars\u0022 Special Program",
     "sourceUrl": "https://www.youtube.com/watch?v=psifFhA2QAA",
-    "publishedAt": "2026-10-26T18:00:33+08:00",
+    "publishedAt": "2026-10-30T20:28:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=pwcYLaNi0A8",
@@ -1857,7 +1907,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=pwcYLaNi0A8",
     "publishedAt": "2026-10-17T12:00:24+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=pzXW1FydqnE",
@@ -1868,6 +1918,16 @@
     "publishedAt": "2026-09-06T12:00:26+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-23T15:22:06.6577464+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=Q7JuwvcqoMI",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Version 4.7 Trailer: \u0022Now, Lay Laughter to All Stars\u0022 | Honkai: Star Rail",
+    "sourceUrl": "https://www.youtube.com/watch?v=Q7JuwvcqoMI",
+    "publishedAt": "2026-10-30T20:15:04+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=r2ZUaFTmQ9g",
@@ -1897,7 +1957,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=rCxNRV9gdzo",
     "publishedAt": "2026-10-29T12:00:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=RHm2CRtHVQM",
@@ -1927,7 +1987,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=s90i-mW48eA",
     "publishedAt": "2026-10-08T18:50:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=twrZobrx0ZM",
@@ -1967,7 +2027,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=YKEufDzuNx8",
     "publishedAt": "2026-09-28T18:00:25+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-10-29T17:21:08.280771+00:00"
+    "fetchedAt": "2026-10-30T16:58:00.0695742+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=zgad2zJnk-0",
