@@ -1,17 +1,27 @@
-今天是2026年10月30日，星期五
+今天是2026年10月31日，星期六
+
+今天是【崩坏3 伊甸】的生日
+今天是【异环 法蒂娅】的生日
+今天是【原神 菲林斯】的生日
+
+——————————————————
 
 游戏活动预览
--异环 活动「澄明环绕〈轨外之境〉」剩余 0天2小时，将于今日04:00结束
--异环 活动「飞芒环绕〈轨外之境〉」今日04:00开始
--异环 周期玩法「轨外之境」今日04:00刷新
--原神 发布视频【A City Forged of Towering Kristall #GenshinImpact】
+-原神 周期玩法「幻想真境剧诗」明日04:00刷新
+-原神 发布视频【The Harbor That Never Freezes #GenshinImpact】
+-原神 发布视频【Hey, no fair! #GenshinImpact #Mitya】
+-崩坏：星穹铁道 发布视频【Version 4.7 Trailer: "Now, Lay Laughter to All Stars" | Honkai: Star Rail】
+-崩坏：星穹铁道 发布视频【Honkai: Star Rail Version 4.7 "Now, Lay Laughter to All Stars" Special Program】
+-崩坏：星穹铁道 发布视频【Fun with Aha: Ways to Defeat the Voracity】
+-崩坏：星穹铁道 发布视频【Version 4.7 "Now, Lay Laughter to All Stars" Preview】
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
+-fix: 战斗策略的秒数参数按固定小数点解析（修复 pt-BR 等逗号小数点区域下 4.5 被读成 45） (#3876) (3ba5886)
 
 BGI仓库更新
--update repo.json [skip ci] (52540e7)
+-update repo.json [skip ci] (6492e7a)
 
 ——————————————————
 
