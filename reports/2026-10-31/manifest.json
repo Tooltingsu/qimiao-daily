@@ -1,11 +1,11 @@
 {
   "date": "2026-10-31",
-  "latestRevision": 1,
+  "latestRevision": 2,
   "lockedRevision": null,
   "state": "READY",
-  "sourceCommit": "6a330f7bd3be72768f44b3277771026ad70f56f3",
-  "reportHash": "sha256:c0e002f31b5ee87ca66d499bfe0cb436326bb2a541ad254a2f463cb414032f24",
-  "generatedAt": "2026-10-30T16:58:14.996205+00:00",
+  "sourceCommit": "b84ab4bf99cdfd09e34596d7d2832b3d93497793",
+  "reportHash": "sha256:410bc09eabafa21d387fa7d6f1c21d478888c81ca9e3c4743f24359c4c261042",
+  "generatedAt": "2026-10-31T15:59:39.4580469+00:00",
   "lockedAt": null,
   "lockReason": null,
   "publishedAt": null
