@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-02",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "2736bdaaf66ba160b5a4cbd75f132118cba42f04",
+  "reportHash": "sha256:2900a8cac1e8f1e4958117fe6c0d8690fb4652f65fc1e823a56fc19ee2e92fa1",
+  "generatedAt": "2026-11-01T17:02:33.0474381+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u67082\u65E5\uFF0C\u661F\u671F\u4E00\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u9999\u83F1\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u539F\u795E \u6D3B\u52A8\u300C\u7B2C\u4E94\u671F\u300C\u783A\u884C\u4FEE\u8FDC\u300D\u65B0\u589E\u53EF\u90095\u661F\u89D2\u8272\u547D\u661F\u300D\u5269\u4F59 1\u59292\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E504:00\u7ED3\u675F\n-\u539F\u795E \u6D3B\u52A8\u300C\u9B54\u795E\u4EFB\u52A1\u300C\u5F80\u51A5\u5E9C\u7684\u5B89\u9B42\u6B4C\u300D\u300D\u5269\u4F59 1\u59292\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E503:59\u7ED3\u675F\n-\u539F\u795E \u6D3B\u52A8\u300C\u90AE\u4EF6\u7B54\u8C22\u0026\u7D2F\u8BA1\u767B\u5F55\u300D\u5269\u4F59 1\u59292\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u660E\u65E503:59\u7ED3\u675F\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u5B88\u91D1\u5927\u4F5C\u6218\u300D\u5269\u4F59 0\u59292\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (00c1149)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:81197f9e8f5924ad594cb7339fb1aa91cca955f1bee03b1aa0eb9f5e1d576166",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "0 commits in [2026-11-01T18:00:00.0000000\u002B08:00, 2026-11-02T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-11-01T18:00:00.0000000\u002B08:00, 2026-11-02T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 18 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-01T17:02:20.3894491+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
