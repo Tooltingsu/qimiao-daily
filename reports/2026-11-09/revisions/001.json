@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-09",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "431139714e28d1c91d0e3209e3d87ff3642e9e60",
+  "reportHash": "sha256:ad6d9f4da01f9172f5ac90859928b560cb02795fc1ffdec95ecb4e6a4d47c591",
+  "generatedAt": "2026-11-08T16:57:16.6580469+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u67089\u65E5\uFF0C\u661F\u671F\u4E00\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5D29\u574F\uFF1A\u661F\u7A79\u94C1\u9053 \u5468\u671F\u73A9\u6CD5\u300C\u6DF7\u6C8C\u56DE\u5FC6\u300D\u4ECA\u65E504:00\u5237\u65B0\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-PR\u6A21\u677F\u8981\u6C42\u6A21\u578B (9f7c36b)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-new \u7AF9\u7B0B(\u65E0\u8349\u795E) (#3803) (d6423e9)\n-Auto code\u907F\u514D\u53CD\u590D\u5C1D\u8BD5\u5176\u4ED6\u670D\u52A1\u5668\u7684\u65E0\u6548\u5151\u6362\u7801 (#3784) (f4c085f)\n-update repo.json [skip ci] (362c1db)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "HEALTHY",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:297726a03be7af18c7409980407f55bfb9546c442e8c3fedc015b28b1d94409b",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-11-08T18:00:00.0000000\u002B08:00, 2026-11-09T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "3 commits in [2026-11-08T18:00:00.0000000\u002B08:00, 2026-11-09T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 15 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-08T16:57:03.1324179+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
