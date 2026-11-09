@@ -1,17 +1,17 @@
-今天是2026年11月9日，星期一
+今天是2026年11月10日，星期二
 
 游戏活动预览
--崩坏：星穹铁道 周期玩法「混沌回忆」今日04:00刷新
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--PR模板要求模型 (9f7c36b)
+-Feat/wgcv2 到达即取 (#3903) (a4727f5)
+-UI展示优化 (cec279f)
+-Merge remote-tracking branch 'origin/main' (841443d)
+-Update version to 0.67.0 (e0ef0dd)
 
 BGI仓库更新
--new 竹笋(无草神) (#3803) (d6423e9)
--Auto code避免反复尝试其他服务器的无效兑换码 (#3784) (f4c085f)
--update repo.json [skip ci] (362c1db)
+-update repo.json [skip ci] (b8030ef)
 
 ——————————————————
 
