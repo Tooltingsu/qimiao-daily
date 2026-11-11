@@ -67,7 +67,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=1_fzebeDSJo",
     "publishedAt": "2026-11-07T12:00:22+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=1SIfQdwas54",
@@ -147,7 +147,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=6GGVZ8y_aMw",
     "publishedAt": "2026-11-06T12:00:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=6I1SNW0tVYk",
@@ -247,7 +247,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9mQ_t8qS6YI",
     "publishedAt": "2026-11-03T12:04:18+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=9OHKzmmq2e8",
@@ -257,7 +257,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=9OHKzmmq2e8",
     "publishedAt": "2026-11-03T12:00:24+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=9wwm86um-UU",
@@ -277,7 +277,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=aaZxyTfgGpM",
     "publishedAt": "2026-11-04T11:30:39+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=acwaALHhDY0",
@@ -317,7 +317,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=aUv_MxpacXw",
     "publishedAt": "2026-11-04T11:30:15+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=AVVl5utTlOw",
@@ -590,6 +590,16 @@
     "fetchedAt": "2026-11-02T20:39:40.3447557+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=iGFY0amy4gk",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Let your fingers dance to the beat~ #GenshinImpact #Genshinfanart #Mitya",
+    "sourceUrl": "https://www.youtube.com/watch?v=iGFY0amy4gk",
+    "publishedAt": "2026-11-11T18:15:29+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=iVHs8wOGYio",
     "game": "GENSHIN",
     "type": "VIDEO",
@@ -687,7 +697,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=lIefM1Mte-E",
     "publishedAt": "2026-11-03T18:00:38+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=LmkcqLBdn5o",
@@ -708,6 +718,16 @@
     "publishedAt": "2026-09-12T21:35:17+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-09-16T15:21:56.2639382+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=M6sKYbtC8pM",
+    "game": "GENSHIN",
+    "type": "VIDEO",
+    "title": "Mess with them, you mess with me! #GenshinImpact #Volkodlak",
+    "sourceUrl": "https://www.youtube.com/watch?v=M6sKYbtC8pM",
+    "publishedAt": "2026-11-11T18:00:31+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mh3CY72-Hlc",
@@ -817,7 +837,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=OOd6_6nSM48",
     "publishedAt": "2026-11-03T12:01:05+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=oRbDyFrVxaI",
@@ -907,7 +927,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=rHF-lm4qkFw",
     "publishedAt": "2026-11-04T18:00:09+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=s5u5aSDvk0A",
@@ -1027,7 +1047,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=vbaOAi_2umw",
     "publishedAt": "2026-11-06T18:00:18+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=VeLpLGey0_Y",
@@ -1077,7 +1097,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=wGu1hmjO4dM",
     "publishedAt": "2026-11-03T12:03:36+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=WnQy2GhbIbc",
@@ -1087,7 +1107,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=WnQy2GhbIbc",
     "publishedAt": "2026-11-10T18:00:37+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=wwDdQBSRR8E",
@@ -1117,7 +1137,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=xbVR53mPLI0",
     "publishedAt": "2026-11-03T12:02:38+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=XknOSCE_imA",
@@ -1777,7 +1797,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=8aoq4Y2uQDE",
     "publishedAt": "2026-11-10T10:00:19+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=9IrX1lc27k8",
@@ -1788,6 +1808,16 @@
     "publishedAt": "2026-10-26T12:00:14+08:00",
     "reviewStatus": "CONFIRMED",
     "fetchedAt": "2026-11-07T16:46:25.8145569+00:00"
+  },
+  {
+    "id": "https://www.youtube.com/watch?v=9zcwsJkUaz8",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Welcome to Version 4.7 \u0022Now, Lay Laughter to All Stars\u0022!",
+    "sourceUrl": "https://www.youtube.com/watch?v=9zcwsJkUaz8",
+    "publishedAt": "2026-11-11T11:00:39+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=aaYSx9xe2wo",
@@ -1807,7 +1837,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=Asggb78zcYA",
     "publishedAt": "2026-11-04T12:00:05+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=AWXzM3TaCH0",
@@ -1917,7 +1947,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=EaQqWl_B8cA",
     "publishedAt": "2026-11-08T12:30:16+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=ELm5wbyWeUw",
@@ -1937,7 +1967,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=eXaeZnq8Ca8",
     "publishedAt": "2026-11-05T12:00:34+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=F5FrLb4pjY4",
@@ -1997,7 +2027,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=ft25LCaghCw",
     "publishedAt": "2026-11-08T10:00:29+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=FZhukNdLXkQ",
@@ -2050,6 +2080,16 @@
     "fetchedAt": "2026-08-29T15:45:21.4394661+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=i2NcADoqM5U",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "Animated Short: \u0022A Joyful Funeral Beneath the Moon\u0022 | Honkai: Star Rail",
+    "sourceUrl": "https://www.youtube.com/watch?v=i2NcADoqM5U",
+    "publishedAt": "2026-11-11T12:00:17+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=idPGtq4imUE",
     "game": "STARRAIL",
     "type": "VIDEO",
@@ -2090,6 +2130,16 @@
     "fetchedAt": "2026-11-07T16:46:25.8145569+00:00"
   },
   {
+    "id": "https://www.youtube.com/watch?v=kqZnxDT_95k",
+    "game": "STARRAIL",
+    "type": "VIDEO",
+    "title": "A Moment Among the Stars \u2014 \u0022All\u0027s Well That Ends Well\u0022 | Honkai: Star Rail",
+    "sourceUrl": "https://www.youtube.com/watch?v=kqZnxDT_95k",
+    "publishedAt": "2026-11-11T18:00:24+08:00",
+    "reviewStatus": "CONFIRMED",
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
+  },
+  {
     "id": "https://www.youtube.com/watch?v=LfvQueP0OrU",
     "game": "STARRAIL",
     "type": "VIDEO",
@@ -2127,7 +2177,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=lXQv4ttLetg",
     "publishedAt": "2026-11-08T12:15:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=LxsRESfLAZ0",
@@ -2137,7 +2187,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=LxsRESfLAZ0",
     "publishedAt": "2026-11-04T11:00:31+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mFcuRubbJWM",
@@ -2147,7 +2197,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=mFcuRubbJWM",
     "publishedAt": "2026-11-10T20:00:24+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=mqV0MLdZ1Jw",
@@ -2177,7 +2227,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=npsD7oBdw9s",
     "publishedAt": "2026-11-04T12:15:13+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=oMw1Wtcn20Q",
@@ -2297,7 +2347,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=rMcFUTECbMQ",
     "publishedAt": "2026-11-08T12:00:11+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=roinkC5lcBI",
@@ -2337,7 +2387,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=UgpJS9DKo84",
     "publishedAt": "2026-11-10T12:00:00+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "523412d1-3375-407c-9f70-a18abc9a662d",
@@ -2377,7 +2427,7 @@
     "sourceUrl": "https://www.youtube.com/watch?v=YXBQ77UGOV8",
     "publishedAt": "2026-11-09T10:00:28+08:00",
     "reviewStatus": "CONFIRMED",
-    "fetchedAt": "2026-11-10T18:31:30.3180986+00:00"
+    "fetchedAt": "2026-11-11T18:28:51.2751952+00:00"
   },
   {
     "id": "https://www.youtube.com/watch?v=zgad2zJnk-0",
