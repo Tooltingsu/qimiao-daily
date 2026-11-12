@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-13",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "663a2c4d002641b6d2420d28618cbec28b6d33db",
+  "reportHash": "sha256:535485d26b379a51255697bb07e42564e0a4c2d70d4d801e9be67b3213ea15c6",
+  "generatedAt": "2026-11-12T18:45:07.3986521+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u670813\u65E5\uFF0C\u661F\u671F\u4E94\n\n\u4ECA\u5929\u662F\u3010\u5F02\u73AF \u6B8B\u8679\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n-\u5F02\u73AF \u6D3B\u52A8\u300C\u98DE\u8292\u73AF\u7ED5\u3008\u8F68\u5916\u4E4B\u5883\u3009\u300D\u5269\u4F59 0\u59291\u5C0F\u65F6\uFF0C\u5C06\u4E8E\u4ECA\u65E504:00\u7ED3\u675F\n-\u5F02\u73AF \u5468\u671F\u73A9\u6CD5\u300C\u8F68\u5916\u4E4B\u5883\u300D\u4ECA\u65E504:00\u5237\u65B0\n-\u539F\u795E \u53D1\u5E03\u89C6\u9891\u3010Wavebinder #GenshinImpact\u3011\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-feat: \u66F4\u65B0tp\u70B9\u4F4D (#3920) (604ec9c)\n-feat(notification): \u98DE\u4E66\u901A\u77E5\u6539\u4E3A Interactive Card 2.0 (#3909) (02c1dd6)\n-feat: \u81EA\u52A8\u8FDE\u62DB\u63A5\u5165\u53D1\u9C7C\u7AD9\u901A\u9053 (#3892) (01c240d)\n-feat(child-session): \u684C\u9762\u5206\u8EAB\u542F\u52A8\u5931\u8D25\u65F6\u5F39\u51FA\u8BCA\u65AD\u4E0E\u4FEE\u590D\u9762\u677F\uFF0C\u73AF\u5883\u68C0\u67E5\u6269\u5230 10 \u9879 (#3896) (9a03bdb)\n-fix(child-session): \u73AF\u5883\u68C0\u67E5\u6539\u4E3A\u5931\u8D25\u540E\u624B\u52A8\u89E6\u53D1 (4d2d9a4)\n-fix(notification): \u4FEE\u6B63\u98DE\u4E66\u901A\u77E5\u91CC Exception \u88AB\u89E3\u6790\u6210\u547D\u540D\u7A7A\u95F4 (#3924) (f8d9262)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-update repo.json [skip ci] (2c47880)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "HEALTHY",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:62be8eed1956e63c6d089c50aab799fe383d78f7d161d7a63edf429a95c7acbd",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "6 commits in [2026-11-12T18:00:00.0000000\u002B08:00, 2026-11-13T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-11-12T18:00:00.0000000\u002B08:00, 2026-11-13T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "HEALTHY",
+      "message": "Fetched 30 official candidates.",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 16 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-12T18:44:52.6633895+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
