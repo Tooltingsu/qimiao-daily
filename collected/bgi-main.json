@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "780f19a25d20997ad10a0e7b194a147363004cbe",
+    "subject": "Update QQ group link in README",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/780f19a25d20997ad10a0e7b194a147363004cbe",
+    "committedAt": "2026-11-18T15:15:32+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "6d14ab9fa27ce0027fe590597d1c664bcb4eb757",
+    "subject": "\u66F4\u65B0\u5FEB\u901F\u4F20\u9001\u652F\u6301\u56FE\u6807 (#3889)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/6d14ab9fa27ce0027fe590597d1c664bcb4eb757",
+    "committedAt": "2026-11-18T15:15:58+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "b779cb081bdfc5d1359d5cd9d47d382105731feb",
+    "subject": "fix: \u4FEE\u590D\u906E\u7F69\u7A97\u53E3\u9000\u51FA\u7F16\u8F91\u540E\u4F4D\u7F6E\u672A\u4FDD\u5B58",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/b779cb081bdfc5d1359d5cd9d47d382105731feb",
+    "committedAt": "2026-11-18T16:57:51+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "3d397ba3bdef411dcbb356abcba68133c0849228",
+    "subject": "fix(auto-combo): \u62C9\u53D6\u6A21\u578B\u5217\u8868\u6309\u5019\u9009\u5730\u5740\u9010\u9879\u5C1D\u8BD5\u5E76\u56DE\u5199\u89C4\u8303\u670D\u52A1\u5730\u5740 (#3935)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/3d397ba3bdef411dcbb356abcba68133c0849228",
+    "committedAt": "2026-11-18T17:33:27+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "27118771e79fb11adcda70d03ea4dbe9309a5182",
+    "subject": "fix(mask): \u4FEE\u590D\u6E38\u620F\u6700\u5C0F\u5316\u540E\u906E\u7F69\u672A\u9690\u85CF",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/27118771e79fb11adcda70d03ea4dbe9309a5182",
+    "committedAt": "2026-11-18T18:18:45+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "ea46fefe6426720dc3974e0db52b16c29ece42e4",
+    "subject": "fix(one-dragon): \u4FEE\u590D\u542F\u52A8\u4EFB\u52A1\u65F6\u8BEF\u5F39\u53F3\u952E\u83DC\u5355",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/ea46fefe6426720dc3974e0db52b16c29ece42e4",
+    "committedAt": "2026-11-18T18:20:38+00:00",
+    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+  }
+]
