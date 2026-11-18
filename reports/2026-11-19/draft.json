@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-19",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "43adc78befec351ab6eae33d2ad9250fd1c615fd",
+  "reportHash": "sha256:3a7824db7cd2d4f72869aeba5c0248fa325eeae11787cc05b90b5c7d9c4b846e",
+  "generatedAt": "2026-11-18T19:17:26.4385097+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u670819\u65E5\uFF0C\u661F\u671F\u56DB\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-Update QQ group link in README (780f19a)\n-\u66F4\u65B0\u5FEB\u901F\u4F20\u9001\u652F\u6301\u56FE\u6807 (#3889) (6d14ab9)\n-fix: \u4FEE\u590D\u906E\u7F69\u7A97\u53E3\u9000\u51FA\u7F16\u8F91\u540E\u4F4D\u7F6E\u672A\u4FDD\u5B58 (b779cb0)\n-fix(auto-combo): \u62C9\u53D6\u6A21\u578B\u5217\u8868\u6309\u5019\u9009\u5730\u5740\u9010\u9879\u5C1D\u8BD5\u5E76\u56DE\u5199\u89C4\u8303\u670D\u52A1\u5730\u5740 (#3935) (3d397ba)\n-fix(mask): \u4FEE\u590D\u6E38\u620F\u6700\u5C0F\u5316\u540E\u906E\u7F69\u672A\u9690\u85CF (2711877)\n-fix(one-dragon): \u4FEE\u590D\u542F\u52A8\u4EFB\u52A1\u65F6\u8BEF\u5F39\u53F3\u952E\u83DC\u5355 (ea46fef)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-\u80CC\u5305\u6750\u6599\u7EDF\u8BA1\uFF1A\u8865\u5145\u81F3\u51AC\u65B0\u91C7\u96C6\u7269\uFF08\u5996\u7CBE\u7EFF\u827E/\u6790\u6676\u8936\u4F1E/\u7B3C\u9178\u6D46\uFF09 (#3863) (a8914af)\n-update repo.json [skip ci] (5540077)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:bfeffe39c151cd7a0844a6314d7bece6552cac599570e506e5941e0995e627f7",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "6 commits in [2026-11-18T18:00:00.0000000\u002B08:00, 2026-11-19T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-11-18T18:00:00.0000000\u002B08:00, 2026-11-19T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 5 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-18T19:17:10.9458904+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
