@@ -1,18 +1,18 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "a8914afdb4c3c6223789979425829696ba025045",
-    "subject": "\u80CC\u5305\u6750\u6599\u7EDF\u8BA1\uFF1A\u8865\u5145\u81F3\u51AC\u65B0\u91C7\u96C6\u7269\uFF08\u5996\u7CBE\u7EFF\u827E/\u6790\u6676\u8936\u4F1E/\u7B3C\u9178\u6D46\uFF09 (#3863)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/a8914afdb4c3c6223789979425829696ba025045",
-    "committedAt": "2026-11-18T13:44:59+00:00",
-    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+    "sha": "1e2764a2e843cb9e02f0dea22c13828b3152aba1",
+    "subject": "Revert \u0022\u65B0\u589E\u6790\u6676\u8936\u4F1E\u91C7\u96C6\u8DEF\u7EBF\uFF08\u81F3\u51AC-\u65B0\u57FA\u6377\u57CE\u5E02\u533A\uFF09 (#3831)\u0022",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/1e2764a2e843cb9e02f0dea22c13828b3152aba1",
+    "committedAt": "2026-11-19T16:47:10+00:00",
+    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "554007704bb4f76654943faf592083c122e354c5",
+    "sha": "3045e9a341cbe5bcc4f7be34b4c391120f6620cd",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/554007704bb4f76654943faf592083c122e354c5",
-    "committedAt": "2026-11-18T18:45:17+00:00",
-    "fetchedAt": "2026-11-18T19:17:10.9458904+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/3045e9a341cbe5bcc4f7be34b4c391120f6620cd",
+    "committedAt": "2026-11-19T18:56:31+00:00",
+    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
   }
 ]
