@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-20",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "9754a28b2321028c545fa13f34c9479884070c1f",
+  "reportHash": "sha256:b407f691ed89a4fa57430a4d51eb28c462517f6c6b81624a05b65d125245d92b",
+  "generatedAt": "2026-11-19T19:24:58.9608681+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u670820\u65E5\uFF0C\u661F\u671F\u4E94\n\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u523B\u6674\u3011\u7684\u751F\u65E5\n\u4ECA\u5929\u662F\u3010\u539F\u795E \u5E03\u4F26\u59AE\u3011\u7684\u751F\u65E5\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-fix(auto-fight): \u4FEE\u590D\u56DB\u4EBA\u8054\u673A\u65F6\u6F0F\u8BC6\u522B 4P \u6807\u8BB0 (#3965) (f77604c)\n-BetterGI.Assets.Map 1.0.28 (d5a9cf0)\n-Merge remote-tracking branch \u0027origin/main\u0027 (88de6dd)\n-Update version to 0.67.2-alpha.1 (237d450)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-Revert \u0022\u65B0\u589E\u6790\u6676\u8936\u4F1E\u91C7\u96C6\u8DEF\u7EBF\uFF08\u81F3\u51AC-\u65B0\u57FA\u6377\u57CE\u5E02\u533A\uFF09 (#3831)\u0022 (1e2764a)\n-update repo.json [skip ci] (3045e9a)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:e7ddbea04d956cdedc008cf62619f175d73b5de2e6aeca72381b6456abf517d4",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "4 commits in [2026-11-19T18:00:00.0000000\u002B08:00, 2026-11-20T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "2 commits in [2026-11-19T18:00:00.0000000\u002B08:00, 2026-11-20T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 7 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-19T19:24:44.4392224+00:00",
+      "usedCachedData": false
+    }
+  ]
+}

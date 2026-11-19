@@ -1,20 +1,23 @@
-今天是2026年11月19日，星期四
+今天是2026年11月20日，星期五
+
+今天是【原神 刻晴】的生日
+今天是【原神 布伦妮】的生日
+
+——————————————————
 
 游戏活动预览
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--Update QQ group link in README (780f19a)
--更新快速传送支持图标 (#3889) (6d14ab9)
--fix: 修复遮罩窗口退出编辑后位置未保存 (b779cb0)
--fix(auto-combo): 拉取模型列表按候选地址逐项尝试并回写规范服务地址 (#3935) (3d397ba)
--fix(mask): 修复游戏最小化后遮罩未隐藏 (2711877)
--fix(one-dragon): 修复启动任务时误弹右键菜单 (ea46fef)
+-fix(auto-fight): 修复四人联机时漏识别 4P 标记 (#3965) (f77604c)
+-BetterGI.Assets.Map 1.0.28 (d5a9cf0)
+-Merge remote-tracking branch 'origin/main' (88de6dd)
+-Update version to 0.67.2-alpha.1 (237d450)
 
 BGI仓库更新
--背包材料统计：补充至冬新采集物（妖精绿艾/析晶褶伞/笼酸浆） (#3863) (a8914af)
--update repo.json [skip ci] (5540077)
+-Revert "新增析晶褶伞采集路线（至冬-新基捷城市区） (#3831)" (1e2764a)
+-update repo.json [skip ci] (3045e9a)
 
 ——————————————————
 
