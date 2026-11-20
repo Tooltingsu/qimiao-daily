@@ -1,23 +1,16 @@
-今天是2026年11月20日，星期五
-
-今天是【原神 刻晴】的生日
-今天是【原神 布伦妮】的生日
-
-——————————————————
+今天是2026年11月21日，星期六
 
 游戏活动预览
 
 ——————————————————
 
 BGI更新预告（所有改动随下一版本同步）
--fix(auto-fight): 修复四人联机时漏识别 4P 标记 (#3965) (f77604c)
--BetterGI.Assets.Map 1.0.28 (d5a9cf0)
--Merge remote-tracking branch 'origin/main' (88de6dd)
--Update version to 0.67.2-alpha.1 (237d450)
+-fix: 修复net11构建时引起的dll丢失问题 (#3970) (f241eee)
+-fix(ci): 固定 MicaSetup 版本以恢复安装包构建 (dbed555)
+-Update version to 0.67.2-alpha.2 (2b50246)
 
 BGI仓库更新
--Revert "新增析晶褶伞采集路线（至冬-新基捷城市区） (#3831)" (1e2764a)
--update repo.json [skip ci] (3045e9a)
+-update repo.json [skip ci] (e52e403)
 
 ——————————————————
 
