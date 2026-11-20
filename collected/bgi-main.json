@@ -1,34 +1,26 @@
 [
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "f77604c5d3e5a4e32603ecf377555a801acc976e",
-    "subject": "fix(auto-fight): \u4FEE\u590D\u56DB\u4EBA\u8054\u673A\u65F6\u6F0F\u8BC6\u522B 4P \u6807\u8BB0 (#3965)",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/f77604c5d3e5a4e32603ecf377555a801acc976e",
-    "committedAt": "2026-11-19T13:40:04+00:00",
-    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
+    "sha": "f241eee7e9d4a0971568b5e45ad821ae2e37c325",
+    "subject": "fix: \u4FEE\u590Dnet11\u6784\u5EFA\u65F6\u5F15\u8D77\u7684dll\u4E22\u5931\u95EE\u9898 (#3970)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/f241eee7e9d4a0971568b5e45ad821ae2e37c325",
+    "committedAt": "2026-11-20T14:40:37+00:00",
+    "fetchedAt": "2026-11-20T19:00:25.8800003+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "d5a9cf0c15bf1536ad2f2da7dbc5c6bd3b0842b9",
-    "subject": "BetterGI.Assets.Map 1.0.28",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/d5a9cf0c15bf1536ad2f2da7dbc5c6bd3b0842b9",
-    "committedAt": "2026-11-19T14:27:37+00:00",
-    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
+    "sha": "dbed55566223330433a6e85b4dc5878e55b6764e",
+    "subject": "fix(ci): \u56FA\u5B9A MicaSetup \u7248\u672C\u4EE5\u6062\u590D\u5B89\u88C5\u5305\u6784\u5EFA",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/dbed55566223330433a6e85b4dc5878e55b6764e",
+    "committedAt": "2026-11-20T14:41:52+00:00",
+    "fetchedAt": "2026-11-20T19:00:25.8800003+00:00"
   },
   {
     "repository": "babalae/better-genshin-impact",
-    "sha": "88de6dd20e9476b46b652a0dd843cb96e6983669",
-    "subject": "Merge remote-tracking branch \u0027origin/main\u0027",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/88de6dd20e9476b46b652a0dd843cb96e6983669",
-    "committedAt": "2026-11-19T14:27:49+00:00",
-    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
-  },
-  {
-    "repository": "babalae/better-genshin-impact",
-    "sha": "237d450d8387ea32a018df15eff0b5a158e096d7",
-    "subject": "Update version to 0.67.2-alpha.1",
-    "url": "https://github.com/babalae/better-genshin-impact/commit/237d450d8387ea32a018df15eff0b5a158e096d7",
-    "committedAt": "2026-11-19T16:37:51+00:00",
-    "fetchedAt": "2026-11-19T19:24:44.4392224+00:00"
+    "sha": "2b502469319eb5a8904e764a2e25a73c5c6906d0",
+    "subject": "Update version to 0.67.2-alpha.2",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/2b502469319eb5a8904e764a2e25a73c5c6906d0",
+    "committedAt": "2026-11-20T14:46:12+00:00",
+    "fetchedAt": "2026-11-20T19:00:25.8800003+00:00"
   }
 ]
