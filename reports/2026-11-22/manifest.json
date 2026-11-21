@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-22",
+  "latestRevision": 1,
+  "lockedRevision": null,
+  "state": "READY",
+  "sourceCommit": "2f209a27e327415d7e5c3f3fc3ab6a66ba7efe06",
+  "reportHash": "sha256:c19a3af4fb996c5040f047f2a6d83ed25a815821400268b140c918d6463ff859",
+  "generatedAt": "2026-11-21T17:55:20.5255052+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null
+}
