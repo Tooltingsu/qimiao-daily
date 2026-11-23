@@ -1,18 +1,58 @@
 [
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "8743d869e27eb370f002e15ddc5cde24006918ca",
-    "subject": "\u4F18\u5316\u4E86\u90E8\u5206\u77FF\u8DEF\u7EBF (#3879)",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/8743d869e27eb370f002e15ddc5cde24006918ca",
-    "committedAt": "2026-11-22T14:41:42+00:00",
-    "fetchedAt": "2026-11-22T18:20:36.6217044+00:00"
+    "sha": "ccc8d60621fb8fe2d895948faa9f0256c64d93cc",
+    "subject": "\u9504\u5730\u5C0F\u5E03\u4E01 11.22 (#3875)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/ccc8d60621fb8fe2d895948faa9f0256c64d93cc",
+    "committedAt": "2026-11-23T15:59:14+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
   },
   {
     "repository": "babalae/bettergi-scripts-list",
-    "sha": "55f4c2de74dcec9d7a946691be11059d1b32f0f3",
+    "sha": "78812a87e3229832d4e83308464b74e61a5ee2b7",
+    "subject": "\u8865\u5145\u5C18\u4E16\u5DE1\u6E38\u7B2C\u516D\u8F91\u548C\u7B2C\u4E03\u8F91 (#3877)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/78812a87e3229832d4e83308464b74e61a5ee2b7",
+    "committedAt": "2026-11-23T16:00:21+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "6b1f4c759ba0b075cb96dc3bfd0285d21656f73e",
+    "subject": "JS\u811A\u672C \u89D2\u8272\u517B\u6210\u4E00\u6761\u9F99\u66F4\u65B0\uFF1A\u65B0\u589E\u5730\u533A\u9996\u9886\u0022\u6D6A\u6D9B\u951A\u5B9A\u8005\u0022 (#3882)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/6b1f4c759ba0b075cb96dc3bfd0285d21656f73e",
+    "committedAt": "2026-11-23T16:00:54+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "b220507e0221ab4126d94d0a5570f4782af978ff",
+    "subject": "\u521B\u5EFA\u6BCF\u65E5\u59D4\u6258\u68C0\u67E5\uFF08\u65E5\u62A5\uFF09\u811A\u672C (#3778)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/b220507e0221ab4126d94d0a5570f4782af978ff",
+    "committedAt": "2026-11-23T16:02:43+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "24126d3955d57c0cbf337cf2df17d78e76e8140b",
+    "subject": "feat: \u589E\u52A0\u5B8C\u6210\u6307\u5B9A\u8DEF\u7EBF\u6570\u540E\u505C\u6B62 (#3824)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/24126d3955d57c0cbf337cf2df17d78e76e8140b",
+    "committedAt": "2026-11-23T16:10:57+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "fdd87a9ef895d2d523c8ff6960665d1e7685262e",
+    "subject": "feat: \u589E\u52A0\u6708\u5361\u5269\u4F59\u5929\u6570\u63D0\u9192 (#3834)",
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/fdd87a9ef895d2d523c8ff6960665d1e7685262e",
+    "committedAt": "2026-11-23T16:11:34+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  },
+  {
+    "repository": "babalae/bettergi-scripts-list",
+    "sha": "8ad022ed88ebb29f1878b18cf5cb7b43fcf8abfa",
     "subject": "update repo.json [skip ci]",
-    "url": "https://github.com/babalae/bettergi-scripts-list/commit/55f4c2de74dcec9d7a946691be11059d1b32f0f3",
-    "committedAt": "2026-11-22T17:43:01+00:00",
-    "fetchedAt": "2026-11-22T18:20:36.6217044+00:00"
+    "url": "https://github.com/babalae/bettergi-scripts-list/commit/8ad022ed88ebb29f1878b18cf5cb7b43fcf8abfa",
+    "committedAt": "2026-11-23T21:58:20+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
   }
 ]

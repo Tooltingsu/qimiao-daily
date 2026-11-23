@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "4b0e0719859fbcc1231abda5187ebf4e03069b3e",
+    "subject": "fix(tray): \u4FEE\u590D\u8D44\u6E90\u7BA1\u7406\u5668\u91CD\u542F\u540E\u6258\u76D8\u56FE\u6807\u4E22\u5931",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/4b0e0719859fbcc1231abda5187ebf4e03069b3e",
+    "committedAt": "2026-11-23T17:14:43+00:00",
+    "fetchedAt": "2026-11-23T22:29:32.2241955+00:00"
+  }
+]
