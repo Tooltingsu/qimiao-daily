@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-24",
+  "revision": 1,
+  "state": "READY",
+  "sourceCommit": "1751c0a1e2fc15a81b2287af0aa648ccb5b1e9ca",
+  "reportHash": "sha256:90adb161703de8f63dac7fef104d1fc4ff1ce24028ab18384ccd51f0681e75ed",
+  "generatedAt": "2026-11-23T22:29:47.0293439+00:00",
+  "lockedAt": null,
+  "lockReason": null,
+  "publishedAt": null,
+  "content": "\u4ECA\u5929\u662F2026\u5E7411\u670824\u65E5\uFF0C\u661F\u671F\u4E8C\n\n\u6E38\u620F\u6D3B\u52A8\u9884\u89C8\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nBGI\u66F4\u65B0\u9884\u544A\uFF08\u6240\u6709\u6539\u52A8\u968F\u4E0B\u4E00\u7248\u672C\u540C\u6B65\uFF09\n-fix(tray): \u4FEE\u590D\u8D44\u6E90\u7BA1\u7406\u5668\u91CD\u542F\u540E\u6258\u76D8\u56FE\u6807\u4E22\u5931 (4b0e071)\n\nBGI\u4ED3\u5E93\u66F4\u65B0\n-\u9504\u5730\u5C0F\u5E03\u4E01 11.22 (#3875) (ccc8d60)\n-\u8865\u5145\u5C18\u4E16\u5DE1\u6E38\u7B2C\u516D\u8F91\u548C\u7B2C\u4E03\u8F91 (#3877) (78812a8)\n-JS\u811A\u672C \u89D2\u8272\u517B\u6210\u4E00\u6761\u9F99\u66F4\u65B0\uFF1A\u65B0\u589E\u5730\u533A\u9996\u9886\u0022\u6D6A\u6D9B\u951A\u5B9A\u8005\u0022 (#3882) (6b1f4c7)\n-\u521B\u5EFA\u6BCF\u65E5\u59D4\u6258\u68C0\u67E5\uFF08\u65E5\u62A5\uFF09\u811A\u672C (#3778) (b220507)\n-feat: \u589E\u52A0\u5B8C\u6210\u6307\u5B9A\u8DEF\u7EBF\u6570\u540E\u505C\u6B62 (#3824) (24126d3)\n-feat: \u589E\u52A0\u6708\u5361\u5269\u4F59\u5929\u6570\u63D0\u9192 (#3834) (fdd87a9)\n-update repo.json [skip ci] (8ad022e)\n\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n\u7F8E\u56FE\u5206\u4EAB\n\u4ECA\u6C50 \u9E23\u6F6E \u6765\u6E90\uFF1Apixiv",
+  "health": "DEGRADED",
+  "validationState": "VALID",
+  "selectedArtwork": [
+    {
+      "platform": "PIXIV",
+      "artworkId": "149246332",
+      "character": "\u4ECA\u6C50",
+      "franchise": "\u9E23\u6F6E",
+      "title": "\u4ECA\u6C50",
+      "author": "\u662F\u54B8\u9C7C\u554A",
+      "sourceUrl": "https://www.pixiv.net/artworks/149246332",
+      "thumbnailUrl": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2026/09/04/02/43/49/149246332_p0_square1200.jpg",
+      "reviewStatus": "CONFIRMED",
+      "selectedForReport": true,
+      "publishedAt": "2026-09-04T02:43:49+09:00",
+      "fetchedAt": "2026-09-10T15:20:28.9363239+00:00"
+    }
+  ],
+  "payloadHash": "sha256:dd5ac332cbdd58e471ab8248e4fa0a4d71a9578be086dfeb3550a966390482e1",
+  "providerStatuses": [
+    {
+      "provider": "GitHub:babalae/better-genshin-impact",
+      "status": "HEALTHY",
+      "message": "1 commits in [2026-11-23T18:00:00.0000000\u002B08:00, 2026-11-24T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "GitHub:babalae/bettergi-scripts-list",
+      "status": "HEALTHY",
+      "message": "7 commits in [2026-11-23T18:00:00.0000000\u002B08:00, 2026-11-24T18:00:00.0000000\u002B08:00); provisional before cutoff",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:GENSHIN",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:STARRAIL",
+      "status": "HEALTHY",
+      "message": "Fetched 15 official candidates.",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": false
+    },
+    {
+      "provider": "Video:NTE",
+      "status": "DEGRADED",
+      "message": "Bilibili returned 412 after browser-header retries; official account feed needs an authorized session or fallback source.",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": true
+    },
+    {
+      "provider": "Pixiv",
+      "status": "HEALTHY",
+      "message": "Added 13 candidates and refreshed 0 thumbnail metadata; no original images downloaded.",
+      "checkedAt": "2026-11-23T22:29:32.2241955+00:00",
+      "usedCachedData": false
+    }
+  ]
+}
