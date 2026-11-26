@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "1287a2cb2dd0382bd245d39aac5b8bc420b7727f",
+    "subject": "Remove repo-bot configuration (#3994)",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/1287a2cb2dd0382bd245d39aac5b8bc420b7727f",
+    "committedAt": "2026-11-26T10:32:07+00:00",
+    "fetchedAt": "2026-11-26T20:01:39.6195891+00:00"
+  },
+  {
+    "repository": "babalae/better-genshin-impact",
+    "sha": "d8d49742dc16cc7e01f317790bc537056ef09f43",
+    "subject": "fix(mask): \u4FEE\u590D\u6E38\u620F\u7A97\u53E3\u8C03\u6574\u5927\u5C0F\u540E\u8DE8\u5C4F\u7684\u906E\u7F69\u504F\u79FB",
+    "url": "https://github.com/babalae/better-genshin-impact/commit/d8d49742dc16cc7e01f317790bc537056ef09f43",
+    "committedAt": "2026-11-26T18:05:29+00:00",
+    "fetchedAt": "2026-11-26T20:01:39.6195891+00:00"
+  }
+]
