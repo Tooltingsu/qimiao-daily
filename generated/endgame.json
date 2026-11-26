@@ -39,19 +39,6 @@
     "notes": ""
   },
   {
-    "ruleId": "NTE_OUTER_REALM",
-    "game": "NTE",
-    "name": "\u8F68\u5916\u4E4B\u5883",
-    "scheduledStart": "2026-11-13",
-    "startsOn": "2026-11-13",
-    "timePrecision": "EXACT",
-    "startTime": "04:00:00",
-    "endsOn": "2026-11-27",
-    "endTime": "04:00:00",
-    "versionNumber": null,
-    "notes": ""
-  },
-  {
     "ruleId": "GENSHIN_SPIRAL_ABYSS",
     "game": "GENSHIN",
     "name": "\u6DF1\u5883\u87BA\u65CB",
@@ -151,6 +138,19 @@
     "timePrecision": "EXACT",
     "startTime": "04:00:00",
     "endsOn": "2027-02-01",
+    "endTime": "04:00:00",
+    "versionNumber": null,
+    "notes": ""
+  },
+  {
+    "ruleId": "NTE_OUTER_REALM",
+    "game": "NTE",
+    "name": "\u8F68\u5916\u4E4B\u5883",
+    "scheduledStart": "2026-12-25",
+    "startsOn": "2026-12-25",
+    "timePrecision": "EXACT",
+    "startTime": "04:00:00",
+    "endsOn": "2027-01-08",
     "endTime": "04:00:00",
     "versionNumber": null,
     "notes": ""
